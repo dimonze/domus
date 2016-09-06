@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+  <start>
+    <element name="realty-feed">
+      <oneOrMore>
+        <element name="offer">
+          <attribute name="internal-id"><ref name="nonEmpty"/></attribute>
+          <interleave>
+            <ref name="category-<!-- __cat__ -->"/>
+            <ref name="type-<!-- __type__ -->"/>
+            <optional>
+              <element name="description"><text/></element>
+            </optional>
+
+            <optional>
+              <element name="latitude"><ref name="any"/></element>
+            </optional>
+
+            <optional>
+              <element name="longitude"><ref name="any"/></element>
+            </optional>
+
+            <optional>
+              <element name="creation"><text/></element>
+            </optional>
+
+            <optional>
+              <element name="expire"><text/></element>
+            </optional>
+            
+            <optional>
+              <element name="location">
+                <interleave>
+                  <element name="region"><ref name="nonEmpty"/></element>
+                  <zeroOrMore>
+                    <element name="region_node"><ref name="any"/></element>  
+                  </zeroOrMore>
+
+                  <element name="city"><text/></element>
+
+                  <zeroOrMore>
+                    <element name="metro"><text/></element>
+                  </zeroOrMore>
+                  <ref name="<!-- __street__ -->"/>
+                  <optional>
+                    <element name="address">
+                      <interleave>
+                        <optional><element name="house"><ref name="any"/></element></optional>
+                        <optional><element name="building"><ref name="any"/></element></optional>
+                        <optional><element name="structure"><ref name="any"/></element></optional>
+                      </interleave>
+                    </element>
+                  </optional>
+                </interleave>
+              </element>
+            </optional>
+
+            <optional>
+              <element name="agent">
+                <interleave>
+                  <optional><element name="phone"><text/></element></optional>
+                  <optional><element name="name"><text/></element></optional>
+                  <optional><element name="link"><data type="anyURI"/></element></optional>
+                </interleave>
+              </element>
+            </optional>
+
+            <zeroOrMore>
+              <element name="image"><data type="anyURI"/></element>
+            </zeroOrMore>
+
+            <!-- __more__ -->
+
+          </interleave>
+        </element>
+      </oneOrMore>
+    </element>
+  </start>
+
+
+<!-- Hardcoded dictionary -->
+
+  <!-- "non empty" tag and "any" tag -->
+  <define name="any">
+    <data type="string">
+      <param name="pattern">.*</param>
+    </data>
+  </define>
+  <define name="nonEmpty">
+    <data type="string">
+      <param name="pattern">.*[\S]+.*</param>
+    </data>
+  </define>
+
+  <!-- types -->
+  <define name="type-sale">
+    <element name="type">
+      <choice>
+        <value>продажа</value>
+        <value>Продажа</value>  
+      </choice>
+    </element>
+  </define>
+  <define name="type-rent">
+    <element name="type">
+      <choice>
+        <value>аренда</value>
+        <value>Аренда</value>
+      </choice>
+    </element>
+  </define>
+
+  <!-- categories -->
+  <define name="category-apartament">
+    <element name="category">
+      <choice>
+        <value>квартира</value>
+        <value>Квартира</value>
+        <value>комната</value>
+        <value>Комната</value>
+      </choice>
+    </element>
+  </define>
+  <define name="category-house">
+    <element name="category">
+      <choice>
+        <value>дом (коттедж)</value>
+        <value>Дом (Коттедж)</value>
+        <value>дома и участки</value>
+        <value>Дома и Участки</value>
+        <value>дом</value>
+        <value>Дом</value>
+        <value>коттедж</value>
+        <value>Коттедж</value>
+      </choice>
+    </element>
+  </define>
+  <define name="category-commercial">
+    <element name="category">
+      <choice>
+        <value>коммерческая</value>
+        <value>Коммерческая</value>
+      </choice>
+    </element>
+  </define>
+  
+  <!-- offer-type -->
+  <define name="apartament-ot">
+    <element name="offer-type">
+      <data type="string">
+        <param name="pattern">.*(квартир|комнат).*</param>
+      </data>
+    </element>
+  </define>
+  <define name="house-ot">
+    <element name="offer-type">
+      <data type="string">
+        <param name="pattern">.*(дач|дом|таунхаус|особняк|участ|коттедж).*</param>
+      </data>
+    </element>
+  </define>
+  
+  <!-- streets -->
+  <define name="street-optional">
+    <optional>
+      <element name="street"><ref name="any"/></element>
+    </optional>
+  </define>
+  <define name="street-required">
+    <element name="street"><ref name="nonEmpty"/></element>
+  </define>
+</grammar>

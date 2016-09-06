@@ -1,0 +1,41 @@
+all:
+  components:
+    sidebar: [menu, user]
+
+profileSuccess:
+  metas:
+    name: Профайл и настройки
+
+profileeditSuccess:
+  metas:
+    name: Редактирование профайла
+  javascripts:
+    - photos.js
+
+setpasswordSuccess:
+  metas:
+    name: Смена пароля
+
+unsubscribeSuccess:
+  metas:
+    name: Отписка от рассылки
+
+employeesSuccess:
+  metas:
+    name: Сотрудники компании
+
+inviteSuccess:
+  metas:
+    name: Пригласить сотрудников
+
+ratingSuccess:
+  components:
+    sidebar: ~
+
+cardSuccess:
+  components:
+    sidebar: [menu, usercard]
+
+lotsSuccess:
+  components:
+    sidebar: [menu, usercard]

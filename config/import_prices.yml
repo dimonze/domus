@@ -1,0 +1,7 @@
+all:
+  apartament-sale: 5000
+  apartament-rent: 5000
+  house-sale: 5000
+  house-rent: 5000
+  commercial-sale: 5000
+  commercial-rent: 5000

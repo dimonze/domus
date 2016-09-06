@@ -1,0 +1,1 @@
+<?= link_to($import_log->User->name, 'user/edit?id=' . $import_log->User->id) ?>

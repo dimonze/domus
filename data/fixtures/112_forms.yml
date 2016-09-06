@@ -1,0 +1,115 @@
+Form:
+  Form21:
+    type: apartament-rent
+    FormField: FormField65
+    position: 1
+    required: true
+
+  Form22:
+    type: apartament-rent
+    FormField: FormField1
+    position: 2
+    required: true
+
+  Form23:
+    type: apartament-rent
+    FormField: FormField26
+    position: 3
+    required: true
+
+  Form24:
+    type: apartament-rent
+    FormField: FormField3
+    position: 4
+    required: true
+
+  Form25:
+    type: apartament-rent
+    FormField: FormField4
+    position: 5
+    required: true
+
+  Form26:
+    type: apartament-rent
+    FormField: FormField27
+    position: 6
+    required: true
+
+  Form27:
+    type: apartament-rent
+    FormField: FormField13
+    position: 7
+    required: true
+
+  Form28:
+    type: apartament-rent
+    FormField: FormField28
+    position: 8
+    required: true
+
+  Form29:
+    type: apartament-rent
+    FormField: FormField29
+    position: 9
+    required: true
+
+  Form211:
+    type: apartament-rent
+    FormField: FormField5
+    position: 11
+    required: true
+
+  Form212:
+    type: apartament-rent
+    FormField: FormField6
+    position: 12
+    required: true
+
+  Form213:
+    type: apartament-rent
+    FormField: FormField10
+    position: 13
+    required: false
+
+  Form214:
+    type: apartament-rent
+    FormField: FormField11
+    position: 14
+    required: false
+
+  Form215:
+    type: apartament-rent
+    FormField: FormField12
+    position: 15
+    required: false
+
+  Form216:
+    type: apartament-rent
+    FormField: FormField14
+    position: 16
+    required: false
+
+  Form217:
+    type: apartament-rent
+    FormField: FormField15
+    position: 17
+    required: false
+
+  Form218:
+    type: apartament-rent
+    FormField: FormField16
+    position: 18
+    required: false
+
+  Form219:
+    type: apartament-rent
+    FormField: FormField18
+    position: 19
+    required: false
+
+  Form230:
+    type: apartament-rent
+    FormField: FormFieldD_CR
+    position: 30
+    required: false
+

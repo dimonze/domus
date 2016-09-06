@@ -1,0 +1,96 @@
+all:
+  users:
+    types:
+      company:
+        name: Компания
+        value:  1
+      employee:
+        name: Сотрудник
+        value:  1
+      realtor:
+        name: Частный риэлтор
+        value:  1
+      owner:
+        name: Собственник
+        value:  1
+      source:
+        name: Источник
+        value:  1
+    sources:
+      1:
+        name: 'Mail.ru'
+        value:  1
+        email: mailru@mesto.ru
+      2:
+        name: 'Мир квартир'
+        value:  1
+        email: mirkvartir@mesto.ru
+      3:
+        name: 'bn'
+        value:  1
+        email: bn@mesto.ru
+      4:
+        name: 'dmir'
+        value:  1
+        email: dmir@mesto.ru
+      5:
+        name: 'ir'
+        value:  1
+        email: ir@mesto.ru
+      6:
+        name: 'lr'
+        value:  1
+        email: lr@mesto.ru
+      7:
+        name: 'add'
+        value:  1
+        email: add@mesto.ru
+      8:
+        name: 'bsn'
+        value:  1
+        email: bsn@mesto.ru
+      9:
+        name: 'volorado'
+        value:  1
+        email: volorado@mesto.ru
+      10:
+        name: '34'
+        value:  1
+        email: 34@mesto.ru
+      11:
+        name: 'yandex'
+        value:  1
+        email: yandex@mesto.ru
+  regions:
+    77:
+      name: Москва
+      value:  1
+      limit: 40000
+    78:
+      name: Санкт-Петербург
+      value:  1
+      limit: 2000
+    50:
+      name: Московская область
+      value:  1
+      limit: 2000
+    47:
+      name: Ленинградская область
+      value:  1
+      limit: 2000
+    39:
+      name: Калининградская область
+      value:  1
+      limit: 2000
+    52:
+      name: Нижегородская область
+      value:  1
+      limit: 2000
+    61:
+      name: Ростовская область
+      value:  1
+      limit: 2000
+    23:
+      name: Краснодарский край
+      value:  1
+      limit: 2000

@@ -1,0 +1,1 @@
+Всего новостроек <?= $regionnode ?> - <?= $nb_results ?>, цена за квадратный метр от <?= Currency::formatPrice($minprice, 'RUR', $currency) ?>, площадь: от <?= $minsquare?> метров квадратных

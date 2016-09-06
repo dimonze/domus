@@ -1,0 +1,20 @@
+all:
+  footer:
+    description: В подвале
+    code: 
+
+  search-right:
+    description: Справа в поиске
+    code: 
+
+  search-left:
+    description: Слева в поиске
+    code:
+
+  lot-right:
+    description: Справа в карточке объекта
+    code:
+
+  usermenu:
+    description: Под меню пользователя
+    code:

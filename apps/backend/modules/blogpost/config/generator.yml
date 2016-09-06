@@ -1,0 +1,34 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           BlogPost
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          blog_post_blogpost
+    with_doctrine_route:     1
+
+    config:
+      actions:
+        _edit: { credentials: [create-blog-actions] }
+        _delete: { credentials: [create-blog-delete] }
+      fields:
+        title_and_lid: { label: Название поста и анонс }
+        title:
+          label: Заголовок
+        status:
+          label: Статус
+      list:
+        display: [_title_and_lid, created_at]
+        sort: [title, asc]
+        title: Записи в блоге %%_blog_title%%
+      filter:
+        class: BlogPostFormFilter
+        display: [title, status]
+      form: ~
+      edit:
+        title: Редактирование поста "%%title%%"
+      new:
+        title: Новый пост

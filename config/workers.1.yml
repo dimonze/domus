@@ -1,0 +1,193 @@
+#domus1
+domus__update_lots_currency:
+  enabled: true
+  command: php
+  arguments:
+    - /var/www/mesto.ru/plugins/sfGearmanPlugin/sfGearmanWorkerStarter.php
+    - UpdateLotsCurrencyWorker
+    - /var/www/mesto.ru/lib/gearman/UpdateLotsCurrencyWorker.class.php
+    - frontend
+    - prod
+    - doctrine
+  functions:
+    - update_lots_currency
+  max_requests: 100
+  job_timeout: 300
+  workers: 1
+
+domus__deactivate_user:
+  enabled: true
+  command: php
+  arguments:
+    - /var/www/mesto.ru/plugins/sfGearmanPlugin/sfGearmanWorkerStarter.php
+    - DeactivateUserWorker
+    - /var/www/mesto.ru/lib/gearman/DeactivateUserWorker.class.php
+    - frontend
+    - prod
+    - doctrine
+  functions:
+    - deactivate_user
+  max_requests: 100
+  job_timeout: 300
+  workers: 1
+
+domus__pm:
+  enabled: true
+  command: php
+  arguments:
+    - /var/www/mesto.ru/plugins/sfGearmanPlugin/sfGearmanWorkerStarter.php
+    - PmWorker
+    - /var/www/mesto.ru/lib/gearman/PmWorker.class.php
+    - frontend
+    - prod
+    - doctrine
+  functions:
+    - pm
+  max_requests: 100
+  job_timeout: 300
+  workers: 3
+
+domus__notify:
+  enabled: true
+  command: php
+  arguments:
+    - /var/www/mesto.ru/plugins/sfGearmanPlugin/sfGearmanWorkerStarter.php
+    - NotifyWorker
+    - /var/www/mesto.ru/lib/gearman/NotifyWorker.class.php
+    - frontend
+    - prod
+    - doctrine
+  functions:
+    - notify
+  max_requests: 100
+  job_timeout: 300
+  workers: 3
+
+domus__import_file:
+  enabled: true
+  command: php
+  arguments:
+    - /var/www/mesto.ru/plugins/sfGearmanPlugin/sfGearmanWorkerStarter.php
+    - ImportFileWorker
+    - /var/www/mesto.ru/lib/gearman/ImportFileWorker.class.php
+    - frontend
+    - prod
+    - doctrine
+  functions:
+    - import_file
+  max_requests: 1
+  job_timeout: 86400
+  workers: 3
+
+domus__create_landing_page:
+  enabled: false
+  command: php
+  arguments:
+    - /var/www/mesto.ru/plugins/sfGearmanPlugin/sfGearmanWorkerStarter.php
+    - CreateNewLandingPageWorker
+    - /var/www/mesto.ru/lib/gearman/CreateNewLandingPageWorker.class.php
+    - frontend
+    - prod
+    - doctrine
+  functions:
+    - create_landing_page
+  max_requests: 200
+  job_timeout: 200
+  workers: 10
+
+domus__export_lot_to_mitula:
+  enabled: true
+  command: php
+  arguments:
+    - /var/www/mesto.ru/plugins/sfGearmanPlugin/sfGearmanWorkerStarter.php
+    - ExportLotToMitulaWorker
+    - /var/www/mesto.ru/lib/gearman/ExportLotToMitulaWorker.class.php
+    - frontend
+    - prod
+    - doctrine
+  functions:
+    - export_lot_to_mitula
+  max_requests: 200
+  job_timeout: 300
+  workers: 5
+
+domus__deactivate_lot:
+  enabled: true
+  command: php
+  arguments:
+    - /var/www/mesto.ru/plugins/sfGearmanPlugin/sfGearmanWorkerStarter.php
+    - DeactivateLotWorker
+    - /var/www/mesto.ru/lib/gearman/DeactivateLotWorker.class.php
+    - frontend
+    - prod
+    - doctrine
+  functions:
+    - deactivate_lot
+  max_requests: 100
+  job_timeout: 300
+  workers: 5
+
+domus__collect_geo_statistic:
+  enabled: false
+  command: php
+  arguments:
+    - /var/www/mesto.ru/plugins/sfGearmanPlugin/sfGearmanWorkerStarter.php
+    - CollectRegionNodeStatisticWorker
+    - /var/www/mesto.ru/lib/gearman/CollectRegionNodeStatisticWorker.class.php
+    - frontend
+    - prod
+    - doctrine
+  functions:
+    - collect_region_statistic
+    - collect_regionnode_statistic
+  max_requests: 70
+  job_timeout: 300
+  workers: 5
+
+domus__export_lot_to_yandex:
+  enabled: true
+  command: php
+  arguments:
+    - /var/www/mesto.ru/plugins/sfGearmanPlugin/sfGearmanWorkerStarter.php
+    - ExportLotToYandexWorker
+    - /var/www/mesto.ru/lib/gearman/ExportLotToYandexWorker.class.php
+    - frontend
+    - prod
+    - doctrine
+  functions:
+    - export_lot_to_yandex
+  max_requests: 100
+  job_timeout: 30
+  workers: 3
+
+domus__synonymize_description:
+  enabled: false
+  command: php
+  arguments:
+    - /var/www/mesto.ru/plugins/sfGearmanPlugin/sfGearmanWorkerStarter.php
+    - SynonymizerWorker
+    - /var/www/mesto.ru/lib/gearman/SynonymizerWorker.class.php
+    - frontend
+    - prod
+    - doctrine
+  functions:
+    - synonymize_description
+  max_requests: 200
+  job_timeout: 30
+  workers: 5
+
+domus__rerate_user_profile:
+  enabled: true
+  command: php
+  arguments:
+    - /var/www/mesto.ru/plugins/sfGearmanPlugin/sfGearmanWorkerStarter.php
+    - RerateUserProfileWorker
+    - /var/www/mesto.ru/lib/gearman/RerateUserProfileWorker.class.php
+    - frontend
+    - prod
+    - doctrine
+  functions:
+    - rerate_user_profile
+  max_requests: 10
+  job_timeout: 3600
+  workers: 5

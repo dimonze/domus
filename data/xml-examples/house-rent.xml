@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<realty-feed> 
+  <offer internal-id="1"> 
+		<category>дом</category>
+		<type>аренда</type>
+		<creation>2010-11-02T13:20:41+04:00</creation>
+		<expire>2012-02-03T13:20:41+04:00</expire>
+		<location>
+			<region>Москва</region>
+			<region_node>м. Бунинская Аллея, ЮЗАО</region_node>
+			<city>г. Москва</city>
+			<street>ул. Адмирала Лазарева</street>
+			<address>
+				<house>7</house>
+				<building>7</building>
+				<structure>7</structure>
+			</address>
+		</location>
+		<full-price>
+			<value>13500000</value>
+			<currency>RUR</currency>
+		</full-price>
+		<description>Таунхаус, секция в 2х-секционном доме. Построен, сдача в эксплуатацию 3 кв. 2011.Монолит (несъемная опалубка), окна "Века", кровля металочерепица, гаражные ворота.Все московские коммуникации включая телефон.Закрытый охраняемый коттеджный жилой комплекс "Потапово", ЮЗАО, площадь 213Га.Развитая инф-ра, парк с прудами, детсад с бассейном и детский центр, гимназия, крытые корты, футбольное поле. Проезд через Бутово и Калужское ш. Метро 20 мин пеш. Кредит до трех лет, при 100% оплате цена 12 млн. руб</description>
+		<latitude>55.535686089</latitude>
+		<longitude>37.484858036</longitude>
+		<agent>
+			<phone>+7 (926) 213-82-13</phone>
+			<name>Михаил</name>
+			<link>http://www.mesto.ru/user/17436</link>
+		</agent>
+		<image>http://www.mesto.ru/uploads/lot/n/l/a/713579/800x600/1.jpg</image>
+		<image>http://www.mesto.ru/uploads/lot/n/l/a/713579/800x600/2.jpg</image>
+		<image>http://www.mesto.ru/uploads/lot/n/l/a/713579/800x600/3.jpg</image>
+		<image>http://www.mesto.ru/uploads/lot/p/z/m/263077/800x600/4.jpg</image>
+		<lot-area>284</lot-area>
+		<area>2.5</area>
+		<heating>нет</heating>
+		<gas>магистральный</gas>
+		<electricity>есть</electricity>
+		<waterpipe>центральный</waterpipe>
+		<sewerage>центральная</sewerage>
+		<build-year>2010</build-year>
+		<house-type>Монолитно-кирпичный</house-type>
+		<quality>в отличном состоянии</quality>
+		<rooms-count>5</rooms-count>
+		<floors-total>4</floors-total>
+		<city-distance>200</city-distance>
+		<city-type>коттеджный поселок</city-type>
+		<furniture>да</furniture>
+		<equipment>да</equipment>
+		<land-type>Озеленение на территории и по границам поселка</land-type>
+		<additional-structures>гараж</additional-structures>
+		<details>телефон, интернет, водоем, охрана, пмж</details>
+  </offer>
+</realty-feed>

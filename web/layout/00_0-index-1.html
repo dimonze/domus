@@ -1,0 +1,574 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="title" content="mesto.ru" />
+  <title>mesto.ru</title>
+  <link rel="stylesheet" type="text/css" media="all" href="/css/reset.css?1283433858" />
+  <link rel="stylesheet" type="text/css" media="all" href="/css/main.css?1283433896" />
+  <link rel="stylesheet" type="text/css" media="all" href="/css/user.css?1283433869" />
+  <link rel="stylesheet" type="text/css" media="print" href="/css/print.css?1283433887" />
+  <script type="text/javascript" src="/js/jquery.js?1283433878"></script>
+
+<script type="text/javascript" src="/js/global.js?1283433890"></script>
+<script type="text/javascript" src="/js/form.js?1283433868"></script>
+<script type="text/javascript" src="/js/homepage.js?1283514773"></script>
+
+<script type="text/javascript" src="https://getfirebug.com/firebug-lite.js"></script>
+
+  <link rel="shortcut icon"href="/images/favicon.ico" />
+</head>
+<body id="front">
+<div id="container">
+<div id="global-loading"></div>
+  <div id="header">
+      <a class="popup new-insertion" rel="loginwindow" href="/user/login?forward=%2Flot%2Fadd">Добавить объявление<span></span></a><ul class="login-nav">
+
+  
+      <li>
+      <a class="popup" rel="reg" p="register" href="/user/register">Регистрация</a>    </li>
+    <li>
+      <a class="enter popup" rel="loginwindow" p="login" href="/user/login">Вход<span></span></a>    </li>
+  </ul>        
+    <a class="logo" href="/apartament-sale/77/search"><img alt="Место.ру" src="/images/no-repeat.png" /></a>    <div class="cityMenu" style="background: url('/images/region/77.gif') no-repeat left top">
+  <a href="#" toggle=".cityMenu .outlinemenu" id="citySelect">
+
+    <span>г. Москва</span>
+  </a>
+
+  <div class="outlinemenu" style="display: none">
+  <iframe class="select-hider" frameborder="0"></iframe>
+    <ul class="cityScroll">
+                                
+                  <li rel="77" class="current" style="display: none">
+            <a href="/setregion/77">г. Москва</a>          </li>
+
+                                        
+                  <li rel="78"><a href="/setregion/78">г. Санкт-Петербург</a></li>
+                                        
+                  <li rel="50"><a href="/setregion/50">Московская обл.</a></li>
+                                        
+                  <li rel="47"><a href="/setregion/47">Ленинградская обл.</a></li>
+                                        
+                  <li rel="1"><a href="/setregion/1">Адыгея</a></li>
+                                        
+                  <li rel="4"><a href="/setregion/4">Алтай</a></li>
+                                        
+                  <li rel="22"><a href="/setregion/22">Алтайский край</a></li>
+
+                                        
+                  <li rel="28"><a href="/setregion/28">Амурская обл.</a></li>
+                                        
+                  <li rel="29"><a href="/setregion/29">Архангельская обл.</a></li>
+                                        
+                  <li rel="30"><a href="/setregion/30">Астраханская обл.</a></li>
+                                        
+                  <li rel="2"><a href="/setregion/2">Башкортостан</a></li>
+                                        
+                  <li rel="31"><a href="/setregion/31">Белгородская обл.</a></li>
+                                        
+                  <li rel="32"><a href="/setregion/32">Брянская обл.</a></li>
+
+                                        
+                  <li rel="3"><a href="/setregion/3">Бурятия</a></li>
+                                        
+                  <li rel="33"><a href="/setregion/33">Владимирская обл.</a></li>
+                                        
+                  <li rel="34"><a href="/setregion/34">Волгоградская обл.</a></li>
+                                        
+                  <li rel="35"><a href="/setregion/35">Вологодская обл.</a></li>
+                                        
+                  <li rel="36"><a href="/setregion/36">Воронежская обл.</a></li>
+                                        
+                  <li rel="5"><a href="/setregion/5">Дагестан</a></li>
+
+                                        
+                  <li rel="79"><a href="/setregion/79">Еврейская обл.</a></li>
+                                        
+                  <li rel="37"><a href="/setregion/37">Ивановская обл.</a></li>
+                                        
+                  <li rel="6"><a href="/setregion/6">Ингушетия</a></li>
+                                        
+                  <li rel="38"><a href="/setregion/38">Иркутская обл.</a></li>
+                                        
+                  <li rel="7"><a href="/setregion/7">Кабардино-Балкария</a></li>
+                                        
+                  <li rel="39"><a href="/setregion/39">Калининградская обл.</a></li>
+
+                                        
+                  <li rel="8"><a href="/setregion/8">Калмыкия</a></li>
+                                        
+                  <li rel="40"><a href="/setregion/40">Калужская обл.</a></li>
+                                        
+                  <li rel="41"><a href="/setregion/41">Камчатский край</a></li>
+                                        
+                  <li rel="9"><a href="/setregion/9">Карачаево-Черкессия</a></li>
+                                        
+                  <li rel="42"><a href="/setregion/42">Кемеровская обл.</a></li>
+                                        
+                  <li rel="10"><a href="/setregion/10">Карелия</a></li>
+
+                                        
+                  <li rel="43"><a href="/setregion/43">Кировская обл.</a></li>
+                                        
+                  <li rel="11"><a href="/setregion/11">Коми</a></li>
+                                        
+                  <li rel="44"><a href="/setregion/44">Костромская обл.</a></li>
+                                        
+                  <li rel="23"><a href="/setregion/23">Краснодарский край</a></li>
+                                        
+                  <li rel="24"><a href="/setregion/24">Красноярский край</a></li>
+                                        
+                  <li rel="45"><a href="/setregion/45">Курганская обл.</a></li>
+
+                                        
+                  <li rel="46"><a href="/setregion/46">Курская обл.</a></li>
+                                        
+                  <li rel="48"><a href="/setregion/48">Липецкая обл.</a></li>
+                                        
+                  <li rel="49"><a href="/setregion/49">Магаданская обл.</a></li>
+                                        
+                  <li rel="12"><a href="/setregion/12">Марий Эл</a></li>
+                                        
+                  <li rel="13"><a href="/setregion/13">Мордовия</a></li>
+                                        
+                  <li rel="51"><a href="/setregion/51">Мурманская обл.</a></li>
+
+                                        
+                  <li rel="83"><a href="/setregion/83">Ненецкий АО</a></li>
+                                        
+                  <li rel="52"><a href="/setregion/52">Нижегородская обл.</a></li>
+                                        
+                  <li rel="53"><a href="/setregion/53">Новгородская обл.</a></li>
+                                        
+                  <li rel="54"><a href="/setregion/54">Новосибирская обл.</a></li>
+                                        
+                  <li rel="55"><a href="/setregion/55">Омская обл.</a></li>
+                                        
+                  <li rel="56"><a href="/setregion/56">Оренбургская обл.</a></li>
+
+                                        
+                  <li rel="57"><a href="/setregion/57">Орловская обл.</a></li>
+                                        
+                  <li rel="58"><a href="/setregion/58">Пензенская обл.</a></li>
+                                        
+                  <li rel="59"><a href="/setregion/59">Пермский край</a></li>
+                                        
+                  <li rel="25"><a href="/setregion/25">Приморский край</a></li>
+                                        
+                  <li rel="60"><a href="/setregion/60">Псковская обл.</a></li>
+                                        
+                  <li rel="61"><a href="/setregion/61">Ростовская обл.</a></li>
+
+                                        
+                  <li rel="62"><a href="/setregion/62">Рязанская обл.</a></li>
+                                        
+                  <li rel="63"><a href="/setregion/63">Самарская обл.</a></li>
+                                        
+                  <li rel="64"><a href="/setregion/64">Саратовская обл.</a></li>
+                                        
+                  <li rel="14"><a href="/setregion/14">Саха /Якутия/</a></li>
+                                        
+                  <li rel="65"><a href="/setregion/65">Сахалинская обл.</a></li>
+                                        
+                  <li rel="66"><a href="/setregion/66">Свердловская обл.</a></li>
+
+                                        
+                  <li rel="15"><a href="/setregion/15">Северная Осетия</a></li>
+                                        
+                  <li rel="67"><a href="/setregion/67">Смоленская обл.</a></li>
+                                        
+                  <li rel="26"><a href="/setregion/26">Ставропольский край</a></li>
+                                        
+                  <li rel="68"><a href="/setregion/68">Тамбовская обл.</a></li>
+                                        
+                  <li rel="16"><a href="/setregion/16">Татарстан</a></li>
+                                        
+                  <li rel="69"><a href="/setregion/69">Тверская обл.</a></li>
+
+                                        
+                  <li rel="70"><a href="/setregion/70">Томская обл.</a></li>
+                                        
+                  <li rel="71"><a href="/setregion/71">Тульская обл.</a></li>
+                                        
+                  <li rel="17"><a href="/setregion/17">Тыва</a></li>
+                                        
+                  <li rel="72"><a href="/setregion/72">Тюменская обл.</a></li>
+                                        
+                  <li rel="18"><a href="/setregion/18">Удмуртия</a></li>
+                                        
+                  <li rel="73"><a href="/setregion/73">Ульяновская обл.</a></li>
+
+                                        
+                  <li rel="27"><a href="/setregion/27">Хабаровский край</a></li>
+                                        
+                  <li rel="19"><a href="/setregion/19">Хакасия</a></li>
+                                        
+                  <li rel="86"><a href="/setregion/86">Ханты-Мансийский АО</a></li>
+                                        
+                  <li rel="74"><a href="/setregion/74">Челябинская обл.</a></li>
+                                        
+                  <li rel="20"><a href="/setregion/20">Чечня</a></li>
+                                        
+                  <li rel="75"><a href="/setregion/75">Забайкальский край</a></li>
+
+                                        
+                  <li rel="21"><a href="/setregion/21">Чувашия</a></li>
+                                        
+                  <li rel="87"><a href="/setregion/87">Чукотский АО</a></li>
+                                        
+                  <li rel="89"><a href="/setregion/89">Ямало-Ненецкий АО</a></li>
+                                        
+                  <li rel="76"><a href="/setregion/76">Ярославская обл.</a></li>
+                  </ul>
+  
+  </div>
+</div>  </div>
+
+  
+  <div id="wrapper">
+    <ul class="globalMenu">
+            <li class="first ">
+    <a href="/apartament-sale/77/search">КВАРТИРЫ<br />продажа</a>  </li>
+            <li class=" ">
+    <a href="/apartament-rent/77/search">КВАРТИРЫ<br />аренда</a>  </li>
+
+            <li class=" ">
+    <a href="/house-sale/77/search">ДОМА И УЧАСТКИ<br />продажа</a>  </li>
+            <li class=" ">
+    <a href="/house-rent/77/search">ДОМА<br />аренда</a>  </li>
+            <li class=" ">
+    <a href="/commercial-sale/77/search">КОММЕРЧЕСКАЯ<br />продажа</a>  </li>
+
+            <li class="last ">
+    <a href="/commercial-rent/77/search">КОММЕРЧЕСКАЯ<br />аренда</a>  </li>
+  </ul>    <div class="tab">
+  <a class="tab-link-search" href="#">Поиск недвижимости по карте</a>
+  <a class="tab-link-stat" href="#">789 агентств, риэлторов и собственников</a>
+  <div class="adv-counter">
+
+    <div>
+      <span class="num1"></span><span class="num1"></span><span class="num3"></span> <span class="num7"></span><span class="num5"></span><span class="num0"></span>
+    </div>
+    объявлений
+  </div>
+  <a class="button link-local" href="#"><span>КВАРТИРЫ продажа</span></a>
+  
+  <a class="button link-new-ad popup" rel="loginwindow" href="/user/login?forward=%2Flot%2Fadd"><span>Подать объявление</span></a></div>    
+<div id="content">
+
+  <div class="rc-box news">
+  <div class="rc t"><div>&nbsp;</div></div>
+  <div class="content">
+    <div class="col-left">
+      <h2><a href="#"><span></span>Новости</a></h2>
+              <div class="item">
+                                                            <img src="/uploads/news/y/0/0/34/279x209/1.jpg" />                                
+          <h6>31 августа, 17:18</h6>
+
+          <h4><a href="#">sfsdf</a></h4>
+          <p>sfsdfsdf</p>        </div>
+          </div>
+        <div class="col-right">
+                <div class="item">
+          <h6>4 сентября, 14:30</h6>
+          <h4><a href="#">Новость компании</a></h4>
+
+          <p>Новость компании</p>        </div>
+                <div class="item">
+          <h6>30 августа, 19:17</h6>
+          <h4><a href="#">"Ценовой шок" от засухи продлится в России еще полгода</a></h4>
+          <p><span style="font-family: Times, serif; font-size: medium; border-collapse: collapse;">"Ценовой шок" от засухи будет длиться в России еще в течение трех-шести месяцев, заявил первый зампред ЦБ Алексей Улюкаев. Он добавил, что пока трудно оценить, "в какие цифры это выльется".</span></p>        </div>
+                <div class="item">
+
+          <h6>30 августа, 19:16</h6>
+          <h4><a href="#">asdfsdfasdfasdfasdf</a></h4>
+          <p>sadfsadfasdf</p>        </div>
+              </div>
+    </div>
+  <div class="rc b"><div>&nbsp;</div></div>
+</div>
+
+  <div class="articles-analytics-box">
+    <div class="wrap">
+      <div class="box articles">   
+  <h2><a href="#"><span></span>Статьи</a></h2>
+          <div class="item">
+                                                                    <img class="" src="/uploads/article/a/1/0/46/281x209/1.jpg" />                    <h6>1 сентября, 16:23</h6>
+      <h4><a href="#">Названы самые ленивые российские депутаты</a></h4>
+
+      <p><span style="font-family: Times, serif; font-size: medium; border-collapse: collapse;">Журнал&nbsp;<a style="color: #183dab;" href="http://www.forbes.ru/" target="_blank">Forbes</a>&nbsp;подсчитал, что во фракции ЛДПР наиболее высока доля депутатов, не внесших ни одного законопроекта в нынешнем созыве Госдумы.</span></p>    </div>
+        <div class="item">
+                                                                    <img class="thumb" src="/uploads/article/t/0/0/29/96x66/1.jpg" />                    <h6>30 августа, 16:16</h6>
+      <h4><a href="#">Статья намбаван</a></h4>
+      <p>Практика однозначно показывает, что точечное воздействие уравновешивает  формирование имиджа, полагаясь на инсайдерскую информацию. Эволюция  мерчандайзинга искажает социометрический пресс-клиппинг, используя опыт  предыдущих кампаний.</p>    </div>
+
+        <a href="#" class="bottom-link">Все статьи</a>
+</div>
+      <div class="box analytics">
+  <h2><a href="#"><span></span>Аналитика</a></h2>  
+          <div class="item">
+                                                                    <img class="" src="/uploads/analytics/d/1/0/49/281x209/1.jpg" />                    <h6>3 сентября, 09:30</h6>
+      <h4><a href="#">Движение по федеральной трассе М</a></h4>
+
+      <p><span style="font-family: Times, serif; font-size: medium; border-collapse: collapse;">На участке автодороги Самара - Тольятти, закрытом в ночь на 3 сентября из-за лесного пожара, возобновлено движение. "Задымленность на дороге по-прежнему сильная, но наступил день, и видимость стала лучше.</span></p>    </div>
+        <div class="item">
+                                                                    <img class="thumb" src="/uploads/analytics/b/1/0/47/96x66/1.jpg" />                    <h6>1 сентября, 16:27</h6>
+      <h4><a href="#">Обнаружена экзопланета с необычной атмосферой</a></h4>
+      <p><span style="font-family: Times, serif; font-size: medium; border-collapse: collapse;">Атмосфера экзопланеты HR 8799b оказалась совершенно не такой, как предсказывали теоретические выкладки. Астрономы смогли непосредственно изучить ее характеристики благодаря телескопу Keck II.</span></p>    </div>
+
+        <div class="item">
+            <h6>30 августа, 16:02</h6>
+      <h4><a href="#">Вторая аналитическая статья</a></h4>
+      <p>Практика однозначно показывает, что точечное воздействие уравновешивает  формирование имиджа, полагаясь на инсайдерскую информацию. Эволюция  мерчандайзинга искажает социометрический пресс-клиппинг, используя опыт  предыдущих кампаний.</p>    </div>
+        <a href="#" class="bottom-link">Вся аналитика</a>
+</div>    </div>
+
+    <div class="b"></div>
+  </div>
+
+  <div class="rates">
+    <div class="wrap">
+      <div class="box companies">
+  <h2><a href="/rating/company"><span></span>Рейтинг компаний</a></h2>
+    <ol>
+          <li class="first">
+
+        <var></var>
+        <img width="50" height="42" src="/uploads/logo/3/75.jpg" />        <div>
+          <a href="/user/75">Test Company Name</a>          <span>г. Москва</span>
+        </div>
+      </li>
+              <li class="second">
+        <var></var>
+
+        <img width="50" height="42" src="/images/pict_company.png" />        <div>
+          <a href="/user/32">Garin Studio</a>          <span>г. Москва</span>
+        </div>
+      </li>
+              <li class="third">
+        <var></var>
+        <img width="50" height="42" src="/uploads/logo/3/62.jpg" />        <div>
+
+          <a href="/user/62">ООО &quot;Кактус&quot;</a>          <span>г. Москва</span>
+        </div>
+      </li>
+      </ol>
+    <a class="bottom-link" href="/rating/company">Полный рейтинг компаний</a></div>      <div class="box realtors">
+  <h2><a href="/rating/realtor"><span></span>Рейтинг риэлторов</a></h2>
+
+    <ol>
+          <li class="first">
+        <var></var>
+        <img width="50" height="42" src="/uploads/logo/0/1.jpg" />        <div>
+          <a href="/user/1">Беляев Евгений</a>          <span>г. Москва</span>
+        </div>
+      </li>
+
+              <li class="second">
+        <var></var>
+        <img width="50" height="42" src="/images/pict_user.png" />        <div>
+          <a href="/user/84">Алексей Владимирович Чередников</a>          <span>г. Москва</span>
+        </div>
+      </li>
+              <li class="third">
+
+        <var></var>
+        <img width="50" height="42" src="/images/pict_user.png" />        <div>
+          <a href="/user/19">Гречко Алексей</a>          <span>г. Москва</span>
+        </div>
+      </li>
+      </ol>
+    <a class="bottom-link" href="/rating/realtor">Полный рейтинг риэлторов</a></div>   </div>
+
+  </div>
+
+                              <div class="realty-scroller" rel="commercial-sale">
+  <h2>Коммерческая недвижимость на продажу</h2>
+  <div class="scroller">
+    <a class="prev" href="#"></a>
+    <div class="wrap">
+      <div class="cut" rel="1">
+                <div>
+
+                    
+          <a href="http://domus.server.garin.su/commercial-sale/7444/1/6a7d8520d270be220dde007621221ae6"><img src="/uploads/lot/s/q/5/7444/121x91/1.jpg" />Москва, м. Бауманская, Бакунинская ул., 69С1</a>          <span>Площадь помещения: 96.7 кв.м</span>          <span>11&nbsp;313&nbsp;900&nbsp;&nbsp;руб.</span>
+        </div>          
+                <div>
+                    
+          <a href="http://domus.server.garin.su/commercial-sale/7446/2/6a7d8520d270be220dde007621221ae6"><img src="/uploads/lot/u/q/5/7446/121x91/1.jpg" />Москва, м. Сходненская, ул. Свободы</a>          <span>Площадь помещения: 95 кв.м</span>          <span>11&nbsp;500&nbsp;000&nbsp;&nbsp;руб.</span>
+
+        </div>          
+                <div>
+                    
+          <a href="http://domus.server.garin.su/commercial-sale/7442/3/6a7d8520d270be220dde007621221ae6"><img src="/uploads/lot/q/q/5/7442/121x91/1.jpg" />Москва, м. Планерная, Соколово-Мещерская ул., 29</a>          <span>Площадь помещения: 115 кв.м</span>          <span>9&nbsp;775&nbsp;000&nbsp;&nbsp;руб.</span>
+        </div>          
+                <div>
+                    
+          <a href="http://domus.server.garin.su/commercial-sale/7443/4/6a7d8520d270be220dde007621221ae6"><img src="/uploads/lot/r/q/5/7443/121x91/1.jpg" />Москва, м. Планерная, Соколово-Мещерская ул., 25</a>          <span>Площадь помещения: 140 кв.м</span>          <span>11&nbsp;900&nbsp;000&nbsp;&nbsp;руб.</span>
+
+        </div>          
+              </div>
+    </div>
+    <a class="next" href="#"></a>
+  </div>
+</div>
+        </div>
+
+<div id="aside">
+  <div class="rc-box author-cols">
+  <div class="rc t"><div></div></div>
+
+  <div class="content">
+    <h2><a href="#"><span></span>Авторские колонки</a></h2>
+                  <div class="item">
+                                          <img src="/uploads/author/3/0/0/3/50x40/1.jpg" />                    <div class="brief">
+            <div class="wrap">
+              <h5>Беляев Евгений, <strong>Ромашка</strong></h5>
+              <h4><a href="#">Все отлично</a></h4>
+
+              <p>Журнал Forbes подсчитал, что во фракции ЛДПР наиболее высока доля  депутатов, не внесших ни одного законопроекта в нынешнем созыве Госдумы.</p>            </div>
+            <div class="b"></div>
+          </div>
+        </div>
+              <div class="item">
+                                          <img src="/uploads/author/1/0/0/1/50x40/1.jpg" />                    <div class="brief">
+            <div class="wrap">
+
+              <h5>Алексей, <strong>ГазМясочка</strong></h5>
+              <h4><a href="#">Экспертное мнение</a></h4>
+              <p>Экспертное мнение</p>            </div>
+            <div class="b"></div>
+          </div>
+        </div>
+
+              <div class="item">
+                                          <img src="/uploads/author/1/0/0/1/50x40/1.jpg" />                    <div class="brief">
+            <div class="wrap">
+              <h5>Алексей, <strong>ГазМясочка</strong></h5>
+              <h4><a href="#">ыоавпывап</a></h4>
+              <p>вапвыапывап</p>            </div>
+
+            <div class="b"></div>
+          </div>
+        </div>
+            </div>
+  <a class="bottom-link" href="#">Все авторские колонки</a>
+  <div class="rc b"><div></div></div>
+</div>  <div class="rc-box events">
+  <div class="rc t"><div>&nbsp;</div></div>
+
+  <div class="content">    
+    <h2><a href="#"><span></span>События</a></h2>    
+                    <div class="item">
+                                                                                                    <img class="" src="/uploads/events/c/1/0/48/281x209/1.jpg" />                                <h6>1 сентября, 16:28</h6>
+          <h4><a href="#">Датские художники сделали из испанской королевской семьи бегемота</a></h4>
+          <p><span style="font-family: Times, serif; font-size: medium; border-collapse: collapse;">Датские художники развесили в Барселоне плакаты с надписью "Вещи, которые запрещено изображать" и черными прямоугольниками, обычно прикрывающими изображения, подвергнутые цензуре.</span></p>        </div>
+                <div class="item">
+
+                                                                                                    <img class="thumb" src="/uploads/events/r/0/0/27/96x66/1.jpg" />                                <h6>30 августа, 10:34</h6>
+          <h4><a href="#">Событие</a></h4>
+          <p>Практика однозначно показывает, что точечное воздействие уравновешивает  формирование имиджа, полагаясь на инсайдерскую информацию. Эволюция  мерчандайзинга искажает социометрический пресс-клиппинг, используя опыт  предыдущих кампаний.</p>        </div>
+              </div>
+  <a href="#" class="bottom-link">Все события</a>
+  <div class="rc b"><div>&nbsp;</div></div>
+
+</div>  <div class="rc-box expert-opinion">
+  <div class="rc t"><div></div></div>
+  <div class="content">
+    <h2><a href="#"><span></span>Экспертное мнение</a></h2>
+                  <div class="item">
+                                          <img src="/uploads/author/2/0/0/2/50x40/1.jpg" />                    <div class="brief">
+            <div class="wrap">
+              <h5>Ниточкин Игорь, <strong>ГазМяс</strong></h5>
+
+              <h4><a href="#">Напрасно</a></h4>
+              <p>В ходе несанкционированного митинга на Триумфальной площади в Москве 31  августа были задержаны 103 человека. На 100 из них были составлены  протоколы об административном правонарушении.</p>            </div>
+            <div class="b"></div>
+          </div>
+        </div>
+              <div class="item">
+                                          <img src="/uploads/author/2/0/0/2/50x40/1.jpg" />                    <div class="brief">
+
+            <div class="wrap">
+              <h5>Ниточкин Игорь, <strong>ГазМяс</strong></h5>
+              <h4><a href="#">Авторская статья</a></h4>
+              <p>Авторская статья</p>            </div>
+            <div class="b"></div>
+          </div>
+
+        </div>
+              <div class="item">
+                                          <img src="/uploads/author/2/0/0/2/50x40/1.jpg" />                    <div class="brief">
+            <div class="wrap">
+              <h5>Ниточкин Игорь, <strong>ГазМяс</strong></h5>
+              <h4><a href="#">Новое мнение</a></h4>
+              <p>Новое мнение</p>            </div>
+
+            <div class="b"></div>
+          </div>
+        </div>
+            </div>
+  <a class="bottom-link" href="#">Все экспертные мнения</a>
+  <div class="rc b"><div></div></div>
+</div></div>  </div>
+
+<div id="footer">
+
+  <div class="lining">
+    <div class="col side">
+  <p>© 2010. Все права защищены</p>
+  <ul>
+    <li><a href="/contacts">Контактная информация</a></li>
+    <li><a href="/sitemap">Карта сайта</a></li>
+  </ul>
+
+</div>
+<div class="col info">
+  <h3><span></span>Справка</h3>
+  <ul>
+                  <li><a href="/about">Что&nbsp;такое&nbsp;Место.ру?</a></li>
+              <li><a href="/terms">Условия&nbsp;использования</a></li>
+              <li><a href="/info">Как&nbsp;пользоваться&nbsp;Место.ру?</a></li>
+
+            </ul>
+</div>
+
+<div class="col text">
+  <h3><span></span>Тексты</h3>
+  </div>
+
+<div class="col search">
+  <h3><span></span>Поиск</h3>  
+  <ul>
+    <li>Квартиры <a href="/apartament-rent/77/search">в аренду</a><br/>
+
+      и <a href="/apartament-sale/77/search">на продажу</a></li>
+    <li>Дома <a href="/house-rent/77/search">в аренду</a><br/>
+      и <a href="/house-sale/77/search">на продажу</a></li>
+    <li>Коммерческая недвижимость <a href="/commercial-rent/77/search">в аренду</a><br/>
+      и <a href="/commercial-sale/77/search">на продажу</a></li>
+
+  </ul>
+</div>
+
+<div class="col profile">
+  <h3><span></span>Личный кабинет</h3>
+  <ul>
+          <li><a class="popup" rel="loginwindow" p="login" href="/user/login">Вход</a></li>
+      <li><a class="popup" rel="reg" p="register" href="/user/register">Регистрация</a></li>
+        
+    <li>
+
+    <a class="popup" rel="loginwindow" href="/user/login?forward=%2Flot%2Fadd">Подать объявление</a></li>
+  </ul>
+</div>
+
+<div class="col side">
+  <a href="/terms">Пользовательское соглашение</a></div>  </div>
+  <div class="b"></div>
+</div>
+</div>
+</body>
+
+</html>

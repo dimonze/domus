@@ -1,0 +1,36 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Claim
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          claim_claim
+    with_doctrine_route:     1
+
+    config:
+      actions:
+        _edit: { credentials: [admin-access] }
+        _delete: { credentials: [admin-access] }
+      fields:
+        title_link: { label: Название блога }
+        user_name: { label: Пожаловался }
+        lot_title: { label: Объявление }
+        theme_and_body: { label: Тема и текст жалобы }
+        created_at: { label:Когда пожаловались }
+        claim_theme_id: { label: Тема жалобы }
+        body: { label: Сообщение }
+        ex_actions: { label: Действия }
+      list:
+        display: [_user_name, _lot_title, _theme_and_body, created_at, _ex_actions]
+        sort: [created_at, desc]
+        title: Жалобы
+        object_actions: {}
+        actions: {}
+      filter:
+        display: [claim_theme_id, status, created_at]
+      form:    ~
+      edit:    ~
+      new:     false

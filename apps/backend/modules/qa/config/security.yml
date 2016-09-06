@@ -1,0 +1,6 @@
+editSuccess:
+  credentials: [redactor-qa-actions]
+deleteSuccess:
+  credentials: [redactor-qa-delete]
+all:
+  credentials: [redactor-qa]

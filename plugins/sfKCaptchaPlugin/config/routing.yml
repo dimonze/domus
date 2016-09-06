@@ -1,0 +1,3 @@
+kcaptcha:
+  url:    /kcaptcha.png
+  params: { module: kcaptcha, action: index }

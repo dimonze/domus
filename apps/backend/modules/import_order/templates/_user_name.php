@@ -1,0 +1,1 @@
+<?= link_to($import_order->User->name, 'user/edit?id=' . $import_order->User->id) ?><br><?= $import_order->User->email?>

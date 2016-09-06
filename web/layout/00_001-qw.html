@@ -1,0 +1,638 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=8" />
+  <title>QW</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  
+  <link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="/css/print.css" />
+  <!--[if IE 6]>
+    <link rel='stylesheet' type='text/css' media='screen' href="/css/ie6.css" />
+    <script type="text/javascript" src="/js/dd.js"></script>
+  <![endif]-->
+  <!--[if IE 7]>
+    <link rel='stylesheet' type='text/css' media='screen' href="/css/ie7.css" />
+  <![endif]-->
+  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js">
+  </script>
+  <script type="text/javascript" src="/js/global.js"></script>
+  <script type="text/javascript" src="/js/test.js"></script>
+</head>
+<body id="front"><div id="container">
+<div id="header">
+
+  <a class="new-insertion" href="#">Подать объявление<span></span></a>
+
+  <ul class="login-nav">
+    <li><a href="#">Регистрация</a></li><li class="enter"><a href="#">Вход<span></span></a></li>
+  </ul>
+  
+  <a href="/apartament-sale/74/search" class="logo"><img src="/images/no-repeat.png" alt="Место.ру"/></a>
+
+  <div style="background: url(http://mesto.ru/images/region/77.gif) no-repeat scroll left top transparent;" class="cityMenu">
+    <a id="citySelect" toggle=".cityMenu .outlinemenu" href="#"><span>г. Москва</span></a>
+
+    <div style="display: none;" class="outlinemenu">
+      <iframe frameborder="0" class="select-hider"></iframe>
+        <ul class="cityScroll">
+          <li style="display: none;" class="current" rel="77"><a href="/apartament-sale/77/search">г. Москва</a>          </li>
+          <li rel="50"><a href="/apartament-sale/50/search">Московская обл.</a></li>
+          <li rel="47"><a href="/apartament-sale/47/search">Ленинградская обл.</a></li>
+          <li rel="78"><a href="/apartament-sale/78/search">г. Санкт-Петербург</a></li>
+          <li rel="76"><a href="/apartament-sale/76/search">Ярославская обл.</a></li>
+        </ul>
+      </iframe>
+    </div>
+  </div>
+
+  <!-- .top-nav надо вытянуть в линию -->
+  <ul class="top-nav">
+    <li class="inner"><a href="#"><em><span>Новости <var></var></span></em></a>
+      <div class="corner"></div>
+      <div class="dropbox">
+        <div class="dropbox-wrap">
+          <ul>
+            <li><a href="#">Новости рынка</a></li>
+            <li><a href="#">Новости компаний</a></li>
+            <li><a href="#">Новости портала</a></li>
+          </ul>
+          <div class="dropbox-cn dropbox-tl"></div>
+          <div class="dropbox-cn dropbox-tr"></div>
+        </div>
+        <div class="dropbox-cn dropbox-bl"></div>
+        <div class="dropbox-cn dropbox-br"></div>
+      </div>
+    </li>
+    <li><a href="#"><em>Статьи</em></a></li>
+    <li><a href="#"><em>Аналитика</em></a></li>
+    <li class="inner current"><a href="#"><em><span>Эксперты <var></var></span></em></a>
+      <div class="corner"></div>
+      <div class="dropbox">
+        <div class="dropbox-wrap">
+          <ul>
+            <li><a href="#">Экспертные мнения</a></li>
+            <li><a href="#">Авторские колонки</a></li>
+          </ul>
+          <div class="dropbox-cn dropbox-tl"></div>
+          <div class="dropbox-cn dropbox-tr"></div>
+        </div>
+        <div class="dropbox-cn dropbox-bl"></div>
+        <div class="dropbox-cn dropbox-br"></div>
+      </div>
+    </li>
+    <li class="inner"><a href="#"><em><span>Рейтинги <var></var></span></em></a>
+      <div class="corner"></div>
+      <div class="dropbox">
+        <div class="dropbox-wrap">
+          <ul>
+            <li><a href="#">Рейтинги компаний</a></li>
+            <li><a href="#">Рейтинги риэлторов</a></li>
+          </ul>
+          <div class="dropbox-cn dropbox-tl"></div>
+          <div class="dropbox-cn dropbox-tr"></div>
+        </div>
+        <div class="dropbox-cn dropbox-bl"></div>
+        <div class="dropbox-cn dropbox-br"></div>
+      </div>
+    </li>
+    <li class="inner"><a href="#"><em><span>Еще <var></var></span></em></a>
+      <div class="corner"></div>
+      <div class="dropbox">
+        <div class="dropbox-wrap">
+          <ul>
+            <li><a href="#">События</a></li>
+            <li><a href="#">Блоги пользователей</a></li>
+            <li><a href="#">Вопросы ответы</a></li>
+            <li><a href="#">Опросы</a></li>
+          </ul>
+          <div class="dropbox-cn dropbox-tl"></div>
+          <div class="dropbox-cn dropbox-tr"></div>
+        </div>
+        <div class="dropbox-cn dropbox-bl"></div>
+        <div class="dropbox-cn dropbox-br"></div>
+      </div>
+    </li>
+  </ul>
+    
+</div>
+
+<div id="wrapper">
+  <ul class="globalMenu">
+    <li class="first active first-active">
+    <a href="/apartament-sale/74/search" title="Найти квартиру и комнату">КВАРТИРЫ<br/>продажа</a>  </li>
+    <li class="">
+    <a href="/apartament-rent/74/search" title="Найти квартиру и комнату">КВАРТИРЫ<br/>аренда</a>  </li>
+    <li class="">
+    <a href="/house-sale/74/search" title="Найти дом и участок">ДОМА И УЧАСТКИ<br/>продажа</a>  </li>
+    <li class="">
+    <a href="/house-rent/74/search" title="Найти дом">ДОМА<br/>аренда</a>  </li>
+    <li class="">
+    <a href="/commercial-sale/74/search" title="Найти недвижимость">КОММЕРЧЕСКАЯ<br/>продажа</a>  </li>
+    <li class="last">
+    <a href="/commercial-rent/74/search" title="Найти недвижимость">КОММЕРЧЕСКАЯ<br/>аренда</a>  </li>
+  </ul>
+  <div class="tab">
+    <a class="tab-link-search" href="#">Поиск недвижимости по карте</a>
+    <a class="tab-link-stat" href="#">789 агентств, риэлторов и собственников</a>
+    <div class="adv-counter">
+      <div>
+        <span class="num1"></span><span class="num1"></span><span class="num3"></span> <span class="num7"></span><span class="num5"></span><span class="num0"></span>
+      </div>
+      объявлений
+    </div>
+    <a class="button link-local" href="#"><span>Найти квартиру</span></a>
+    <a class="button link-new-ad" href="#"><span>Подать объявление</span></a>
+  </div>
+
+  <div class="nav-tree">
+    <a href="#">Главная</a> <span class="slash">/</span> Вопросы и ответы
+  </div>
+  
+  <div id="content">
+    
+    
+    <div class="rc-box qw-box">
+      <div class="rc t"><div></div></div>
+      <div class="content">
+        <a href="#" class="blue-button" id="make-q">Задать вопрос<span></span></a>
+        <h2><a href="#"><span class="png24"></span>Вопросы и ответы</a></h2>
+        <h2 class="qw-h2-in">25 мая</h2>
+        <div class="bubble-wrp">
+          <img src="/images/avatar-def.png" class="bubble-foto" alt=""/>
+          <div class="bubble3">
+            <div class="tail-l png24"></div>
+            <div class="tl bbl-corn png24"></div><div class="tr bbl-corn png24"></div>
+            <div class="bubble3-content">
+              <h4><a href="#">Винни-Пух и всё-всё-всё</a></h4>
+              <p>
+                Однажды вы тоже столкнетесь с неведомым. Неведомым, 
+                неведомым и еще раз неведомым. Стоит что бы видеть 
+                как будет в две строки.
+              </p>
+              <h5 class="qw-info">Турлаев Иван, 12 апреля, 15:45</h5>
+              <h5>Коммерческая недвижимость</h5>
+              <div class="qw-actions">
+                <a href="#" class="to-reply">Ответить<span class="png24"></span></a>
+                <a href="#" class="reply">2 ответа<span class="png24"></span></a>
+              </div>
+            </div>
+            <div class="bl bbl-corn png24"></div><div class="br bbl-corn png24"></div>
+          </div>
+        </div>
+        <div class="bubble-wrp">
+          <img src="/images/avatar-def.png" class="bubble-foto" alt=""/>
+          <div class="bubble3">
+            <div class="tail-l png24"></div>
+            <div class="tl bbl-corn png24"></div><div class="tr bbl-corn png24"></div>
+            <div class="bubble3-content">
+              <h4><a href="#">Винни-Пух и всё-всё-всё</a></h4>
+              <p>
+                Однажды вы тоже столкнетесь с неведомым. Неведомым, 
+                неведомым и еще раз неведомым. Стоит что бы видеть 
+                как будет в две строки.
+              </p>
+              <h5 class="qw-info">Турлаев Иван, 12 апреля, 15:45</h5>
+              <h5>Коммерческая недвижимость</h5>
+              <div class="qw-actions">
+                <a href="#" class="to-reply">Ответить<span class="png24"></span></a>
+                <a href="#" class="reply">2 ответа<span class="png24"></span></a>
+              </div>
+            </div>
+            <div class="bl bbl-corn png24"></div><div class="br bbl-corn png24"></div>
+          </div>
+        </div>
+        <div class="bubble-wrp">
+          <img src="/images/avatar-def.png" class="bubble-foto" alt=""/>
+          <div class="bubble3">
+            <div class="tail-l png24"></div>
+            <div class="tl bbl-corn png24"></div><div class="tr bbl-corn png24"></div>
+            <div class="bubble3-content">
+              <h4><a href="#">Винни-Пух и всё-всё-всё</a></h4>
+              <p>
+                Однажды вы тоже столкнетесь с неведомым. Неведомым, 
+                неведомым и еще раз неведомым. Стоит что бы видеть 
+                как будет в две строки.
+              </p>
+              <h5 class="qw-info">Турлаев Иван, 12 апреля, 15:45</h5>
+              <h5>Коммерческая недвижимость</h5>
+              <div class="qw-actions">
+                <a href="#" class="to-reply">Ответить<span class="png24"></span></a>
+                <a href="#" class="reply">2 ответа<span class="png24"></span></a>
+              </div>
+            </div>
+            <div class="bl bbl-corn png24"></div><div class="br bbl-corn png24"></div>
+          </div>
+        </div>
+        <div class="bubble-wrp">
+          <img src="/images/avatar-def.png" class="bubble-foto" alt=""/>
+          <div class="bubble3">
+            <div class="tail-l png24"></div>
+            <div class="tl bbl-corn png24"></div><div class="tr bbl-corn png24"></div>
+            <div class="bubble3-content">
+              <h4><a href="#">Винни-Пух и всё-всё-всё</a></h4>
+              <p>
+                Однажды вы тоже столкнетесь с неведомым. Неведомым, 
+                неведомым и еще раз неведомым. Стоит что бы видеть 
+                как будет в две строки.
+              </p>
+              <h5 class="qw-info">Турлаев Иван, 12 апреля, 15:45</h5>
+              <h5>Коммерческая недвижимость</h5>
+              <div class="qw-actions">
+                <a href="#" class="to-reply">Ответить<span class="png24"></span></a>
+                <a href="#" class="reply">2 ответа<span class="png24"></span></a>
+              </div>
+            </div>
+            <div class="bl bbl-corn png24"></div><div class="br bbl-corn png24"></div>
+          </div>
+        </div>
+        
+      </div><!-- .content -->
+      <div class="rc b"><div></div></div>
+    </div><!-- .rc-box + .qw-box -->
+    
+    <div class="rc-box qw-box">
+      <div class="rc t"><div></div></div>
+      <div class="content">
+        
+        <h2 class="qw-h2-in">24 мая</h2>
+        <div class="bubble-wrp">
+          <img src="/images/avatar-def.png" class="bubble-foto" alt=""/>
+          <div class="bubble3">
+            <div class="tail-l png24"></div>
+            <div class="tl bbl-corn png24"></div><div class="tr bbl-corn png24"></div>
+            <div class="bubble3-content">
+              <h4><a href="#">Винни-Пух и всё-всё-всё</a></h4>
+              <p>
+                Однажды вы тоже столкнетесь с неведомым. Неведомым, 
+                неведомым и еще раз неведомым. Стоит что бы видеть 
+                как будет в две строки.
+              </p>
+              <h5 class="qw-info">Турлаев Иван, 12 апреля, 15:45</h5>
+              <h5>Коммерческая недвижимость</h5>
+              <div class="qw-actions">
+                <a href="#" class="to-reply">Ответить<span class="png24"></span></a>
+                <a href="#" class="reply">2 ответа<span class="png24"></span></a>
+              </div>
+            </div>
+            <div class="bl bbl-corn png24"></div><div class="br bbl-corn png24"></div>
+          </div>
+        </div>
+        <div class="bubble-wrp">
+          <img src="/images/avatar-def.png" class="bubble-foto" alt=""/>
+          <div class="bubble3">
+            <div class="tail-l png24"></div>
+            <div class="tl bbl-corn png24"></div><div class="tr bbl-corn png24"></div>
+            <div class="bubble3-content">
+              <h4><a href="#">Винни-Пух и всё-всё-всё</a></h4>
+              <p>
+                Однажды вы тоже столкнетесь с неведомым. Неведомым, 
+                неведомым и еще раз неведомым. Стоит что бы видеть 
+                как будет в две строки.
+              </p>
+              <h5 class="qw-info">Турлаев Иван, 12 апреля, 15:45</h5>
+              <h5>Коммерческая недвижимость</h5>
+              <div class="qw-actions">
+                <a href="#" class="to-reply">Ответить<span class="png24"></span></a>
+                <a href="#" class="reply">2 ответа<span class="png24"></span></a>
+              </div>
+            </div>
+            <div class="bl bbl-corn png24"></div><div class="br bbl-corn png24"></div>
+          </div>
+        </div>
+        <div class="bubble-wrp">
+          <img src="/images/avatar-def.png" class="bubble-foto" alt=""/>
+          <div class="bubble3">
+            <div class="tail-l png24"></div>
+            <div class="tl bbl-corn png24"></div><div class="tr bbl-corn png24"></div>
+            <div class="bubble3-content">
+              <h4><a href="#">Винни-Пух и всё-всё-всё</a></h4>
+              <p>
+                Однажды вы тоже столкнетесь с неведомым. Неведомым, 
+                неведомым и еще раз неведомым. Стоит что бы видеть 
+                как будет в две строки.
+              </p>
+              <h5 class="qw-info">Турлаев Иван, 12 апреля, 15:45</h5>
+              <h5>Коммерческая недвижимость</h5>
+              <div class="qw-actions">
+                <a href="#" class="to-reply">Ответить<span class="png24"></span></a>
+                <a href="#" class="reply">2 ответа<span class="png24"></span></a>
+              </div>
+            </div>
+            <div class="bl bbl-corn png24"></div><div class="br bbl-corn png24"></div>
+          </div>
+        </div>
+        <div class="bubble-wrp">
+          <img src="/images/avatar-def.png" class="bubble-foto" alt=""/>
+          <div class="bubble3">
+            <div class="tail-l png24"></div>
+            <div class="tl bbl-corn png24"></div><div class="tr bbl-corn png24"></div>
+            <div class="bubble3-content">
+              <h4><a href="#">Винни-Пух и всё-всё-всё</a></h4>
+              <p>
+                Однажды вы тоже столкнетесь с неведомым. Неведомым, 
+                неведомым и еще раз неведомым. Стоит что бы видеть 
+                как будет в две строки.
+              </p>
+              <h5 class="qw-info">Турлаев Иван, 12 апреля, 15:45</h5>
+              <h5>Коммерческая недвижимость</h5>
+              <div class="qw-actions">
+                <a href="#" class="to-reply">Ответить<span class="png24"></span></a>
+                <a href="#" class="reply">2 ответа<span class="png24"></span></a>
+              </div>
+            </div>
+            <div class="bl bbl-corn png24"></div><div class="br bbl-corn png24"></div>
+          </div>
+        </div>
+        
+      </div><!-- .content -->
+      <div class="rc b"><div></div></div>
+    </div><!-- .rc-box + .qw-box -->
+
+    
+    <div class="rc-box expert-opinion">
+      <div class="rc t"><div></div></div>
+      <div class="content">
+        <h2><a href="#"><span></span>Экспертное мнение</a></h2>
+              
+        <div class="bubble-wrp">
+          <img src="/images/upic50x50.jpg" class="bubble-foto" alt=""/>        	<div class="bubble3">        	  <div class="tail-l"></div>        	  <div class="tl bbl-corn"></div><div class="tr bbl-corn"></div>        	  <div class="bubble3-content">        	    <h5>Чак Норрис, <strong>МетроГодвинМауер</strong></h5>                            	    <h4><a href="#">Винни-Пух и всё-всё-всё</a></h4>
+              <p>
+                Однажды вы тоже столкнетесь с неведомым. Неведомым, 
+                неведомым и еще раз неведомым. Стоит что бы видеть 
+                как будет в две строки.
+              </p>        	  </div>        	  <div class="bl bbl-corn"></div><div class="br bbl-corn"></div>        	</div>        </div>
+        <div class="bubble-wrp">
+          <img src="/images/upic50x50.jpg" class="bubble-foto" alt=""/>
+          <div class="bubble3">
+            <div class="tail-l"></div>
+            <div class="tl bbl-corn"></div><div class="tr bbl-corn"></div>
+            <div class="bubble3-content">
+              <h5>Анатолий Вассерман, <strong>НТВ</strong></h5>   
+              <h4><a href="#">Будьте достойны</a></h4>                 
+              <p>Как люди могут выбрать власть, если их никто не уважает?</p>
+            </div>
+            <div class="bl bbl-corn"></div><div class="br bbl-corn"></div>
+          </div>
+        </div>
+        
+        <div class="bubble-wrp">
+          <img src="/images/upic50x50.jpg" class="bubble-foto" alt=""/>
+          <div class="bubble3">
+            <div class="tail-l"></div>
+            <div class="tl bbl-corn"></div><div class="tr bbl-corn"></div>
+            <div class="bubble3-content">
+              <h5>Анатолий Вассерман, <strong>НТВ</strong></h5>   
+              <h4><a href="#">Будьте достойны</a></h4>                 
+              <p>Как люди могут выбрать власть, если их никто не уважает?</p>
+            </div>
+            <div class="bl bbl-corn"></div><div class="br bbl-corn"></div>
+          </div>
+        </div>
+      </div><!-- .content -->
+      <a class="bottom-link" href="#">Все экспертные мнения</a>
+      <div class="rc b"><div></div></div>
+    </div><!-- .rc-box + .expert-opinion -->
+    
+    
+    <div class="rc-box news authors-box">
+      <div class="rc t"><div></div></div>
+      <div class="content">
+        <h2><a href="#"><span></span>Авторские колонки</a></h2>
+        
+        <div class="bubble-wrp">
+          <img src="/images/upic50x50.jpg" class="bubble-foto" alt=""/>
+          <div class="bubble3">
+            <div class="tail-l"></div>
+            <div class="tl bbl-corn"></div><div class="tr bbl-corn"></div>
+            <div class="bubble3-content">
+              <h5>Чак Норрис, <strong>МетроГодвинМауер</strong></h5>                    
+              <h4><a href="#">Винни-Пух и всё-всё-всё</a></h4>
+              <p>
+                Однажды вы тоже столкнетесь с неведомым. Неведомым, 
+                неведомым и еще раз неведомым. Стоит что бы видеть 
+                как будет в две строки.
+              </p>
+            </div>
+            <div class="bl bbl-corn"></div><div class="br bbl-corn"></div>
+          </div>
+        </div>
+        <div class="bubble-wrp">
+          <img src="/images/upic50x50.jpg" class="bubble-foto" alt=""/>
+          <div class="bubble3">
+            <div class="tail-l"></div>
+            <div class="tl bbl-corn"></div><div class="tr bbl-corn"></div>
+            <div class="bubble3-content">
+              <h5>Анатолий Вассерман, <strong>НТВ</strong></h5>   
+              <h4><a href="#">Будьте достойны</a></h4>                 
+              <p>Как люди могут выбрать власть, если их никто не уважает?</p>
+            </div>
+            <div class="bl bbl-corn"></div><div class="br bbl-corn"></div>
+          </div>
+        </div>
+        <div class="bubble-wrp">
+          <img src="/images/upic50x50.jpg" class="bubble-foto" alt=""/>
+          <div class="bubble3">
+            <div class="tail-l"></div>
+            <div class="tl bbl-corn"></div><div class="tr bbl-corn"></div>
+            <div class="bubble3-content">
+              <h5>Анатолий Вассерман, <strong>НТВ</strong></h5>   
+              <h4><a href="#">Будьте достойны</a></h4>                 
+              <p>Как люди могут выбрать власть, если их никто не уважает?</p>
+            </div>
+            <div class="bl bbl-corn"></div><div class="br bbl-corn"></div>
+          </div>
+        </div>
+        <div class="bubble-wrp">
+          <img src="/images/upic50x50.jpg" class="bubble-foto" alt=""/>
+          <div class="bubble3">
+            <div class="tail-l"></div>
+            <div class="tl bbl-corn"></div><div class="tr bbl-corn"></div>
+            <div class="bubble3-content">
+              <h5>Чак Норрис, <strong>МетроГодвинМауер</strong></h5>                    
+              <h4><a href="#">Винни-Пух и всё-всё-всё</a></h4>
+              <p>
+                Однажды вы тоже столкнетесь с неведомым. Неведомым, 
+                неведомым и еще раз неведомым. Стоит что бы видеть 
+                как будет в две строки.
+              </p>
+            </div>
+            <div class="bl bbl-corn"></div><div class="br bbl-corn"></div>
+          </div>
+        </div>
+        <div class="bubble-wrp">
+          <img src="/images/upic50x50.jpg" class="bubble-foto" alt=""/>
+          <div class="bubble3">
+            <div class="tail-l"></div>
+            <div class="tl bbl-corn"></div><div class="tr bbl-corn"></div>
+            <div class="bubble3-content">
+              <h5>Анатолий Вассерман, <strong>НТВ</strong></h5>   
+              <h4><a href="#">Будьте достойны</a></h4>                 
+              <p>Как люди могут выбрать власть, если их никто не уважает?</p>
+            </div>
+            <div class="bl bbl-corn"></div><div class="br bbl-corn"></div>
+          </div>
+        </div>
+      </div><!-- .content -->
+      <a class="bottom-link" href="#">Все авторские колонки</a>
+      <div class="rc b"><div></div></div>
+    </div><!-- .rc-box + .authors-box -->
+    
+
+    
+
+  </div><!-- #content -->
+  
+  <div id="aside">
+    
+    <div class="rc-box news themes blue-box">
+      <div class="rc t"><div></div></div>
+      <div class="content">
+
+        <div class="col-left">
+          <h2><a href="#"><span></span>Темы</a></h2>
+          <ul>          	<li><span>Коммерческая недвижимость</span></li>
+            <li><a href="#">Загородная недвижимость</a></li>
+            <li><a href="#">Аренда недвижимости</a></li>
+            <li><a href="#">Юридическое сопровождение сделок</a></li>
+            <li><a href="#">Инвестиции в недвижимость</a></li>
+            <li><a href="#">Строительство</a></li>
+            <li><a href="#">Ипотека</a></li>          </ul>
+        </div>
+        
+      </div>      
+      <div class="rc b"><div></div></div>
+    </div>
+    
+    <form action="#" class="aside-search">
+      <input type="text" name="q-search" class="aside-search-t" />
+      <input type="submit" value="" class="aside-search-s" />
+      <span>Поиск по новостям, событиям, статьям, мнениям и вопросам</span>
+    </form>
+    
+    <div class="rc-box events">
+      <div class="rc t"><div></div></div>
+      <div class="content">
+        <h2><a href="#"><span></span>События дня</a></h2>
+        <img src="/images/pic-events.jpg" alt="" />
+
+        <div class="item">
+          <h5>12 апреля, 12:29</h5>
+          <h4><a href="#">Москва может получить деньги из федерального бюджета на строительство</a></h4>
+          <p>Москве могут быть выделены средства из федерального бюджета на строительство дорог и улучшение транспортной ситуации,</p>
+        </div>
+
+        <div class="item">
+          <h5>12 апреля, 12:29</h5>
+          <h4><a href="#">Власти Петербурга оценили гостиницу "Астория" в 1,5 миллиарда</a></h4>
+          <p>Однажды вы тоже столкнетесь с неведомым.</p>
+        </div>
+
+        <div class="item">
+          <h5>12 апреля, 12:29</h5>
+          <h4><a href="#">Москва может получить деньги из федерального бюджета на строительство</a></h4>
+          <p>Однажды вы тоже столкнетесь с неведомым.</p>
+        </div>
+      </div>
+      <a class="bottom-link" href="#">Все события</a>
+      <div class="rc b"><div></div></div>
+    </div>
+
+    <div class="articles-analytics-box articles-analytics-box-posts">
+      <div class="wrap">
+        <div class="box articles">
+          <h2><a href="#"><span></span>Статьи</a></h2>
+
+          <div class="item">
+            <img src="/images/pic-aa01.jpg" alt=""/>
+            <h6>12 апреля, 12:29</h6>
+            <h4><a href="#">В Дубае снова скупают недвижимость</a></h4>
+            <p>Активисты нескольких общественных движений, выступающих за сохранение исторического облика Москвы</p>
+          </div>
+          <div class="item">
+            <img class="thumb" src="/images/pic-aa03.jpg" alt=""/>
+            <h6>12 апреля, 12:29</h6>
+            <h4><a href="#">В Дубае снова скупают недвижимость и что теперь делать </a></h4>
+            <p>Активисты нескольких общественных движений, выступающих</p>
+          </div>
+          <div class="item">
+            <img class="thumb" src="/images/pic-aa04.jpg" alt=""/>
+            <h6>12 апреля, 12:29</h6>
+            <h4><a href="#">В Дубае снова скупают</a></h4>
+            <p>Активисты нескольких общественных движений, выступающих за сохранение исторического облика Москвы</p>
+          </div>
+
+          <a class="bottom-link" href="#">Больше статей</a>
+        </div>
+
+      </div>
+      <div class="b"></div>
+    </div>
+    
+  </div><!-- #aside -->
+</div><!-- #wrapper -->
+
+<div id="footer">
+  <div class="lining">
+
+    <div class="col side">
+      <p>&copy; Место.ру, 2009—2010</p>
+      <ul>
+        <li><a href="#">Контактная информация</a></li>
+        <li><a href="#">Карта сайта</a></li>
+      </ul>
+    </div>
+
+    <div class="col info">
+      <h3><span></span>Справка</h3>
+      <ul>
+        <li><a href="#">Что такое Место.ру?</a></li>
+        <li><a href="#">Как пользоваться Место.ру?</a></li>
+      </ul>
+    </div>
+
+    <div class="col text">
+      <h3><span></span>Тексты</h3>
+      <ul>
+        <li><a href="#">Новости рынка</a></li>
+        <li><a href="#">Статьи</a></li>
+        <li><a href="#">Авторские колонки</a></li>
+        <li><a href="#">Вопросы и ответы</a></li>
+        <li><a href="#">Рейтинги</a></li>
+        <li><a href="#">Опросы</a></li>
+      </ul>
+    </div>
+
+    <div class="col search">
+      <h3><span></span>Поиск</h3>
+      <ul>
+        <li>Квартиры <a href="#">в аренду</a><br/>и <a href="#">на продажу</a></li>
+        <li>Дома <a href="#">в аренду</a><br/>и <a href="#">на продажу</a></li>
+        <li>Коммерческая недвижимость <a href="#">в аренду</a><br/>и <a href="#">на продажу</a></li>
+      </ul>
+    </div>
+
+    <div class="col profile">
+      <h3><span></span>Личный кабинет</h3>
+      <ul>
+        <li><a href="#">Вход</a></li>
+        <li><a href="#">Регистрация</a></li>
+        <li><a href="#">Подать объявление</a></li>
+      </ul>
+    </div>
+
+    <div class="col side">
+      <a href="#">Пользовательское соглашение</a>
+    </div>
+    
+  </div>
+  <div class="b"></div>
+</div><!-- #footer -->
+
+
+</div></body>
+</html>

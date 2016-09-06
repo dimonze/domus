@@ -1,0 +1,4 @@
+all:
+  javascripts:
+    - /sfFormExtraPlugin/js/tiny_mce/tiny_mce
+    - ajaxupload.js

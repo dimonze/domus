@@ -1,0 +1,23 @@
+rendering: ~
+new_building:
+  class: newBuildingFilter
+subdomain:
+  class: subdomainFilter
+translit:
+  class: translitFilter
+security:  ~
+
+remember:
+  class: rememberFilter
+
+geoip:
+  class: geoIpFilter
+
+cache:     ~
+common:
+  class: sfCommonFilter
+
+browsercondition:
+  class: sfBrowserLayoutFilter
+
+execution: ~

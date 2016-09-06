@@ -1,0 +1,252 @@
+all:
+  news:
+    index:
+      events: true
+      analytics: false
+      article: true
+      news: true
+      experts: true
+      authors: true
+      qa: true
+      questionnaire: true
+      blogs: true
+    show:
+      events: false
+      analytics: false
+      article: true
+      news: true
+      experts: true
+      authors: true
+      qa: true
+      questionnaire: true
+      blogs: true
+    theme:
+      events: false
+      analytics: false
+      article: true
+      news: true
+      experts: true
+      authors: true
+      qa: true
+      questionnaire: true
+      blogs: true
+  author_article:
+    index:
+      events: true
+      analytics: false
+      article: true
+      news: true
+      experts: true
+      authors: true
+      qa: true
+      questionnaire: true
+      blogs: true
+    show:
+      events: false
+      analytics: false
+      article: true
+      news: true
+      experts: true
+      authors: true
+      qa: true
+      questionnaire: true
+      blogs: true
+    theme:
+      events: false
+      analytics: false
+      article: true
+      news: true
+      experts: true
+      authors: true
+      qa: true
+      questionnaire: true
+      blogs: true
+    showauthor:
+      events: false
+      analytics: false
+      article: true
+      news: true
+      experts: true
+      authors: true
+      qa: true
+      questionnaire: true
+      blogs: true
+  blogs:
+    index:
+      events: true
+      analytics: false
+      article: true
+      news: true
+      experts: true
+      authors: true
+      qa: true
+      questionnaire: true
+      blogs: true
+    show:
+      events: false
+      analytics: false
+      article: true
+      news: true
+      experts: true
+      authors: true
+      qa: true
+      questionnaire: true
+      blogs: true
+    theme:
+      events: false
+      analytics: false
+      article: true
+      news: true
+      experts: true
+      authors: true
+      qa: true
+      questionnaire: true
+      blogs: true
+    showpost:
+      events: false
+      analytics: false
+      article: true
+      news: true
+      experts: true
+      authors: true
+      qa: true
+      questionnaire: true
+      blogs: true
+  expert_article:
+    index:
+      events: true
+      analytics: false
+      article: true
+      news: true
+      experts: true
+      authors: true
+      qa: true
+      questionnaire: true
+      blogs: true
+    show:
+      events: false
+      analytics: false
+      article: true
+      news: true
+      experts: true
+      authors: true
+      qa: true
+      questionnaire: true
+      blogs: true
+    theme:
+      events: false
+      analytics: false
+      article: true
+      news: true
+      experts: true
+      authors: true
+      qa: true
+      questionnaire: true
+      blogs: true
+    showauthor:
+      events: false
+      analytics: false
+      article: true
+      news: true
+      experts: true
+      authors: true
+      qa: true
+      questionnaire: true
+      blogs: true
+  qa:
+    index:
+      events: true
+      analytics: false
+      article: true
+      news: true
+      experts: true
+      authors: true
+      qa: true
+      questionnaire: true
+      blogs: true
+    show:
+      events: false
+      analytics: false
+      article: true
+      news: true
+      experts: true
+      authors: true
+      qa: true
+      questionnaire: true
+      blogs: true
+    theme:
+      events: false
+      analytics: false
+      article: true
+      news: true
+      experts: true
+      authors: true
+      qa: true
+      questionnaire: true
+      blogs: true
+    add:
+      events: false
+      analytics: false
+      article: true
+      news: true
+      experts: true
+      authors: true
+      qa: true
+      questionnaire: true
+      blogs: true
+  questionnaire:
+    index:
+      events: true
+      analytics: false
+      article: true
+      news: true
+      experts: true
+      authors: true
+      qa: true
+      questionnaire: true
+      blogs: true
+  page:
+    homepage:
+      events: true
+      analytics: false
+      article: false
+      news: false
+      experts: true
+      authors: true
+      qa: false
+      questionnaire: false
+      blogs: true
+  posts:
+    index:
+      events: true
+      analytics: false
+      article: true
+      news: true
+      experts: true
+      authors: true
+      qa: true
+      questionnaire: true
+      blogs: true
+      events_banner: true
+    show:
+      events: false
+      analytics: false
+      article: true
+      news: true
+      experts: true
+      authors: true
+      qa: true
+      questionnaire: true
+      blogs: true
+      events_banner: true
+    theme:
+      events: false
+      analytics: false
+      article: true
+      news: true
+      experts: true
+      authors: true
+      qa: true
+      questionnaire: true
+      blogs: true
+      events_banner: true

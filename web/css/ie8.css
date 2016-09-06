@@ -1,0 +1,44 @@
+.roomsBox label {padding-right: 0;}
+.reg form div img.captcha {display: block; padding: 0 !important; position: relative; left: 194px; margin-top: 10px !important;}
+.user-type ul.selected0{background-position: 17px 9px;}
+.user-type ul.selected1 {background-position: 17px 33px;}
+.user-type ul.selected2 {background-position: 17px 57px;}
+.user-type ul.selected3 {background-position: 17px 81px;}
+
+
+.popupWrap input.phone {
+  width: 91px !important;
+}
+
+
+.big-img-card {
+  display: block;
+}
+
+.selectbox.items li.last {
+  border: none;
+  background: url(/images/sb-bottom.png) left bottom no-repeat;
+}
+
+.selectbox.items li.last .item {
+  background: url(/images/sb-rb-r.png) right bottom no-repeat;
+}
+.flat div span em {top: 2.4em;}
+
+.advancedSearch .inputBox label input {
+  top: -3px;
+}
+
+#search-gmap {
+height: 358px;
+}
+
+.scrollBox a img {
+  position: relative;
+  top: -1px;
+}
+
+.profile-message {
+  behavior: url(/css/PIE.htc);
+}
+

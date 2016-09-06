@@ -1,0 +1,4 @@
+SHELL=/bin/bash
+*/15 * * * * root /var/www/mesto.ru/scripts/run_indexer_delta.sh > /dev/null
+03  */3 * * * root /var/www/mesto.ru/scripts/run_indexer_main.sh > /dev/null
+23  */3 * * * root /usr/bin/indexer landing_pages leads_main --rotate > /dev/null

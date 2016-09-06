@@ -1,0 +1,229 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="X-Ua-Compatible" content="IE=8"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="title" content=""/>
+  <meta name="name" content=""/>
+  <title></title>
+  <link rel="stylesheet" type="text/css" media="all" href="vitrina.css"/>
+  <script type="text/javascript" src="http://mesto.ru/js/jquery.js"></script>
+  <script type="text/javascript">
+    $(function(){
+      $('.vitrina_top-nav .vitrina_inner > a', '#vitrina_header').click(function () {
+        var li = $(this).parent();
+        li.siblings()
+            .removeClass('expanded')
+            .removeClass('current-expanded')
+            .removeClass('expanded-right')
+            .removeClass('current-expanded-right');
+        if (li.hasClass('current')) {
+          li.toggleClass('current-expanded');
+          if (li.is(':last-child')) li.toggleClass('current-expanded-right');
+        } else {
+          li.toggleClass('expanded');
+          if (li.is(':last-child')) li.toggleClass('expanded-right');
+        }
+        if ($.browser.msie) {
+          $('div.vitrina_dropbox-tl', 'ul.vitrina_top-nav').css({width:$(this).closest('li').find('div.vitrina_dropbox-wrap').width() + 2});
+        }
+
+        $('body').bind('click.topnav', function (e) {
+          if ($(e).closest('div.vitrina_dropbox').length == 0 && e.className != 'vitrina_dropbox') {
+            $('ul.vitrina_top-nav li').siblings()
+                .removeClass('expanded')
+                .removeClass('current-expanded')
+                .removeClass('expanded-right')
+                .removeClass('current-expanded-right');
+
+            $('body').unbind('click.topnav');
+          }
+        });
+
+        return false;
+      });
+    });
+  </script>
+
+  <link rel="shortcut icon" href="http://mesto.ru/images/favicon.ico"/>
+</head>
+<body>
+<div id="vitrina_bg">
+  <div id="vitrina_container">
+    <div class="vitrina_global">
+      <div class="vitrina_contentBox">
+        <div class="vitrina_headerBox">
+          <div id="vitrina_header">
+
+            <a class="vitrina_logo" href="http://mesto.ru/77/main"><img alt="Место.ру" src="http://mesto.ru/images/no-repeat.png"/></a>
+
+            <ul class="vitrina_top-nav">
+              <li class="vitrina_inner ">
+                <a href="#"><em><span>Новости <var></var></span></em></a>
+                <div class="vitrina_corner"></div>
+                <div class="vitrina_dropbox">
+                  <div class="vitrina_dropbox-wrap">
+                    <ul>
+                      <li><a href="http://mesto.ru/77/news/news-market">Новости рынка</a></li>
+                      <li><a href="http://mesto.ru/77/news/news-portal">Новости портала</a>
+                      </li>
+                      <li><a href="http://mesto.ru/77/news/news-companies">Новости компаний</a>
+                      </li>
+                    </ul>
+                    <div class="vitrina_dropbox-cn vitrina_dropbox-tl"></div>
+                    <div class="vitrina_dropbox-cn vitrina_dropbox-tr"></div>
+                  </div>
+                  <div class="vitrina_dropbox-cn vitrina_dropbox-bl"></div>
+                  <div class="vitrina_dropbox-cn vitrina_dropbox-br"></div>
+                </div>
+              </li>
+              <li>
+                <a href="http://mesto.ru/77/posts/article"><em>Статьи</em></a></li>
+              <li>
+                <a href="http://mesto.ru/77/posts/analytics"><em>Аналитика</em></a></li>
+              <li class="vitrina_inner ">
+                <a href="#"><em><span>Эксперты <var></var></span></em></a>
+                <div class="vitrina_corner"></div>
+                <div class="vitrina_dropbox">
+                  <div class="vitrina_dropbox-wrap">
+                    <ul>
+                      <li><a href="http://mesto.ru/77/experts">Экспертные мнения</a></li>
+                      <li><a href="http://mesto.ru/77/authors">Авторские колонки</a></li>
+                    </ul>
+                    <div class="vitrina_dropbox-cn vitrina_dropbox-tl"></div>
+                    <div class="vitrina_dropbox-cn vitrina_dropbox-tr"></div>
+                  </div>
+                  <div class="vitrina_dropbox-cn vitrina_dropbox-bl"></div>
+                  <div class="vitrina_dropbox-cn vitrina_dropbox-br"></div>
+                </div>
+              </li>
+              <li class="vitrina_discount">
+                <a href="http://mesto.ru/price"><em>Скидки</em></a></li>
+              <li class="vitrina_inner ">
+                <a href="#"><em><span>Еще <var></var></span></em></a>
+                <div class="vitrina_corner"></div>
+                <div class="vitrina_dropbox">
+                  <div class="vitrina_dropbox-wrap">
+                    <ul>
+                      <li><a href="http://mesto.ru/77/posts/events">События</a></li>
+                      <li><a href="http://mesto.ru/questionnaire">Опросы</a></li>
+                      <li><a href="http://mesto.ru/77/qa">Вопрос&amp;Ответ</a></li>
+                      <li><a href="http://mesto.ru/blog/all">Блоги</a></li>
+                      <li><a href="http://mesto.ru/info">О Место.ру</a></li>
+                      <li><a href="http://mesto.ru/rating/company">Рейтинги компаний</a></li>
+                      <li><a href="http://mesto.ru/rating/realtor">Рейтинги риэлторов</a></li>
+                      <li><a href="http://mesto.ru/agencies">Агентства</a></li>
+                    </ul>
+                    <div class="vitrina_dropbox-cn vitrina_dropbox-tl"></div>
+                    <div class="vitrina_dropbox-cn vitrina_dropbox-tr"></div>
+                  </div>
+                  <div class="vitrina_dropbox-cn vitrina_dropbox-bl"></div>
+                  <div class="vitrina_dropbox-cn vitrina_dropbox-br"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="vitrina_wrapper">
+          <ul class="vitrina_innerGlobalMenu">
+            <li class=" ">
+              <a href="http://mesto.ru/apartament-sale/77/search">КВАРТИРЫ<br>продажа</a></li>
+            <li class=" ">
+              <a href="http://mesto.ru/apartament-rent/77/search">КВАРТИРЫ<br>аренда</a></li>
+            <li class=" ">
+              <a href="#" class="no-click">ДОМА И УЧАСТКИ<br>продажа</a>
+            </li>
+            <li class=" ">
+              <a href="http://mesto.ru/house-rent/77/search">ДОМА<br>аренда</a></li>
+            <li class=" ">
+              <a href="http://mesto.ru/commercial-sale/77/search">КОММЕРЧЕСКАЯ<br>продажа</a>
+            </li>
+            <li>
+              <a href="#" class="no-click">КОММЕРЧЕСКАЯ<br>аренда</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="vitrina_footer">
+        <div class="vitrina_lining">
+          <div class="vitrina_col vitrina_side">
+            <p>© 2011. Все права защищены</p>
+            <ul>
+              <li>
+                <a href="http://mesto.ru/contacts">Контактная информация</a></li>
+              <li><a href="http://mesto.ru/sitemap">Карта сайта</a></li>
+              <li>
+              </li>
+            </ul>
+          </div>
+
+          <div class="vitrina_col vitrina_info">
+            <h3><span></span>Справка</h3>
+            <ul>
+              <li><a href="http://mesto.ru/about">Что&nbsp;такое&nbsp;Место.ру?</a></li>
+              <li><a href="http://mesto.ru/terms">Условия&nbsp;использования</a></li>
+              <li><a href="http://mesto.ru/info">Как&nbsp;пользоваться&nbsp;Место.ру?</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="vitrina_col vitrina_text">
+            <h3><span></span>Тексты</h3>
+            <ul>
+              <li><a href="http://mesto.ru/77/news/news-market">Новости рынка</a></li>
+              <li><a href="http://mesto.ru/77/posts/article">Статьи</a></li>
+              <li><a href="http://mesto.ru/77/posts/analytics">Аналитика</a></li>
+              <li><a href="http://mesto.ru/77/authors">Авторские колонки</a></li>
+              <li><a href="http://mesto.ru/77/experts">Экспертные мнения</a></li>
+              <li><a href="http://mesto.ru/77/posts/events">События</a></li>
+              <li><a href="http://mesto.ru/questionnaire">Опросы</a></li>
+              <li><a href="http://mesto.ru/77/qa">Вопрос&Ответ</a></li>
+            </ul>
+          </div>
+
+          <div class="vitrina_col vitrina_search">
+            <h3><span></span>Поиск</h3>
+            <ul>
+              <li>Квартиры
+                <a href="http://mesto.ru/apartament-rent/77/search">в аренду</a><br/>
+                и <a href="http://mesto.ru/apartament-sale/77/search">на продажу</a></li>
+              <li>Дома <a href="http://mesto.ru/house-rent/77/search">в аренду</a><br/>
+                и <a href="http://mesto.ru/house-sale/77/search">на продажу</a></li>
+              <li>Коммерческая недвижимость
+                <a href="http://mesto.ru/commercial-rent/77/search">в аренду</a><br/>
+                и <a href="http://mesto.ru/commercial-sale/77/search">на продажу</a></li>
+            </ul>
+          </div>
+
+          <div class="vitrina_col vitrina_profile">
+            <ul>
+              <li>&nbsp;</li>
+            </ul>
+          </div>
+
+          <div class="vitrina_col vitrina_side">
+            <ul>
+              <li><a href="http://mesto.ru/terms">Пользовательское соглашение</a></li>
+              <li>
+                <a href="http://mesto.ru/sitemap/apartament">&laquo;Городская недвижимость&raquo;: жилая</a>
+              </li>
+              <li>
+                <a href="http://mesto.ru/sitemap/commercial">&laquo;Городская недвижимость&raquo;: коммерческая</a>
+              </li>
+              <li>
+                <a href="http://mesto.ru/sitemap/house">&laquo;Загородная недвижимость&raquo;: жилая</a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+        <div class="vitrina_b"></div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

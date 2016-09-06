@@ -1,0 +1,6 @@
+editSuccess:
+  credentials: [create-blog-actions]
+deleteSuccess:
+  credentials: [create-blog-delete]
+all:
+  credentials: [create-blog]

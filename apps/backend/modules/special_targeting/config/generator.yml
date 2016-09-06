@@ -1,0 +1,31 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           SpecialTargeting
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          special_targeting
+    with_doctrine_route:     1
+
+    config:
+      actions: ~
+      fields:
+        id:       { label: Номер }
+        name:     { label: Заголовок }
+        text:     { label: Текст }
+        slug:     { label: часть url }
+      list:
+        display:  [id, name, slug]
+        object_actions: ~
+        actions: ~
+        title: Страницы таргетинга
+      filter:
+        class: false
+      form:    ~
+      edit:
+        title: Редактирование страницы "%%name%%"
+      new:
+        title: Создание новой страницы

@@ -1,0 +1,73 @@
+Form:
+  Form71:
+    type: new-building
+    FormField: FormField54
+    position: 1
+    required: true
+
+  Form72:
+    type: new-building
+    FormField: FormField55
+    position: 2
+    required: false
+
+  Form73:
+    type: new-building
+    FormField: FormField63
+    position: 3
+    required: false
+
+  Form74:
+    type: new-building
+    FormField: FormField5
+    position: 4
+    required: true
+
+  Form75:
+    type: new-building
+    FormField: FormField57
+    position: 5
+    required: false
+
+  Form76:
+    type: new-building
+    FormField: FormField3
+    position: 6
+    required: false
+
+  Form77:
+    type: new-building
+    FormField: FormField4
+    position: 7
+    required: false
+
+  Form78:
+    type: new-building
+    FormField: FormField58
+    position: 8
+    required: false
+
+  Form79:
+    type: new-building
+    FormField: FormField59
+    position: 9
+    required: false
+
+  Form710:
+    type: new-building
+    FormField: FormField60
+    position: 10
+    required: false
+
+  Form711:
+    type: new-building
+    FormField: FormField61
+    position: 11
+    required: false
+
+  Form730:
+    type: new-building
+    FormField: FormFieldD_CR
+    position: 30
+    required: false
+

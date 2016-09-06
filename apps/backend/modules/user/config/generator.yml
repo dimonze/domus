@@ -1,0 +1,69 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           User
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          user
+    with_doctrine_route:     1
+
+    config:
+      actions:
+        _edit: { credentials: [admin-user-actions] }
+        _delete: { credentials: [admin-user-delete] }
+
+      fields:
+        group_id: {label: Группа}
+        Group: {label: Группа}
+        type: {label: Тип}
+        type_text: {label: Тип}
+        employer_id: {label: Компания (id)}
+        approved: {label: Подтвержден}
+        email: {label: Email}
+        password: {label: Пароль}
+        name: {label: Имя и Фамилия}
+        phone: {label: Телефон}
+        company_name: {label: Компания}
+        regions: {label: Регион}
+        created_at: {label: Дата регистрации}
+        last_login: {label: Последний вход}
+        active_count: {label: Объявлений}
+        deleted: {label: Удален}
+        per-page: {label: На страницу}
+
+      list:
+        display: [id, name, type, company_name, email, created_at, last_login, active_count]
+        sort: [created_at, desc]
+        title: Список пользователей
+        layout: stacked
+        table_method: createQueryNbLots
+        object_actions:
+          _edit: ~
+          _delete: ~
+          delete:
+            name: Delete User %%email%%
+            action: delete
+            icon: /images/icons/delete.png
+            params: confirm=Are you sure you want to delete user %%email%%?
+        batch_actions:
+          _delete: ~
+        params: |
+          <small>%%id%%</small> %%name%% <i>%%type_text%%</i> <b>%%company_name%%</b>
+            (<a href="mailto:%%email%%">%%email%%</a>)<br />
+          <small>группа "%%Group%%", зарегистрирован %%created_at%%,
+            был на сайте %%last_login%%</small><br />
+          %%_nb_lots_link%% %%_pm_link%%
+
+
+      filter:
+        display: [id, group_id, type, email, name, phone, company_name, regions, employer_id, created_at, last_login, deleted, per-page]
+
+      form:
+        class: BackendUserForm
+      edit:
+        title: Редактирование пользователя %%email%%
+      new:
+        title: Создание пользователя

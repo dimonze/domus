@@ -1,0 +1,1 @@
+<?= ImportFile::$types[$import_log->file_type] ?>

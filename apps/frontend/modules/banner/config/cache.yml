@@ -1,0 +1,7 @@
+_invisible:
+  enabled: true
+  lifetime: 3699
+
+_one_banner:
+  enabled: true
+  lifetime: 21700

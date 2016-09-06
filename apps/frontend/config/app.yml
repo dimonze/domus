@@ -1,0 +1,2899 @@
+all:
+  exchange:
+    update: true
+    rates:
+      RUR: 1
+      USD: 29.6396
+      EUR: 43.751
+  site: www.domus.server.garin.su
+  new_building_domain: novostroyki.domus.server.garin.su
+  cottage_domain: cottage.domus.server.garin.su
+  admin:
+    email: admin@domus.server.garin.su
+  feedback:
+    user_id: 1
+  support:
+    user_id: 11
+  blog_creator:
+    user_id: 75
+  consult:
+    list: 
+      type_1:
+        -
+          email: canis@garin-studio.ru
+        - 
+          email:  andrey@mesto.ru
+          is_bcc: true
+        -
+          email:  n3xt@garin-studio.ru
+          is_bcc: true  
+      type_2:
+        -
+          email: canis@garin-studio.ru
+        - 
+          email: andrey@mesto.ru
+          is_cc: true
+        -
+          email: n3xt@garin-studio.ru
+          is_cc: true
+  gmap:
+    key: AIzaSyBDsNyfsGRzQouSQR7rzmYOI4E4W5P4MXw
+  upload:
+    tmp_dir: tmp
+  .array:
+    usermenu:
+      -
+        url: lot/favourite
+        name: Избранные объявления
+      -
+        url: lot/my
+        name: Мои объявления
+      -
+        url: lot/add
+        name: Разместить объявление
+      -
+        url: import/importFile
+        name: Пакетная загрузка
+        user_type: company
+      -
+        ~
+      -
+        url: pm/index
+        name: Мои сообщения
+      -
+        url: 'pm/index#c:create-pm$moderator:1'
+        name: Обратная связь
+      -
+        ~
+      -
+        url: user/employees
+        name: Сотрудники компании
+        user_type: company
+      -
+        url: user/invite
+        name: Пригласить сотрудников
+        user_type: company
+      -
+        ~
+      -
+        url: blogs/my
+        name: Мой блог
+        credential: admin-access
+      -
+        ~
+      -
+        url: user/profile
+        name: Профайл и настройки
+      -
+        ~
+      -
+        url: lot/moderate
+        name: Модерация
+        credential: moder-access
+      -
+        url: statistic
+        name: Статистика
+        credential: moder-statistic
+      -
+        url: /backend.php
+        name: Администрирование
+        credential: admin-access
+
+    mainmenu:
+      -
+        name:  'Квартиры и комнаты'
+        class: 'flats'
+        fields:
+          -
+            name: 'Продажа'
+            type: 'apartament-sale'
+            presets:
+              -
+                name: 'Продажа квартир'
+                url:  '/prodazha-kvartir-i-komnat/kvartira'
+              -
+                name: 'Продажа однокомнатных квартир'
+                url:  '/prodazha-kvartir-i-komnat/1-komnatnaya-kvartira'
+              -
+                name: 'Продажа двухкомнатных квартир'
+                url:  '/prodazha-kvartir-i-komnat/2-h-komnatnaya-kvartira'
+              -
+                name: 'Продажа трехкомнатных квартир'
+                url:  '/prodazha-kvartir-i-komnat/3-h-komnatnaya-kvartira'
+              -
+                name: 'Продажа комнат'
+                url:  '/prodazha-kvartir-i-komnat/komnata'
+              -
+                name: 'Все квартиры и комнаты'
+                url:  '/prodazha-kvartir-i-komnat'
+          -
+            name: 'Аренда'
+            type: 'apartament-rent'
+            presets:
+              -
+                name: 'Аренда квартир'
+                url:  '/arenda-kvartir-i-komnat/kvartira'
+              -
+                name: 'Аренда однокомнатных квартир'
+                url:  '/arenda-kvartir-i-komnat/1-komnatnaya-kvartira'
+              -
+                name: 'Аренда двухкомнатных квартир'
+                url:  '/arenda-kvartir-i-komnat/2-h-komnatnaya-kvartira'
+              -
+                name: 'Аренда трехкомнатных квартир'
+                url:  '/arenda-kvartir-i-komnat/3-h-komnatnaya-kvartira'
+              -
+                name: 'Аренда комнат'
+                url:  '/arenda-kvartir-i-komnat/komnata'
+              -
+                name: 'Все квартиры и комнаты'
+                url:  '/arenda-kvartir-i-komnat'
+          -
+            name: 'Новостройки'
+            to_nb: true
+            regions: [77, 50]
+            type: 'new_building-sale'
+            presets:
+              -
+                name: 'Новостройки Москвы'
+                url:  '/novostroyki-v-moskve'
+              -
+                name: 'Новостройки Подмосковья'
+                url:  '/novostroyki-v-podmoskovie'
+      -
+        name:   'Дома и участки'
+        class: 'houses'
+        fields:
+          -
+            name: 'Продажа'
+            type: 'house-sale'
+            presets:
+              -
+                name: 'Продажа дач'
+                url:  '/prodazha-domov-i-uchastkov/dacha'
+              -  
+                name: 'Продажа домов и коттеджей'
+                url:  '/prodazha-domov-i-uchastkov/kottedzh-dom'
+              -
+                name: 'Продажа части дома'
+                url:  '/prodazha-domov-i-uchastkov/1-2-doma'
+              -
+                name: 'Продажа особняков'
+                url:  '/prodazha-domov-i-uchastkov/osobnyak'
+              -
+                name: 'Продажа таунхаусов'
+                url:  '/prodazha-domov-i-uchastkov/taunhaus'
+              -
+                name: 'Продажа участков'
+                url:  '/prodazha-domov-i-uchastkov/uchastok'
+              -
+                name: 'Все дома и участки'
+                url:  '/prodazha-domov-i-uchastkov'
+          -
+            name: 'Аренда'
+            type: 'house-rent'
+            presets:
+              -
+                name: 'Аренда домов и дач'
+                url:  '/arenda-domov'
+          -
+            name: 'Поселки'
+            to_cottage: true
+            regions: [50]
+            type: 'cottage-sale'
+            presets:
+              -
+                name: 'Коттеджные поселки Подмосковья'
+                url: '/cottage-v-podmoskovie/poselki'
+              -
+                name: 'Таунхаусы и Дуплексы Подмосковья'
+                url: '/cottage-v-podmoskovie/townhouse'
+              -
+                name: 'Участки в Подмосковье'
+                url: '/cottage-v-podmoskovie/uchastki'
+              -
+                name: 'Все поселки Подмосковья'
+                url: '/cottage-v-podmoskovie'
+      -
+        name:   'Коммерческая недвижимость'
+        class: 'com'
+        fields:
+          -
+            name: 'Продажа'
+            type: 'commercial-sale'
+            presets:
+              -
+                name: 'Продажа офисов'
+                url:  '/prodazha-komercheskoy-nedvizhimosti/ofis'
+              -
+                name: 'Продажа торговых помещений'
+                url:  '/prodazha-komercheskoy-nedvizhimosti/torgovye-ploschadi'
+              -
+                name: 'Продажа магазинов'
+                url:  '/prodazha-komercheskoy-nedvizhimosti/magazin'
+              -
+                name: 'Продажа складов'
+                url:  '/prodazha-komercheskoy-nedvizhimosti/sklad'
+              -
+                name: 'Продажа ресторанов и кафе'
+                url:  '/prodazha-komercheskoy-nedvizhimosti/restoran-kafe'
+              -
+                name: 'Продажа производственных площадей'
+                url:  '/prodazha-komercheskoy-nedvizhimosti/proizvod-ploschadi'
+              -
+                name: 'Продажа отдельно стоящих зданий'
+                url:  '/prodazha-komercheskoy-nedvizhimosti/otd-stoyaschee-zdanie'
+              -
+                name: 'Продажа помещений свободного назначения'
+                url:  '/prodazha-komercheskoy-nedvizhimosti/svobodnogo-naznacheniya'
+              -
+                name: 'Продажа земли'
+                url:  '/prodazha-komercheskoy-nedvizhimosti/zemlya'
+              -
+                name: 'Вся коммерческая недвижимость'
+                url:  '/prodazha-komercheskoy-nedvizhimosti'
+          -
+            name: 'Аренда'
+            type: 'commercial-rent'
+            presets:
+              -
+                name: 'Аренда офисов'
+                url:  '/arenda-komercheskoy-nedvizhimosti/ofis'
+              -
+                name: 'Аренда торговых помещений'
+                url:  '/arenda-komercheskoy-nedvizhimosti/torgovye-ploschadi'
+              -
+                name: 'Аренда магазинов'
+                url:  '/arenda-komercheskoy-nedvizhimosti/magazin'
+              -
+                name: 'Аренда складов'
+                url:  '/arenda-komercheskoy-nedvizhimosti/sklad'
+              -
+                name: 'Аренда ресторанов и кафе'
+                url:  '/arenda-komercheskoy-nedvizhimosti/restoran-kafe'
+              -
+                name: 'Аренда производственных площадей'
+                url:  '/arenda-komercheskoy-nedvizhimosti/proizvod-ploschadi'
+              -
+                name: 'Аренда отдельно стоящих зданий'
+                url:  '/arenda-komercheskoy-nedvizhimosti/otd-stoyaschee-zdanie'
+              -
+                name: 'Аренда помещений свободного назначения'
+                url:  '/arenda-komercheskoy-nedvizhimosti/svobodnogo-naznacheniya'
+              -
+                name: 'Аренда земли'
+                url:  '/arenda-komercheskoy-nedvizhimosti/zemlya'
+              -
+                name: 'Вся коммерческая недвижимость'
+                url:  '/arenda-komercheskoy-nedvizhimosti'
+    nb_names:
+      77: 'Новостройки Москвы'
+      50: 'Новостройки Подмосковья'
+    cottage_names:
+      50: 'Коттеджи Подмосковья'
+  layout:
+    copyright: '© %год%. Все права защищены'
+    header_counters: ''
+    rambler_top100: ''
+  lot:
+    my_max_per_page: 10
+    periods:
+      sale:
+        30: '1 месяц'
+        60: '2 месяца'
+        90: '3 месяца'
+      rent:
+        30: '1 месяц'
+        60: '2 месяца'
+        90: '3 месяца'
+    types:
+      cottage-sale:
+        name: 'Коттеджный поселок на продажу'
+        menu: 'КОТТЕДЖНЫЕ ПОСЕЛКИ<br />продажа'
+        short: 'коттеджные поселки продажа'
+        plural: 'Коттеджные поселки на продажу'
+        dative: 'Коттеджный поселок на продажу'
+        accusative: 'Коттеджные поселки на продажу'
+        menu-search: 'Найти коттеджный поселок'
+        pm-ask: 'продаже коттеджного поселка'
+        anchor: 'о продаже {types} в коттеджных поселках'
+      new_building-sale:
+        name: 'Новостройка на продажу'
+        menu: 'НОВОСТРОЙКИ<br />продажа'
+        short: 'новостройки продажа'
+        plural: 'Новостройки на продажу'
+        dative: 'Новостройку на продажу'
+        accusative: 'Новостройки на продажу'
+        menu-search: 'Найти новостройку'
+        pm-ask: 'продаже новостройки'
+        anchor: 'о продаже квартир в новостройках'
+      apartament-sale:
+        name: 'Квартира/комната на продажу'
+        menu: 'КВАРТИРЫ<br />продажа'
+        short: 'квартиры продажа'
+        plural: 'Квартиры/комнаты на продажу'
+        dative: 'Квартиру/комнату на продажу'
+        accusative: 'квартир/комнат на продажу'
+        menu-search: 'Найти квартиру и комнату'
+        pm-ask: 'продаже квартиры'
+        anchor: 'о продаже квартир'
+      apartament-rent:
+        name: 'Квартира/комната в аренду'
+        menu: 'КВАРТИРЫ<br />аренда'
+        short: 'квартиры аренда'
+        plural: 'Квартиры/комнаты в аренду'
+        dative: 'Квартиру/комнату в аренду'
+        accusative: 'квартир/комнат в аренду'
+        menu-search: 'Найти квартиру и комнату'
+        pm-ask: 'аренде квартиры'
+        anchor: 'об аренде квартир'
+      house-sale:
+        name: 'Дом/участок на продажу'
+        menu: 'ДОМА И УЧАСТКИ<br />продажа'
+        short: 'дома и участки продажа'
+        plural: 'Дома и участки на продажу'
+        dative: 'Дом/участок на продажу'
+        accusative: 'домов/участков на продажу'
+        menu-search: 'Найти дом и участок'
+        pm-ask: 'продаже дома/участка'
+        anchor: 'о продаже домов и участков'
+      house-rent:
+        name: 'Дом в аренду'
+        menu: 'ДОМА<br />аренда'
+        short: 'дома аренда'
+        plural: 'Дома в аренду'
+        dative: 'Дом в аренду'
+        accusative: 'домов/участков в аренду'
+        menu-search: 'Найти дом'
+        pm-ask: 'аренде дома/участка'
+        anchor: 'об аренде домов'
+      commercial-sale:
+        name: 'Коммерческая недвижимость на продажу'
+        menu: 'КОММЕРЧЕСКАЯ<br />продажа'
+        short: 'коммерческая продажа'
+        plural: 'Коммерческая недвижимость на продажу'
+        dative: 'Коммерческую недвижимость на продажу'
+        accusative: 'объектов коммерческой недвижимости на продажу'
+        menu-search: 'Найти недвижимость'
+        pm-ask: 'продаже недвижимости'
+        anchor: 'о продаже коммерческой недвижимости'
+      commercial-rent:
+        name: 'Коммерческая недвижимость в аренду'
+        menu: 'КОММЕРЧЕСКАЯ<br />аренда'
+        short: 'коммерческая аренда'
+        plural: 'Коммерческая недвижимость в аренду'
+        dative: 'Коммерческую недвижимость в аренду'
+        accusative: 'объектов коммерческой недвижимости в аренду'
+        menu-search: 'Найти недвижимость'
+        pm-ask: 'аренде недвижимости'
+        anchor: 'об аренде коммерческой недвижимости'
+    info-order:
+      cottage-sale: { }
+      new_building-sale: {  }
+      apartament-sale:
+        1:
+          - '2'
+          - '54'
+          - '1'
+          - '7'
+          - '8'
+        2:
+          - '3'
+          - '4'
+          - '9'
+          - '5'
+          - '6'
+        3:
+          - '14'
+          - '10'
+          - '11'
+          - '15'
+          - '12'
+          - '13'
+        4:
+          - '20'
+      apartament-rent:
+        1:
+          - '16'
+          - '55'
+          - '1'
+          - '7'
+          - '8'
+          - '17'
+          - '18'
+          - '19'
+        2:
+          - '3'
+          - '4'
+          - '9'
+          - '5'
+          - '6'
+        3:
+          - '10'
+          - '11'
+          - '15'
+          - '12'
+        4:
+          - '21'
+      house-sale:
+        1:
+          - '2'
+          - '26'
+          - '27'
+          - '35'
+          - '4'
+          - '28'
+          - '29'
+          - '5'
+        2:
+          - '30'
+          - '31'
+          - '32'
+          - '33'
+          - '34'
+        3:
+          - '38'
+          - '39'
+          - '40'
+          - '41'
+          - '42'
+        4:
+          - '36'
+          - '37'
+        5:
+          - '43'
+          - '44'
+          - '22'
+      house-rent:
+        1:
+          - '16'
+          - '26'
+          - '27'
+          - '35'
+          - '18'
+          - '19'
+        2:
+          - '4'
+          - '28'
+          - '61'
+          - '5'
+        3:
+          - '60'
+          - '56'
+          - '57'
+          - '59'
+          - '58'
+        4:
+          - '36'
+          - '37'
+        5:
+          - '43'
+          - '44'
+          - '23'
+      commercial-sale:
+        1:
+          - '2'
+          - '46'
+          - '47'
+          - '45'
+        2:
+          - '3'
+          - '4'
+          - '49'
+          - '5'
+          - '48'
+        3:
+          - '50'
+          - '51'
+          - '52'
+        4:
+          - '24'
+      commercial-rent:
+        1:
+          - '53'
+          - '46'
+          - '45'
+        2:
+          - '3'
+          - '4'
+          - '49'
+          - '5'
+          - '48'
+        3:
+          - '50'
+          - '52'
+          - '63'
+        4:
+          - '25'
+  retargeting_routes:
+    array:
+      - 'lot/favourite'
+      - 'lot/add'
+      - 'import/importFile'
+      - 'lot/my'
+      - 'user/pm'
+      - 'blogs/my'
+      - 'user/employees'
+      - 'user/profile'
+      - 'user/invite'
+  search:
+    max_per_page: 20
+    fields:
+      new_building-sale:
+        price_rur_from:
+          label: 'Цена от (RUR)'
+          name: 'price[from][rur]'
+          value:
+            - 20000
+            - 30000
+            - 40000
+            - 50000
+            - 70000
+            - 100000
+            - 150000
+            - 200000
+            - 250000
+            - 300000
+            - 350000
+            - 400000
+            - 450000
+            - 500000
+            - 700000
+            - 1000000
+        price_rur_to:
+          label: 'Цена до (RUR)'
+          name: 'price[to][rur]'
+          value:
+            - 20000
+            - 30000
+            - 40000
+            - 50000
+            - 70000
+            - 100000
+            - 150000
+            - 200000
+            - 250000
+            - 300000
+            - 350000
+            - 400000
+            - 450000
+            - 500000
+            - 700000
+            - 1000000
+        price_usd_from:
+          label: 'Цена от (USD)'
+          name: 'price[from][usd]'
+          value:
+            - 700
+            - 1000
+            - 1500
+            - 2000
+            - 2500
+            - 3000
+            - 3500
+            - 4000
+            - 4500
+            - 5000
+            - 5500
+            - 6000
+            - 6500
+            - 7000
+            - 7500
+            - 8000
+            - 8500
+            - 9000
+            - 9500
+            - 10000
+            - 20000
+            - 30000
+        price_usd_to:
+          label: 'Цена до (USD)'
+          name: 'price[to][usd]'
+          value:
+            - 700
+            - 1000
+            - 1500
+            - 2000
+            - 2500
+            - 3000
+            - 3500
+            - 4000
+            - 4500
+            - 5000
+            - 5500
+            - 6000
+            - 6500
+            - 7000
+            - 7500
+            - 8000
+            - 8500
+            - 9000
+            - 9500
+            - 10000
+            - 20000
+            - 30000
+        price_eur_from:
+          label: 'Цена от (EUR)'
+          name: 'price[from][eur]'
+          value:
+            - 700
+            - 1000
+            - 1500
+            - 2000
+            - 2500
+            - 3000
+            - 3500
+            - 4000
+            - 4500
+            - 5000
+            - 5500
+            - 6000
+            - 6500
+            - 7000
+            - 7500
+            - 8000
+            - 8500
+            - 9000
+            - 9500
+            - 10000
+            - 20000
+            - 30000
+        price_eur_to:
+          label: 'Цена до (EUR)'
+          name: 'price[to][eur]'
+          value:
+            - 700
+            - 1000
+            - 1500
+            - 2000
+            - 2500
+            - 3000
+            - 3500
+            - 4000
+            - 4500
+            - 5000
+            - 5500
+            - 6000
+            - 6500
+            - 7000
+            - 7500
+            - 8000
+            - 8500
+            - 9000
+            - 9500
+            - 10000
+            - 20000
+            - 30000
+        field72_from:
+          label: 'Площадь от'
+          name: 'field[72][from]'
+          value:
+            - 30
+            - 40
+            - 50
+            - 60
+            - 70
+            - 80
+            - 90
+            - 100
+            - 125
+            - 150
+            - 175
+            - 200
+            - 250
+            - 300
+        field73_to:
+          label: 'Площадь до'
+          name: 'field[73][to]'
+          value:
+            - 30
+            - 40
+            - 50
+            - 60
+            - 70
+            - 80
+            - 90
+            - 100
+            - 125
+            - 150
+            - 175
+            - 200
+            - 250
+            - 300
+      apartament-sale:
+        price_rur_from:
+          label: 'Цена от (RUR)'
+          name: 'price[from][rur]'
+          value:
+            - 500000
+            - 1000000
+            - 2000000
+            - 3000000
+            - 4000000
+            - 5000000
+            - 6000000
+            - 7000000
+            - 8000000
+            - 9000000
+            - 10000000
+            - 15000000
+            - 20000000
+            - 25000000
+            - 30000000
+            - 35000000
+            - 40000000
+            - 45000000
+            - 50000000
+            - 60000000
+            - 70000000
+            - 80000000
+            - 90000000
+            - 100000000
+            - 200000000
+            - 300000000
+        price_rur_to:
+          label: 'Цена до (RUR)'
+          name: 'price[to][rur]'
+          value:
+            - 500000
+            - 1000000
+            - 2000000
+            - 3000000
+            - 4000000
+            - 5000000
+            - 6000000
+            - 7000000
+            - 8000000
+            - 9000000
+            - 10000000
+            - 15000000
+            - 20000000
+            - 25000000
+            - 30000000
+            - 35000000
+            - 40000000
+            - 45000000
+            - 50000000
+            - 60000000
+            - 70000000
+            - 80000000
+            - 90000000
+            - 100000000
+            - 200000000
+            - 300000000
+        price_usd_from:
+          label: 'Цена от (USD)'
+          name: 'price[from][usd]'
+          value:
+            - 20000
+            - 30000
+            - 40000
+            - 50000
+            - 70000
+            - 100000
+            - 150000
+            - 200000
+            - 250000
+            - 300000
+            - 350000
+            - 400000
+            - 450000
+            - 500000
+            - 550000
+            - 600000
+            - 650000
+            - 700000
+            - 750000
+            - 800000
+            - 850000
+            - 900000
+            - 950000
+            - 1000000
+            - 2000000
+            - 3000000
+            - 4000000
+            - 5000000
+            - 7000000
+            - 10000000
+        price_usd_to:
+          label: 'Цена до (USD)'
+          name: 'price[to][usd]'
+          value:
+            - 20000
+            - 30000
+            - 40000
+            - 50000
+            - 70000
+            - 100000
+            - 150000
+            - 200000
+            - 250000
+            - 300000
+            - 350000
+            - 400000
+            - 450000
+            - 500000
+            - 550000
+            - 600000
+            - 650000
+            - 700000
+            - 750000
+            - 800000
+            - 850000
+            - 900000
+            - 950000
+            - 1000000
+            - 2000000
+            - 3000000
+            - 4000000
+            - 5000000
+            - 7000000
+            - 10000000
+        price_eur_from:
+          label: 'Цена от (EUR)'
+          name: 'price[from][eur]'
+          value:
+            - 20000
+            - 30000
+            - 40000
+            - 50000
+            - 70000
+            - 100000
+            - 150000
+            - 200000
+            - 250000
+            - 300000
+            - 350000
+            - 400000
+            - 450000
+            - 500000
+            - 550000
+            - 600000
+            - 650000
+            - 700000
+            - 750000
+            - 800000
+            - 850000
+            - 900000
+            - 950000
+            - 1000000
+            - 2000000
+            - 3000000
+            - 4000000
+            - 5000000
+            - 7000000
+            - 10000000
+        price_eur_to:
+          label: 'Цена до (EUR)'
+          name: 'price[to][eur]'
+          value:
+            - 20000
+            - 30000
+            - 40000
+            - 50000
+            - 70000
+            - 100000
+            - 150000
+            - 200000
+            - 250000
+            - 300000
+            - 350000
+            - 400000
+            - 450000
+            - 500000
+            - 550000
+            - 600000
+            - 650000
+            - 700000
+            - 750000
+            - 800000
+            - 850000
+            - 900000
+            - 950000
+            - 1000000
+            - 2000000
+            - 3000000
+            - 4000000
+            - 5000000
+            - 7000000
+            - 10000000
+        field1_from:
+          label: 'Площадь от'
+          name: 'field[1][from]'
+          value:
+            - 10
+            - 20
+            - 30
+            - 40
+            - 50
+            - 60
+            - 70
+            - 80
+            - 90
+            - 100
+            - 125
+            - 150
+            - 175
+            - 200
+            - 250
+            - 300
+        field1_to:
+          label: 'Площадь до'
+          name: 'field[1][to]'
+          value:
+            - 10
+            - 20
+            - 30
+            - 40
+            - 50
+            - 60
+            - 70
+            - 80
+            - 90
+            - 100
+            - 125
+            - 150
+            - 175
+            - 200
+            - 250
+            - 300
+      apartament-rent:
+        day:
+          price_rur_from:
+            label: 'Цена от (RUR)'
+            name: 'price[from][rur]'
+            value:
+              - 5000
+              - 10000
+              - 20000
+              - 30000
+              - 40000
+              - 50000
+              - 70000
+              - 100000
+              - 150000
+              - 200000
+              - 250000
+              - 300000
+              - 350000
+              - 400000
+              - 450000
+              - 500000
+              - 700000
+              - 1000000
+          price_rur_to:
+            label: 'Цена до (RUR)'
+            name: 'price[to][rur]'
+            value:
+              - 5000
+              - 10000
+              - 20000
+              - 30000
+              - 40000
+              - 50000
+              - 70000
+              - 100000
+              - 150000
+              - 200000
+              - 250000
+              - 300000
+              - 350000
+              - 400000
+              - 450000
+              - 500000
+          price_usd_from:
+            label: 'Цена от (USD)'
+            name: 'price[from][usd]'
+            value:
+              - 200
+              - 300
+              - 400
+              - 500
+              - 700
+              - 1000
+              - 1500
+              - 2000
+              - 2500
+              - 3000
+              - 3500
+              - 4000
+              - 4500
+              - 5000
+              - 5500
+              - 6000
+              - 6500
+              - 7000
+              - 7500
+              - 8000
+              - 8500
+              - 9000
+              - 9500
+              - 10000
+              - 20000
+              - 30000
+          price_usd_to:
+            label: 'Цена до (USD)'
+            name: 'price[to][usd]'
+            value:
+              - 200
+              - 300
+              - 400
+              - 500
+              - 700
+              - 1000
+              - 1500
+              - 2000
+              - 2500
+              - 3000
+              - 3500
+              - 4000
+              - 4500
+              - 5000
+              - 5500
+              - 6000
+              - 6500
+              - 7000
+              - 7500
+              - 8000
+              - 8500
+              - 9000
+              - 9500
+              - 10000
+              - 20000
+              - 30000
+          price_eur_from:
+            label: 'Цена от (EUR)'
+            name: 'price[from][eur]'
+            value:
+              - 200
+              - 300
+              - 400
+              - 500
+              - 700
+              - 1000
+              - 1500
+              - 2000
+              - 2500
+              - 3000
+              - 3500
+              - 4000
+              - 4500
+              - 5000
+              - 5500
+              - 6000
+              - 6500
+              - 7000
+              - 7500
+              - 8000
+              - 8500
+              - 9000
+              - 9500
+              - 10000
+              - 20000
+              - 30000
+          price_eur_to:
+            label: 'Цена до (EUR)'
+            name: 'price[to][eur]'
+            value:
+              - 200
+              - 300
+              - 400
+              - 500
+              - 700
+              - 1000
+              - 1500
+              - 2000
+              - 2500
+              - 3000
+              - 3500
+              - 4000
+              - 4500
+              - 5000
+              - 5500
+              - 6000
+              - 6500
+              - 7000
+              - 7500
+              - 8000
+              - 8500
+              - 9000
+              - 9500
+              - 10000
+              - 20000
+              - 30000
+        month:
+          price_rur_from:
+            label: 'Цена от (RUR)'
+            name: 'price[from][rur]'
+            value:
+              - 5000
+              - 10000
+              - 20000
+              - 30000
+              - 40000
+              - 50000
+              - 70000
+              - 100000
+              - 150000
+              - 200000
+              - 250000
+              - 300000
+              - 350000
+              - 400000
+              - 450000
+              - 500000
+              - 700000
+              - 1000000
+          price_rur_to:
+            label: 'Цена до (RUR)'
+            name: 'price[to][rur]'
+            value:
+              - 5000
+              - 10000
+              - 20000
+              - 30000
+              - 40000
+              - 50000
+              - 70000
+              - 100000
+              - 150000
+              - 200000
+              - 250000
+              - 300000
+              - 350000
+              - 400000
+              - 450000
+              - 500000
+          price_usd_from:
+            label: 'Цена от (USD)'
+            name: 'price[from][usd]'
+            value:
+              - 200
+              - 300
+              - 400
+              - 500
+              - 700
+              - 1000
+              - 1500
+              - 2000
+              - 2500
+              - 3000
+              - 3500
+              - 4000
+              - 4500
+              - 5000
+              - 5500
+              - 6000
+              - 6500
+              - 7000
+              - 7500
+              - 8000
+              - 8500
+              - 9000
+              - 9500
+              - 10000
+              - 20000
+              - 30000
+          price_usd_to:
+            label: 'Цена до (USD)'
+            name: 'price[to][usd]'
+            value:
+              - 200
+              - 300
+              - 400
+              - 500
+              - 700
+              - 1000
+              - 1500
+              - 2000
+              - 2500
+              - 3000
+              - 3500
+              - 4000
+              - 4500
+              - 5000
+              - 5500
+              - 6000
+              - 6500
+              - 7000
+              - 7500
+              - 8000
+              - 8500
+              - 9000
+              - 9500
+              - 10000
+              - 20000
+              - 30000
+          price_eur_from:
+            label: 'Цена от (EUR)'
+            name: 'price[from][eur]'
+            value:
+              - 200
+              - 300
+              - 400
+              - 500
+              - 700
+              - 1000
+              - 1500
+              - 2000
+              - 2500
+              - 3000
+              - 3500
+              - 4000
+              - 4500
+              - 5000
+              - 5500
+              - 6000
+              - 6500
+              - 7000
+              - 7500
+              - 8000
+              - 8500
+              - 9000
+              - 9500
+              - 10000
+              - 20000
+              - 30000
+          price_eur_to:
+            label: 'Цена до (EUR)'
+            name: 'price[to][eur]'
+            value:
+              - 200
+              - 300
+              - 400
+              - 500
+              - 700
+              - 1000
+              - 1500
+              - 2000
+              - 2500
+              - 3000
+              - 3500
+              - 4000
+              - 4500
+              - 5000
+              - 5500
+              - 6000
+              - 6500
+              - 7000
+              - 7500
+              - 8000
+              - 8500
+              - 9000
+              - 9500
+              - 10000
+              - 20000
+              - 30000
+        field1_from:
+          label: 'Площадь от'
+          name: 'field[1][from]'
+          value:
+            - 10
+            - 20
+            - 30
+            - 40
+            - 50
+            - 60
+            - 70
+            - 80
+            - 90
+            - 100
+            - 125
+            - 150
+            - 175
+            - 200
+            - 250
+            - 300
+        field1_to:
+          label: 'Площадь до'
+          name: 'field[1][to]'
+          value:
+            - 10
+            - 20
+            - 30
+            - 40
+            - 50
+            - 60
+            - 70
+            - 80
+            - 90
+            - 100
+            - 125
+            - 150
+            - 175
+            - 200
+            - 250
+            - 300
+      house-sale:
+        price_rur_from:
+          label: 'Цена от (RUR)'
+          name: 'price[from][rur]'
+          value:
+            - 500000
+            - 1000000
+            - 2000000
+            - 3000000
+            - 4000000
+            - 5000000
+            - 6000000
+            - 7000000
+            - 8000000
+            - 9000000
+            - 10000000
+            - 15000000
+            - 20000000
+            - 25000000
+            - 30000000
+            - 35000000
+            - 40000000
+            - 45000000
+            - 50000000
+            - 60000000
+            - 70000000
+            - 80000000
+            - 90000000
+            - 100000000
+            - 200000000
+            - 300000000
+        price_rur_to:
+          label: 'Цена до (RUR)'
+          name: 'price[to][rur]'
+          value:
+            - 500000
+            - 1000000
+            - 2000000
+            - 3000000
+            - 4000000
+            - 5000000
+            - 6000000
+            - 7000000
+            - 8000000
+            - 9000000
+            - 10000000
+            - 15000000
+            - 20000000
+            - 25000000
+            - 30000000
+            - 35000000
+            - 40000000
+            - 45000000
+            - 50000000
+            - 60000000
+            - 70000000
+            - 80000000
+            - 90000000
+            - 100000000
+            - 200000000
+            - 300000000
+        price_usd_from:
+          label: 'Цена от (USD)'
+          name: 'price[from][usd]'
+          value:
+            - 20000
+            - 30000
+            - 40000
+            - 50000
+            - 70000
+            - 100000
+            - 150000
+            - 200000
+            - 250000
+            - 300000
+            - 350000
+            - 400000
+            - 450000
+            - 500000
+            - 550000
+            - 600000
+            - 650000
+            - 700000
+            - 750000
+            - 800000
+            - 850000
+            - 900000
+            - 950000
+            - 1000000
+            - 2000000
+            - 3000000
+            - 4000000
+            - 5000000
+            - 7000000
+            - 10000000
+        price_usd_to:
+          label: 'Цена до (USD)'
+          name: 'price[to][usd]'
+          value:
+            - 20000
+            - 30000
+            - 40000
+            - 50000
+            - 70000
+            - 100000
+            - 150000
+            - 200000
+            - 250000
+            - 300000
+            - 350000
+            - 400000
+            - 450000
+            - 500000
+            - 550000
+            - 600000
+            - 650000
+            - 700000
+            - 750000
+            - 800000
+            - 850000
+            - 900000
+            - 950000
+            - 1000000
+            - 2000000
+            - 3000000
+            - 4000000
+            - 5000000
+            - 7000000
+            - 10000000
+        price_eur_from:
+          label: 'Цена от (EUR)'
+          name: 'price[from][eur]'
+          value:
+            - 20000
+            - 30000
+            - 40000
+            - 50000
+            - 70000
+            - 100000
+            - 150000
+            - 200000
+            - 250000
+            - 300000
+            - 350000
+            - 400000
+            - 450000
+            - 500000
+            - 550000
+            - 600000
+            - 650000
+            - 700000
+            - 750000
+            - 800000
+            - 850000
+            - 900000
+            - 950000
+            - 1000000
+            - 2000000
+            - 3000000
+            - 4000000
+            - 5000000
+            - 7000000
+            - 10000000
+        price_eur_to:
+          label: 'Цена до (EUR)'
+          name: 'price[to][eur]'
+          value:
+            - 20000
+            - 30000
+            - 40000
+            - 50000
+            - 70000
+            - 100000
+            - 150000
+            - 200000
+            - 250000
+            - 300000
+            - 350000
+            - 400000
+            - 450000
+            - 500000
+            - 550000
+            - 600000
+            - 650000
+            - 700000
+            - 750000
+            - 800000
+            - 850000
+            - 900000
+            - 950000
+            - 1000000
+            - 2000000
+            - 3000000
+            - 4000000
+            - 5000000
+            - 7000000
+            - 10000000
+        field26_from:
+          label: 'Площадь дома от'
+          name: 'field[26][from]'
+          value:
+            - 30
+            - 40
+            - 50
+            - 60
+            - 70
+            - 80
+            - 90
+            - 100
+            - 150
+            - 200
+            - 250
+            - 300
+            - 350
+            - 400
+            - 450
+            - 500
+            - 600
+            - 700
+        field26_to:
+          label: 'Площадь дома до'
+          name: 'field[26][to]'
+          value:
+            - 30
+            - 40
+            - 50
+            - 60
+            - 70
+            - 80
+            - 90
+            - 100
+            - 150
+            - 200
+            - 250
+            - 300
+            - 350
+            - 400
+            - 450
+            - 500
+            - 600
+            - 700
+        field27_from:
+          label: 'Площадь участка от'
+          name: 'field[27][from]'
+          value:
+            - 5
+            - 10
+            - 15
+            - 20
+            - 25
+            - 30
+            - 40
+            - 50
+            - 60
+            - 70
+            - 80
+            - 90
+            - 100
+            - 150
+            - 200
+            - 300
+            - 400
+            - 500
+        field27_to:
+          label: 'Площадь участка до'
+          name: 'field[27][to]'
+          value:
+            - 5
+            - 10
+            - 15
+            - 20
+            - 25
+            - 30
+            - 40
+            - 50
+            - 60
+            - 70
+            - 80
+            - 90
+            - 100
+            - 150
+            - 200
+            - 300
+            - 400
+            - 500
+      house-rent:
+        price_rur_from:
+          label: 'Цена от (RUR)'
+          name: 'price[from][rur]'
+          value:
+            - 5000
+            - 10000
+            - 20000
+            - 30000
+            - 40000
+            - 50000
+            - 60000
+            - 70000
+            - 80000
+            - 90000
+            - 100000
+            - 150000
+            - 200000
+            - 250000
+            - 300000
+            - 350000
+            - 400000
+            - 450000
+            - 500000
+            - 600000
+            - 700000
+            - 800000
+            - 900000
+            - 1000000
+            - 2000000
+            - 3000000
+        price_rur_to:
+          label: 'Цена до (RUR)'
+          name: 'price[to][rur]'
+          value:
+            - 5000
+            - 10000
+            - 20000
+            - 30000
+            - 40000
+            - 50000
+            - 60000
+            - 70000
+            - 80000
+            - 90000
+            - 100000
+            - 150000
+            - 200000
+            - 250000
+            - 300000
+            - 350000
+            - 400000
+            - 450000
+            - 500000
+            - 600000
+            - 700000
+            - 800000
+            - 900000
+            - 1000000
+            - 2000000
+            - 3000000
+        price_usd_from:
+          label: 'Цена от (USD)'
+          name: 'price[from][usd]'
+          value:
+            - 200
+            - 300
+            - 400
+            - 500
+            - 700
+            - 1000
+            - 1500
+            - 2000
+            - 2500
+            - 3000
+            - 3500
+            - 4000
+            - 4500
+            - 5000
+            - 5500
+            - 6000
+            - 6500
+            - 7000
+            - 7500
+            - 8000
+            - 8500
+            - 9000
+            - 9500
+            - 10000
+            - 20000
+            - 30000
+            - 50000
+        price_usd_to:
+          label: 'Цена до (USD)'
+          name: 'price[to][usd]'
+          value:
+            - 200
+            - 300
+            - 400
+            - 500
+            - 700
+            - 1000
+            - 1500
+            - 2000
+            - 2500
+            - 3000
+            - 3500
+            - 4000
+            - 4500
+            - 5000
+            - 5500
+            - 6000
+            - 6500
+            - 7000
+            - 7500
+            - 8000
+            - 8500
+            - 9000
+            - 9500
+            - 10000
+            - 20000
+            - 30000
+            - 50000
+        price_eur_from:
+          label: 'Цена от (EUR)'
+          name: 'price[from][eur]'
+          value:
+            - 200
+            - 300
+            - 400
+            - 500
+            - 700
+            - 1000
+            - 1500
+            - 2000
+            - 2500
+            - 3000
+            - 3500
+            - 4000
+            - 4500
+            - 5000
+            - 5500
+            - 6000
+            - 6500
+            - 7000
+            - 7500
+            - 8000
+            - 8500
+            - 9000
+            - 9500
+            - 10000
+            - 20000
+            - 30000
+            - 50000
+        price_eur_to:
+          label: 'Цена до (EUR)'
+          name: 'price[to][eur]'
+          value:
+            - 200
+            - 300
+            - 400
+            - 500
+            - 700
+            - 1000
+            - 1500
+            - 2000
+            - 2500
+            - 3000
+            - 3500
+            - 4000
+            - 4500
+            - 5000
+            - 5500
+            - 6000
+            - 6500
+            - 7000
+            - 7500
+            - 8000
+            - 8500
+            - 9000
+            - 9500
+            - 10000
+            - 20000
+            - 30000
+            - 50000
+        field26_from:
+          label: 'Площадь дома от'
+          name: 'field[26][from]'
+          value:
+            - 30
+            - 40
+            - 50
+            - 60
+            - 70
+            - 80
+            - 90
+            - 100
+            - 150
+            - 200
+            - 250
+            - 300
+            - 350
+            - 400
+            - 450
+            - 500
+            - 600
+            - 700
+        field26_to:
+          label: 'Площадь дома до'
+          name: 'field[26][to]'
+          value:
+            - 30
+            - 40
+            - 50
+            - 60
+            - 70
+            - 80
+            - 90
+            - 100
+            - 150
+            - 200
+            - 250
+            - 300
+            - 350
+            - 400
+            - 450
+            - 500
+            - 600
+            - 700
+        field27_from:
+          label: 'Площадь участка от'
+          name: 'field[27][from]'
+          value:
+            - 5
+            - 10
+            - 15
+            - 20
+            - 25
+            - 30
+            - 40
+            - 50
+            - 60
+            - 70
+            - 80
+            - 90
+            - 100
+            - 120
+            - 150
+            - 200
+            - 300
+            - 400
+            - 500
+        field27_to:
+          label: 'Площадь участка до'
+          name: 'field[27][to]'
+          value:
+            - 5
+            - 10
+            - 15
+            - 20
+            - 25
+            - 30
+            - 40
+            - 50
+            - 60
+            - 70
+            - 80
+            - 90
+            - 100
+            - 120
+            - 150
+            - 200
+            - 300
+            - 400
+            - 500
+      commercial-sale:
+        price_rur_from:
+          label: 'Цена от (RUR)'
+          name: 'price[from][rur]'
+          value:
+            - 500000
+            - 1000000
+            - 2000000
+            - 3000000
+            - 4000000
+            - 5000000
+            - 6000000
+            - 7000000
+            - 8000000
+            - 9000000
+            - 10000000
+            - 15000000
+            - 20000000
+            - 25000000
+            - 30000000
+            - 35000000
+            - 40000000
+            - 45000000
+            - 50000000
+            - 60000000
+            - 70000000
+            - 80000000
+            - 90000000
+            - 100000000
+            - 200000000
+            - 300000000
+        price_rur_to:
+          label: 'Цена до (RUR)'
+          name: 'price[to][rur]'
+          value:
+            - 500000
+            - 1000000
+            - 2000000
+            - 3000000
+            - 4000000
+            - 5000000
+            - 6000000
+            - 7000000
+            - 8000000
+            - 9000000
+            - 10000000
+            - 15000000
+            - 20000000
+            - 25000000
+            - 30000000
+            - 35000000
+            - 40000000
+            - 45000000
+            - 50000000
+            - 60000000
+            - 70000000
+            - 80000000
+            - 90000000
+            - 100000000
+            - 200000000
+            - 300000000
+        price_usd_from:
+          label: 'Цена от (USD)'
+          name: 'price[from][usd]'
+          value:
+            - 20000
+            - 30000
+            - 40000
+            - 50000
+            - 70000
+            - 100000
+            - 150000
+            - 200000
+            - 250000
+            - 300000
+            - 350000
+            - 400000
+            - 450000
+            - 500000
+            - 550000
+            - 600000
+            - 650000
+            - 700000
+            - 750000
+            - 800000
+            - 850000
+            - 900000
+            - 950000
+            - 1000000
+            - 2000000
+            - 3000000
+            - 4000000
+            - 5000000
+            - 7000000
+            - 10000000
+        price_usd_to:
+          label: 'Цена до (USD)'
+          name: 'price[to][usd]'
+          value:
+            - 20000
+            - 30000
+            - 40000
+            - 50000
+            - 70000
+            - 100000
+            - 150000
+            - 200000
+            - 250000
+            - 300000
+            - 350000
+            - 400000
+            - 450000
+            - 500000
+            - 550000
+            - 600000
+            - 650000
+            - 700000
+            - 750000
+            - 800000
+            - 850000
+            - 900000
+            - 950000
+            - 1000000
+            - 2000000
+            - 3000000
+            - 4000000
+            - 5000000
+            - 7000000
+            - 10000000
+        price_eur_from:
+          label: 'Цена от (EUR)'
+          name: 'price[from][eur]'
+          value:
+            - 20000
+            - 30000
+            - 40000
+            - 50000
+            - 70000
+            - 100000
+            - 150000
+            - 200000
+            - 250000
+            - 300000
+            - 350000
+            - 400000
+            - 450000
+            - 500000
+            - 550000
+            - 600000
+            - 650000
+            - 700000
+            - 750000
+            - 800000
+            - 850000
+            - 900000
+            - 950000
+            - 1000000
+            - 2000000
+            - 3000000
+            - 4000000
+            - 5000000
+            - 7000000
+            - 10000000
+        price_eur_to:
+          label: 'Цена до (EUR)'
+          name: 'price[to][eur]'
+          value:
+            - 20000
+            - 30000
+            - 40000
+            - 50000
+            - 70000
+            - 100000
+            - 150000
+            - 200000
+            - 250000
+            - 300000
+            - 350000
+            - 400000
+            - 450000
+            - 500000
+            - 550000
+            - 600000
+            - 650000
+            - 700000
+            - 750000
+            - 800000
+            - 850000
+            - 900000
+            - 950000
+            - 1000000
+            - 2000000
+            - 3000000
+            - 4000000
+            - 5000000
+            - 7000000
+            - 10000000
+        field46_from:
+          label: 'Площадь помещения от'
+          name: 'field[46][from]'
+          value:
+            - 10
+            - 20
+            - 30
+            - 40
+            - 50
+            - 60
+            - 70
+            - 80
+            - 90
+            - 100
+            - 125
+            - 150
+            - 175
+            - 200
+            - 250
+            - 300
+            - 500
+            - 1000
+            - 2000
+            - 3000
+            - 4000
+            - 5000
+            - 7000
+            - 10000
+        field46_to:
+          label: 'Площадь помещения до'
+          name: 'field[46][to]'
+          value:
+            - 10
+            - 20
+            - 30
+            - 40
+            - 50
+            - 60
+            - 70
+            - 80
+            - 90
+            - 100
+            - 125
+            - 150
+            - 175
+            - 200
+            - 250
+            - 300
+            - 500
+            - 1000
+            - 2000
+            - 3000
+            - 4000
+            - 5000
+            - 7000
+            - 10000
+        field47_from:
+          label: 'Площадь участка от'
+          name: 'field[47][from]'
+          value:
+            - 1
+            - 2
+            - 3
+            - 4
+            - 5
+            - 6
+            - 7
+            - 8
+            - 9
+            - 10
+            - 15
+            - 20
+            - 25
+            - 30
+            - 35
+            - 40
+            - 50
+            - 75
+            - 100
+        field47_to:
+          label: 'Площадь участка до'
+          name: 'field[47][to]'
+          value:
+            - 1
+            - 2
+            - 3
+            - 4
+            - 5
+            - 6
+            - 7
+            - 8
+            - 9
+            - 10
+            - 15
+            - 20
+            - 25
+            - 30
+            - 35
+            - 40
+            - 50
+            - 75
+            - 100
+      commercial-rent:
+        month:
+          price_rur_from:
+            label: 'Цена от (RUR)'
+            name: 'price[from][rur]'
+            value:
+              - 10000
+              - 20000
+              - 30000
+              - 40000
+              - 50000
+              - 60000
+              - 70000
+              - 80000
+              - 90000
+              - 100000
+              - 150000
+              - 200000
+              - 250000
+              - 300000
+              - 350000
+              - 400000
+              - 450000
+              - 500000
+              - 600000
+              - 700000
+              - 800000
+              - 900000
+              - 1000000
+              - 2000000
+              - 3000000
+              - 4000000
+              - 5000000
+              - 7000000
+              - 10000000
+              - 20000000
+              - 30000000
+              - 50000000
+              - 70000000
+              - 100000000
+          price_rur_to:
+            label: 'Цена до (RUR)'
+            name: 'price[to][rur]'
+            value:
+              - 10000
+              - 20000
+              - 30000
+              - 40000
+              - 50000
+              - 60000
+              - 70000
+              - 80000
+              - 90000
+              - 100000
+              - 150000
+              - 200000
+              - 250000
+              - 300000
+              - 350000
+              - 400000
+              - 450000
+              - 500000
+              - 600000
+              - 700000
+              - 800000
+              - 900000
+              - 10000
+              - 20000
+              - 30000
+              - 40000
+              - 50000
+              - 60000
+              - 70000
+              - 80000
+              - 90000
+              - 100000
+              - 150000
+              - 200000
+              - 250000
+              - 300000
+              - 350000
+              - 400000
+              - 450000
+              - 500000
+              - 600000
+              - 700000
+              - 800000
+              - 900000
+              - 1000000
+              - 2000000
+              - 3000000
+              - 4000000
+              - 5000000
+              - 7000000
+              - 10000000
+          price_usd_from:
+            label: 'Цена от (USD)'
+            name: 'price[from][usd]'
+            value:
+              - 300
+              - 400
+              - 500
+              - 700
+              - 1000
+              - 1500
+              - 2000
+              - 2500
+              - 3000
+              - 3500
+              - 4000
+              - 4500
+              - 5000
+              - 5500
+              - 6000
+              - 6500
+              - 7000
+              - 7500
+              - 8000
+              - 8500
+              - 9000
+              - 9500
+              - 10000
+              - 20000
+              - 30000
+              - 50000
+              - 100000
+              - 200000
+              - 300000
+          price_usd_to:
+            label: 'Цена до (USD)'
+            name: 'price[to][usd]'
+            value:
+              - 300
+              - 400
+              - 500
+              - 700
+              - 1000
+              - 1500
+              - 2000
+              - 2500
+              - 3000
+              - 3500
+              - 4000
+              - 4500
+              - 5000
+              - 5500
+              - 6000
+              - 6500
+              - 7000
+              - 7500
+              - 8000
+              - 8500
+              - 9000
+              - 9500
+              - 10000
+              - 20000
+              - 30000
+              - 50000
+              - 100000
+              - 200000
+              - 300000
+          price_eur_from:
+            label: 'Цена от (EUR)'
+            name: 'price[from][eur]'
+            value:
+              - 300
+              - 400
+              - 500
+              - 700
+              - 1000
+              - 1500
+              - 2000
+              - 2500
+              - 3000
+              - 3500
+              - 4000
+              - 4500
+              - 5000
+              - 5500
+              - 6000
+              - 6500
+              - 7000
+              - 7500
+              - 8000
+              - 8500
+              - 9000
+              - 9500
+              - 10000
+              - 20000
+              - 30000
+              - 50000
+              - 100000
+              - 200000
+              - 300000
+          price_eur_to:
+            label: 'Цена до (EUR)'
+            name: 'price[to][eur]'
+            value:
+              - 300
+              - 400
+              - 500
+              - 700
+              - 1000
+              - 1500
+              - 2000
+              - 2500
+              - 3000
+              - 3500
+              - 4000
+              - 4500
+              - 5000
+              - 5500
+              - 6000
+              - 6500
+              - 7000
+              - 7500
+              - 8000
+              - 8500
+              - 9000
+              - 9500
+              - 10000
+              - 20000
+              - 30000
+              - 50000
+              - 100000
+              - 200000
+              - 300000
+        year:
+          price_rur_from:
+            label: 'Цена от (RUR)'
+            name: 'price[from][rur]'
+            value:
+              - 10000
+              - 20000
+              - 30000
+              - 40000
+              - 50000
+              - 60000
+              - 70000
+              - 80000
+              - 90000
+              - 100000
+              - 150000
+              - 200000
+              - 250000
+              - 300000
+              - 350000
+              - 400000
+              - 450000
+              - 500000
+              - 600000
+              - 700000
+              - 800000
+              - 900000
+              - 1000000
+              - 2000000
+              - 3000000
+              - 4000000
+              - 5000000
+              - 7000000
+              - 10000000
+              - 20000000
+              - 30000000
+              - 50000000
+              - 70000000
+              - 100000000
+          price_rur_to:
+            label: 'Цена до (RUR)'
+            name: 'price[to][rur]'
+            value:
+              - 10000
+              - 20000
+              - 30000
+              - 40000
+              - 50000
+              - 60000
+              - 70000
+              - 80000
+              - 90000
+              - 100000
+              - 150000
+              - 200000
+              - 250000
+              - 300000
+              - 350000
+              - 400000
+              - 450000
+              - 500000
+              - 600000
+              - 700000
+              - 800000
+              - 900000
+              - 10000
+              - 20000
+              - 30000
+              - 40000
+              - 50000
+              - 60000
+              - 70000
+              - 80000
+              - 90000
+              - 100000
+              - 150000
+              - 200000
+              - 250000
+              - 300000
+              - 350000
+              - 400000
+              - 450000
+              - 500000
+              - 600000
+              - 700000
+              - 800000
+              - 900000
+              - 1000000
+              - 2000000
+              - 3000000
+              - 4000000
+              - 5000000
+              - 7000000
+              - 10000000
+          price_usd_from:
+            label: 'Цена от (USD)'
+            name: 'price[from][usd]'
+            value:
+              - 300
+              - 400
+              - 500
+              - 700
+              - 1000
+              - 1500
+              - 2000
+              - 2500
+              - 3000
+              - 3500
+              - 4000
+              - 4500
+              - 5000
+              - 5500
+              - 6000
+              - 6500
+              - 7000
+              - 7500
+              - 8000
+              - 8500
+              - 9000
+              - 9500
+              - 10000
+              - 20000
+              - 30000
+              - 50000
+              - 100000
+              - 200000
+              - 300000
+          price_usd_to:
+            label: 'Цена до (USD)'
+            name: 'price[to][usd]'
+            value:
+              - 300
+              - 400
+              - 500
+              - 700
+              - 1000
+              - 1500
+              - 2000
+              - 2500
+              - 3000
+              - 3500
+              - 4000
+              - 4500
+              - 5000
+              - 5500
+              - 6000
+              - 6500
+              - 7000
+              - 7500
+              - 8000
+              - 8500
+              - 9000
+              - 9500
+              - 10000
+              - 20000
+              - 30000
+              - 50000
+              - 100000
+              - 200000
+              - 300000
+          price_eur_from:
+            label: 'Цена от (EUR)'
+            name: 'price[from][eur]'
+            value:
+              - 300
+              - 400
+              - 500
+              - 700
+              - 1000
+              - 1500
+              - 2000
+              - 2500
+              - 3000
+              - 3500
+              - 4000
+              - 4500
+              - 5000
+              - 5500
+              - 6000
+              - 6500
+              - 7000
+              - 7500
+              - 8000
+              - 8500
+              - 9000
+              - 9500
+              - 10000
+              - 20000
+              - 30000
+              - 50000
+              - 100000
+              - 200000
+              - 300000
+          price_eur_to:
+            label: 'Цена до (EUR)'
+            name: 'price[to][eur]'
+            value:
+              - 300
+              - 400
+              - 500
+              - 700
+              - 1000
+              - 1500
+              - 2000
+              - 2500
+              - 3000
+              - 3500
+              - 4000
+              - 4500
+              - 5000
+              - 5500
+              - 6000
+              - 6500
+              - 7000
+              - 7500
+              - 8000
+              - 8500
+              - 9000
+              - 9500
+              - 10000
+              - 20000
+              - 30000
+              - 50000
+              - 100000
+              - 200000
+              - 300000
+        field46_from:
+          label: 'Площадь помещения от'
+          name: 'field[46][from]'
+          value:
+            - 10
+            - 20
+            - 30
+            - 40
+            - 50
+            - 60
+            - 70
+            - 80
+            - 90
+            - 100
+            - 125
+            - 150
+            - 175
+            - 200
+            - 250
+            - 300
+            - 500
+            - 1000
+            - 2000
+            - 3000
+            - 4000
+            - 5000
+            - 7000
+            - 10000
+        field46_to:
+          label: 'Площадь помещения до'
+          name: 'field[46][to]'
+          value:
+            - 10
+            - 20
+            - 30
+            - 40
+            - 50
+            - 60
+            - 70
+            - 80
+            - 90
+            - 100
+            - 125
+            - 150
+            - 175
+            - 200
+            - 250
+            - 300
+            - 500
+            - 1000
+            - 2000
+            - 3000
+            - 4000
+            - 5000
+            - 7000
+            - 10000
+        field47_from:
+          label: 'Площадь участка от'
+          name: 'field[47][from]'
+          value:
+            - 1
+            - 2
+            - 3
+            - 4
+            - 5
+            - 6
+            - 7
+            - 8
+            - 9
+            - 10
+            - 15
+            - 20
+            - 25
+            - 30
+            - 35
+            - 40
+            - 50
+            - 75
+            - 100
+        field47_to:
+          label: 'Площадь участка до'
+          name: 'field[47][to]'
+          value:
+            - 1
+            - 2
+            - 3
+            - 4
+            - 5
+            - 6
+            - 7
+            - 8
+            - 9
+            - 10
+            - 15
+            - 20
+            - 25
+            - 30
+            - 35
+            - 40
+            - 50
+            - 75
+            - 100
+      cottage-sale:
+        field92_from:
+          label: 'Расстояние до МКАД, от'
+          name: 'field[92][from]'
+          value:
+            - 10
+            - 30
+            - 50
+            - 70
+            - 100
+        field92_to:
+          label: 'Расстояние до МКАД, до'
+          name: 'field[92][to]'
+          value:
+            - 10
+            - 30
+            - 50
+            - 70
+            - 100
+        price_rur_from:
+          label: 'Цена от (RUR)'
+          name: 'price[from][rur]'
+          value:
+            - 1000000
+            - 2000000
+            - 3000000
+            - 5000000
+            - 10000000
+            - 15000000
+            - 30000000
+        price_rur_to:
+          label: 'Цена до (RUR)'
+          name: 'price[to][rur]'
+          value:
+            - 1000000
+            - 2000000
+            - 3000000
+            - 5000000
+            - 10000000
+            - 15000000
+            - 30000000
+        price_usd_from:
+          label: 'Цена от (USD)'
+          name: 'price[from][usd]'
+          value:
+            - 30000
+            - 60000
+            - 90000
+            - 150000
+            - 300000
+            - 450000
+            - 900000
+        price_usd_to:
+          label: 'Цена до (USD)'
+          name: 'price[to][usd]'
+          value:
+            - 30000
+            - 60000
+            - 90000
+            - 150000
+            - 300000
+            - 450000
+            - 900000
+        price_eur_from:
+          label: 'Цена от (EUR)'
+          name: 'price[from][eur]'
+          value:
+            - 20000
+            - 40000
+            - 60000
+            - 100000
+            - 200000
+            - 350000
+            - 650000
+        price_eur_to:
+          label: 'Цена до (EUR)'
+          name: 'price[to][eur]'
+          value:
+            - 20000
+            - 40000
+            - 60000
+            - 100000
+            - 200000
+            - 350000
+            - 650000
+        square_from:
+          label: 'Площадь дома от'
+          name: 'square[from]'
+          value:
+            - 100
+            - 150
+            - 200
+            - 250
+            - 300
+            - 500
+        square_to:
+          label: 'Площадь дома до'
+          name: 'square[to]'
+          value:
+            - 100
+            - 150
+            - 200
+            - 250
+            - 300
+            - 500
+        field94_from:
+          label: 'Площадь участка от'
+          name: 'field[94][from]'
+          value:
+            - 10
+            - 15
+            - 20
+            - 25
+            - 30
+            - 50
+        field95_to:
+          label: 'Площадь участка до'
+          name: 'field[95][to]'
+          value:
+            - 10
+            - 15
+            - 20
+            - 25
+            - 30
+            - 50
+  news:
+    my_max_per_page: 5
+    on_main: 3
+  article:
+    my_max_per_page: 5
+    p_per_page: 5
+  authors:
+    my_max_per_page: 10
+  autolinks:
+    on_post: 3
+  rss:
+    google:
+      publication_name: Mesto.ru
+      publication_language: ru
+    rambler:
+      title: 'Домус Сервер Гарин Сунь'
+      link: 'http://domus.server.garin.su'
+      description: 'Краткая инфа по сайту'
+      author: mesto.ru
+    yandex:
+      title: 'Домус Сервер Гарин Высунь'
+      link: 'http://domus.server.garin.su'
+      description: 'Краткая инфа по проекту'
+      author: mesto.ru
+  qa:
+    max_days_per_index_page: 3
+    max_q_per_theme_page: 3
+    max_q_on_sidebar: 3
+  blog:
+    my_max_per_page: 5
+    my_max_per_theme_page: 5
+    max_on_index_page: 3
+  user:
+    promotion: 10

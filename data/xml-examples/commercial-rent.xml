@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<realty-feed> 
+  <offer internal-id="1"> 
+		<category>коммерческая</category>
+		<type>аренда</type>
+		<creation>2010-11-02T13:20:41+04:00</creation>
+		<expire>2012-02-03T13:20:41+04:00</expire>
+		<location>
+			<region>Москва</region>
+			<region_node>м. Менделеевская</region_node>
+			<city>г. Москва</city>
+			<street>ул. Образцова</street>
+			<address>
+				<house>12</house>
+				<building>2</building>
+				<structure>1</structure>
+			</address>
+		</location>
+		<full-price>
+			<value>290000</value>
+			<currency>RUR</currency>
+		</full-price>
+		<description>м. Менделеевская, ул. Образцова, 10 минут пешком . Продаётся 5-ти этажное административное здание, общей площадью 1972,8 кв. метров, 1998 года постройка, ремонт класса В+, 5 этажей + подвал, кабинетно- коридорная планировка, огороженная охраняемая территория, 25 м/м, 25 номеров "Комстар" и интернет, высота потолков 2,8 метров, земельный участок 1049 кв. метров в аренде до 2051 года, 500 кВт. Цена 290 млн. рублей включая НДС.</description>
+		<latitude>55.535686089</latitude>
+		<longitude>37.484858036</longitude>
+		<agent>
+			<phone>+7 (499) 408-33-32</phone>
+			<name>АА Минком</name>
+			<link>http://aa-minkom.narod.ru/zdan.html</link>
+		</agent>
+		<image>http://www.mesto.ru/uploads/lot/n/l/a/713579/800x600/1.jpg</image>
+		<image>http://www.mesto.ru/uploads/lot/n/l/a/713579/800x600/2.jpg</image>
+		<image>http://www.mesto.ru/uploads/lot/n/l/a/713579/800x600/3.jpg</image>
+		<image>http://www.mesto.ru/uploads/lot/p/z/m/263077/800x600/4.jpg</image>
+		<commercial-type>Отд. стоящее здание</commercial-type>
+		<full-floor-area>1972.8</full-floor-area>
+		<floor>1</floor>
+		<currency-type>месяц</currency-type> 
+		<floors-total>5</floors-total>
+		<building-type>Кирпичный</building-type>
+		<build-year>1998</build-year>
+		<earth-type>поселений</earth-type>
+		<office-class>B</office-class>
+		<quality>дорогая и высококачественная отделка</quality>
+		<layout-type>коридорно-кабинетная планировка</layout-type>
+		<details>меблировка, телефон, интернет, парковка, охрана</details>
+  </offer>
+</realty-feed>

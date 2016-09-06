@@ -1,0 +1,1 @@
+<?= image_tag(photo($news, 140, 90)) ?>

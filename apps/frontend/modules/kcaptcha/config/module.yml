@@ -1,0 +1,22 @@
+all:
+  .array:
+    options:
+      length:           6
+      width:            140
+      height:           60
+      background:       [202, 232, 243]
+      include_pattern:  false
+      exclude_pattern:  cb|qg|qb|db|cq
+      ampl_x:           1
+      ampl_y:           1
+
+    qa_options:
+      length:           6
+      width:            140
+      height:           60
+      background:       [200, 200, 200]
+      foreground:       [0, 0, 0]
+      include_pattern:  false
+      exclude_pattern:  cb|qg|qb|db|cq
+      ampl_x:           1
+      ampl_y:           1

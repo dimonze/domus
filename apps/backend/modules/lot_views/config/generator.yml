@@ -1,0 +1,34 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           LotView
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          lot_view_lot_views
+    with_doctrine_route:     1
+
+    config:
+      fields:
+        lot_id: { label: Объявление }
+        ip_address: { label: IP-адрес }
+        lot_type: { label: Тип недвижимости}
+        created_at: { label: Дата просмотра}
+        lot_link: { label: Объявление }
+        lot_type_ru: { label: Тип объявления }
+        region_name: { label: Регион }
+      list:
+        display: [ _lot_link, ip_address, _lot_type_ru, created_at, region_name ]
+        sort: [created_at, desc]
+        title: Активные просмотры объявлений
+        max_per_page: 50
+        object_actions: {}
+        actions: {}
+      filter:
+#        class: false
+        class: LotViewFormFilter
+      form:    ~
+      edit:    ~
+      new:     ~

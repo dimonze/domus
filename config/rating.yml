@@ -1,0 +1,59 @@
+lot:
+  description: 10
+  photo:
+    first: 5
+    other: 1
+  organization_link: 3
+user:
+  company:
+    company_name: 5
+    name: 5
+    photo: 5
+    phone: 5
+    info:
+      email_confirmed: 5
+      additional_phone: 3
+      about: 5
+      specialities: 3
+      regions: 3
+      experience: 0
+      advantage: 5
+      site: 5
+  employee:
+    company_name: 0
+    name: 5
+    photo: 5
+    phone: 5
+    info:
+      email_confirmed: 5
+      additional_phone: 3
+      about: 5
+      specialities: 3
+      regions: 3
+      experience: 0
+      advantage: 5
+      site: 5
+  realtor:
+    name: 5
+    photo: 5
+    phone: 5
+    info:
+      email_confirmed: 5
+      additional_phone: 3
+      about: 5
+      specialities: 3
+      regions: 3
+      experience: 0
+      advantage: 5
+      site: 5
+lot-rate:
+  10: 0
+  20: 0
+  30: 0
+  40: 1
+  50: 1
+  60: 2
+  70: 3
+  80: 3
+  90: 3
+  100: 5

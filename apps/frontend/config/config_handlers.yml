@@ -1,0 +1,14 @@
+config/meta.yml:
+  class: sfDefineEnvironmentConfigHandler
+  param:
+    prefix: meta_
+
+config/banners.yml:
+  class: sfDefineEnvironmentConfigHandler
+  param:
+    prefix: banner_
+
+config/aside.yml:
+  class: sfDefineEnvironmentConfigHandler
+  param:
+    prefix: aside_

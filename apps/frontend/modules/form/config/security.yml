@@ -1,0 +1,6 @@
+all:
+  is_secure: false
+crop:
+  is_secure: true
+upload:
+  is_secure: true

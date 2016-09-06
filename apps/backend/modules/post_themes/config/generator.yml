@@ -1,0 +1,28 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Theme
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          post_themes
+    with_doctrine_route:     1
+
+    config:
+      actions: ~
+      fields:  ~
+      list:
+        fields:
+          title: { label: Название }
+        display: [title]
+        sort: [title]
+        title: Темы
+        max_per_page: 10
+      filter:  ~
+      form:    ~
+      edit:
+        title: Редактирование темы "%%title%%"
+      new:
+        title: Добавление новой темы

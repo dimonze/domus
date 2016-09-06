@@ -1,0 +1,13 @@
+.DS_Store
+/nbproject
+/.idea
+/cache/*
+/log/*
+/lib/form/doctrine/base/*
+/lib/filter/doctrine/base/*
+/lib/model/doctrine/base/*
+/web/sitemap*
+/web/uploads
+/data/xml-validation/*rng.xml
+#/config/region*.yml
+/sftp-config.json

@@ -1,0 +1,16 @@
+#domus2
+MAILTO=noc@garin-studio.ru
+
+#0       *       *       *       *       /home/domus/update_hw_statistic.sh >> /home/domus/update_hw.log
+#*       *       *       *       *       /home/domus/parsing/sync_domus_uploads.sh >> /home/domus/parsing/sync_domus.log
+
+*/30 * * * * /usr/bin/php /var/www/media.mesto.ru/html/scripts/maintenance/maintenance.php media.mesto.ru
+
+0  22  * * 1 /var/www/mesto.ru/run-kgd > /dev/null && /var/www/mesto.ru/run-rost > /dev/null
+0  22  * * 2 /var/www/mesto.ru/run-kras > /dev/null && /var/www/mesto.ru/run-ngd > /dev/null
+0  22  * * 3 /var/www/mesto.ru/run-lo > /dev/null
+0  22  * * 4 /var/www/mesto.ru/run-mo > /dev/null
+0  22  * * 5 /var/www/mesto.ru/run-spb > /dev/null
+0  22  * * 6 /var/www/mesto.ru/run-msk > /dev/null
+0  22  * * 7 /var/www/mesto.ru/run-vlg > /dev/null
+0  0 17  * * /var/www/mesto.ru/run-all-the-shit > /dev/null

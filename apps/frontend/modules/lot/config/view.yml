@@ -1,0 +1,41 @@
+addSuccess:
+  components:
+    sidebar: [menu, user]
+  metas:
+    name: Добавить объявление
+
+mySuccess:
+  components:
+    sidebar: [menu, user]
+  metas:
+    name: Мои объявления
+  javascripts:
+    - http://static.ak.fbcdn.net/connect.php/js/FB.Share
+
+editSuccess:
+  components:
+    sidebar: [menu, user]
+  metas:
+    name: Редактировать объявление
+
+favouriteSuccess:
+  components:
+    sidebar: [menu, user]
+    compare: [compare, link]
+  metas:
+    name: Избранные объявления
+
+moderateSuccess:
+  metas:
+    name: Модерация
+  stylesheets: [jquery-ui/index.css]
+  javascripts: [jquery.datepicker.js, moderate]
+
+showSuccess:
+  components:
+    compare: [compare, link]
+  stylesheets: [fancybox/fancybox.css]
+  javascripts:
+    - jquery.maskedinput.min.js
+    - jquery.fancybox.js
+    - estate_on_duty.js

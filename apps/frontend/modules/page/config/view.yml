@@ -1,0 +1,24 @@
+all:
+  components:
+    sidebar: [page, submenu]
+
+bannersSuccess:
+  components: []
+  javascripts: [homepage]
+  layout: homepage
+
+homepageSuccess:
+  components: []
+  javascripts: [homepage]
+  layout: homepage
+
+priceSuccess:
+  components: []
+  stylesheets:
+    - /js/jscroll/jquery.jscrollpane.css: { position: first }
+  javascripts:
+    - jscroll/jquery.mousewheel.js
+    - jscroll/jquery.jscrollpane.min.js
+    - advert
+  metas:
+    name: Реклама на Место.ру

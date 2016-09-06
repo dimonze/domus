@@ -1,0 +1,506 @@
+homepage:
+  url:  /
+  param: { module: page, action: homepage }
+  
+show_lot:
+  url:     /:type/:id
+  class:   sfDoctrineRoute
+  options: { model: Lot, type: object, method: getOne }
+  param:   { module: lot, action: show }
+  requirements:
+    id: \d+
+    type: .+\-(sale|rent)
+
+500_error_page:
+  url: /error/500
+  param: { module: page, action: 500 }
+
+all_banners:
+  url: /all
+  param: { module: page, action: banners }
+
+spec_pages:
+  url: /all/:id
+  param: { module: spec_pages, action: show }
+  requirements:
+    id: \d+
+
+one_banner:
+  url: /special/:id
+  param: { module: page, action: oneBanner }
+  requirements:
+    id: \d+
+
+spec_targeting:
+  url: /special/:slug
+  param: { module: spec_pages, action: specialTargeting }
+
+xml_fields:
+  url: /xml_fields
+  param: { module: page, action: xmlfields }
+
+import:
+  url: /import/:action
+  param: { module: import }
+
+import_xml_lot:
+  url: /import_xml_lot/import
+  param: { module: import_xml_lot }
+
+pm:
+  url:   /user/pm/:action
+  param: { module: pm, action: index }
+
+user_lots:
+  url: /user/:id/lots/:type
+  param: { module: user, action: lots }
+
+user_card:
+  url:     /user/:id
+  class:   sfDoctrineRoute
+  options: { model: User, type: object }
+  param:   { module: user, action: card }
+  requirements:
+    id: \d+
+
+unsubscribe:
+  url:   /unsubscribe/:email/:hash
+  param: { module: user, action: unsubscribe }
+
+form:
+  url:   /form/:action
+  param: { module: form }
+
+form_typed:
+  url:   /form/:action/type/:type
+  param: { module: form }
+
+
+form_search:
+  url:   /form/:action.:sf_format
+  param: { module: form, sf_format: js }
+  
+compare:
+  url: /compare/:type
+  param: { module: compare, action: index }
+  requirements:
+    type: .+\-(sale|rent)
+
+compare_action:
+  url: /compare/:action
+  param: { module: compare }
+  
+#search_old:
+#  url:   /:type/:region_id/search/*
+#  class: DomusSearchRoute
+#  param: { module: search, action: index }
+#  requirements:
+#    type: .+\-(sale|rent)
+
+object:
+  url:   /:type/:region_id/object
+  param: { module: search, action: object }
+  requirements:
+    type: .+\-(sale|rent)
+
+
+show_lot_slug:
+  url:     /nedvijimost/:slug.html
+  class:   sfDoctrineRoute
+  options: { model: Lot, type: object }
+  param:   { module: lot, action: show }
+  requirements:
+    slug: "[A-Za-z0-9_-]+"
+
+show_lot_slug_nb:
+  url:     /novostroyki/:slug.html
+  class:   sfDoctrineRoute
+  options: { model: Lot, type: object }
+  param:   { module: lot, action: show }
+  requirements:
+    slug: "[A-Za-z0-9_-]+"
+    
+show_lot_slug_cottage:
+  url:     /cottage/:slug.html
+  class:   sfDoctrineRoute
+  options: { model: Lot, type: object }
+  param:   { module: lot, action: show }
+  requirements:
+    slug: "[A-Za-z0-9_-]+"
+    
+rayon_list:
+  url: /rayon
+  class: DomusSearchRoute
+  param: { module: search, action: rslist, type: rajon }
+  
+shosse_list:
+  url: /shosse
+  class: DomusSearchRoute
+  param: { module: search, action: rslist, type: shosse }
+
+search_action:
+  url:   /search/:action
+  param: { module: search }
+  
+search_landing_paginated:
+  url:   /:type/:slug/:page
+  class: DomusSearchRoute
+  param: { module: search, action: index }
+  requirements:
+    type: (.+\-(sale|rent)|(prodazha|arenda)\-.+|(novostroyki|cottage)\-.+)
+    slug: "[A-Za-z0-9_-]+"
+    page: ^\d+
+    
+search_paginated:
+  url:   /:type/:page
+  class: DomusSearchRoute
+  param: { module: search, action: index }
+  requirements:
+    type: (.+\-(sale|rent)|(prodazha|arenda)\-.+|(novostroyki|cottage)\-.+)
+    page: ^\d+
+
+search_landing:
+  url:   /:type/:slug/*
+  class: DomusSearchRoute
+  param: { module: search, action: index }
+  requirements:
+    type: (.+\-(sale|rent)|(prodazha|arenda)\-.+|(novostroyki|cottage)\-.+)
+    slug: "[A-Za-z0-9_-]+"
+    
+search:
+  url:   /:type/*
+  class: DomusSearchRoute
+  param: { module: search, action: index }
+  requirements:
+    type: (.+\-(sale|rent)|(prodazha|arenda)\-.+|(novostroyki|cottage)\-.+)
+
+show_lot:
+  url:     /:type/:id
+  class:   sfDoctrineRoute
+  options: { model: Lot, type: object, method: getOne }
+  param:   { module: lot, action: show }
+  requirements:
+    id: \d+
+    type: .+\-(sale|rent)
+
+
+banner_frame:
+  url: /lot/specials/:zones
+  param: { module: banner, action: frame, zones: 10 }
+  requirements:
+    zones: \d+
+
+banner_frame_naydi_dom:
+  url: /lot/new-specials/:zones
+  param: { module: banner, action: frameNaydiDom, zones: 10 }
+  requirements:
+    zones: \d+
+
+banner_frame_naydi_dom_hit:
+  url: /hit_banner
+  param: { module: banner, action: hitBanner }
+
+lot_action:
+  url:   /lot/:id/:action
+  param: { module: lot }
+  requirements:
+    id: \d+
+
+lot:
+  url:   /lot/:action/:page
+  param: { module: lot, page: 1 }
+
+statistic:
+  url: /statistic/:action
+  param: { module: statistic, action: index }
+
+
+setregion:
+  url: setregion/:id
+  class:   sfDoctrineRoute
+  options: { model: Region, type: object }
+  param: { module: region, action: set }
+  requirements:
+    id: \d+
+
+currency:
+  url:   /currency.:sf_format
+  param: { module: currency, action: index, sf_format: js }
+
+user:
+  url:   /user/:action
+  param: { module: user }
+
+rating:
+  url: /rating/:type
+  param: { module: user, action: rating }
+  requirements:
+    type: (company|realtor)
+
+post_filemanager:
+  url: /filemanager/:action
+  param: { module: filemanager, action: index }
+
+post_filemanager_connector:
+  url: /filemanager-connector/:action
+  param: { module: filemanager-connector }
+
+filter:
+  url: /filter/:action
+  param: { module: filter }
+
+news_show_slug:
+  url: /news/:slug.html
+  param: { module: news, action: show }
+  requirements:
+    slug: ^\w+[\w\-\.]*-\d+$
+
+news_show:
+  url: /news/:id
+  param: { module: news, action: show }
+  requirements:
+    id: \d+
+
+news_by_theme:
+  url: /news/:news_section/:theme/:created_at
+  param: {module: news, action: theme }
+
+news_by_section:
+  url: /news/:news_section/:page
+  param: { module: news, action: index, page: 1 }
+  
+author_article_show_slug:
+  url: /authors/article/:author_id/:slug.html
+  param: { module: author_article, action: show }
+  requirements:
+    author_id: \d+
+    slug: ^(\w+[\w\-\.]*)\-(\d+)(\-part(\d+))*$
+
+author_article_show:
+  url: /authors/article/:author_id/:id
+  param: { module: author_article, action: show }
+  requirements:
+    author_id: \d+
+    id: \d+
+
+author_article:
+  url: /authors/:page
+  param: { module: author_article, action: index, page: 1 }
+  requirements:
+    page: \d+
+
+author_article_by_theme:
+  url: /authors/:theme
+  param: { module: author_article, action: theme }
+
+author_article_show_author:
+  url: /authors/authors/:author_id
+  param: {module: author_article, action: showauthor }
+  requirements:
+    author_id: \d+
+    
+expert_article_show_slug:
+  url: /experts/article/:author_id/:slug.html
+  param: { module: expert_article, action: show }
+  requirements:
+    author_id: \d+
+    slug: ^(\w+[\w\-\.]*)\-(\d+)(\-part(\d+))*$
+
+expert_article_show:
+  url: /experts/article/:author_id/:id
+  param: { module: expert_article, action: show }
+  requirements:
+    author_id: \d+
+    id: \d+
+
+expert_article:
+  url: /experts/:page
+  param: { module: expert_article, action: index, page: 1 }
+  requirements:
+    page: \d+
+
+expert_article_by_theme:
+  url: /experts/:theme
+  param: { module: expert_article, action: theme }
+
+expert_article_show_author:
+  url: /experts/authors/:author_id
+  param: {module: expert_article, action: showauthor }
+  requirements:
+    author_id: \d+
+
+posts:
+  url: /posts/:post_type
+  param: { module: posts, action: index }
+
+post_show_slug:
+  url: /posts/:post_type/:slug.html
+  param: { module: posts, action: show, page: 1 }
+  requirements:
+    slug: ^(\w+[\w\-\.]*)\-(\d+)(\-part(\d+))*$
+
+post_show:
+  url: /posts/:post_type/:id/:page
+  param: { module: posts, action: show, page: 1 }
+  requirements:
+    id: \d+
+
+posts_by_theme:
+  url: /posts/:post_type/:theme/:page
+  param: { module: posts, action: theme }
+  requirements:
+    page: \d+
+
+questionnaire:
+  url: /questionnaire/:action
+  param: { module: questionnaire, action: index }
+
+questionnaire_deleteanswer:
+  url: /questionnaire/deleteanswer
+  param: { module: questionnaire, action: deleteanswer }
+
+show_questionnaire:
+  url: /questionnaire/:id
+  param: { module: questionnaire, action: show }
+  requirements:
+    id: \d+
+
+questionnaire_vote:
+  url: /questionnaire/vote/:id
+  param: { module: questionnaire, action: vote }
+  requirements:
+    id: \d+
+
+portal_search:
+  url: /search
+  param: { module: form, action: portalSearch }
+
+qa:
+  url: /qas/:page
+  param: { module: qa, action: index, page: 1 }
+  requirements:
+    page: \d+
+
+qa_add:
+  url: /qa/add
+  param: { module: qa, action: add }
+
+qa_show:
+  url: /qa/:id
+  param: { module: qa, action: show }
+  requirements:
+    id: \d+
+    
+qa_by_theme:
+  url: /qa/:theme/:page
+  param: { module: qa, action: theme, page: 1 }
+  requirements:
+    page: \d+
+
+qa_answer:
+  url: /qa/:id/:answer
+  param: { module: qa, action: show }
+  requirements:
+    id: \d+
+    answer: answer
+
+qa_kcaptcha:
+  url:    /qa-kcaptcha.png
+  params: { module: kcaptcha, action: qa }
+
+comments_actions:
+  url: /comment/:id/:action
+  param: {module: comments, action: delete }
+  requirements:
+    id: \d+
+comment_form:
+  url: /comment/getform
+  param: { module: comments, action: getform }
+comment_add:
+  url: /comment/add
+  param: { module: comments, action: add }
+
+blogs:
+  url: /blog/all
+  param: { module: blogs, action: index }
+
+blog_post_my:
+  url: /blogs/my/:page
+  param: { module: blogs, action: my, page: 1 }
+  requirements:
+    page: \d+
+
+blog_theme:
+  url: /blog/:theme
+  param: { module: blogs, action: theme }
+
+blog_show:
+  url: /blog/:blog_url/all
+  param: { module: blogs, action: show }
+  requirements:
+    blog_url: \w+
+
+blog_post_show:
+  url: /blog/:blog_url/:id
+  param: { module: blogs, action: showpost }
+  requirements:
+    blog_url: \w+
+    id: \d+
+
+blog_post_edit:
+  url: /blog/:blog_url/:id/edit
+  param: { module: blogs, action: editpost }
+  requirements:
+    blog_url: \w+
+    id: \d+
+
+blog_post_delete:
+  url: /blog/:blog_url/:id/delete
+  param: { module: blogs, action: deletepost }
+  requirements:
+    blog_url: \w+
+    id: \d+
+
+blog_post_publish:
+  url: /blog/:blog_url/:id/publish
+  param: { module: blogs, action: publishpost }
+  requirements:
+    blog_url: \w+
+    id: \d+
+
+blog_post_add:
+  url: /blogs/add
+  param: { module: blogs, action: add }
+
+feed:
+  url: /feed/:partner.:sf_format
+  param: { module: feed, action: feed }
+  requirements:
+    partner: \w+
+
+
+agencies:
+  url: /agencies/:region_id/:page
+  params: { module: agencies, action: index, type: company, region_id: 77, page: 1 }
+
+agencies_bti:
+  url: /bti/:region_id/:page
+  params: { module: agencies, action: index, type: bti, region_id: 77, page: 1 }
+
+agency:
+  url: /agency/:id
+  params: { module: agencies, action: show }
+
+
+price_page:
+  url: /price
+  params: { module: page, action: price }
+
+pages:
+  url:   /
+  param: { module: page, action: index }
+
+default:
+  url:   /*
+  param: { module: page, action: index }
+

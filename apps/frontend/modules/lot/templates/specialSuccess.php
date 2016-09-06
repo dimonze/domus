@@ -1,0 +1,1 @@
+<?php include_partial('banner/all_spec_zones', array('lot' => $lot)) ?>

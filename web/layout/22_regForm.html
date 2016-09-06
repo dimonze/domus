@@ -1,0 +1,213 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<link href="/css/reset.css" rel="stylesheet" type="text/css" />
+<link href="/css/main.css" rel="stylesheet" type="text/css" />
+<link href="/css/regform.css" rel="stylesheet" type="text/css" />
+<!--[if lte IE 6]>
+<script type="text/javascript" src="js/iepngfix_tilebg.js"></script>
+<link href="/css/ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+</head>
+<body>
+<!--global start -->
+<div class="global">
+	<!--contentBox start -->
+	<div class="contentBox">
+		<!--header start -->
+		<div class="headerBox">
+			<div class="header">
+				<div class="headerLeft"><a href="#" class="logo">domus</a>
+					<!--sityMenu start -->
+					<div class="cityMenu"> <a href="#"><span>Санкт-Петербург</span></a> </div>
+					<!--sityMenu end -->
+				</div>
+				<div class="headerRight">
+					<!--topMenu start -->
+					<ul class="topMenu">
+						<li>Петр Копейкин</li>
+						<li class="cabinet"><a href="#">Мой кабинет</a></li>
+						<li class="out"><a href="#">Выход</a></li>
+					</ul>
+					<!--topMenu end -->
+					<!--topSearchForm start -->
+					<form action="" method="get">
+						<fieldset>
+							<input type="text" value="Поиск по ключевому слову" onblur="if(this.value==''){this.value='Поиск по ключевому слову';}"
+onfocus="if(this.value=='Поиск по ключевому слову'){this.value='';}" class="topSearchInput" />
+							<button class="topSearchButton" type="submit" value="Найти">Найти</button>
+						</fieldset>
+					</form>
+					<!--topSearchForm end -->
+				</div>
+			</div>
+		</div>
+		<!--header end -->
+		<div class="wrapper">
+			<!--globalMenu start -->
+			<ul class="globalMenu">
+				<li class="active"><a href="#">КВАРТИРЫ<br />
+					продажа</a></li>
+				<li><a href="#">КВАРТИРЫ<br />
+					аренда</a></li>
+				<li><a href="#">ДОМА И УЧАСТКИ<br />
+					продажа</a></li>
+				<li><a href="#">ДОМА И УЧАСТКИ<br />
+					аренда</a></li>
+				<li><a href="#">КОММЕРЧЕСКАЯ<br />
+					продажа</a></li>
+				<li><a href="#">КОММЕРЧЕСКАЯ<br />
+					аренда</a></li>
+			</ul>
+			<!--globalMenu end -->
+		</div>
+		<!-- Popup start -->
+		<div class="popupWrap auth" style="display: none;">
+			<div class="popupTop">
+				<div class="popupTopL">&nbsp;</div>
+				<div class="popupTopR">&nbsp;</div>
+				<div class="popupTopC">&nbsp;</div>
+			</div>
+			<div class="popupCenter">
+				<form action="" method="post">
+					<fieldset>
+						<legend><span><a class="popupClose" href="#"><img src="images/blank.gif" alt="Закрыть" title="Закрыть" /></a>Вход</span></legend>
+						<div>
+							<label for="email">E-mail</label>
+							<input id="email" type="text" name="email" maxlength="" value="" />
+						</div>
+						<div>
+							<label for="pass">Пароль</label>
+							<input id="pass" type="password" name="pass" maxlength="" value="" />
+						</div>
+						<ul>
+							<li><a href="#">Забыли пароль?</a></li>
+							<li><a href="#">Регистрация</a></li>
+						</ul>
+						<div>
+							<input class="popupSubmit" id="login" type="submit" name="login" value="Войти" />
+							<label class="popupLabel" for="remember">
+								<input type="checkbox" name="remember" id="remember" />
+								<span>Запомнить меня</span></label>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+			<div class="popupBottom">
+				<div class="popupBottomL">&nbsp;</div>
+				<div class="popupBottomR">&nbsp;</div>
+				<div class="popupBottomC">&nbsp;</div>
+			</div>
+		</div>
+		<!-- Popup end -->
+		<!-- Popup start -->
+		<div class="popupWrap reg">
+			<div class="popupTop">
+				<div class="popupTopL">&nbsp;</div>
+				<div class="popupTopR">&nbsp;</div>
+				<div class="popupTopC">&nbsp;</div>
+			</div>
+			<div class="popupCenter">
+				<form action="" method="post">
+					<fieldset>
+						<legend><span><a class="popupClose" href="#"><img src="images/blank.gif" alt="Закрыть" title="Закрыть" /></a>Регистрация</span></legend>
+						<div>
+							<label>Вы</label>
+							<ul>
+								<li>
+									<label class="popupLabel radio" for="fiz">
+										<input type="radio" name="name" id="fiz" checked="checked" />
+										<span>физическое лицо</span></label>
+								</li>
+								<li>
+									<label class="popupLabel radio" for="ur">
+										<input type="radio" name="name" id="ur" />
+										<span>юридическое лицо</span></label>
+								</li>
+							</ul>
+						</div>
+						<div>
+							<div class="formError">
+								<label for="fio">Ф. И. О.</label>
+								<input id="fio" type="text" name="fio" maxlength="" value="" />
+							</div>
+						</div>
+						<div>
+							<div class="formValid">
+								<label for="org">Название организации</label>
+								<input id="org" type="text" name="org" maxlength="" value="" />
+								<p>без кавычек ООО, ЗАО и т.д.</p>
+							</div>
+						</div>
+						<div>
+							<div class="formValid">
+								<label for="codeCity">Телефон</label>
+								<input id="codeCountry" type="text" name="codecountry" maxlength="" value="+7" />
+								<input id="codeCity" type="text" name="codecity" maxlength="" value="код" />
+								<input id="number" type="text" name="namber" maxlength="" value="" />
+							</div>
+						</div>
+						<div>
+							<div class="formError">
+								<label for="regEmail">E-mail</label>
+								<input id="regEmail" type="text" name="email" maxlength="" value="" />
+							</div>
+						</div>
+						<div>
+							<div class="formValid">
+								<label for="regPass">Пароль<br />
+									<span>(не менее 6и символов)</span></label>
+								<input id="regPass" type="password" name="pass" maxlength="" value="" />
+							</div>
+						</div>
+						<div style="padding-top: 0;">
+							<div class="formValid">
+								<label for="regPass2">Подтвердите пароль</label>
+								<input id="regPass2" type="password" name="pass2" maxlength="" value="" />
+							</div>
+						</div>
+						<div>
+							<div class="formError">
+								<label for="captcha">Все символы с картинки</label>
+								<input id="captcha" type="text" name="captcha" maxlength="" value="" />
+								<img class="validImg" src="images/blank.gif" alt="" />
+								<p><img src="images/regform/captcha.gif" alt="" width="176" height="29" title="Введите эти символы в поле" /></p>
+								<p><a href="#">обновить картинку</a></p>
+							</div>
+						</div>
+						<div style="height: 50px;"> <a id="authLink" href="#">Авторизироваться</a>
+							<input class="popupSubmit" id="send" type="submit" name="submit" value="Отправить" />
+						</div>
+					</fieldset>
+				</form>
+			</div>
+			<div class="popupBottom">
+				<div class="popupBottomL">&nbsp;</div>
+				<div class="popupBottomR">&nbsp;</div>
+				<div class="popupBottomC">&nbsp;</div>
+			</div>
+		</div>
+		<!-- Popup end -->
+	</div>
+	<!--contentBox end -->
+</div>
+<!--global end -->
+<!--footer start -->
+<div class="footer">
+	<div class="footerBox">
+		<div class="copyright">&copy; 2009. Все права защищены</div>
+		<!--footerMenu start -->
+		<ul class="footerMenu">
+			<li><a href="#">О&nbsp;проекте</a></li>
+			<li class="active"><a href="#">Информация</a></li>
+			<li><a href="#">Помощь</a></li>
+			<li><a href="#">Реклама&nbsp;на&nbsp;проекте</a></li>
+		</ul>
+		<!--footerMenu end -->
+	</div>
+</div>
+<!--footer end -->
+</body>
+</html>

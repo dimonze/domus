@@ -1,0 +1,474 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<link href="/css/reset.css" rel="stylesheet" type="text/css" />
+<link href="/css/main.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/js/jquery.js"></script>
+  <script type="text/javascript" src="/js/global.js"></script>
+<!--[if lte IE 6]>
+<script type="text/javascript" src="/js/iepngfix_tilebg.js"></script>
+<link href="/css/ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+</head>
+<body>
+<!--global start -->
+<div class="global">
+	<!--contentBox start -->
+	<div class="contentBox">
+		<!--header start -->
+		<div class="headerBox">
+			<div class="header">
+				<div class="headerLeft"><a href="#" class="logo">domus</a>
+					<!--sityMenu start -->
+					<div class="cityMenu"> <a href="#"><span>Санкт-Петербург</span></a> </div>
+					<!--sityMenu end -->
+				</div>
+				<div class="headerRight">
+					<!--topMenu start -->
+					<ul class="topMenu">
+						<li>Петр Копейкин</li>
+						<li class="cabinet"><a href="#">Мой кабинет</a></li>
+						<li class="out"><a href="#">Выход</a></li>
+					</ul>
+					<!--topMenu end -->
+					<!--topSearchForm start -->
+					<form action="" method="get">
+						<fieldset>
+							<input type="text" value="Поиск по ключевому слову" onblur="if(this.value==''){this.value='Поиск по ключевому слову';}"
+onfocus="if(this.value=='Поиск по ключевому слову'){this.value='';}" class="topSearchInput" />
+							<button class="topSearchButton" type="submit" value="Найти">Найти</button>
+						</fieldset>
+					</form>
+					<!--topSearchForm end -->
+				</div>
+			</div>
+		</div>
+		<!--header end -->
+		<div class="wrapper">
+			<!--globalMenu start -->
+			<ul class="globalMenu">
+				<li class="active"><a href="#">КВАРТИРЫ<br />
+					продажа</a></li>
+				<li><a href="#">КВАРТИРЫ<br />
+					аренда</a></li>
+				<li><a href="#">ДОМА И УЧАСТКИ<br />
+					продажа</a></li>
+				<li><a href="#">ДОМА И УЧАСТКИ<br />
+					аренда</a></li>
+				<li><a href="#">КОММЕРЧЕСКАЯ<br />
+					продажа</a></li>
+				<li><a href="#">КОММЕРЧЕСКАЯ<br />
+					аренда</a></li>
+			</ul>
+			<!--globalMenu end -->
+			<!--pageHeader start -->
+			<div class="pageHeader">
+				<h1>Разместить объявление</h1>
+			</div>
+			<!--pageHeader end -->
+			<!--contentLeft start -->
+			<div class="contentLeft_02">
+				<form action="/test/apartament-sale" method="post" class="addForm">
+					<div class="addForm-head sortBox_02">
+						<div class="floatLeft"> <label><strong>Я предлагаю</strong>
+							<select name="select" >
+								<option>Квартиру/комнату на продажу</option>
+							</select></label>
+						</div>
+						<div class="floatRight">
+							<label><strong>Период публикации </strong>
+								<select>
+								<option>15 дней</option>
+							</select></label>
+						</div>
+						<div class="clearBoth"></div>
+					</div>
+					<table width="100%" cellpadding="0" cellspacing="0">
+						
+							<tr class="form-region_id">
+								<td><label for="apartament-sale_region_id"><strong>* Регион</strong></label></td>
+								<td class="field"><select name="apartament-sale[region_id]" id="apartament-sale_region_id">
+										<option value="77">г. Москва</option>
+										<option value="78">г. Санкт-Петербург</option>
+									</select></td>
+							</tr>
+							<tr class="form-region_node">
+								<td><label><strong>* Метро/Район/Город</strong></label></td>
+								<td class="field"><select class="regionnode" name="apartament-sale[region_node][]">
+										<option>ст. м. Авиамоторная</option>
+										<option>ст. м. Автозаводская</option>
+									</select>
+									<br />
+									<select class="regionnode" name="apartament-sale[region_node][]">
+										<option>ст. м. Авиамоторная</option>
+										<option>ст. м. Автозаводская</option>
+									</select>
+									<br />
+									<select class="regionnode" name="apartament-sale[region_node][]">
+										<option>ст. м. Авиамоторная</option>
+										<option>ст. м. Автозаводская</option>
+									</select>
+									</td>
+							</tr>
+							<tr class="form-city_region">
+								<td><label for="apartament-sale_city_region"><strong>&nbsp;&nbsp;Район/Населенный пункт</strong></label></td>
+								<td class="field"><input class="autocomplete-city ac_input"  name="apartament-sale[city_region]" id="apartament-sale_city_region" type="text"></td>
+							</tr>
+							<tr class="form-street">
+								<td><label for="apartament-sale_street"><strong>&nbsp;&nbsp;Адрес</strong></label></td>
+								<td class="field"><input class="autocomplete-street ac_input" name="apartament-sale[street]" id="apartament-sale_street" type="text"></td>
+							</tr>
+							<tr class="form-address">
+								<td><label for="apartament-sale_address">&nbsp;&nbsp;обязательно для городов</label></td>
+								<td class="field"><label>дом
+										<input size="3" name="apartament-sale[address][house]" id="apartament-sale_address_house" type="text">
+									</label>
+									<label>корпус
+										<input size="3" name="apartament-sale[address][building]" id="apartament-sale_address_building" type="text">
+									</label>
+									<label>строение
+										<input size="3" name="apartament-sale[address][structure]" id="apartament-sale_address_structure" type="text">
+									</label></td>
+							</tr>
+							<tr class="form-coords">
+								<td class="field colspan2" colspan="2"><b>
+									<label for="apartament-sale_coords"> </label>
+									
+									<div class="input-gmap">гуглокарте нужно адать размеры в соответствии с макетом</div></td>
+							</tr>
+							<tr class="form-field63">
+								<td><label for="apartament-sale_field63"><strong>* Тип предложения</strong></label></td>
+								<td class="field"><ul class="radio_list">
+										<li class="radiocombo">
+											<input class="radiocombo" name="apartament-sale[field63]" value="комната" id="apartament-sale_field63_комната" type="radio">
+											&nbsp;
+											<label class="radiocombo" for="apartament-sale_field63_комната">комната</label>
+										</li>
+										<li class="radiocombo">
+											<input oldvalue=" комнатная квартира" class="radiocombo" name="apartament-sale[field63]" value=" комнатная квартира" id="apartament-sale_field63_ комнатная квартира" type="radio">
+											&nbsp;
+											<select style="display: inline;">
+												<option value="1">1</option>
+												<option value="2">2</option>
+												<option value="3">3</option>
+												<option value="4">4</option>
+												<option value="5">5</option>
+												<option value="6">6</option>
+												<option value="7">7</option>
+												<option value="8">8</option>
+												<option value="9">9</option>
+												<option value="10">10</option>
+												<option value="11">11</option>
+												<option value="12">12</option>
+												<option value="13">13</option>
+												<option value="14">14</option>
+												<option value="15">15</option>
+											</select>
+											<label class="radiocombo" for="apartament-sale_field63_ комнатная квартира"> комнатная квартира</label>
+										</li>
+										<li class="radiocombo">
+											<input class="radiocombo" name="apartament-sale[field63]" value="квартира со свободной планировкой" id="apartament-sale_field63_квартира со свободной планировкой" type="radio">
+											&nbsp;
+											<label class="radiocombo" for="apartament-sale_field63_квартира со свободной планировкой">квартира со свободной планировкой</label>
+										</li>
+									</ul></td>
+							</tr>
+							<tr class="form-field1">
+								<td><label for="apartament-sale_field1"><strong>* Общая площадь</strong></label></td>
+								<td class="field"><input maxlength="4" size="4" name="apartament-sale[field1]" id="apartament-sale_field1" type="text">
+									<span class="field-help"> кв.м </span></td>
+							</tr>
+							<tr class="form-field2">
+								<td><label for="apartament-sale_field2"><strong>* Общая стоимость</strong></label></td>
+								<td class="field"><input class="inputprice" name="apartament-sale[field2]" id="apartament-sale_field2">
+									<select name="currency_apartament-sale[field2]" id="currency_apartament-sale_field2">
+										<option value="RUR">RUR</option>
+										<option value="USD">USD</option>
+										<option value="EUR">EUR</option>
+									</select></td>
+							</tr>
+							<tr class="form-field3">
+								<td><label for="apartament-sale_field3"><strong>* Этаж</strong></label></td>
+								<td class="field"><input maxlength="2" size="2" name="apartament-sale[field3]" id="apartament-sale_field3" type="text"></td>
+							</tr>
+							<tr class="form-field4">
+								<td><label for="apartament-sale_field4"><strong>* Этажность</strong></label></td>
+								<td class="field"><input maxlength="2" size="2" name="apartament-sale[field4]" id="apartament-sale_field4" type="text"></td>
+							</tr>
+							<tr class="form-field5">
+								<td><label for="apartament-sale_field5"><strong>* Год постройки</strong></label></td>
+								<td class="field"><input maxlength="4" size="4" name="apartament-sale[field5]" id="apartament-sale_field5" type="text">
+									<span class="field-help"> ориентировочно </span></td>
+							</tr>
+							<tr class="form-field6">
+								<td><label for="apartament-sale_field6"><strong>* Тип здания</strong></label></td>
+								<td class="field"><select name="apartament-sale[field6]" id="apartament-sale_field6">
+										<option value="Кирпичный">Кирпичный</option>
+										<option value="Блочный">Блочный</option>
+										<option value="Панельный">Панельный</option>
+										<option value="Дерево">Дерево</option>
+										<option value="Панельно-блочный">Панельно-блочный</option>
+										<option value="Монолит">Монолит</option>
+										<option value="Монолитно-кирпичный">Монолитно-кирпичный</option>
+									</select></td>
+							</tr>
+							<tr class="form-field7">
+								<td> <strong>&nbsp;&nbsp;Детали </strong></td>
+								<td class="field"><input name="apartament-sale[field7]" id="apartament-sale_field7" type="checkbox">
+									<label for="apartament-sale_field7">С отделкой</label></td>
+							</tr>
+							<tr class="form-field8">
+								<td></td>
+								<td class="field"><input name="apartament-sale[field8]" id="apartament-sale_field8" type="checkbox">
+									<label for="apartament-sale_field8">Подземная автостоянка</label></td>
+							</tr>
+							<tr class="form-field9">
+								<td><label for="apartament-sale_field9">&nbsp;&nbsp;Жилая площадь</label></td>
+								<td class="field"><input maxlength="3" size="3" name="apartament-sale[field9]" id="apartament-sale_field9" type="text"></td>
+							</tr>
+							<tr class="form-field10">
+								<td><label for="apartament-sale_field10">&nbsp;&nbsp;Площадь кухни</label></td>
+								<td class="field"><input maxlength="3" size="3" name="apartament-sale[field10]" id="apartament-sale_field10" type="text"></td>
+							</tr>
+							<tr class="form-field11">
+								<td><label for="apartament-sale_field11">&nbsp;&nbsp;Высота потолков</label></td>
+								<td class="field"><input name="apartament-sale[field11]" id="apartament-sale_field11" type="text"></td>
+							</tr>
+							<tr class="form-field12">
+								<td><label for="apartament-sale_field12">&nbsp;&nbsp;Расположение комнат</label></td>
+								<td class="field"><select name="apartament-sale[field12]" id="apartament-sale_field12">
+										<option value="" selected="selected"> </option>
+										<option value="изолированные">изолированные</option>
+										<option value="смежные">смежные</option>
+										<option value="смежно-изолированная">смежно-изолированная</option>
+									</select></td>
+							</tr>
+							<tr class="form-field13">
+								<td><label for="apartament-sale_field13">&nbsp;&nbsp;Санузел</label></td>
+								<td class="field"><select name="apartament-sale[field13]" id="apartament-sale_field13">
+										<option value="" selected="selected"> </option>
+										<option value="совмещенный">совмещенный</option>
+										<option value="раздельный">раздельный</option>
+										<option value="2 с/у">2 с/у</option>
+										<option value="3 с/у">3 с/у</option>
+										<option value="4 с/у">4 с/у</option>
+									</select></td>
+							</tr>
+							<tr class="form-field14">
+								<td><label for="apartament-sale_field14">&nbsp;&nbsp;Окна</label></td>
+								<td class="field"><select name="apartament-sale[field14]" id="apartament-sale_field14">
+										<option value="" selected="selected"> </option>
+										<option value="деревянные">деревянные</option>
+										<option value="деревянные стеклопакет">деревянные стеклопакет</option>
+										<option value="пластиковые стеклопакет">пластиковые стеклопакет</option>
+										<option value="алюминиевые стеклопакет">алюминиевые стеклопакет</option>
+										<option value="дерево-алюм. стеклопакет">дерево-алюм. стеклопакет</option>
+									</select></td>
+							</tr>
+							<tr class="form-field15">
+								<td><label for="apartament-sale_field15">&nbsp;&nbsp;Перекрытия</label></td>
+								<td class="field"><select name="apartament-sale[field15]" id="apartament-sale_field15">
+										<option value="" selected="selected"> </option>
+										<option value="дерево">дерево</option>
+										<option value="железобетон">железобетон</option>
+										<option value="монолитные">монолитные</option>
+										<option value="смешанные">смешанные</option>
+									</select></td>
+							</tr>
+							<tr class="form-field16">
+								<td><label for="apartament-sale_field16">&nbsp;&nbsp;Ремонт</label></td>
+								<td class="field"><select name="apartament-sale[field16]" id="apartament-sale_field16">
+										<option value="" selected="selected"> </option>
+										<option value="евроремонт">евроремонт</option>
+										<option value="в отличном состоянии">в отличном состоянии</option>
+										<option value="после косметического ремонта">после косметического ремонта</option>
+										<option value="требует косметического ремонта">требует косметического ремонта</option>
+										<option value="требует кап ремонта">требует кап ремонта</option>
+									</select></td>
+							</tr>
+							<tr class="form-field17">
+								<td><label for="apartament-sale_field17">&nbsp;&nbsp;Балкон/лоджия</label></td>
+								<td class="field"><select name="apartament-sale[field17]" id="apartament-sale_field17">
+										<option value="" selected="selected"> </option>
+										<option value="балкон">балкон</option>
+										<option value="лоджия">лоджия</option>
+										<option value="балкон и лоджия">балкон и лоджия</option>
+									</select></td>
+							</tr>
+							<tr class="form-field18">
+								<td> &nbsp;&nbsp;Детали </td>
+								<td class="field"><input name="apartament-sale[field18]" id="apartament-sale_field18" type="checkbox">
+									<label for="apartament-sale_field18">Меблировка</label></td>
+							</tr>
+							<tr class="form-field19">
+								<td></td>
+								<td class="field"><input name="apartament-sale[field19]" id="apartament-sale_field19" type="checkbox">
+									<label for="apartament-sale_field19">Телефон</label></td>
+							</tr>
+							<tr class="form-field20">
+								<td></td>
+								<td class="field"><input name="apartament-sale[field20]" id="apartament-sale_field20" type="checkbox">
+									<label for="apartament-sale_field20">Интернет</label></td>
+							</tr>
+							<tr class="form-field21">
+								<td></td>
+								<td class="field"><input name="apartament-sale[field21]" id="apartament-sale_field21" type="checkbox">
+									<label for="apartament-sale_field21">Лифт</label></td>
+							</tr>
+							<tr class="form-field22">
+								<td></td>
+								<td class="field"><input name="apartament-sale[field22]" id="apartament-sale_field22" type="checkbox">
+									<label for="apartament-sale_field22">Мусоропровод</label></td>
+							</tr>
+							<tr class="form-field24">
+								<td></td>
+								<td class="field"><input name="apartament-sale[field24]" id="apartament-sale_field24" type="checkbox">
+									<label for="apartament-sale_field24">Огороженная территория</label></td>
+							</tr>
+							<tr class="form-field23">
+								<td><label for="apartament-sale_field23">&nbsp;&nbsp;Охрана</label></td>
+								<td class="field"><select name="apartament-sale[field23]" id="apartament-sale_field23">
+										<option value="" selected="selected"> </option>
+										<option value="отсутствует">отсутствует</option>
+										<option value="консьерж">консьерж</option>
+										<option value="охрана">охрана</option>
+										<option value="домофон">домофон</option>
+										<option value="кодовый замок">кодовый замок</option>
+									</select></td>
+							</tr>
+							<tr class="form-description">
+								<td class="field colspan2" colspan="2">
+									<label for="apartament-sale_description"><strong>&nbsp;&nbsp;Описание объекта</strong></label>
+	
+									<textarea rows="4" cols="30" need_colspan="1" name="apartament-sale[description]" id="apartament-sale_description"></textarea>
+									<br>
+									<span class="field-help"> &nbsp;&nbsp;Не более 500 символов </span></td>
+							</tr>
+							<tr class="form-image">
+								<td class="field colspan2" colspan="2">
+									<label for="apartament-sale_image"><strong>&nbsp;&nbsp;Фотографии</strong></label>
+									
+									<div need_colspan="1" class="ajax-uploaded">
+										<div class="uploaded-item">
+											<input name="apartament-sale[image][]" id="filename" value="c24cc84c56c04d69373500e2bf1f2f32323029a4.jpg" type="hidden">
+											<img src="images/pic/pic_09.jpg"> <a class="delete" href="#">Удалить</a></div>
+										<div class="uploaded-item">
+											<input name="apartament-sale[image][]" id="filename" value="d871729a4d1ff7f437b7a0835c40eae6ea1b6ce7.jpg" type="hidden">
+											<img src="images/pic/pic_09.jpg"> <a class="delete" href="#">Удалить</a></div>
+										<div class="uploaded-item">
+											<input name="apartament-sale[image][]" id="filename" value="ed83373727322df1866eea9d6fe66783d9f1c41b.jpg" type="hidden">
+											<img src="images/pic/pic_09.jpg"> <a class="delete" href="#">Удалить</a></div>
+											<div class="clearBoth"></div>
+									</div>
+									<input need_colspan="1" type="file">
+									<button need_colspan="1" class="ajax-upload" url="/form/upload" max="6" name="apartament-sale[image]" id="apartament-sale_image">Загрузить</button>
+									<br>
+									<span class="field-help"> До 6 изображений </span></td>
+							</tr>
+							<tr class="form-company_link">
+								<td class="field colspan2" colspan="2">
+									<label for="apartament-sale_company_link"><strong>Сcылка на страницу объекта на сайте компании</strong></label>
+									
+									<input need_colspan="1" name="apartament-sale[company_link]" id="apartament-sale_company_link" type="text">
+									<br>
+									<span class="field-help"> Например: <a class="linkification-ext" href="http://www.myfirm.ru/tverskaya14.htm" title="Linkification: http://www.myfirm.ru/tverskaya14.htm">www.myfirm.ru/tverskaya14.htm</a> </span></td>
+							</tr>
+							<tr class="form-company_contact_title">
+								<td class="field colspan2" colspan="2"><b>
+									<label for="apartament-sale_company_contact_title">Контактная информация для объявления</label>
+									</b><br>
+									<input need_colspan="1" name="apartament-sale[company_contact_title]" id="apartament-sale_company_contact_title" type="hidden">
+									</td>
+							</tr>
+							<tr class="form-company_contact_name">
+								<td><label for="apartament-sale_company_contact_name">Представитель компании</label></td>
+								<td class="field"><input name="apartament-sale[company_contact_name]" id="apartament-sale_company_contact_name" type="text"></td>
+							</tr>
+							<tr class="form-company_contact_phone">
+								<td><label for="apartament-sale_company_contact_phone">Доп. телефонный номер</label></td>
+								<td class="field"><label>
+										<input size="2" name="apartament-sale[company_contact_phone][country]" id="apartament-sale_company_contact_phone_country" type="text">
+									</label>
+									<label>
+										<input size="4" name="apartament-sale[company_contact_phone][area]" id="apartament-sale_company_contact_phone_area" type="text">
+									</label>
+									<label>
+										<input size="8" name="apartament-sale[company_contact_phone][number]" id="apartament-sale_company_contact_phone_number" type="text">
+									</label></td>
+							</tr>
+							<tr class="form-agree">
+								<td colspan="2" class="field colspan2"><input need_colspan="1" name="apartament-sale[agree]" id="apartament-sale_agree" type="checkbox">
+									<label for="apartament-sale_agree">* Я ознакомлен и принимаю <a href="#">Условия&nbsp;и&nbsp;правила обслуживания&nbsp;и&nbsp;размещения информации</a></label></td>
+							</tr>
+						
+						
+							<tr class="addButton">
+								<td colspan="2" ><span class="formButton">
+                                	<input name="input" type="submit" value="Разместить обьявление" />
+                                </span>
+								<div class="buttonBox">&nbsp;</div>
+									<span class="formButton">
+                                	<input name="input" type="reset" value="Очистить" />
+                                </span></td>
+							</tr>
+						
+					</table>
+				</form>
+			</div>
+			<!--contentLeft end -->
+			<!--contentRight start -->
+			<div class="contentRight_02">
+				<!--cabinetMenuBox start -->
+				<div class="cabinetMenuBox ">
+					<div class="boxBack_02">
+						<h2>Мой кабинет</h2>
+					</div>
+					<ul class="cabinetMenu padding_11">
+						<li><a href="#">Избранные</a></li>
+						<li><a href="#">Разместить объявления</a></li>
+						<li class="active"><a href="#">Мои объявления</a></li>
+						<li><a href="#">Мои сообщения</a></li>
+						<li><a href="#">Разместить объект</a></li>
+						<li><a href="#">Профайл</a></li>
+					</ul>
+				</div>
+				<!--cabinetMenuBox end -->
+
+        <div id="rate-diag" class="rate-diag">
+          <h5>Заполнено полей: <strong>23</strong> из 70</h5>
+          <div class="diag"><span style="width: 78%;"></span></div>
+          <p class="rate">Рейтинг: <strong>453</strong></p>
+          <a class="show" href="#">О рейтинге</a>
+          <p class="hidden">О рейтинге можно сказать многое</p>
+          <div class="b"></div>
+        </div>
+
+        
+
+			</div>
+			<!--contentRight end -->
+			<div class="clearBoth"></div>
+		</div>
+	</div>
+	<!--contentBox end -->
+</div>
+<!--global end -->
+<!--footer start -->
+<div class="footer">
+	<div class="footerBox">
+		<div class="copyright">&copy; 2009. Все права защищены</div>
+		<!--footerMenu start -->
+		<ul class="footerMenu">
+			<li><a href="#">О&nbsp;проекте</a></li>
+			<li class="active"><a href="#">Информация</a></li>
+			<li><a href="#">Помощь</a></li>
+			<li><a href="#">Реклама&nbsp;на&nbsp;проекте</a></li>
+		</ul>
+		<!--footerMenu end -->
+	</div>
+</div>
+<!--footer end -->
+</body>
+</html>

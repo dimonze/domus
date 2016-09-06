@@ -1,0 +1,12 @@
+all:
+  metas:
+    title:        Посадочные страницы
+    #description:  symfony project
+    #keywords:     symfony, project
+    #language:     en
+    #robots:       index, follow
+  
+  javascripts:
+    - /sfFormExtraPlugin/js/tiny_mce/tiny_mce
+    - ajaxupload.js
+    - global.js

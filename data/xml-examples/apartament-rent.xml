@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<realty-feed> 
+  <offer internal-id="1"> 
+		<category>квартира</category>
+		<type>аренда</type>
+		<creation>2010-11-02T13:20:41+04:00</creation>
+		<expire>2012-02-03T13:20:41+04:00</expire>
+		<location>
+			<region>Москва</region>
+			<region_node>м. Сокол</region_node>
+			<city>г. Москва</city>
+			<street>ул. Новопесчаная</street>
+			<address>
+				<house>11</house>
+				<building>1</building>
+				<structure>6</structure>
+			</address>
+		</location>
+		<full-price>
+			<value>18000</value>
+			<currency>RUR</currency>
+		</full-price>
+		<description>двухкомнатная квартира рядом с метро в сталинском доме,закрытый зеленый двор,солидные соседи,возможность присоединения комнаты над квартирой:комнаты-27+16м.кухня 17,2м.,два больших коридора,большая антресоль и ванная,итальянская сантехника,подвесные потолки,панорамный вид на песчаную площадь,бронированная дверь.Торг.</description>
+		<latitude>55.7997854276</latitude>
+		<longitude>37.5165081024</longitude>
+		<agent>
+			<phone>+7 (903) 565-25-62</phone>
+			<name>Валерия</name>
+			<link>http://www.mesto.ru/user/11720</link>
+		</agent>
+		<image>http://www.mesto.ru/uploads/lot/p/z/m/263077/800x600/1.jpg</image>
+		<image>http://www.mesto.ru/uploads/lot/p/z/m/263077/800x600/2.jpg</image>
+		<image>http://www.mesto.ru/uploads/lot/p/z/m/263077/800x600/3.jpg</image>
+		<image>http://www.mesto.ru/uploads/lot/p/z/m/263077/800x600/4.jpg</image>
+		<offer-type>2-х комнатная квартира</offer-type>
+		<full-area>76</full-area>
+		<agent-fee>
+			<value>123321</value>
+			<currency>RUR</currency>
+		</agent-fee>
+		<currency-type>месяц</currency-type>
+		<floor>5</floor>
+		<floors-total>5</floors-total>
+		<build-year>1949</build-year>
+		<house-type>Кирпичный</house-type>
+		<floor-space>43</floor-space>
+		<kitchen-area>17.2</kitchen-area>
+		<ceilings-height>3.75</ceilings-height>
+		<equipment>да</equipment>
+		<rooms-arrangement>изолированные</rooms-arrangement>
+		<sewerage>раздельный</sewerage>
+		<windows>пластиковые стеклопакет</windows>
+		<quality>евроремонт</quality>
+		<furniture>да</furniture>
+		<balcony>балкон</balcony>
+		<details>с отделкой, телефон, домофон, интернет, кодовый замок, огороженная территория</details>
+  </offer>
+</realty-feed>

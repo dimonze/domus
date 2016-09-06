@@ -1,0 +1,428 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="X-Ua-Compatible" content="IE=8"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="title" content="Избранные объявления"/>
+  <meta name="name" content="Избранное"/>
+  <title>Избранные объявления</title>
+  <link rel="stylesheet" type="text/css" media="all" href="/css/reset.css?1300193896"/>
+  <link rel="stylesheet" type="text/css" media="all" href="/css/main.css?1304451981"/>
+  <link rel="stylesheet" type="text/css" media="all" href="/css/user.css?1300193826"/>
+  <link rel="stylesheet" type="text/css" media="all" href="/css/metro.css?1304080404"/>
+  <link rel="stylesheet" type="text/css" media="print" href="/css/print.css?1300193917"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="/css/jquery-ui/index.css?1300193813" />
+   <!--[if IE 6]>
+    <script type="text/javascript" src="js/iepngfix_tilebg.js"></script>
+    <link rel="stylesheet" type="text/css" media="all" href="/css/ie6.css"/>
+  <![endif]-->
+  <!--[if IE 7]>
+    <link rel="stylesheet" type="text/css" media="all" href="/css/ie7.css"/>
+  <![endif]-->
+  <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" media="all" href="/css/ie8.css"/>
+  <![endif]-->
+  <script type="text/javascript" src="/js/jquery.js?1300193834"></script>
+  <script type="text/javascript" src="/js/jquery.datepicker.js?1300193925"></script>
+  <script type="text/javascript" src="/js/highcharts.js"></script>
+  <script type="text/javascript" src="/js/chart.js"></script>
+  <script type="text/javascript" src="/js/global.js?1304401901"></script>
+  <script type="text/javascript" src="/js/form.js?1303995208"></script>
+  <script type="text/javascript" src="/js/metro.js?1303722618"></script>
+
+  <link rel="shortcut icon" href="/images/favicon.ico"/>
+</head>
+<body>
+
+<script type="text/javascript">
+  var to_draw = [
+    {date: '5.04.11', active: 5, added: 2, inactive: -2},
+    {date: '6.04.11', active: 4, added: 3, inactive: -8},
+    {date: '7.04.11', active: 3, added: 4, inactive: -3},
+    {date: '8.04.11', active: 2, added: 5, inactive: -7},
+    {date: '9.04.11', active: 1, added: 1, inactive: -5}
+  ];
+</script>
+
+<div id="bg">
+<div id="container">
+<div id="global-loading"></div>
+<div class="global">
+<div class="contentBox">
+
+<div class="headerBox">
+  <div id="header">
+    <a class="new-insertion" href="/lot/add">Добавить объявление<span></span></a>
+    <ul class="login-nav">
+      <li>tester</li>
+
+      <li class="cabinet inner">
+        <a href="#" toggle=".cabinetSubmenu" class="toggle">Мой кабинет</a>
+        <ul class="cabinetSubmenu">
+          <li class="active">
+            <span>Избранное</span>
+            (<span title="Всего">0</span>)
+
+          </li>
+          <li class="">
+            <a href="/lot/add">Добавить объявление</a>
+
+          </li>
+          <li class="">
+            <a href="/import/importFile">Импортировать объявления</a>
+
+          </li>
+          <li class="">
+            <a href="/lot/my">Мои объявления</a>
+            (<span title="Всего">0</span>)
+
+          </li>
+          <li class="">
+            <a href="/user/pm">Мои сообщения</a>
+            (<span class="unread-messages-container">0</span>)
+
+
+          </li>
+          <li class="">
+            <a href="/user/profile">Профайл</a>
+
+          </li>
+          <li class="">
+            <a href="/user/invite">Пригласить сотрудников</a>
+
+          </li>
+          <li class="">
+            <a href="/user/pm#c:create-pm$moderator:1">Обратная связь</a>
+
+          </li>
+        </ul>
+      </li>
+      <li class="out last"><a href="/user/logout">Выход</a></li>
+
+    </ul>
+    <!--        <div class="headerLeft">-->
+    <a class="logo" href="/77/main"><img alt="Место.ру" src="/images/no-repeat.png"/></a>
+    <div class="cityMenu" style="background: url('/images/region/77.gif') no-repeat left top">
+      <a href="#" toggle=".cityMenu .outlinemenu" id="citySelect">
+        <span>г. Москва</span>
+      </a>
+
+      <div class="outlinemenu" style="display: none">
+        <iframe class="select-hider" frameborder="0"></iframe>
+        <ul class="cityScroll">
+
+          <li rel="77" class="current" style="display: none">
+            <a href="/setregion/77">г. Москва</a></li>
+
+          <li rel="50"><a href="/setregion/50">Московская обл.</a></li>
+
+          <li rel="47"><a href="/setregion/47">Ленинградская обл.</a></li>
+
+          <li rel="28"><a href="/setregion/28">Амурская обл.</a></li>
+
+          <li rel="2"><a href="/setregion/2">Башкортостан</a></li>
+
+          <li rel="31"><a href="/setregion/31">Белгородская обл.</a></li>
+
+          <li rel="78"><a href="/setregion/78">г. Санкт-Петербург</a></li>
+
+          <li rel="3"><a href="/setregion/3">Бурятия</a></li>
+
+          <li rel="34"><a href="/setregion/34">Волгоградская обл.</a></li>
+
+          <li rel="35"><a href="/setregion/35">Вологодская обл.</a></li>
+
+          <li rel="37"><a href="/setregion/37">Ивановская обл.</a></li>
+
+          <li rel="6"><a href="/setregion/6">Ингушетия</a></li>
+
+          <li rel="40"><a href="/setregion/40">Калужская обл.</a></li>
+
+          <li rel="23"><a href="/setregion/23">Краснодарский край</a></li>
+
+          <li rel="12"><a href="/setregion/12">Марий Эл</a></li>
+
+          <li rel="61"><a href="/setregion/61">Ростовская обл.</a></li>
+
+          <li rel="15"><a href="/setregion/15">Северная Осетия</a></li>
+
+          <li rel="86"><a href="/setregion/86">Ханты-Мансийский АО</a></li>
+
+          <li rel="20"><a href="/setregion/20">Чечня</a></li>
+
+          <li rel="75"><a href="/setregion/75">Забайкальский край</a></li>
+        </ul>
+
+      </div>
+    </div>
+    <ul class="top-nav">
+      <li class="inner ">
+        <a href="#"><em><span>Новости <var></var></span></em></a>
+        <div class="corner"></div>
+        <div class="dropbox">
+          <div class="dropbox-wrap">
+            <ul>
+              <li><a href="/77/news/news-market">Новости рынка</a></li>
+              <li><a href="/77/news/news-portal">Новости портала</a></li>
+              <li><a href="/77/news/news-companies">Новости компаний</a></li>
+            </ul>
+            <div class="dropbox-cn dropbox-tl"></div>
+            <div class="dropbox-cn dropbox-tr"></div>
+          </div>
+          <div class="dropbox-cn dropbox-bl"></div>
+          <div class="dropbox-cn dropbox-br"></div>
+        </div>
+      </li>
+      <li>
+        <a href="/77/posts/article"><em>Статьи</em></a></li>
+      <li>
+        <a href="/77/posts/analytics"><em>Аналитика</em></a></li>
+      <li class="inner "><a href="#"><em><span>Эксперты <var></var></span></em></a>
+        <div class="corner"></div>
+        <div class="dropbox">
+          <div class="dropbox-wrap">
+            <ul>
+              <li><a href="/77/experts">Экспертные мнения</a></li>
+              <li><a href="/77/authors">Авторские колонки</a></li>
+            </ul>
+            <div class="dropbox-cn dropbox-tl"></div>
+            <div class="dropbox-cn dropbox-tr"></div>
+          </div>
+          <div class="dropbox-cn dropbox-bl"></div>
+          <div class="dropbox-cn dropbox-br"></div>
+        </div>
+      </li>
+      <li class="inner "><a href="#"><em><span>Рейтинги <var></var></span></em></a>
+        <div class="corner"></div>
+        <div class="dropbox">
+          <div class="dropbox-wrap">
+            <ul>
+              <li><a href="/rating/company">Рейтинги компаний</a></li>
+              <li><a href="/rating/realtor">Рейтинги риэлторов</a></li>
+            </ul>
+            <div class="dropbox-cn dropbox-tl"></div>
+            <div class="dropbox-cn dropbox-tr"></div>
+          </div>
+          <div class="dropbox-cn dropbox-bl"></div>
+          <div class="dropbox-cn dropbox-br"></div>
+        </div>
+      </li>
+      <li class="inner "><a href="#"><em><span>Еще <var></var></span></em></a>
+        <div class="corner"></div>
+        <div class="dropbox">
+          <div class="dropbox-wrap">
+            <ul>
+              <li><a href="/77/posts/events">События</a></li>
+              <li><a href="/questionnaire">Опросы</a></li>
+              <li><a href="/77/qa">Вопрос&amp;Ответ</a></li>
+              <li><a href="/blog/all">Блоги</a></li>
+              <li><a href="/info">О Место.ру</a></li>
+            </ul>
+            <div class="dropbox-cn dropbox-tl"></div>
+            <div class="dropbox-cn dropbox-tr"></div>
+          </div>
+          <div class="dropbox-cn dropbox-bl"></div>
+          <div class="dropbox-cn dropbox-br"></div>
+        </div>
+      </li>
+    </ul>
+    <!--        </div>-->
+    <!--        <div class="headerRight">
+    </div>-->
+  </div>
+</div>
+
+<div class="wrapper">
+<ul class="innerGlobalMenu">
+  <li class=" ">
+    <a href="/apartament-sale/77/search">КВАРТИРЫ<br/>продажа</a></li>
+  <li class=" ">
+    <a href="/apartament-rent/77/search">КВАРТИРЫ<br/>аренда</a></li>
+  <li class=" ">
+    <a href="/house-sale/77/search">ДОМА И УЧАСТКИ<br/>продажа</a></li>
+  <li class=" ">
+    <a href="#" class="no-click">ДОМА<br/>аренда</a>
+  </li>
+  <li class=" ">
+    <a href="/commercial-sale/77/search">КОММЕРЧЕСКАЯ<br/>продажа</a></li>
+  <li class="last ">
+    <a href="/commercial-rent/77/search">КОММЕРЧЕСКАЯ<br/>аренда</a></li>
+</ul>
+
+
+<div class="pageHeader">
+
+  <ul class="compareList">
+    <li>
+      <a href="/compare/new_building-sale">Новостройки на продажу</a></li>
+    <li>
+      <a href="/compare/apartament-sale">квартир/комнат на продажу</a></li>
+    <li>
+      <a href="/compare/apartament-rent">квартир/комнат в аренду</a></li>
+    <li>
+      <a href="/compare/house-sale">домов/участков на продажу</a></li>
+    <li>
+      <a href="/compare/house-rent">домов/участков в аренду</a></li>
+    <li>
+      <a href="/compare/commercial-sale">объектов коммерческой недвижимости на продажу</a>
+    </li>
+    <li>
+      <a href="/compare/commercial-rent">объектов коммерческой недвижимости в аренду</a>
+    </li>
+  </ul>
+
+  <h1>Статистика объявлений</h1>
+</div>
+
+  <div class="contentStatistics">
+    <form class="statParams cf" action="">
+      <fieldset>
+        <div class="row">
+          <label for="fooType">Тип:</label>
+          <select name="" id="fooType">
+            <option value="">Выберите тип чего-то там</option>
+          </select>
+        </div>
+
+        <div class="row">
+          <label for="fooRegion">Регион:</label>
+          <select name="" id="fooRegion">
+            <option value="">Выберите регион</option>
+          </select>
+        </div>
+      </fieldset>
+      <fieldset>
+        <h4>Отчетные периоды:</h4>
+        <div class="row">c <input class="datepicker" type="text"/> по <input class="datepicker" type="text"/></div>
+        <h4>Быстрый выбор:</h4>
+        <div class="row">за <a href="#">сегодня</a>, <a href="#">вчера</a>, <span>неделю</span>, <a href="#">месяц</a>, <a href="#">квартал</a>, <a href="#">год</a></div>
+        <div class="row">за следующий <a href="#">день</a>, <a href="#">неделю</a>, <a href="#">месяц</a>, <a href="#">год</a></div>
+      </fieldset>
+      <fieldset class="checkboxes">
+        <div>
+          <div class="row"><input type="checkbox" id="foo-company"/><label for="foo-company">Компания</label></div>
+          <div class="row"><input type="checkbox" id="foo-emp"/><label for="foo-emp">Сотрудник</label></div>
+          <div class="row"><input type="checkbox" id="foo-private"/><label for="foo-private">Частный риэлтор</label></div>
+        </div>
+        <div class="short">
+          <div class="row"><input type="checkbox" id="foo-owner"/><label for="foo-owner">Собственник</label></div>
+          <div class="row"><input type="checkbox" id="foo-source"/><label for="foo-source">Источник</label></div>
+        </div>
+      </fieldset>
+      <div class="buttons">
+        <input type="submit" value="Построить диаграмму"/>
+      </div>
+    </form>
+
+    <div id="bars">
+
+    </div>
+
+    <h2>Сводная таблица</h2>
+    <table class="cute-table">
+      <thead>
+      <tr>
+        <td>Дата</td>
+        <td>Активные</td>
+        <td>Добавленные</td>
+        <td>Не активные</td>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>22.04.2011</td>
+        <td>254</td>
+        <td>100</td>
+        <td>110</td>
+      </tr>
+      <tr>
+        <td>22.04.2011</td>
+        <td>254</td>
+        <td>100</td>
+        <td>110</td>
+      </tr>
+      <tr>
+        <td>22.04.2011</td>
+        <td>254</td>
+        <td>100</td>
+        <td>110</td>
+      </tr>
+      <tr>
+        <td>22.04.2011</td>
+        <td>254</td>
+        <td>100</td>
+        <td>110</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+</div>
+</div>
+<div class="wrap">
+</div>
+<div class="district-description"></div>
+<div id="footer">
+  <div class="lining">
+    <div class="col side">
+      <p>© 2011. Все права защищены</p>
+      <ul>
+        <li><a href="/contacts">Контактная информация</a></li>
+        <li><a href="/sitemap">Карта сайта</a></li>
+        <li>
+        </li>
+      </ul>
+    </div>
+    <div class="col info">
+      <h3><span></span>Справка</h3>
+      <ul>
+        <li><a href="/about">Что&nbsp;такое&nbsp;Место.ру?</a></li>
+        <li><a href="/terms">Условия&nbsp;использования</a></li>
+        <li><a href="/info">Как&nbsp;пользоваться&nbsp;Место.ру?</a></li>
+      </ul>
+    </div>
+
+    <div class="col text">
+      <h3><span></span>Тексты</h3>
+      <ul>
+        <li><a href="/77/news/news-market">Новости рынка</a></li>
+        <li><a href="/77/posts/article">Статьи</a></li>
+        <li><a href="/77/authors">Авторские колонки</a></li>
+      </ul>
+    </div>
+
+    <div class="col search">
+      <h3><span></span>Поиск</h3>
+      <ul>
+        <li>Квартиры <a href="/apartament-rent/77/search">в аренду</a><br/>
+          и <a href="/apartament-sale/77/search">на продажу</a></li>
+        <li>Дома <a href="/house-rent/77/search">в аренду</a><br/>
+          и <a href="/house-sale/77/search">на продажу</a></li>
+        <li>Коммерческая недвижимость
+          <a href="/commercial-rent/77/search">в аренду</a><br/>
+          и <a href="/commercial-sale/77/search">на продажу</a></li>
+      </ul>
+    </div>
+
+    <div class="col profile">
+      <h3><span></span>Личный кабинет</h3>
+      <ul>
+
+        <li class="out last"><a href="/user/logout">Выход</a></li>
+
+        <li>
+          <a class="" href="/lot/add">Добавить объявление</a></li>
+      </ul>
+    </div>
+
+    <div class="col side">
+      <a href="/terms">Пользовательское соглашение</a></div>
+  </div>
+  <div class="b"></div>
+</div>
+</div>
+</div>
+</body>
+</html> 

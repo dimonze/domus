@@ -1,0 +1,35 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           ExpertArticle
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          expert_article
+    with_doctrine_route:     1
+
+    config:
+      actions:
+        _edit: { credentials: [expert-blog-actions] }
+        _delete: { credentials: [expert-blog-delete] }
+      fields:  ~
+      list:
+        fields:
+          title_and_lid: {label: Заголовок и Анонс}
+          author_name: { label: Автор }
+        display: [_title_and_lid, author_name]
+        sort: [created_at, desc]
+        title: Экспертное мнение
+        max_per_page: 10
+      filter:
+        class: ExpertArticleFormFilter
+      form:
+        display:
+          Основное: [title, main_region_id, region_list, slug, lid, post_text, source, source_url, author_id, created_at, status, themes_list, on_main, in_yandex_rss, in_google_xml, in_rambler_rss]
+          Дополнительно (СЕО): [title_h1, description, keywords]
+      edit:
+        title: Редактирование мнения "%%title%%" от %%created_at%%
+      new:
+        title: Добавление мнения

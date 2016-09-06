@@ -1,0 +1,21 @@
+all:
+  is_secure: false
+add:
+  is_secure: true
+delete:
+  is_secure: true
+edit:
+  is_secure: true
+my:
+  is_secure: true
+setpublish:
+  is_secure: true
+setinactive:
+  is_secure: true
+
+moderate:
+  is_secure: true
+  credentials: moder-access
+setrestricted:
+  is_secure: true
+  credentials: redactor-news-actions

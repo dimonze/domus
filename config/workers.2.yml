@@ -1,0 +1,32 @@
+#domus2
+
+domus__synonymize_description:
+  enabled: true
+  command: php
+  arguments:
+    - /var/www/mesto.ru/plugins/sfGearmanPlugin/sfGearmanWorkerStarter.php
+    - SynonymizerWorker
+    - /var/www/mesto.ru/lib/gearman/SynonymizerWorker.class.php
+    - frontend
+    - prod
+    - doctrine
+  functions:
+    - synonymize_description
+  max_requests: 200
+  job_timeout: 30
+  workers: 10
+domus__import_lot:
+  enabled: true
+  command: php
+  arguments:
+    - /var/www/mesto.ru/plugins/sfGearmanPlugin/sfGearmanWorkerStarter.php
+    - ImportLotWorker
+    - /var/www/mesto.ru/lib/gearman/ImportLotWorker.class.php
+    - frontend
+    - prod
+    - doctrine
+  functions:
+    - import_lot
+  max_requests: 100
+  job_timeout: 1800
+  workers: 10

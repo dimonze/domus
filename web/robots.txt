@@ -1,0 +1,17 @@
+User-agent: *
+Disallow: /compare
+Disallow: /user/login
+Disallow: /user/register
+Disallow: /user/pm
+Disallow: /user/pm/*
+Disallow: /search/notify
+Disallow: /setregion
+Disallow: /lot/*/notify
+Disallow: /lot/*/phone
+Disallow: /lot/*/claim
+
+Crawl-delay: 5
+
+Host: www.mesto.ru
+
+Sitemap: http://www.mesto.ru/sitemap.xml

@@ -1,0 +1,34 @@
+SpecPages:
+  columns:
+    id:
+      type: integer(4)
+      unsigned: true
+      notnull: true
+      primary: true
+      autoincrement: true
+    name:
+      type: string(100)
+      notnull: true
+    text:
+      type: string
+    url:
+      type: string(255)
+
+SpecialTargeting:
+  actAs:
+    Sluggable:
+      builder:  [Toolkit, slugify]
+      fields:   [name]
+      unique:   true
+  columns:
+    id:
+      type: integer(4)
+      unsigned: true
+      notnull: true
+      primary: true
+      autoincrement: true
+    name:
+      type: string(100)
+      notnull: true
+    text:
+      type: string

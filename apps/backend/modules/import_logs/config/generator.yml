@@ -1,0 +1,33 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           ImportLog
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          import_logs
+    with_doctrine_route:     1
+
+    config:
+      actions:  ~
+      fields:
+        user_name:        { label: Пользователь }
+        created_at:       { label: Дата импорта }
+        file_type:        { label: Тип файла }
+        file_name:        { label: Название файла }
+        lots_by_regions:  { label: По регионам }
+        lots_by_types:    { label: По типу недвижимости }
+        errors:           { label: Ошибки импорта }
+      list:
+        display:  [ _user_name, _file_name, _file_type, _import_type, created_at, _lots_by_regions, _lots_by_types, _errors ]
+        sort:     [created_at, desc]
+        object_actions: {}
+        actions: {}
+        title: Статистика импорта объявлений
+      filter:
+        class: ImportLogFormFilter        
+      form:    ~
+      edit:    ~
+      new:     ~

@@ -1,0 +1,30 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           BlogAuthor
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          blog_author
+    with_doctrine_route:     1
+
+    config:
+      actions:
+        _edit: { credentials: [create-bloguser-actions] }
+        _delete: { credentials: [create-bloguser-delete] }
+      fields:
+        name: { label: ФИО }
+        photo: { label: Фото }
+        author_type: {label: Тип автора }
+        user: { label: Пользователь }
+      list:
+        display: [id, _photo, name, author_type, user]
+        title: Авторы
+      filter:  ~
+      form:    ~
+      edit:
+        title: Редактирование автора %%name%%
+      new:
+        title: Добавление автора

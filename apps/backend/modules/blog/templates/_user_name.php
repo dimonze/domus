@@ -1,0 +1,1 @@
+<?= link_to($blog->User->name, 'user/edit?id=' .$blog->User->id) ?>

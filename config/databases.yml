@@ -1,0 +1,21 @@
+all:
+  slave:
+    class:          sfDoctrineDatabase
+    param:
+      dsn:          mysql:dbname=domus;host=localhost
+      username:     domus
+      password:     domus
+      attributes:
+        use_dql_callbacks: true
+        use_native_enum:   true
+        server_version:    5
+  doctrine:
+    class:          sfDoctrineDatabase
+    param:
+      dsn:          mysql:dbname=domus;host=localhost
+      username:     domus
+      password:     domus
+      attributes:
+        use_dql_callbacks: true
+        use_native_enum:   true
+        server_version:    5  

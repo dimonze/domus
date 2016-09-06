@@ -1,0 +1,1 @@
+<?= image_tag(photo($post_author, 50, 40)) ?>

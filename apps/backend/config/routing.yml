@@ -1,0 +1,283 @@
+landing_page:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                LandingPage
+    module:               landing
+    prefix_path:          /landing
+    column:               id
+    with_wildcard_routes: true
+
+special_targeting:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                SpecialTargeting
+    module:               special_targeting
+    prefix_path:          special_targeting
+    column:               id
+    with_wildcard_routes: true
+
+import_order:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                ImportOrder
+    module:               import_order
+    prefix_path:          import_order
+    column:               id
+    with_wildcard_routes: true
+
+spec_pages:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                SpecPages
+    module:               spec_pages
+    prefix_path:          spec_pages
+    column:               id
+    with_wildcard_routes: true
+
+notification:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Notification
+    module:               notification
+    prefix_path:          notification
+    column:               Array
+    with_wildcard_routes: true
+
+import_log_errors:
+  url: /import_logs/errors/:id
+  param: { module: import_logs, action: getErrors }
+  requirements:
+    id: \d+
+import_logs:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                ImportLog
+    module:               import_logs
+    prefix_path:          import_logs
+    column:               id
+    with_wildcard_routes: true
+
+lot_view_lot_views:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                LotView
+    module:               lot_views
+    prefix_path:          lot_views
+    column:               id
+    with_wildcard_routes: true
+
+qa_answers:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                PostComment
+    module:               qa_answers
+    prefix_path:          qa_answers
+    column:               id
+    with_wildcard_routes: true
+
+post_comment_comments:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                PostComment
+    module:               comments
+    prefix_path:          comments
+    column:               id
+    with_wildcard_routes: true
+
+claim_claim:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Claim
+    module:               claim
+    prefix_path:          claim
+    column:               id
+    with_wildcard_routes: true
+
+blog_post_blogpost:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                BlogPost
+    module:               blogpost
+    prefix_path:          blogpost
+    column:               id
+    with_wildcard_routes: true
+
+claim_theme_claimtheme:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                ClaimTheme
+    module:               claimtheme
+    prefix_path:          claimtheme
+    column:               id
+    with_wildcard_routes: true
+
+questionnaire_answers_questionnaireanswers:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                QuestionnaireAnswers
+    module:               questionnaireanswers
+    prefix_path:          questionnaireanswers
+    column:               id
+    with_wildcard_routes: true
+
+questionnaire:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Post
+    module:               questionnaire
+    prefix_path:          questionnaire
+    column:               id
+    with_wildcard_routes: true
+
+qa:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Post
+    module:               qa
+    prefix_path:          qa
+    column:               id
+    with_wildcard_routes: true
+
+post_author:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                PostAuthor
+    module:               post_author
+    prefix_path:          post_author
+    column:               id
+    with_wildcard_routes: true
+
+post_themes:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Theme
+    module:               post_themes
+    prefix_path:          post_themes
+    column:               id
+    with_wildcard_routes: true
+
+expert_article:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                ExpertArticle
+    module:               expert_article
+    prefix_path:          expert_article
+    column:               id
+    with_wildcard_routes: true
+
+author_article:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                AuthorArticle
+    module:               author_article
+    prefix_path:          author_article
+    column:               id
+    with_wildcard_routes: true
+
+blog_author:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                BlogAuthor
+    module:               blog_author
+    prefix_path:          blog_author
+    column:               id
+    with_wildcard_routes: true
+
+events:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Events
+    module:               events
+    prefix_path:          events
+    column:               id
+    with_wildcard_routes: true
+
+analytics:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Analytics
+    module:               analytics
+    prefix_path:          analytics
+    column:               id
+    with_wildcard_routes: true
+
+article:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Article
+    module:               article
+    prefix_path:          article
+    column:               id
+    with_wildcard_routes: true
+
+news:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                News
+    module:               news
+    prefix_path:          news
+    column:               id
+    with_wildcard_routes: true
+
+blog:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Blog
+    module:               blog
+    prefix_path:          blog
+    column:               id
+    with_wildcard_routes: true
+
+user_group:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                UserGroup
+    module:               user_group
+    prefix_path:          user_group
+    column:               id
+    with_wildcard_routes: true
+
+region:
+  url: /region/:action.:sf_format
+  params: { module: region, action: index, sf_format: html }
+
+
+user:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                User
+    module:               user
+    prefix_path:          user
+    column:               id
+    with_wildcard_routes: true
+
+page:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Page
+    module:               page
+    prefix_path:          page
+    column:               id
+    with_wildcard_routes: true
+  requirements:
+    url: .+
+
+emailthemes_new:
+  url:   /settings/emailthemes/new
+  param: { module: settings, action: emailthemesnew }
+
+emailtheme_delete:
+  url:   /settings/emailthemes/delete
+  param: { module: settings, action: emailthemedelete }
+
+# default rules
+homepage:
+  url:   /
+  param: { module: default, action: index }
+
+default_index:
+  url:   /:module
+  param: { action: index }
+
+default:
+  url:   /:module/:action/*

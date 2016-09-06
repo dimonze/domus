@@ -1,0 +1,1572 @@
+Region:
+  columns:
+    id:
+      type: integer(1)
+      unsigned: 1
+      primary: true
+    name: string(100)
+    latitude: float
+    longitude: float
+    zoom:
+      type: integer(1)
+      unsigned: true
+    position: integer(1)
+    description: array
+    in_menu:
+      type: boolean
+    seotext: string(5000)
+    rajontext: string(5000)
+    shossetext: string(5000)
+
+Regionnode:
+  actAs: [Geographical]
+  columns:
+    id:
+      type: integer(3)
+      unsigned: 1
+      primary: true
+      autoincrement: true
+    region_id:
+      type: integer(1)
+      unsigned: 1
+    name:
+      type: string(100)
+    socr:
+      type: string(15)
+      notnull: true
+    parent:
+      type: integer(3)
+      unsigned: 1
+    has_children:
+      type: boolean
+    has_street:
+      type: boolean
+    list:
+      type: boolean
+    description: array
+
+  relations:
+    Regionnode:
+      local: parent
+      foreign: id
+      type: one
+      foreignAlias: Nodes
+    Region:
+      local: region_id
+      foreign: id
+      type: one
+
+Street:
+  actAs: [Geographical]
+  columns:
+    id:
+      type: integer(5)
+      unsigned: 1
+      primary: true
+      notnull: true
+      autoincrement: true
+    regionnode_id:
+      type: integer(3)
+      unsigned: 1
+      primary: true
+    name:
+      type: string(90)
+    socr:
+      type: string(15)
+  relations:
+    Regionnode:
+      local: regionnode_id
+      foreign: id
+      type: one
+  indexes:
+    geo:
+      fields: [latitude, longitude]
+
+
+User:
+  actAs: [SoftDelete]
+  columns:
+    id:
+      type: integer(4)
+      primary: true
+      unsigned: true
+      autoincrement: true
+
+    group_id:
+      type: integer(2)
+      unsigned: true
+
+    type:
+      type: enum
+      values: [owner, company, employee, realtor, source]
+      notnull: true
+
+    employer_id:
+      type: integer(4)
+      unsigned: true
+
+    email:
+      type: string(60)
+      notnull: true
+    password:
+      type: string(32)
+      notnull: true
+    name:
+      type: string(100)
+      notnull: true
+    company_name: string(100)
+    phone:
+      type: string(18)
+      notnull: true
+
+    created_at: timestamp
+    last_login: timestamp
+    remember_key: string(64)
+    remember_till: timestamp
+
+    active_count: integer(3)
+    deleted_count: integer(3)
+    approved:
+      type: boolean
+      notnull: false
+      default: 0
+    inactive:
+      type: boolean
+      notnull: true
+      default: 0
+    rating:
+      type: integer(3)
+      unsigned: true
+    photo:
+      type: string(50)
+
+  indexes:
+    email_index:
+      fields: [email]
+      #must be unique
+    phone_index:
+      fields: [phone]
+      #must be unique
+    remember_key_index:
+      fields: [remember_key]
+      type: unique
+
+  relations:
+    Lot:
+      local: id
+      foreign: user_id
+      type: many
+    Favourite:
+      local: id
+      foreign: user_id
+      type: many
+      cascade: [delete]
+    Employer:
+      class: User
+      type: one
+      local: employer_id
+      foreign: id
+      foreignAlias: Employees
+      foreignType: many
+    Group:
+      class: UserGroup
+      local: group_id
+      type: one
+      foreign: id
+      foreignAlias: Users
+      foreignType: many
+      onDelete: set null
+
+UserInfo:
+  columns:
+    user_id:
+      type: integer(4)
+      primary: true
+      unsigned: true
+    additional_phone: string(18)
+    about: string
+    specialities: string
+    regions: string
+    experience: string
+    advantage: string
+    site: string(100)
+    email_confirmation: string(8)
+    promotion:
+      type: integer(2)
+      default: 0
+    xml_url:
+      type: string(255)
+      default: null
+    xml_type:
+      type: enum
+      values: [mesto, gde, irr, mail, winner, mir, dmir]
+      notnull: true
+      default: mesto
+  relations:
+    User:
+      type: one
+      foreignType: one
+      foreignAlias: Info
+      onDelete: cascade
+
+UserRegion:
+  columns:
+    user_id:
+      type: integer(4)
+      unsigned: true
+      primary: true
+    region_id:
+      type: integer(1)
+      unsigned: true
+      primary: true
+    lots_count:
+      type: integer(2)
+      notnull: true
+      default: 0
+      unsigned: true
+  relations:
+    User:
+      local: user_id
+      foreign: id
+      type: one
+      foreignType: many
+      foreignAlias: Regions
+      onDelete: cascade
+    Region:
+      local: region_id
+      foreign: id
+      type: one
+      foreignType: many
+      foreignAlias: Users
+      onDelete: cascade
+
+UserSourcesLink:
+  columns:
+    id:
+      type: integer(5)
+      unsigned: true
+      autoincrement: true
+      primary: true
+    user_id:
+      type: integer(4)
+      unsigned: true
+      notnull: true
+    url:
+      type: string(255)
+      notnull: true
+    type:
+      type: integer(1)
+      notnull: true
+    file_type:
+      type: integer(1)
+      notnull: true
+    status:
+      type: enum
+      values: [active, banned, restored, not-paid]
+      notnull: true
+      default: active
+    frequency:
+      type: integer(1)
+      notnull: true
+      default: 24
+  relations:
+    User:
+      local: user_id
+      foreign: id
+      type: one
+      foreignType: many
+      foreignAlias: SourcesLinks
+      onDelete: cascade
+
+UserResetKey:
+  columns:
+    user_id:
+      type: integer(4)
+      primary: true
+      unsigned: true
+      autoincrement: true
+    reset_key:
+      type: string(32)
+      primary: true
+
+UserSettings:
+  columns:
+    user_id:
+      type: integer(4)
+      primary: true
+      unsigned: true
+    name:
+      type: string(30)
+      primary: true
+    value: string
+  relations:
+    User:
+      type: one
+      foreignType: many
+      foreignAlias: Settings
+      onDelete: cascade
+
+UserGroup:
+  columns:
+    id:
+      type: integer(2)
+      unsigned: true
+      autoincrement: true
+      primary: true
+    name:
+      type: string(100)
+      notnull: true
+      unique: true
+    credentials:
+      type: array
+      notnull: true
+
+PM:
+  columns:
+    id:
+      type: integer(3)
+      primary: true
+      autoincrement: true
+    sender:
+      type: integer(4)
+      unsigned: true
+    receiver:
+      type: integer(4)
+      unsigned: true
+    subject: string(200)
+    message: string
+
+    sent_at: timestamp
+    answered: boolean
+    in_answer: integer(3)
+    red: boolean
+    user_name:
+      type: string(50)
+      default: null
+    user_email:
+      type: string(60)
+      default: null
+    is_deleted:
+      type: integer(1)
+      unsigned: true
+    priority:
+      type: enum
+      values: [none, low, mid, high]
+      default: none
+      notnull: true
+
+  relations:
+    UserSender:
+      class: User
+      local: sender
+      foreign: id
+      type: one
+    UserReceiver:
+      class: User
+      local: receiver
+      foreign: id
+      type: one
+    InAnswer:
+      class: PM
+      local: in_answer
+      foreign: id
+      type: one
+
+Lot:
+  actAs: [SoftDelete]
+  columns:
+    id:
+      type: integer(4)
+      primary: true
+      unsigned: true
+      autoincrement: true
+
+    type:
+      type: enum
+      values: ['apartament-sale', 'apartament-rent', 'house-sale', 'house-rent', 'commercial-sale', 'commercial-rent', 'new_building-sale', 'cottage-sale']
+
+    user_id:
+      type: integer(4)
+      unsigned: true
+
+    region_id:
+      type: integer(1)
+      unsigned: 1
+    address1: string(255)
+    address2: string(255)
+    address_info: array
+    latitude: float
+    longitude: float
+    slug: string(500)
+
+    price: integer
+    currency:
+      type: enum
+      values: [RUR, USD, EUR]
+    exchange: decimal(6,4)
+
+    brief: string(300)
+    description: string(1500)
+    auto_description: string(1500)
+    hidden_description: string(1500)
+    images: string
+    thumb: integer(1)
+
+    organization_link: string(500)
+    organization_contact_name: string(150)
+    organization_contact_phone: string(250)
+
+    nb_more_info_link: string(500)
+    nb_banner_id:
+      type: integer(2)
+      unsigned: true
+
+    created_at: timestamp
+    active_till: timestamp
+    updated_at: timestamp
+    parsed_at: timestamp
+    editable:
+      type: boolean
+      default: true
+    imported:
+      type: boolean
+      default: 0
+    internal_id:
+      type: integer(5)
+      unsigned: true
+    status:
+      type: enum
+      values: [active, inactive, restricted, moderate, not-paid]
+      default: active
+    rating:
+      type: integer(3)
+      unsigned: true
+    moderator_message:
+      type: integer(3)
+  indexes:
+    user_and_internal_id:
+      fields: [user_id, internal_id]
+    internal_id:
+      fields: [internal_id]
+
+  relations:
+    Region:
+      local: region_id
+      foreign: id
+      type: one
+    User:
+      local: user_id
+      foreign: id
+      type: one
+    LotInfo:
+      local: id
+      foreign: lot_id
+      type: many
+    Favourite:
+      local: id
+      foreign: lot_id
+      type: many
+
+LotView:
+  actAs:
+    Timestampable:
+      created:
+        name: created_at
+        type: timestamp
+      updated:
+        disabled: true
+  columns:
+    id:
+      type: integer(4)
+      primary: true
+      unsigned: true
+      autoincrement: true
+    lot_id:
+      type: integer(4)
+      unsigned: true
+    ip_address:
+      type: string(15)
+      ip: true
+      notnull: true
+    lot_type:
+      type: enum
+      values: ['apartament-sale', 'apartament-rent', 'house-sale', 'house-rent', 'commercial-sale', 'commercial-rent', 'new_building-sale', 'cottage-sale']
+  relations:
+    Lot:
+      foreignAlias: LotViews
+      local: lot_id
+      foreign: id
+
+LotInfo:
+  columns:
+    lot_id:
+      type: integer(4)
+      unsigned: true
+      primary: true
+    field_id:
+      type: integer(2)
+      primary: true
+    value: string
+
+
+  relations:
+    Lot:
+      foreignAlias: LotDetails
+      local: lot_id
+      foreign: id
+    FormField:
+      foreignAlias: LotDetails
+      local: field_id
+      foreign: id
+
+Favourite:
+  columns:
+    lot_id:
+      type: integer(4)
+      unsigned: true
+      primary: true
+    user_id:
+      type: integer(4)
+      unsigned: true
+      primary: true
+
+  relations:
+    Lot:
+      foreignAlias: LotDetails
+      local: lot_id
+      foreign: id
+    User:
+      local: user_id
+      foreign: id
+      type: one
+
+FormItem:
+  columns:
+    type:
+      type: enum
+      values: ['apartament-sale', 'apartament-rent', 'house-sale', 'house-rent', 'commercial-sale', 'commercial-rent', 'new_building-sale', 'cottage-sale']
+    field_id: integer(2)
+    position: integer(2)
+    required: boolean
+    show_additional_header: boolean
+
+  indexes:
+    index:
+      fields: [type, field_id]
+      type: unique
+
+  relations:
+    FormField:
+      foreignAlias: FormField
+      local: field_id
+      foreign: id
+      cascade: [delete]
+
+
+FormField:
+  columns:
+    id:
+      type: integer(2)
+      primary: true
+      autoincrement: true
+    type: string(15)
+    size: integer(1)
+    value: string(1000)
+    label: string(150)
+    comment: string(150)
+    help: string(150)
+    rating:
+      type: integer(3)
+      unsigned: true
+    xml_name:
+      type: string(255)
+      default: null
+    xml_desc:
+      type: string(1000)
+      default: null
+
+
+Page:
+  columns:
+    id:
+      type: integer(2)
+      primary: true
+      autoincrement: true
+
+    url: string(50)
+    parent_id: integer(2)
+    in_menu:
+      type: boolean
+      default: false
+    position: integer(2)
+    title: string(255)
+    name: string(255)
+    content: string
+    description: string(255)
+    keywords: string(255)
+
+  relations:
+    Page:
+      local: parent_id
+      foreign: id
+      onDelete: CASCADE
+
+  indexes:
+    index:
+      fields: [url]
+      type: unique
+
+
+Log:
+  columns:
+    model:
+      type: string(15)
+      primary: true
+
+    pk:
+      type: string(255)
+      primary: true
+
+    field:
+      type: string(25)
+      primary: true
+
+    old: string
+    new: string
+
+    created_at:
+      type: timestamp
+      primary: true
+
+
+Notification:
+  columns:
+    email:
+      type: string(50)
+      primary: true
+    model:
+      type: string(15)
+      primary: true
+    field:
+      type: string(25)
+      primary: true
+    pk:
+      type: string(255)
+      primary: true
+    period:
+      type: enum
+      values: [daily, weekly, monthly]
+      notnull: true
+
+Search:
+  columns:
+    id:
+      type: integer(2)
+      unsigned: true
+      primary: true
+      autoincrement: true
+    hash: string(32)
+    param: string
+  indexes:
+    hash:
+      fields: [hash]
+      type: unique
+
+Invite:
+  actAs:
+    Timestampable:
+      created:
+        name: created_at
+        type: timestamp
+      updated:
+        disabled: true
+  columns:
+    code:
+      type: string(12)
+      primary: true
+    email:
+      type: string(50)
+      primary: true
+    user_id:
+      type: integer(4)
+      unsigned: true
+  relations:
+    User:
+      foreignAlias: Invites
+      onDelete: cascade
+
+Post:
+  actAs: [SoftDelete]
+  columns:
+    id:
+      type: integer(3)
+      unsigned: true
+      primary: true
+      autoincrement: true
+    post_type:
+      type: enum
+      values: [expert_article, author_article, news, events, article, analytics, qa, questionnaire]
+      notnull: true
+    slug:
+      type: string(255)
+      notnull: true
+    created_at:
+      type: timestamp
+      notnull: true
+    updated_at:
+      type: timestamp
+    author_id:
+      type: integer(3)
+      unsigned: true
+    user_id:
+      type: integer(4)
+      unsigned: true
+    author_name:
+      type: string(255)
+      default: NULL
+    author_email:
+      type: string(60)
+      notnull: false
+      default: NULL
+    title:
+      type: string(255)
+      notnull: true
+    rating:
+      type: integer(3)
+      unsigned: true
+      notnull: true
+      default: 0
+    post_text:
+      type: string
+      notnull: true
+    status:
+      type: enum
+      values: [restricted, publish, not_publish, inactive, moderate]
+      notnull: true
+      default: not_publish
+    event_date:
+      type: string(255)
+      notnull: false
+      default: NULL
+    event_place:
+      type: string(255)
+      notnull: false
+      default: NULL
+    event_contact:
+      type: string(255)
+      notnull: false
+      default: NULL
+    section:
+      type: enum
+      values: ['Новости рынка', 'Новости компаний', 'Новости портала']
+    title_photo:
+      type: string(50)
+    title_photo_source:
+      type: string(200)
+    title_photo_source_url:
+      type: string(200)
+    source:
+      type: string(200)
+    source_url:
+      type: string(200)
+    lid:
+      type: string(400)
+    subtitle:
+      type: string(255)
+    signature:
+      type: string(150)
+    less_count:
+      type: integer(2)
+      default: 0
+    is_primary:
+      type: boolean
+      default: 0
+      length: 1
+      notnull: true
+    on_main:
+      type: boolean
+      default: 0
+      length: 1
+      notnull: true
+    in_yandex_rss:
+      type: boolean
+      default: false
+      notnull: true
+    in_google_xml:
+      type: boolean
+      default: false
+      notnull: true
+    in_rambler_rss:
+      type: boolean
+      default: false
+      notnull: true
+    title_h1: string(255)
+    title_seo: string(255)
+    description: string(255)
+    keywords: string(255)
+    main_region_id:
+      type: integer(1)
+      unsigned: true
+  relations:
+    Tags:
+      foreignAlias: Posts
+      class: Tag
+      refClass: PostTag
+    Themes:
+      foreignAlias: Posts
+      class: Theme
+      refClass: PostTheme
+    Comments:
+      class: PostComment
+      type: many
+      local: id
+      foreign: post_id
+      cascade: [delete]
+      foreignType: one
+      foreignAlias: Post
+    PostAuthor:
+      local: author_id
+      foreign: id
+      type: one
+      onDelete: CASCADE
+    User:
+      local: user_id
+      foreign: id
+      type: one
+      onDelete: CASCADE
+    Answers:
+      class: QuestionnaireAnswers
+      local: id
+      foreign: post_id
+      type: many
+      foreignType: one
+      foreignAlias: Post
+      cascade: [delete]
+    Region:
+      foreignAlias: Posts
+      class: Region
+      refClass: PostRegion
+    MainRegion:
+      class: Region
+      foreign: id
+      local: main_region_id
+      type: one
+  indexes:
+    title_index:
+      fields: [title]
+    post_type:
+      fields: [post_type]
+    created_at_index:
+      fields: [created_at]
+    rating_index:
+      fields: [rating]
+
+Tag:
+  columns:
+    id:
+      type: integer(3)
+      unsigned: true
+      primary: true
+      autoincrement: true
+    title:
+      type: string(64)
+      fixed: true
+      unique: true
+      notnull: true
+  relations:
+    Posts:
+      class: Post
+      refClass: PostTag
+      foreignAlias: Tags
+
+PostTag:
+  columns:
+    post_id:
+      type: integer(3)
+      unsigned: true
+      notnull: true
+      primary: true
+    tag_id:
+      type: integer(3)
+      unsigned: true
+      notnull: true
+      primary: true
+  relations:
+    Post:
+      type: one
+      onDelete: CASCADE
+    Tag:
+      type: one
+
+Theme:
+  columns:
+    id:
+      type: integer(3)
+      unsigned: true
+      primary: true
+      autoincrement: true
+    title:
+      type: string(64)
+      fixed: true
+      unique: true
+      notnull: true
+  relations:
+    Posts:
+      class: Post
+      refClass: PostTheme
+      foreignAlias: Themes
+
+
+PostTheme:
+  columns:
+    post_id:
+      type: integer(3)
+      unsigned: true
+      notnull: true
+      primary: true
+    theme_id:
+      type: integer(3)
+      unsigned: true
+      notnull: true
+      primary: true
+  relations:
+    Post:
+      type: one
+      onDelete: CASCADE
+    Theme:
+      type: one
+      onDelete: CASCADE
+
+PostAuthor:
+  actAs: [SoftDelete]
+  columns:
+    id:
+      type: integer(3)
+      unsigned: true
+      primary: true
+      autoincrement: true
+    name:
+      type: string(100)
+    company:
+      type: string(100)
+    post:
+      type: string(100)
+    photo:
+      type: string(20)
+    description:
+      type: string(400)
+    author_type:
+      type: enum
+      values: ['author', 'expert']
+  indexes:
+    author_type:
+      fields: [author_type]
+
+PostRegion:
+  columns:
+    post_id:
+      type: integer(3)
+      unsigned: true
+      notnull: true
+      primary: true
+    region_id:
+      type: integer(1)
+      unsigned: 1
+      notnull: true
+      primary: true
+  relations:
+    Post:
+      type: one
+      onDelete: CASCADE
+    Region:
+      type: one
+
+PostComment:
+  actAs:
+    Timestampable: true
+    NestedSet:
+      hasManyRoots: true
+      rootColumnName: post_id
+  columns:
+    id:
+      type: integer(3)
+      unsigned: true
+      primary: true
+      autoincrement: true
+    user_id:
+      type: integer(4)
+      unsigned: true
+      default: null
+    user_name:
+      type: string(50)
+      default: null
+    user_email:
+      type: string(60)
+      default: null
+    post_id:
+      type: integer(3)
+      unsigned: true
+      notnull: true
+    body:
+      type: string
+      notnull: true
+    deleted:
+      type: boolean
+      notnull: true
+      default: false
+  relations:
+    User:
+      type: one
+    Post:
+      type: one
+      onDelete: CASCADE
+
+ReadPostComment:
+  columns:
+    user_id:
+      type: integer(4)
+      unsigned: true
+      notnull: true
+      primary: true
+    post_id:
+      type: integer(3)
+      unsigned: true
+      notnull: true
+      primary: true
+    post_comment_id:
+      type: integer(3)
+      unsigned: true
+      notnull: true
+      primary: true
+  relations:
+    Post:
+      type: one
+      onDelete: CASCADE
+    User:
+      type: one
+    PostComment:
+      type: one
+      onDelete: CASCADE
+
+QuestionnaireAnswers:
+  columns:
+    id:
+      type: integer(3)
+      unsigned: true
+      primary: true
+      autoincrement: true
+    post_id:
+      type: integer(3)
+      unsigned: true
+      notnull: true
+    title:
+      type: string(255)
+      fixed: false
+      unique: false
+      notnull: false
+      default: ''
+    vote:
+      type: integer(3)
+      unsigned: true
+      notnull: false
+      default: 0
+  indexes:
+    title_index:
+      fields: [title]
+  relations:
+    Post:
+      type: one
+      onDelete: CASCADE
+
+QuestionnaireAnswersVote:
+  columns:
+    post_id:
+      type: integer(3)
+      unsigned: true
+      notnull: true
+    answer_id:
+      type: integer(3)
+      unsigned: true
+      notnull: true
+    user_id:
+      type: integer(4)
+      unsigned: true
+      notnull: true
+  relations:
+    Answers:
+      class: QuestionnaireAnswers
+      local: answer_id
+      foreign: id
+      onDelete: CASCADE
+    Post:
+      class: Post
+      local: post_id
+      foreign: id
+      onDelete: CASCADE
+    User:
+      class: User
+      local: user_id
+      foreign: id
+
+Blog:
+  columns:
+    id:
+      type: integer(4)
+      unsigned: true
+      primary: true
+      autoincrement: true
+    title:
+      type: string(100)
+      fixed: true
+      unique: true
+      notnull: true
+    user_id:
+      type: integer(4)
+      unsigned: true
+      unique: true
+      notnull: true
+    url:
+      type: string(30)
+      unique: true
+      notnull: true
+      default: null
+    status:
+      type: enum
+      values: [active, inactive, moderate, restricted]
+      notnull: true
+  relations:
+    User:
+      local: user_id
+      foreign: id
+      type: one
+      foreignType: one
+      onDelete: CASCADE
+    BlogPost:
+      local: id
+      foreign: blog_id
+      type: one
+  indexes:
+    user_id_index:
+      fields: [user_id]
+    status_index:
+      fields: [status]
+
+BlogPost:
+  columns:
+    id:
+      type: integer(4)
+      unsigned: true
+      primary: true
+      autoincrement: true
+    blog_id:
+      type: integer(4)
+      unsigned: true
+    title:
+      type: string(255)
+      notnull: true
+    created_at:
+      type: timestamp
+      notnull: true
+    updated_at:
+      type: timestamp
+    lid:
+      type: string(500)
+    body:
+      type: string
+      notnull: true
+    status:
+      type: enum
+      values: [restricted, publish, not_publish, inactive, moderate]
+      notnull: true
+      default: moderate
+    title_photo:
+      type: string(50)
+    title_photo_source:
+      type: string(200)
+    title_photo_source_url:
+      type: string(200)
+    theme_id:
+      type: integer(3)
+      unsigned: true
+      notnull: true
+    title_h1: string(255)
+    title_seo: string(255)
+    description: string(255)
+    keywords: string(255)
+  relations:
+    Blog:
+      class: Blog
+      local: blog_id
+      foreign: id
+      type: one
+      onDelete: CASCADE
+    Theme:
+      type: one
+      foreignAlias: BlogPost
+    Comments:
+      class: BlogPostComment
+      type: many
+      local: id
+      foreign: post_id
+      foreignType: one
+      foreignAlias: BlogPost
+  indexes:
+    created_at_index:
+      fields: [created_at]
+    blog_id_index:
+      fields: [blog_id]
+    status_index:
+      fields: [status]
+
+BlogPostComment:
+  actAs:
+    Timestampable: true
+    NestedSet:
+      hasManyRoots: true
+      rootColumnName: post_id
+  columns:
+    id:
+      type: integer(3)
+      unsigned: true
+      primary: true
+      autoincrement: true
+    user_id:
+      type: integer(4)
+      unsigned: true
+      notnull: true
+    post_id:
+      type: integer(4)
+      unsigned: true
+      notnull: true
+    body:
+      type: string
+      notnull: true
+    deleted:
+      type: boolean
+      notnull: true
+      default: false
+  relations:
+    User:
+      type: one
+    BlogPost:
+      local: post_id
+      type: one
+      onDelete: CASCADE
+
+BlogPostTheme:
+  columns:
+    blog_post_id:
+      type: integer(4)
+      unsigned: true
+      notnull: true
+      primary: true
+    theme_id:
+      type: integer(3)
+      unsigned: true
+      notnull: true
+      primary: true
+  relations:
+    BlogPost:
+      type: one
+      onDelete: CASCADE
+    Theme:
+      type: one
+      onDelete: CASCADE
+
+ModeratorFilters:
+  columns:
+    id:
+      type: integer(3)
+      unsigned: true
+      notnull: true
+      primary: true
+      autoincrement: true
+    user_id:
+      type: integer(4)
+      unsigned: true
+      notnull: true
+    name:
+      type: string(50)
+      notnull: true
+    params:
+      type: array
+  indexes:
+    filter:
+      fields: [user_id, name]
+      type: unique
+  relations:
+    User:
+      local: user_id
+      foreign: id
+      onDelete: CASCADE
+
+Claim:
+  actAs:
+    Timestampable: true
+  columns:
+    id:
+      type: integer(32)
+      unsigned: true
+      notnull: true
+      primary: true
+      autoincrement: true
+    user_id:
+      type: integer(4)
+      unsigned: true
+      notnull: false
+      default: NULL
+    user_name:
+      type: string(255)
+      default: NULL
+    user_email:
+      type: string(60)
+      default: NULL
+    lot_id:
+      type: integer(4)
+      unsigned: true
+      notnull: true
+    claim_theme_id:
+      type: integer(4)
+      unsigned: true
+      notnull: true
+    status:
+      type: enum
+      values: [new, confirmed, not_confirmed, on_control, need_check, fixed]
+      notnull: true
+      default: new
+    body:
+      type: string
+      notnull: true
+  relations:
+    Lot:
+      local: lot_id
+      type: one
+      foreignAlias: Claims
+      onDelete: CASCADE
+    User:
+      local: user_id
+      type: one
+      foreignAlias: Claims
+    Theme:
+      local: claim_theme_id
+      class: ClaimTheme
+      type: one
+      foreignAlias: Claims
+      onDelete: CASCADE
+
+ClaimTheme:
+  columns:
+    id:
+      type: integer(4)
+      unsigned: true
+      notnull: true
+      primary: true
+      autoincrement: true
+    title:
+      type: string(255)
+      notnull: true
+
+SeoTexts:
+  columns:
+    id:
+      type: integer(4)
+      unsigned: true
+      notnull: true
+      primary: true
+      autoincrement: true
+    region_id:
+      type: integer(1)
+      unsigned: true
+      notnull: true
+    region_node_id:
+      type: integer(3)
+      unsigned: true
+    section:
+      type: integer(1)
+      unsigned: true
+      notnull: true
+    real_estate_type:
+      type: string(35)
+    text:
+      type: string(5000)
+  relations:
+    Region:
+      local: region_id
+      foreign: id
+      type: one
+      foreignAlias: SeoTexts
+      onDelete: cascade
+    Regionnode:
+      local: region_node_id
+      foreign: id
+      type: one
+      foreignAlias: SeoTexts
+      onDelete: cascade
+
+Flat:
+  columns:
+    id:
+      type: integer
+      unsigned: true
+      notnull: true
+      primary: true
+      autoincrement: true
+    lot_id:
+      type: integer
+    rooms:
+      type: integer
+    common_space:
+      type: float
+    living_space:
+      type: float
+    kitchen_space:
+      type: float
+    floor:
+      type: integer
+    has_balcony:
+      type: boolean
+    has_loggia:
+      type: boolean
+    price:
+      type: integer
+    currency:
+      type: enum
+      values: [rur,eur,usd]
+  relations:
+    Lot:
+      local: lot_id
+      foreign: id
+      onDelete: cascade
+      foreignAlias: Flats
+
+LotStatistic:
+  columns:
+    id:
+      type: integer(4)
+      unsigned: true
+      notnull: true
+      primary: true
+      autoincrement: true
+    stat_at:
+      type: date
+      notnull: true
+      length: 10
+    region_id:
+      type: integer(1)
+      unsigned: true
+      notnull: true
+    type:
+      type: enum
+      values: ['apartament-sale', 'apartament-rent', 'house-sale', 'house-rent', 'commercial-sale', 'commercial-rent', 'new_building-sale', 'cottage-sale']
+    user_type:
+      type: enum
+      values: [owner, company, employee, realtor, source]
+      notnull: true
+    active:
+      type: integer(2)
+      notnull: true
+      default: 0
+    new:
+      type: integer(2)
+      notnull: true
+      default: 0
+    deleted:
+      type: integer(2)
+      notnull: true
+      default: 0
+  relations:
+    Region:
+      local: region_id
+      foreign: id
+      type: one
+      onDelete: cascade
+  indexes:
+    stat_at:
+      fields: [stat_at]
+    region_id:
+      fields: [region_id]
+    type:
+      fields: [type]
+    user_type:
+      fields: [user_type]
+      
+LandingPage:
+  actAs: [Geographical]
+  columns:
+    id:
+      type: integer(4)
+      unsigned: true
+      primary: true
+      autoincrement: true
+    url:
+      type: string(255)
+      notnull: true
+    h1:
+      type: string(255)
+    title:
+      type: string(255)
+    lot_title_prefix:
+      type: string(255)
+    description:
+      type: string(5000)
+    keywords:
+      type: string(1000)
+    seo_text:
+      type: string(5000)
+    params:
+      type: array
+    query:
+      type: string(5000)
+    region_id:
+      type: integer(1)
+      unsigned: 1
+      notnull: true
+    type:
+      type: enum
+      values: ['apartament-sale', 'apartament-rent', 'house-sale', 'house-rent', 'commercial-sale', 'commercial-rent', 'new_building-sale', 'cottage-sale']
+  relations:
+    Region:
+      local: region_id
+      foreign: id
+      type: one
+      onDelete: cascade
+  indexes:
+    region_id:
+      fields: [region_id]
+    type:
+      fields: [type]
+
+Cottage:
+  columns:
+    id:
+      type: integer(4)
+      unsigned: true
+      primary: true
+      autoincrement: true
+    lot_id:
+      type: integer(4)
+      unsigned: true
+      notnull: true
+    common_space:
+      type: float
+    area_space:
+      type: float
+    price:
+      type: integer
+    currency:
+      type: enum
+      values: [rur,eur,usd]
+    decription:
+      type: string(5000)
+    type:
+      type: enum
+      values: [cottage,townhouse]
+  relations:
+    Lot:
+      local: lot_id
+      type: one
+      foreignAlias: Cottages
+      onDelete: CASCADE
+  indexes:
+    lot_id:
+      fields: [lot_id]

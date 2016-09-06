@@ -1,0 +1,32 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Article
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          article
+    with_doctrine_route:     1
+
+    config:
+      actions:
+        _edit: { credentials: [redactor-article-actions] }
+        _delete: { credentials: [redactor-article-delete] }
+      fields:  ~
+      list:
+        fields:
+          title_photo: {label: Изображение}
+          title_and_lid: {label: Заголовок и Анонс}
+        display: [_title_photo, _title_and_lid]
+        sort: [created_at, desc]
+        title: Статьи
+        max_per_page: 10
+      filter:
+        class: ArticleFormFilter
+      form:    ~
+      edit:
+        title: Редактирование статьи "%%title%%" от %%created_at%%
+      new:
+        title: Добавление статьи

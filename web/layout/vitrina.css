@@ -1,0 +1,679 @@
+html, body, address, blockquote, div, p, pre, h1, h2, h3, h4, h5, h6, hr, /* block level 	*/
+dd, dl, dt, ul, ol, li, /* lists 		*/
+a, abbr, acronym, b, big, br, cite, code, del, dfn, em, i, /* inline text 	*/
+ins, kbd, q, samp, small, span, strong, sub, sup, tt, var, /* inline text 	*/
+img, object, /* misc 		*/
+caption, table, tbody, td, tfoot, th, thead, tr, /* table 		*/
+  /*input,*/
+textarea, select, button, form, fieldset, legend, label, /* form 		*/
+font, u, s, center, dir, menu, strike, xmp /* depricated 	*/
+{
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  text-indent: 0;
+  list-style-type: none;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+hr, img, object {
+  border: 0;
+}
+
+input, select, button {
+  vertical-align: middle; /* make all controls align middle to textline in all browsers */
+}
+
+textarea {
+  vertical-align: top; /* ...and all textareas, but... */
+}
+
+input, button {
+  overflow: visible; /* remove padding in buttons in IE */
+}
+
+select[size] {
+  vertical-align: top; /* make align top to textline for all selectboxes which has attribute "size",.. */
+}
+
+select[size="1"] {
+  vertical-align: middle; /* ...if attribute "size" of a selectbox is set to "1", make it align middle to textline */
+}
+
+fieldset {
+  border: none;
+}
+
+fieldset legend {
+  *margin-left: -7px; /* remove màrgin in IE6-7. Better place this in your IE6-7.css and include via Conditional Comments. */
+}
+
+caption, td, th, tr {
+  vertical-align: top;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+optgroup {
+  color: black; /* optgroup in Opera has black background and white text... */
+  background: white; /* ...so let's fix it */
+  font-style: normal; /* works only in FF */
+}
+
+optgroup option {
+  padding-left: 22px; /* make padding in FF almost the same as in other browsers */
+}
+
+hr {
+  color: black;
+  background-color: black;
+  height: 1px;
+  margin: 7px 0; /* crossbrowser hr */
+  *margin: 0; /* hack for IE6-7. Better place this in your IE6-7.css and include via Conditional Comments */
+}
+
+ol li, ul li {
+  vertical-align: bottom; /* fixing margins for IE, if there are elements with "display: block" in list items */
+}
+
+ol li {
+  list-style-type: decimal;
+}
+
+ul li {
+  list-style-type: disc;
+}
+
+q {
+  quotes: '\00AB' '\00BB' '\201E' '\201C';
+}
+
+/* russian quotes */
+q:before {
+  content: '\00AB';
+}
+
+q:after {
+  content: '\00BB';
+}
+
+q q:before {
+  content: '\201E';
+}
+
+q q:after {
+  content: '\201C';
+}
+
+sub, sup {
+  position: relative; /* this method is better, there will not be extra padding in textline */
+  font-size: 11px;
+}
+
+sub {
+  top: 5px;
+}
+
+sup {
+  top: -5px;
+}
+
+#vitrina_bg {
+  font: 13px Arial, Helvetica, sans-serif;
+  color: #000;
+  background: white url(http://mesto.ru/images/bg.png) repeat-x;
+}
+
+#vitrina_container {
+  width: 972px;
+  margin: 0 auto;
+}
+
+.vitrina_global {
+  position: relative;
+  min-height: 100%;
+}
+
+.vitrina_headerBox {
+  z-index: 1000;
+}
+
+#vitrina_header {
+  padding-top: 44px;
+  padding-bottom: 30px;
+  position: relative;
+  zoom: 1;
+  z-index: 20;
+  width: 973px;
+  height: 40px;
+  margin: auto;
+}
+
+.vitrina_logo {
+  color: transparent;
+  display: block;
+  height: 49px;
+  width: 170px;
+  float: left;
+  overflow: hidden;
+  zoom: 1;
+}
+
+.vitrina_logo:link {
+  color: transparent;
+}
+
+.vitrina_logo:visited {
+  color: transparent;
+}
+
+.vitrina_logo:hover {
+  color: transparent !important;
+}
+
+.vitrina_logo:active {
+  color: transparent;
+}
+
+.vitrina_top-nav {
+  float: right;
+  list-style: none;
+  margin: 14px 0 0 0;
+  position: relative;
+  z-index: 20;
+}
+
+.vitrina_top-nav li {
+  display: inline-block;
+  height: 26px;
+  margin: 0 0 0 5px;
+  font-size: 0.846em;
+  position: relative;
+  width: auto;
+  vertical-align: baseline;
+}
+
+.vitrina_top-nav li a {
+  padding-left: 11px;
+  background: url("http://mesto.ru/images/p.png") 0 -26px no-repeat;
+  display: inline-block;
+}
+
+.vitrina_top-nav li em {
+  line-height: 26px;
+  padding-right: 11px;
+  background: url("http://mesto.ru/images/p.png") 100% -26px no-repeat;
+  font-style: normal;
+  display: inline-block;
+}
+
+.vitrina_top-nav li.vitrina_discount a {
+  padding-left: 23px;
+  background: url("http://mesto.ru/images/new-top-nav-adv-button.png") 0 0 no-repeat;
+  display: inline-block;
+}
+
+.vitrina_top-nav li.vitrina_discount em {
+  line-height: 27px;
+  padding-right: 11px;
+  background: url("http://mesto.ru/images/new-top-nav-adv-button.png") 100% 0 no-repeat;
+  font-style: normal;
+  display: inline-block;
+}
+
+.vitrina_top-nav li.current a {
+  background-position: 0 0;
+}
+
+.vitrina_top-nav li.current em {
+  background-position: 100% 0;
+}
+
+.vitrina_top-nav li.expanded a {
+  background-position: 0 -355px;
+}
+
+.vitrina_top-nav li.expanded em {
+  background-position: 100% -355px;
+}
+
+.vitrina_top-nav li.current-expanded a {
+  background-position: 0 -381px;
+}
+
+.vitrina_top-nav li.current-expanded em {
+  background-position: 100% -381px;
+}
+
+.vitrina_top-nav li a:link {
+  color: #000;
+}
+
+.vitrina_top-nav li a:visited {
+  color: #000;
+}
+
+.vitrina_top-nav li a:hover {
+  color: #090;
+}
+
+.vitrina_top-nav li a:active {
+  color: #090;
+}
+
+.vitrina_top-nav .vitrina_inner a {
+  text-decoration: none;
+}
+
+.vitrina_top-nav .vitrina_inner a span {
+  display: inline-block;
+  position: relative;
+  margin-right: 10px;
+  line-height: 1em;
+}
+
+.vitrina_top-nav .vitrina_inner a span var {
+  position: absolute;
+  right: -10px;
+  top: 4px;
+  width: 6px;
+  height: 3px;
+  font-size: 0;
+  background: url("http://mesto.ru/images/no-repeat.png") 0 -1264px no-repeat;
+}
+
+.vitrina_top-nav .vitrina_current a span var {
+  background-position: -12px -1264px
+}
+
+.vitrina_top-nav .current-expanded a span var {
+  background-position: -18px -1264px
+}
+
+.vitrina_top-nav .expanded a span var {
+  background-position: -6px -1264px
+}
+
+.vitrina_top-nav .vitrina_inner a:link span {
+  border-bottom: 1px dashed #000;
+}
+
+.vitrina_top-nav .vitrina_inner a:visited span {
+  border-bottom: 1px dashed #000;
+}
+
+.vitrina_top-nav .vitrina_inner a:hover span {
+  border-bottom: 1px dashed #090;
+}
+
+.vitrina_top-nav .vitrina_inner a:active span {
+  border-bottom: 1px dashed #090;
+}
+
+.vitrina_dropbox {
+  display: none;
+  position: absolute;
+  left: 1px;
+  top: 23px;
+  z-index: 22;
+}
+
+.expanded .vitrina_dropbox,
+.current-expanded .vitrina_dropbox {
+  display: block;
+}
+
+.vitrina_dropbox-wrap {
+  position: relative;
+  width: 100%;
+  padding: 0 1px 0 1px;
+  margin: 0 -1px 0 -1px;
+  overflow: hidden;
+}
+
+.vitrina_dropbox-cn {
+  position: absolute;
+  background: url(http://mesto.ru/images/box-blue-right.png) no-repeat;
+  left: -10px;
+  z-index: -1;
+}
+
+.vitrina_dropbox-tl,
+.vitrina_dropbox-tr {
+  height: 500px;
+  top: -13px;
+}
+
+.vitrina_dropbox-tl,
+.vitrina_dropbox-bl {
+  width: 100%;
+}
+
+.vitrina_dropbox-tr,
+.vitrina_dropbox-br {
+  width: 10px;
+  margin-left: 100%;
+}
+
+.vitrina_dropbox-bl,
+.vitrina_dropbox-br {
+  height: 13px;
+  font-size: 0;
+}
+
+.vitrina_dropbox-bl {
+  left: -11px;
+  padding-right: 2px;
+  clip: rect(auto auto auto 10px);
+}
+
+.vitrina_dropbox-br {
+  left: -9px;
+}
+
+.vitrina_dropbox ul {
+  list-style: none;
+  margin: 4px 12px 0;
+}
+
+.vitrina_top-nav .vitrina_dropbox li {
+  margin: 7px 0 0;
+  background: none;
+  display: block;
+  font-size: 1em;
+  position: static;
+  white-space: nowrap;
+  color: #000;
+  height: auto;
+}
+
+.vitrina_top-nav .vitrina_dropbox li a {
+  display: inline;
+  padding: 0;
+  background: none;
+  text-decoration: underline;
+}
+
+.vitrina_top-nav .vitrina_corner {
+  display: none;
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  background: url("http://mesto.ru/images/nav-c.png") 0 -9px no-repeat;
+  margin-left: 100%;
+  left: -1px;
+  top: 14px;
+}
+
+.vitrina_top-nav .expanded .vitrina_corner {
+  display: block;
+}
+
+.vitrina_top-nav .expanded-right .vitrina_corner,
+.vitrina_top-nav .current-expanded-right .vitrina_corner {
+  margin: 0;
+  left: -8px
+}
+
+.vitrina_top-nav .current-expanded .vitrina_corner {
+  background-position: 0 -18px;
+  display: block;
+}
+
+.vitrina_top-nav .current-expanded-right .vitrina_corner {
+  background-position: 0 0;
+  display: block;
+}
+
+.vitrina_top-nav .expanded-right .vitrina_corner {
+  background-position: 0 -27px;
+  display: block;
+}
+
+.vitrina_top-nav .vitrina_dropbox li a:link {
+  color: #000;
+}
+
+.vitrina_top-nav .vitrina_dropbox li a:visited {
+  color: #000;
+}
+
+.vitrina_top-nav .vitrina_dropbox li a:hover {
+  color: #016a91;
+}
+
+.vitrina_top-nav .vitrina_dropbox li a:active {
+  color: #016a91;
+}
+
+.current .vitrina_dropbox li a:link {
+  color: #000;
+}
+
+.current .vitrina_dropbox li a:visited {
+  color: #000;
+}
+
+.current .vitrina_dropbox li a:hover {
+  color: #2a5f00;
+}
+
+.current .vitrina_dropbox li a:active {
+  color: #2a5f00;
+}
+
+.vitrina_top-nav li.expanded,
+.vitrina_top-nav li.current-expanded,
+.vitrina_top-nav li.expanded-right,
+.vitrina_top-nav li.current-expanded-right {
+  z-index: 25
+}
+
+.current-expanded .vitrina_dropbox-cn {
+  background-image: url("http://mesto.ru/images/box-green-right.png");
+}
+
+.expanded-right .vitrina_dropbox-cn {
+  background-image: url("http://mesto.ru/images/box-blue-left.png");
+}
+
+.current-expanded-right .vitrina_dropbox-cn {
+  background-image: url("http://mesto.ru/images/box-green-left.png");
+}
+
+.current-expanded-right .vitrina_dropbox,
+.expanded-right .vitrina_dropbox {
+  left: auto;
+  right: 1px;
+  display: block;
+}
+
+.vitrina_wrapper {
+  width: 972px;
+  margin: auto auto 100px;
+  z-index: 90;
+}
+
+.vitrina_innerGlobalMenu,
+.vitrina_globalMenu {
+  line-height: 15px;
+  margin-bottom: 0;
+  height: 47px;
+
+}
+
+.vitrina_innerGlobalMenu li,
+.vitrina_globalMenu li {
+  list-style: none;
+  display: block;
+  float: left;
+  height: 40px;
+  margin: 0;
+}
+
+.vitrina_innerGlobalMenu li a,
+.vitrina_globalMenu li a,
+.vitrina_innerGlobalMenu li span {
+  height: 34px;
+  width: 136px;
+  display: block;
+  background: url(http://mesto.ru/images/no-repeat.png) no-repeat left -1750px;
+  margin: 0 2px 0 0;
+  cursor: pointer;
+  padding: 6px 0 0 24px;
+  color: #2c4220;
+  text-decoration: none !important;
+}
+
+.vitrina_innerGlobalMenu li a:hover,
+.vitrina_globalMenu li a:hover {
+  text-decoration: underline !important;
+  color: #2c4220 !important;
+
+}
+
+.vitrina_innerGlobalMenu li.active,
+.vitrina_globalMenu li.active {
+}
+
+.vitrina_innerGlobalMenu li.active a,
+.vitrina_globalMenu li.active a {
+  background: url(http://mesto.ru/images/no-repeat.png) no-repeat left -1680px;
+}
+
+#vitrina_footer {
+  margin: 0 auto 10px;
+  width: 973px;
+}
+
+#vitrina_footer .vitrina_lining {
+  padding: 17px 7px 19px;
+  background: #e9e9e9 url(http://mesto.ru/images/bg-footer.png) 0 -4px no-repeat;
+  overflow: hidden;
+  zoom: 1;
+  font-size: 0.846em;
+  color: #666;
+}
+
+#vitrina_footer .vitrina_col {
+  width: 149px;
+  margin: 0 8px;
+  float: left;
+}
+
+#vitrina_footer .vitrina_side {
+  width: 133px;
+  line-height: 1.6em;
+}
+
+#vitrina_footer .vitrina_col p {
+  margin: 0 0 0.4em;
+}
+
+#vitrina_footer .vitrina_col ul {
+  list-style: none;
+  margin: 0;
+}
+
+#vitrina_footer .vitrina_col li {
+  list-style: none;
+}
+
+#vitrina_footer .vitrina_col h3 {
+  border-bottom: 2px solid #bababa;
+  padding: 2px 0 7px 18px;
+  color: #666;
+  font-size: 1em;
+  margin: 0 0 0.8em;
+  position: relative;
+}
+
+#vitrina_footer .vitrina_col h3 span {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: url(http://mesto.ru/images/no-repeat.png) 0 -1318px no-repeat;
+  font-size: 0;
+}
+
+#vitrina_footer .vitrina_text h3 span {
+  background-position: -16px -1318px;
+}
+
+#vitrina_footer .vitrina_search h3 span {
+  background-position: -32px -1318px;
+}
+
+#vitrina_footer .vitrina_profile h3 span {
+  background-position: -48px -1318px;
+}
+
+#vitrina_footer .vitrina_col li {
+  margin: 0 0 0.636em;
+  line-height: 1.364em;
+}
+
+#vitrina_footer .vitrina_search li {
+  margin: 0 0 1.364em;
+}
+
+#vitrina_footer .vitrina_col a:link {
+  color: #666;
+}
+
+#vitrina_footer .vitrina_col a:visited {
+  color: #666;
+}
+
+#vitrina_footer .vitrina_col a:hover {
+  color: #090;
+}
+
+#vitrina_footer .vitrina_col a:active {
+  color: #090;
+}
+
+#vitrina_footer .vitrina_profile li a {
+  text-decoration: none;
+  line-height: 1;
+  display: inline-block;
+  background: none;
+  padding: 0;
+}
+
+#vitrina_footer .vitrina_profile li a:link {
+  border-bottom: 1px dashed #666;
+}
+
+#vitrina_footer .vitrina_profile li a:visited {
+  border-bottom: 1px dashed #666;
+}
+
+#vitrina_footer .vitrina_profile li a:hover {
+  border-bottom: 1px dashed #090;
+}
+
+#vitrina_footer .vitrina_profile li a:active {
+  border-bottom: 1px dashed #090;
+}

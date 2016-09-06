@@ -1,0 +1,32 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Blog
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          blog
+    with_doctrine_route:     1
+
+    config:
+      actions:
+        _edit: { credentials: [create-blog-actions] }
+        _delete: { credentials: [create-blog-delete] }
+
+      fields:
+        title_link: { label: Название блога }
+        user_name: { label: Автор }
+      list:
+        display: [_title_link, _user_name, url]
+        sort: [title, asc]
+        title: Блоги
+      filter:
+        display: [user_id, title, status]
+      form:
+        class: BlogForm
+      edit:
+        title: Редактирование блога "%%title%%"
+      new:
+        title: Новый блог

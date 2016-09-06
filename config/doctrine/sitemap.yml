@@ -1,0 +1,25 @@
+SitemapSeoData:
+  columns:
+    id:
+      type: integer(4)
+      unsigned: true
+      notnull: true
+      primary: true
+      autoincrement: true
+    h1:
+      type: string(500)
+    section:
+      type: string(100)
+      notnull: true
+    subsection:
+      type: string(255)
+    title:
+      type: string(500)
+    link:
+      type: string(500)
+    content:
+      type: string(5000)
+    level:
+      type: enum
+      length: 5
+      values: ['region', 'city', 'village', 'district', 'street']

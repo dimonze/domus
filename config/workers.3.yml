@@ -1,0 +1,32 @@
+#domus3
+domus__parse_yandex_lot:
+  enabled: true
+  command: php
+  arguments:
+    - /var/www/mesto.ru/plugins/sfGearmanPlugin/sfGearmanWorkerStarter.php
+    - ParseYandexWorker
+    - /var/www/mesto.ru/lib/gearman/ParseYandexWorker.class.php
+    - frontend
+    - prod
+    - doctrine
+  functions:
+    - parse_yandex_lot
+  max_requests: 100
+  job_timeout: 600
+  workers: 10
+
+domus__import_lot:
+  enabled: true
+  command: php
+  arguments:
+    - /var/www/mesto.ru/plugins/sfGearmanPlugin/sfGearmanWorkerStarter.php
+    - ImportLotWorker
+    - /var/www/mesto.ru/lib/gearman/ImportLotWorker.class.php
+    - frontend
+    - prod
+    - doctrine
+  functions:
+    - import_lot
+  max_requests: 100
+  job_timeout: 1800
+  workers: 10

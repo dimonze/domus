@@ -1,0 +1,29 @@
+Agency:
+  columns:
+    id:
+      type: integer(3)
+      unsigned: 1
+      primary: true
+      autoincrement: true
+    region_id:
+      type: integer(1)
+      notnull: true
+      unsigned: true
+    name:
+      type: string(100)
+      notnull: true
+    type:
+      type: enum
+      values: ['company', 'bti']
+      notnull: true
+      default: company
+    url: string(100)
+    address: string
+    phones: array
+    description: string
+
+  relations:
+    Region:
+      local: region_id
+      foreign: id
+      type: one

@@ -1,0 +1,1 @@
+<?= link_to('написать сообщение', '/user/pm#c:create-pm$to:' . $user->id, 'target=_blank') ?>

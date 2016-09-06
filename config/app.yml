@@ -1,0 +1,10 @@
+all:
+  static_host: s.domus.server.garin.su:8080
+  uploads_host: u.domus.server.garin.su:8080
+  .array:
+    cache:
+      host: 127.0.0.1
+      port: 11211
+    sphinx:
+      host: 127.0.0.1
+      port: 9312

@@ -1,0 +1,10 @@
+all:
+  .array:
+    options:
+      allowed_symbols:  23456789abcdeghkmnpqsuvxyz
+      length:           6
+      width:            120,
+      height:           60,
+      credits:          ~
+      foreground:       [0, 0, 0]
+      background:       [255, 255, 255]

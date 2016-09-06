@@ -1,0 +1,17 @@
+GeoIpRu:
+  columns:
+    start:
+      type: integer(4)
+      unsigned: true
+      notnull: true
+      primary: true
+    end:
+      type: integer(4)
+      unsigned: true
+      notnull: true
+      primary: true
+    region_id:
+      type: integer(1)
+      unsigned: 1
+    region: string(80)
+    city: string(60)

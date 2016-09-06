@@ -1,0 +1,38 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Notification
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          notification
+    with_doctrine_route:     1
+
+    config:
+      actions:
+        _edit: { credentials: [none] }
+        _delete: { credentials: [none] }
+
+      fields:
+        model: { label: Тип }
+        model_text: { label: Тип }
+        period: { label: Период }
+        period_text: { label: Период }
+        params: { label: Праметры подписки }
+
+      list:
+        display: [_email, model_text, period_text, _params]
+        object_actions: {}
+        batch_actions: {}
+        actions: {}
+        max_per_page: 10
+        title: Подписки пользователей
+
+      filter:
+        display: [email, model, period]
+
+      form:    ~
+      edit:    ~
+      new:     ~

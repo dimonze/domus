@@ -1,0 +1,33 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           PostComment
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          post_comment_comments
+    with_doctrine_route:     1
+
+    config:
+      actions:
+        _delete: { credentials: [moder-access] }
+      fields:
+        post_title: { label: Заголовок }
+        post_type_title: { label: Раздел }
+        body: { label: Коментарий }
+        created_at: { label: Дата }
+        user_name: { label: Пользователь }
+        comment_delete: { label: удалить }
+      list:
+        display: [_post_type_title, _post_title, body, created_at, _user_name, _comment_delete]
+        sort: [created_at, desc]
+        title: Коментарии
+        object_actions: {}
+        actions: {}
+      filter:
+        class: false
+      form:    ~
+      edit:    {}
+      new:     {}

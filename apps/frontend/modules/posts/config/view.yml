@@ -1,0 +1,5 @@
+all:
+  javascripts:    
+    - news_portal.js
+    - homepage.js
+    - incut.js

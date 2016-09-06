@@ -1,0 +1,34 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           UserGroup
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          user_group
+    with_doctrine_route:     1
+
+    config:
+      actions: ~
+      fields:
+        name: { label: Название }
+        credentials: { label: Права доступа }
+        nb_users: { label: Кол-во пользователей }
+
+      list:
+        table_method: createQueryNbUsers
+        display: [id, name, nb_users]
+        batch_actions: {}
+        title: Группы пользователей
+
+      filter:
+        display: [name]
+        
+      form:    ~
+      edit:
+        title: Редактирование группы пользователей
+
+      new:
+        title: Создание группы пользователей

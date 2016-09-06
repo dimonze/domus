@@ -1,0 +1,20 @@
+Options -Indexes +FollowSymLinks
+
+#AuthType Basic
+#AuthName "Nothing is here"
+#AuthUserFile /var/www/mesto.ru/web/.htpasswd
+#Require valid-user
+
+<IfModule mod_rewrite.c>
+  RewriteEngine on
+  RewriteBase /
+
+  # remove trailing slash
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_URI} ^(.*)/$
+  RewriteRule ^(.*)/$ $1 [R=302,L]
+
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule (.*) index.php/$1 [L,QSA]
+</IfModule>

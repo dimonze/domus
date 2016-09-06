@@ -1,0 +1,24 @@
+﻿.headerBox {background:none;}
+#banner-footer, .cityMenu, .headerRight, .globalMenu, .productMenu, .boxBack_01, .contentRight, .footer, .sortBox_02, .similarResultsBox {display:none;}
+.contentLeft {
+width:750px;
+}
+
+
+#front #aside,
+#front #header a,
+#front #header ul,
+#front #header div,
+#front .post-actions,
+#front .author-post-actions, 
+#front .comments-ballon, 
+#front .comments-ballon, 
+#front .events, 
+#front .expert-opinion,
+#front #footer { display: none;}
+#front #header .logo { display:block; height:49px; overflow:hidden; width:170px; margin: 0 0 10px;}
+#front #header .logo img { border: 0 none; }
+#front .tab { display: none;}
+#author-post-actions { display: none;}
+
+#front .authors-box { display: none;}

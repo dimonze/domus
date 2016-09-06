@@ -1,0 +1,25 @@
+Page:
+  Home:
+    url: home
+    title: Главная
+    name: Главная
+
+  About:
+    url: about
+    title: О проекте
+    name: О проекте
+
+  Info:
+    url: info
+    title: Информация
+    name: Информация
+
+  Help:
+    url: help
+    title: Помощь
+    name: Помощь
+
+  Advert:
+    url: advert
+    title: Реклама на проекте
+    name: Реклама на проекте

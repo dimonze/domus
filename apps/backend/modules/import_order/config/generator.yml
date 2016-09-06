@@ -1,0 +1,38 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           ImportOrder
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          import_order
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        user_name:        { label: Пользователь }
+        created_at:       { label: Дата формирования заказа }
+        date_from:        { label: Дата начала импорта }
+        date_to:          { label: Дата завершения импорта }
+        company_name:     { label: Название компании }
+        status:           { label: Статус оплаты }
+      list:
+        display:  [ _user_name, created_at, date_from, date_to, _status ]
+        sort:     [created_at, desc]
+        object_actions: ~
+        actions: ~
+        title: Статус оплат на импорт
+      filter:
+        class: false
+      form:
+        display:
+          Заказ: [_user_id, company_name, created_at, date_from, date_to, status]
+          Дополнительная информация: [_data]
+      edit:
+        title: Редактирование заказа "%%id%%" от %%created_at%%
+      new:
+        title: Добавление заказа

@@ -1,0 +1,66 @@
+User:
+  User_1:
+    email: me@zhekanax.ru
+    password: ae2b1fca515949e5d54fb22b8ed95575
+    remember_key: CBsSSVKjXzswaeXWpENdqLwxskOZQxAAqjtzmDJfdxVyffb15jkQrpPEWnW3GSKE
+    name: 'Беляев Евгений Владимирович'
+    phone: '+7 (903) 105-37-08'
+    organization_name: null
+    organization_site: null
+    organization_logo: null
+    created_at: '2009-04-17 20:27:28'
+    last_login: '2009-04-22 16:39:38'
+    remember_till: '2009-05-06 16:39:38'
+    deleted: false
+  User_2:
+    email: anddavydov@ya.ru
+    password: 104c4f4ff99507526b600f3d102afa1e
+    remember_key: 1dao38Vdi0agjSGNM9qUBOfCqtVDlL4lCKdlW9Ha5VNqe5Tb2EbONx5zsrNHbUmA
+    name: 'Андрей Давыдов'
+    phone: '+7 (903) 277-17-88'
+    organization_name: null
+    organization_site: null
+    organization_logo: null
+    created_at: '2009-04-20 16:21:27'
+    last_login: '2009-04-21 17:44:32'
+    remember_till: '2009-05-05 17:44:32'
+    deleted: false
+  User_4:
+    email: yuryrettttt456@yandex.ru
+    password: e10adc3949ba59abbe56e057f20f883e
+    remember_key: null
+    name: Андрей
+    phone: '+7 (495) 343-43-44'
+    organization_name: null
+    organization_site: null
+    organization_logo: null
+    created_at: '2009-04-22 02:09:53'
+    last_login: null
+    remember_till: null
+    deleted: false
+  User_5:
+    email: cegthgegthvskj@yandex.ru
+    password: e10adc3949ba59abbe56e057f20f883e
+    remember_key: null
+    name: andrey
+    phone: '+7 (567) 987-65-43'
+    organization_name: null
+    organization_site: null
+    organization_logo: null
+    created_at: '2009-04-22 02:11:51'
+    last_login: '2009-04-22 02:12:05'
+    remember_till: null
+    deleted: false
+  User_6:
+    email: info@avrealty.ru
+    password: 2c7bb8666276179cf13d90a329086642
+    remember_key: null
+    name: Андрей
+    phone: '+7 (495) 725-76-49'
+    organization_name: 'Avenue Realty'
+    organization_site: null
+    organization_logo: null
+    created_at: '2009-04-22 12:10:53'
+    last_login: '2009-04-22 13:54:46'
+    remember_till: null
+    deleted: false

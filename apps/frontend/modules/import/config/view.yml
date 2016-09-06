@@ -1,0 +1,10 @@
+importFileSuccess:
+  components:
+    sidebar: [menu, user]
+  stylesheets: [jquery.sb.css]
+  javascripts: [jquery.sb.min.js, import.js]
+paySuccess:
+  javascripts:
+    - jquery.datepicker.js
+  stylesheets:
+    - jquery-ui/index.css

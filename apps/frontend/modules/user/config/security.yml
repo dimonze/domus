@@ -1,0 +1,21 @@
+all:
+  is_secure:   true
+
+card:
+  is_secure:   false
+register:
+  is_secure:   false
+login:
+  is_secure:   false
+reset:
+  is_secure:   false
+setpassword:
+  is_secure:   false
+unsubscribe:
+  is_secure:   false
+rating:
+  is_secure:   false
+userscount:
+  is_secure:   false
+lots:
+  is_secure:   false

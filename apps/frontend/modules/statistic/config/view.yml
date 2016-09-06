@@ -1,0 +1,7 @@
+all:
+  javascripts:
+    - highcharts.js
+    - chart.js    
+    - jquery.datepicker.js
+  stylesheets:
+    - jquery-ui/index.css

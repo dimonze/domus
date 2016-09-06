@@ -1,0 +1,79 @@
+all:
+  .array:
+    menu:
+      -
+        text: Контент
+        route: '@page'
+        credential: admin-content
+      -
+        text: пользователи
+        route: '@user'
+        credential: admin-user
+      -
+        text: группы
+        route: '@user_group'
+        credential: admin-user-group
+      -
+        text: новостной портал
+        route: 'news_portal/index'
+      -
+        text: блоги
+        route: 'blog/index'
+      -
+        text: баннеры
+        route: 'http://media.mesto.ru/openx/'
+        credential: admin-banner
+      -
+        text: география
+        route: '@region'
+        credential: admin-geo
+      -
+        text: формы
+        route: 'form/index'
+        credential: admin-form
+      -
+        text: настройки
+        route: 'settings/index'
+        credential: admin-settings
+      -
+        text: экспорт новостей
+        route: 'feed/index'
+        credential: admin-settings
+      -
+        text: жалобы
+        route: 'claim/index'
+        credential: claims-moder
+      -
+        text: просмотры
+        route: 'lot_views/index'
+        credential: admin-lot-views
+      -
+        text: подписки
+        route: 'notification/index'
+        credential: admin-notifications
+      -
+        text: импорт
+        route: 'import_logs/index'
+        credential: admin-import
+      -
+        text: стоимость импорта
+        route: 'price/index'
+        credential: admin-import
+      -
+        text: заказы импорта
+        route: 'import_order/index'
+        credential: admin-orders
+      -
+        text: страницы спецпредложений
+        route: 'spec_pages/index'
+        credential: specpages-access
+      -
+        text: страницы таргетинга
+        route: 'special_targeting/index'
+        credential: specpages-access
+      -
+        text: посадочные страницы
+        route: '@landing_page'
+        credential: seo-access
+
+  upload: { tmp_dir: tmp }

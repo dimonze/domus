@@ -1,0 +1,1091 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="X-Ua-Compatible" content="IE=8"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="title" content="Добавление объявления"/>
+  <meta name="name" content="Добавить объявление"/>
+  <title>Добавление объявления</title>
+  <link rel="stylesheet" type="text/css" media="all" href="/css/reset.css?1300193896"/>
+  <link rel="stylesheet" type="text/css" media="all" href="/css/main.css?1303806151"/>
+  <link rel="stylesheet" type="text/css" media="all" href="/css/user.css?1300193826"/>
+  <link rel="stylesheet" type="text/css" media="all" href="/css/metro.css?1303722625"/>
+  <link rel="stylesheet" type="text/css" media="print" href="/css/print.css?1300193917"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="/css/autocomplete.css?1300193828"/>
+  <!--[if IE 6]>
+    <script type="text/javascript" src="js/iepngfix_tilebg.js"></script>
+    <link rel="stylesheet" type="text/css" media="all" href="/css/ie6.css"/>
+  <![endif]-->
+  <!--[if IE 7]>
+    <link rel="stylesheet" type="text/css" media="all" href="/css/ie7.css"/>
+  <![endif]-->
+  <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" media="all" href="/css/ie8.css"/>
+  <![endif]-->
+  <script type="text/javascript" src="/js/jquery.js?1300193834"></script>
+  <script type="text/javascript" src="/js/global.js?1303808674"></script>
+  <script type="text/javascript" src="/js/form.js?1303904196"></script>
+  <script type="text/javascript" src="/js/metro.js?1303722618"></script>
+  <script type="text/javascript" src="/js/autocomplete.js?1300193822"></script>
+  <!--<script type="text/javascript" src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=true&amp;key=ABQIAAAAFenUZ1dWnutO1UanaakQ0BT_Le6hTfFDB2tIaX09e5KrJNjnPRSLCs7X_7sIeXLoUGcVjufxLPEdww"></script>-->
+  <script type="text/javascript" src="/js/ajaxupload.js?1300193864"></script>
+  <link rel="shortcut icon" href="/images/favicon.ico"/>
+</head>
+<body>
+<div id="homepage_header">
+
+</div>
+
+<noindex>
+  <div class="header_counters">
+  </div>
+</noindex>
+<div id="bg">
+<div id="container">
+<div id="global-loading"></div>
+<div class="global">
+<div class="contentBox">
+
+<div class="headerBox">
+  <div id="header">
+    <a class="new-insertion" href="/lot/add">Добавить объявление<span></span></a>
+    <ul class="login-nav">
+      <li>Игорь В. Н.</li>
+
+      <li class="cabinet inner">
+        <a href="#" toggle=".cabinetSubmenu" class="toggle">Мой кабинет</a>
+        <ul class="cabinetSubmenu">
+          <li class="">
+            <a href="/lot/favourite">Избранное</a>
+            (<span title="Всего">0</span>)
+
+          </li>
+          <li class="active">
+            <span>Добавить объявление</span>
+
+          </li>
+          <li class="">
+            <a href="/import/importFile">Импортировать объявления</a>
+
+          </li>
+          <li class="">
+            <a href="/lot/my">Мои объявления</a>
+            (<span title="Всего">79</span> /
+            <span class="status-moderate" title="Ожидают модерации">69</span> /
+            <span class="status-restricted" title="Запрещены">1</span> /
+            <span class="status-inactive" title="Неактивны">7</span>)
+
+          </li>
+          <li class="">
+            <a href="/user/pm">Мои сообщения</a>
+            (27<span class="unread-messages-container"> / <b title="Новые" class="unread-messages">9</b></span>)
+
+
+          </li>
+          <li class="">
+            <a href="/blogs/my">Мой блог</a>
+
+          </li>
+          <li class="">
+            <a href="/user/profile">Профайл</a>
+
+          </li>
+          <li class="">
+            <a href="/user/pm#c:create-pm$moderator:1">Обратная связь</a>
+
+          </li>
+          <li class="">
+            <a href="/lot/moderate">Модерация</a>
+
+          </li>
+          <li class="">
+            <a href="/backend.php">Администрирование</a>
+
+          </li>
+        </ul>
+      </li>
+      <li class="out last"><a href="/user/logout">Выход</a></li>
+
+    </ul>
+    <!--        <div class="headerLeft">-->
+    <a class="logo logo_nb" href="/77/main"><img alt="Место.ру" src="/images/no-repeat.png"/></a>
+    <div class="cityMenu" style="background: url('/images/region/77.gif') no-repeat left top">
+      <a href="#" toggle=".cityMenu .outlinemenu" id="citySelect">
+        <span>г. Москва</span>
+      </a>
+
+      <div class="outlinemenu" style="display: none">
+        <iframe class="select-hider" frameborder="0"></iframe>
+        <ul class="cityScroll">
+
+          <li rel="77" class="current" style="display: none">
+            <a href="/setregion/77">г. Москва</a></li>
+
+          <li rel="50"><a href="/setregion/50">Московская обл.</a></li>
+
+          <li rel="47"><a href="/setregion/47">Ленинградская обл.</a></li>
+
+          <li rel="28"><a href="/setregion/28">Амурская обл.</a></li>
+
+          <li rel="2"><a href="/setregion/2">Башкортостан</a></li>
+
+          <li rel="31"><a href="/setregion/31">Белгородская обл.</a></li>
+
+          <li rel="78"><a href="/setregion/78">г. Санкт-Петербург</a></li>
+
+          <li rel="3"><a href="/setregion/3">Бурятия</a></li>
+
+          <li rel="34"><a href="/setregion/34">Волгоградская обл.</a></li>
+
+          <li rel="35"><a href="/setregion/35">Вологодская обл.</a></li>
+
+          <li rel="37"><a href="/setregion/37">Ивановская обл.</a></li>
+
+          <li rel="6"><a href="/setregion/6">Ингушетия</a></li>
+
+          <li rel="40"><a href="/setregion/40">Калужская обл.</a></li>
+
+          <li rel="23"><a href="/setregion/23">Краснодарский край</a></li>
+
+          <li rel="12"><a href="/setregion/12">Марий Эл</a></li>
+
+          <li rel="61"><a href="/setregion/61">Ростовская обл.</a></li>
+
+          <li rel="15"><a href="/setregion/15">Северная Осетия</a></li>
+
+          <li rel="86"><a href="/setregion/86">Ханты-Мансийский АО</a></li>
+
+          <li rel="20"><a href="/setregion/20">Чечня</a></li>
+
+          <li rel="75"><a href="/setregion/75">Забайкальский край</a></li>
+        </ul>
+
+      </div>
+    </div>
+    <ul class="top-nav">
+      <li class="inner ">
+        <a href="#"><em><span>Новости <var></var></span></em></a>
+        <div class="corner"></div>
+        <div class="dropbox">
+          <div class="dropbox-wrap">
+            <ul>
+              <li><a href="/77/news/news-market">Новости рынка</a></li>
+              <li><a href="/77/news/news-portal">Новости портала</a></li>
+              <li><a href="/77/news/news-companies">Новости компаний</a></li>
+            </ul>
+            <div class="dropbox-cn dropbox-tl"></div>
+            <div class="dropbox-cn dropbox-tr"></div>
+          </div>
+          <div class="dropbox-cn dropbox-bl"></div>
+          <div class="dropbox-cn dropbox-br"></div>
+        </div>
+      </li>
+      <li>
+        <a href="/77/posts/article"><em>Статьи</em></a></li>
+      <li>
+        <a href="/77/posts/analytics"><em>Аналитика</em></a></li>
+      <li class="inner "><a href="#"><em><span>Эксперты <var></var></span></em></a>
+        <div class="corner"></div>
+        <div class="dropbox">
+          <div class="dropbox-wrap">
+            <ul>
+              <li><a href="/77/experts">Экспертные мнения</a></li>
+              <li><a href="/77/authors">Авторские колонки</a></li>
+            </ul>
+            <div class="dropbox-cn dropbox-tl"></div>
+            <div class="dropbox-cn dropbox-tr"></div>
+          </div>
+          <div class="dropbox-cn dropbox-bl"></div>
+          <div class="dropbox-cn dropbox-br"></div>
+        </div>
+      </li>
+      <li class="inner "><a href="#"><em><span>Рейтинги <var></var></span></em></a>
+        <div class="corner"></div>
+        <div class="dropbox">
+          <div class="dropbox-wrap">
+            <ul>
+              <li><a href="/rating/company">Рейтинги компаний</a></li>
+              <li><a href="/rating/realtor">Рейтинги риэлторов</a></li>
+            </ul>
+            <div class="dropbox-cn dropbox-tl"></div>
+            <div class="dropbox-cn dropbox-tr"></div>
+          </div>
+          <div class="dropbox-cn dropbox-bl"></div>
+          <div class="dropbox-cn dropbox-br"></div>
+        </div>
+      </li>
+      <li class="inner "><a href="#"><em><span>Еще <var></var></span></em></a>
+        <div class="corner"></div>
+        <div class="dropbox">
+          <div class="dropbox-wrap">
+            <ul>
+              <li><a href="/77/posts/events">События</a></li>
+              <li><a href="/questionnaire">Опросы</a></li>
+              <li><a href="/77/qa">Вопрос&amp;Ответ</a></li>
+              <li><a href="/blog/all">Блоги</a></li>
+              <li><a href="/info">О Место.ру</a></li>
+            </ul>
+            <div class="dropbox-cn dropbox-tl"></div>
+            <div class="dropbox-cn dropbox-tr"></div>
+          </div>
+          <div class="dropbox-cn dropbox-bl"></div>
+          <div class="dropbox-cn dropbox-br"></div>
+        </div>
+      </li>
+    </ul>
+    <!--        </div>-->
+    <!--        <div class="headerRight">
+    </div>-->
+  </div>
+</div>
+
+<div class="wrapper">
+
+<div class="nb-nav" id="nb-nav">
+  <div class="nb-nav__block">
+    <div class="nb-nav__box nb-nav__box_flats">
+      <h4 class="nb-nav__header">Квартиры</h4>
+      <ul class="nb-nav__list">
+        <li class="nb-nav__item nb-nav__item_inactive"><b>Продажа</b>
+          <ul class="nb-subnav__list">
+            <li class="nb-subnav__item"><a href="#">комнат</a></li>
+            <li class="nb-subnav__item"><a href="#">однокомнатных квартир с огромными кухнями</a></li>
+            <li class="nb-subnav__item"><a href="#">двухкомнатных квартир</a></li>
+            <li class="nb-subnav__item"><a href="#">трехкомнатных квартир</a></li>
+            <li class="nb-subnav__item"><a href="#">квартир и комнат</a></li>
+          </ul>
+        </li>
+        <li class="nb-nav__item nb-nav__item_current"><b>Аренда</b>
+          <ul class="nb-subnav__list">
+            <li class="nb-subnav__item"><a href="#">комнат</a></li>
+            <li class="nb-subnav__item"><a href="#">квартир</a></li>
+            <li class="nb-subnav__item"><a href="#">квартир</a></li>
+            <li class="nb-subnav__item"><a href="#">кв</a></li>
+            <li class="nb-subnav__item"><a href="#">комнат</a></li>
+          </ul>
+        </li>
+        <li class="nb-nav__item"><a href="#">Новостройки</a>
+          <ul class="nb-subnav__list">
+            <li class="nb-subnav__item"><a href="#">комнат</a></li>
+            <li class="nb-subnav__item"><a href="#">однокомнатных квартир</a></li>
+            <li class="nb-subnav__item"><a href="#">двухкомнатных квартир</a></li>
+            <li class="nb-subnav__item"><a href="#">трехкомнатных квартир</a></li>
+            <li class="nb-subnav__item"><a href="#">квартир и комнат</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="nb-nav__box nb-nav__box_houses">
+      <h4 class="nb-nav__header">Дома и участки</h4>
+      <ul class="nb-nav__list">
+        <li class="nb-nav__item"><a href="#">Продажа</a>
+          <ul class="nb-subnav__list">
+            <li class="nb-subnav__item"><a href="#">комнат</a></li>
+            <li class="nb-subnav__item"><a href="#">однокомнатных квартир</a></li>
+            <li class="nb-subnav__item"><a href="#">двухкомнатных квартир</a></li>
+            <li class="nb-subnav__item"><a href="#">трехкомнатных квартир</a></li>
+            <li class="nb-subnav__item"><a href="#">квартир и комнат</a></li>
+          </ul>
+        </li>
+        <li class="nb-nav__item"><a href="#">Покупка</a>
+          <ul class="nb-subnav__list">
+            <li class="nb-subnav__item"><a href="#">комнат</a></li>
+            <li class="nb-subnav__item"><a href="#">однокомнатных квартир</a></li>
+            <li class="nb-subnav__item"><a href="#">двухкомнатных квартир</a></li>
+            <li class="nb-subnav__item"><a href="#">трехкомнатных квартир</a></li>
+            <li class="nb-subnav__item"><a href="#">квартир и комнат</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="nb-nav__box nb-nav__box_com">
+      <h4 class="nb-nav__header">Коммерческая недвижимость</h4>
+      <ul class="nb-nav__list">
+        <li class="nb-nav__item"><a href="#">Продажа</a>
+          <ul class="nb-subnav__list">
+            <li class="nb-subnav__item"><a href="#">комнат</a></li>
+            <li class="nb-subnav__item"><a href="#">однокомнатных квартир</a></li>
+            <li class="nb-subnav__item"><a href="#">двухкомнатных квартир</a></li>
+            <li class="nb-subnav__item"><a href="#">трехкомнатных квартир</a></li>
+            <li class="nb-subnav__item"><a href="#">квартир и комнат</a></li>
+          </ul>
+        </li>
+        <li class="nb-nav__item"><a href="#">Аренда</a>
+          <ul class="nb-subnav__list">
+            <li class="nb-subnav__item"><a href="#">комнат</a></li>
+            <li class="nb-subnav__item"><a href="#">однокомнатных квартир</a></li>
+            <li class="nb-subnav__item"><a href="#">двухкомнатных квартир</a></li>
+            <li class="nb-subnav__item"><a href="#">трехкомнатных квартир</a></li>
+            <li class="nb-subnav__item"><a href="#">квартир и комнат</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="clearBoth"></div>
+  </div>
+  <div class="nb-nav__blue-line"></div>
+</div>
+<div class="index-adv-teaser">
+  <div class="wrap">
+
+  </div>
+  <div class="adv-line adv-line-view-2 search-ads"><!-- если убрать класс adv-line-view-2 то будет другой вид - с рамкой -->
+    <div class="frame-wrap">
+      <iframe src="http://advstr.winner-group.ru/mesto.html" height="26px" width="100%" frameborder="0" scrolling="no" style="width:100%;"></iframe>
+    </div>
+    <div class="shadow"></div>
+    <div class="r"></div>
+  </div>
+  <a class="adv-link" href="/price">Реклама</a>
+</div>
+
+<div class="pageHeader">
+  <h1>
+    Добавить объявление </h1>
+</div>
+
+
+<div class="contentLeft_02">
+<form action="/lot/add" method="post" class="addForm ajax-validate">
+
+<div class="addForm-head sortBox_02">
+  <div class="floatLeft">
+    <label><strong>Я предлагаю</strong></label>
+    <ul class="radio_list">
+      <li>
+        <input name="dynamicform[type]" type="radio" value="apartament-sale" id="dynamicform_type_apartament-sale"/>&nbsp;<label for="dynamicform_type_apartament-sale">Квартиру или комнату на продажу</label>
+      </li>
+      <li>
+        <input name="dynamicform[type]" type="radio" value="apartament-rent" id="dynamicform_type_apartament-rent"/>&nbsp;<label for="dynamicform_type_apartament-rent">Квартиру или комнату в аренду</label>
+      </li>
+      <li>
+        <input name="dynamicform[type]" type="radio" value="house-sale" id="dynamicform_type_house-sale"/>&nbsp;<label for="dynamicform_type_house-sale">Дом или участок на продажу</label>
+      </li>
+      <li>
+        <input name="dynamicform[type]" type="radio" value="house-rent" id="dynamicform_type_house-rent"/>&nbsp;<label for="dynamicform_type_house-rent">Дом в аренду</label>
+      </li>
+      <li>
+        <input name="dynamicform[type]" type="radio" value="commercial-sale" id="dynamicform_type_commercial-sale"/>&nbsp;<label for="dynamicform_type_commercial-sale">Коммерческую недвижимость на продажу</label>
+      </li>
+      <li>
+        <input name="dynamicform[type]" type="radio" value="commercial-rent" id="dynamicform_type_commercial-rent"/>&nbsp;<label for="dynamicform_type_commercial-rent">Коммерческую недвижимость в аренду</label>
+      </li>
+      <li>
+        <input name="dynamicform[type]" type="radio" checked="checked" value="new_building-sale" id="dynamicform_type_new_building-sale" checked="checked"/>&nbsp;<label for="dynamicform_type_new_building-sale">Новостройки</label>
+      </li>
+    </ul>
+  </div>
+  <div class="floatRight">
+    <label>
+      <strong>Период публикации </strong>
+      <select name="dynamicform[period]" id="dynamicform_period">
+        <option value="30">1 месяц</option>
+        <option value="60">2 месяца</option>
+        <option value="90">3 месяца</option>
+      </select> </label>
+  </div>
+  <div class="clearBoth"></div>
+</div>
+
+<table width="100%" cellpadding="0" cellspacing=".">
+<tbody>
+
+
+<tr class="form-region_id">
+  <td>
+    <strong><label for="dynamicform_region_id">* Регион</label></strong>
+  </td>
+  <td class="field">
+
+
+    <select name="dynamicform[region_id]" id="dynamicform_region_id">
+      <option value="" selected="selected"></option>
+      <option value="77">г. Москва</option>
+      <option value="50">Московская обл.</option>
+      <option value="47">Ленинградская обл.</option>
+      <option value="1">Адыгея</option>
+      <option value="4">Алтай</option>
+      <option value="22">Алтайский край</option>
+      <option value="28">Амурская обл.</option>
+      <option value="29">Архангельская обл.</option>
+      <option value="30">Астраханская обл.</option>
+      <option value="2">Башкортостан</option>
+      <option value="31">Белгородская обл.</option>
+      <option value="78">г. Санкт-Петербург</option>
+      <option value="32">Брянская обл.</option>
+      <option value="3">Бурятия</option>
+      <option value="33">Владимирская обл.</option>
+      <option value="34">Волгоградская обл.</option>
+      <option value="35">Вологодская обл.</option>
+      <option value="36">Воронежская обл.</option>
+      <option value="5">Дагестан</option>
+      <option value="79">Еврейская обл.</option>
+      <option value="37">Ивановская обл.</option>
+      <option value="6">Ингушетия</option>
+      <option value="38">Иркутская обл.</option>
+      <option value="7">Кабардино-Балкария</option>
+      <option value="39">Калининградская обл.</option>
+      <option value="8">Калмыкия</option>
+      <option value="40">Калужская обл.</option>
+      <option value="41">Камчатский край</option>
+      <option value="9">Карачаево-Черкессия</option>
+      <option value="42">Кемеровская обл.</option>
+      <option value="10">Карелия</option>
+      <option value="43">Кировская обл.</option>
+      <option value="11">Коми</option>
+      <option value="44">Костромская обл.</option>
+      <option value="23">Краснодарский край</option>
+      <option value="24">Красноярский край</option>
+      <option value="45">Курганская обл.</option>
+      <option value="46">Курская обл.</option>
+      <option value="48">Липецкая обл.</option>
+      <option value="49">Магаданская обл.</option>
+      <option value="12">Марий Эл</option>
+      <option value="13">Мордовия</option>
+      <option value="51">Мурманская обл.</option>
+      <option value="83">Ненецкий АО</option>
+      <option value="52">Нижегородская обл.</option>
+      <option value="53">Новгородская обл.</option>
+      <option value="54">Новосибирская обл.</option>
+      <option value="55">Омская обл.</option>
+      <option value="56">Оренбургская обл.</option>
+      <option value="57">Орловская обл.</option>
+      <option value="58">Пензенская обл.</option>
+      <option value="59">Пермский край</option>
+      <option value="25">Приморский край</option>
+      <option value="60">Псковская обл.</option>
+      <option value="61">Ростовская обл.</option>
+      <option value="62">Рязанская обл.</option>
+      <option value="63">Самарская обл.</option>
+      <option value="64">Саратовская обл.</option>
+      <option value="14">Саха /Якутия/</option>
+      <option value="65">Сахалинская обл.</option>
+      <option value="66">Свердловская обл.</option>
+      <option value="15">Северная Осетия</option>
+      <option value="67">Смоленская обл.</option>
+      <option value="26">Ставропольский край</option>
+      <option value="68">Тамбовская обл.</option>
+      <option value="16">Татарстан</option>
+      <option value="69">Тверская обл.</option>
+      <option value="70">Томская обл.</option>
+      <option value="71">Тульская обл.</option>
+      <option value="17">Тыва</option>
+      <option value="72">Тюменская обл.</option>
+      <option value="18">Удмуртия</option>
+      <option value="73">Ульяновская обл.</option>
+      <option value="27">Хабаровский край</option>
+      <option value="19">Хакасия</option>
+      <option value="86">Ханты-Мансийский АО</option>
+      <option value="74">Челябинская обл.</option>
+      <option value="20">Чечня</option>
+      <option value="75">Забайкальский край</option>
+      <option value="21">Чувашия</option>
+      <option value="87">Чукотский АО</option>
+      <option value="89">Ямало-Ненецкий АО</option>
+      <option value="76">Ярославская обл.</option>
+    </select>
+
+
+  </td>
+</tr>
+
+
+<tr class="form-region_node">
+  <td>
+    <strong><label for="dynamicform_region_node">* Метро/Район/Город</label></strong>
+  </td>
+  <td class="field">
+
+
+    <select class="regionnode" source="/form/regionnode" name="dynamicform[region_node][]" id="dynamicform_region_node">
+      <option value="" selected="selected">Выберите регион</option>
+    </select>
+
+
+  </td>
+</tr>
+
+
+<tr class="form-city_region">
+  <td>
+    <strong><label for="dynamicform_city_region">* Район/Населенный пункт</label></strong>
+  </td>
+  <td class="field">
+
+
+    <input class="autocomplete-city" source="/form/city" type="text" name="dynamicform[city_region]" id="dynamicform_city_region"/>
+
+
+  </td>
+</tr>
+
+
+<tr class="form-street">
+  <td>
+    <label for="dynamicform_street">Улица</label></td>
+  <td class="field">
+
+
+    <input class="autocomplete-street" source="/form/street" type="text" name="dynamicform[street]" id="dynamicform_street"/>
+
+
+  </td>
+</tr>
+
+
+<tr class="form-address">
+  <td>
+    <label for="dynamicform_address">обязательно для городов</label></td>
+  <td class="field">
+
+
+    <label>дом
+      <input size="3" type="text" name="dynamicform[address][house]" id="dynamicform_address_house"/></label>
+    <label>корпус
+      <input size="3" type="text" name="dynamicform[address][building]" id="dynamicform_address_building"/></label>
+    <label>строение
+      <input size="3" type="text" name="dynamicform[address][structure]" id="dynamicform_address_structure"/></label>
+
+
+  </td>
+</tr>
+
+
+<tr class="form-coords">
+  <td class="field colspan2" colspan="2">
+
+
+                  <span class="field-help"><label for="dynamicform_coords">Если маркер неправильно указывает местоположение объекта на карте,
+                    вы можете передвинуть его в нужное место</label></span><br/>
+    <input need_colspan="1" type="hidden" name="dynamicform[coords]" id="dynamicform_coords"/>
+    <div need_colspan="1" class="input-gmap">&nbsp;</div>
+    <br/>
+
+
+  </td>
+</tr>
+
+<tr class="form-field-price">
+  <td><strong><label>* Стоимость</label></strong></td>
+  <td><div>от <input type="text" name="" /> до
+    <input type="text" name="" />,
+    <select class="inputprice" name="" rating="3">
+      <option value="RUR">РУБ</option>
+      <option value="USD">USD</option>
+      <option value="EUR">EUR</option>
+    </select> /м<sup>2</sup></div></td>
+</tr>
+
+<tr class="form-field-price">
+  <td><strong><label>* Площадь</label></strong></td>
+  <td><div>от <input type="text" name="" /> до
+    <input type="text" name="" />, м<sup>2</sup></div></td>
+</tr>
+
+<tr class="form-field-price">
+  <td><strong><label>* Количество комнат</label></strong></td>
+  <td><div>от <input type="text" name="" /> до
+    <input type="text" name="" /></div>
+</tr>
+
+<tr class="form-field-price">
+  <td><strong><label>* Этажность</label></strong></td>
+  <td><input type="text" name="" /></td>
+</tr>
+
+<tr class="form-field74">
+  <td>
+    <strong><label for="dynamicform_field74">* Состояние строительства</label></strong>
+  </td>
+  <td class="field">
+
+    <select rating="1" name="dynamicform[field74]" id="dynamicform_field74">
+      <option value="" selected="selected">На стадии строительства</option>
+      <option value="сдан">сдан</option>
+      <option value="строится">строится</option>
+    </select>
+
+  </td>
+</tr>
+
+<tr>
+  <td>
+    <strong><label for="">* Срок ввода в эксплуатацию</label></strong>
+  </td>
+  <td class="field">
+
+    <select rating="1" name="">
+      <option value="" selected="selected">Месяц</option>
+    </select>
+    <select rating="1" name="">
+      <option value="" selected="selected">Год</option>
+    </select>
+
+  </td>
+</tr>
+
+<tr>
+  <td>
+    <strong><label for="">* Тип здания</label></strong>
+  </td>
+  <td class="field">
+
+    <select rating="1" name="">
+      <option value="" selected="selected"></option>
+    </select>
+
+  </td>
+</tr>
+
+<tr>
+  <td>
+    <strong><label for="">* Балкон / лоджия</label></strong>
+  </td>
+  <td class="field">
+
+    <select rating="1" name="">
+      <option value="" selected="selected">нет</option>
+      <option value="">да</option>
+    </select>
+
+  </td>
+</tr>
+
+<tr class="form-description">
+  <td class="field colspan2" colspan="2">
+
+
+    <b><label for="dynamicform_description">Описание объекта</label></b><br/>
+    <textarea rows="4" cols="30" need_colspan="1" max="500" rating="10" name="dynamicform[description]" id="dynamicform_description"></textarea><br/>
+
+                <span class="field-help">
+          Не более 500 символов        </span>
+
+
+  </td>
+</tr>
+
+<tr>
+  <td class="colspan2" colspan="2">
+    <div class="same-house">
+      <h3>Квартиры в этом доме</h3>
+
+      <div class="flat cf">
+        <div>
+          <label for="">Количество комнат</label>
+          <select name="" id="">
+            <option value="">9</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="">Площать, м<sup>2</sup></label>
+              <span>
+                <input type="text" name="" id=""/><em>Общая</em>
+              </span>
+              <span>
+                <input type="text" name="" id=""/><em>Жилая</em>
+              </span>
+              <span>
+                <input type="text" name="" id=""/><em>Кухня</em>
+              </span>
+        </div>
+
+        <div>
+          <label for="">Этаж</label>
+          <input type="text" name="" id=""/>
+        </div>
+
+        <div>
+          <h4>Балкон/лоджия</h4>
+          <ul>
+            <li><input type="checkbox"/><label for="">Балкон</label></li>
+            <li><input type="checkbox"/><label for="">Лоджия</label></li>
+          </ul>
+        </div>
+
+        <div class="last">
+          <label for="">Стоимость квартиры</label>
+          <input type="text" class="flat_price"/>,
+          <select class="inputprice" name="" rating="3">
+            <option value="RUR">РУБ</option>
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+          </select> /м<sup>2</sup>
+        </div>
+
+        <div class="buttons">
+          <span class="formButton formButtonDelete"><input type="submit" value="Убрать квартиру"/></span>
+        </div>
+
+      </div><!-- .flat -->
+
+      <div class="flat cf">
+        <div>
+          <label for="">Количество комнат</label>
+          <select name="" id="">
+            <option value="">9</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="">Площать, м<sup>2</sup></label>
+              <span>
+                <input type="text" name="" id=""/><em>Общая</em>
+              </span>
+              <span>
+                <input type="text" name="" id=""/><em>Жилая</em>
+              </span>
+              <span>
+                <input type="text" name="" id=""/><em>Кухня</em>
+              </span>
+        </div>
+
+        <div>
+          <label for="">Этаж</label>
+          <input type="text" name="" id=""/>
+        </div>
+
+        <div>
+          <h4>Балкон/лоджия</h4>
+          <ul>
+            <li><input type="checkbox"/><label for="">Балкон</label></li>
+            <li><input type="checkbox"/><label for="">Лоджия</label></li>
+          </ul>
+        </div>
+
+        <div>
+          <label for="">Стоимость квартиры</label>
+          <input type="text" class="flat_price"/>,
+          <select class="inputprice" name="" rating="3">
+            <option value="RUR">РУБ</option>
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+          </select> /м<sup>2</sup>
+        </div>
+
+        <div class="buttons">
+          <span class="formButton"><input type="submit" value="Добавить квартиру"/></span>
+        </div>
+
+      </div><!-- .flat -->
+
+    </div><!-- .same-house -->
+  </td>
+</tr>
+
+<input type="hidden" name="dynamicform[thumb]" id="dynamicform_thumb"/>
+
+<tr class="form-image">
+  <td class="field colspan2" colspan="2">
+
+
+    <b><label for="dynamicform_image">Фотографии</label></b><br/>
+    <div need_colspan="1" rating="5|3" class="ajax-uploaded"></div>
+    <p>
+      <span rel="file"><a href="#" class="inner">с компьютера</a></span>
+      <span rel="link"><a href="#" class="inner">из интернета</a></span>
+    </p>
+    <input need_colspan="1" rating="5|3" type="file" size="46"/><input need_colspan="1" rating="5|3" type="text" size="46"/>
+    <button need_colspan="1" rating="5|3" class="ajax-upload" url="/form/upload" max="6" default-type="file" rel="dynamicform[image]">Загрузить</button>
+    <br/>
+
+                <span class="field-help">
+          До 6 изображений        </span>
+
+
+  </td>
+</tr>
+
+
+<tr>
+  <td colspan="2">
+    <br/><b>Дополнительная контактная информация для объявления</b></td>
+</tr>
+
+
+<tr class="form-organization_contact_name">
+  <td>
+    <label for="dynamicform_organization_contact_name">Представитель компании</label>
+  </td>
+  <td class="field">
+
+
+    <input type="text" name="dynamicform[organization_contact_name]" id="dynamicform_organization_contact_name"/>
+
+
+  </td>
+</tr>
+
+
+<tr class="form-organization_contact_phone">
+  <td>
+    <label for="dynamicform_organization_contact_phone">Доп. телефонный номер</label>
+  </td>
+  <td class="field">
+
+
+    <div class="phone-row">
+      <input size="2" type="text" name="dynamicform[organization_contact_phone][country][]" class="input-country" value="+7" id="dynamicform_organization_contact_phone_country_+7"/><input size="4" type="text" name="dynamicform[organization_contact_phone][area][]" class="input-area" value="" id="dynamicform_organization_contact_phone_area_"/><input size="8" type="text" name="dynamicform[organization_contact_phone][number][]" class="input-number" value="" id="dynamicform_organization_contact_phone_number_"/>
+    </div>
+
+
+  </td>
+</tr>
+
+
+<tr class="form-agree">
+  <td class="field colspan2" colspan="2">
+
+
+    <input need_colspan="1" checked="1" type="checkbox" name="dynamicform[agree]" id="dynamicform_agree"/>
+    <label for="dynamicform_agree">* Я ознакомлен и принимаю
+      <a href="/terms" target="_blank">Условия
+        и правила обслуживания и размещения информации</a></label>
+
+
+  </td>
+</tr>
+
+</tbody>
+<tfoot>
+<tr class="addButton">
+  <td colspan="2">
+    <span class="formButton"><input type="submit" value="Добавить обьявление"/></span>
+    <div class="buttonBox">&nbsp;</div>
+    <span class="formButton"><input type="reset" value="Очистить"/></span>
+  </td>
+</tr>
+</tfoot>
+</table>
+</form>
+</div>
+<div class="contentRight_02">
+  <div class="cabinetMenuBox ">
+    <div class="boxBack_02">
+      <h2>Мой кабинет</h2>
+    </div>
+    <ul class="cabinetMenu padding_11">
+      <li class="">
+        <a href="/lot/favourite">Избранное</a>
+        <span title="Всего">0</span>
+
+      </li>
+      <li class="active">
+        <span>Добавить объявление</span>
+
+      </li>
+      <li class="">
+        <a href="/import/importFile">Импортировать объявления</a>
+
+      </li>
+      <li class="">
+        <a href="/lot/my">Мои объявления</a>
+        <span title="Всего">79</span>
+        <ul>
+          <li class="status-moderate">
+            Ожидают модерации 69
+          </li>
+          <li class="status-restricted">
+            Запрещены 1
+          </li>
+          <li class="status-inactive">
+            Неактивны 7
+          </li>
+        </ul>
+
+
+      </li>
+      <li class="">
+        <a href="/user/pm">Мои сообщения</a>
+        27
+        <ul class="unread-messages-container">
+          <li>Новые <span class="unread-messages">9</span></li>
+        </ul>
+
+
+      </li>
+      <li class="">
+        <a href="/blogs/my">Мой блог</a>
+        <span title="Всего">(0 запись)</span>
+
+      </li>
+      <li class="">
+        <a href="/user/profile">Профайл</a>
+
+      </li>
+      <li class="">
+        <a href="/user/pm#c:create-pm$moderator:1">Обратная связь</a>
+
+      </li>
+      <li class="">
+        <a href="/lot/moderate">Модерация</a>
+
+      </li>
+      <li class="">
+        <a href="/backend.php">Администрирование</a>
+
+      </li>
+    </ul>
+  </div>
+
+  <div id="rate-diag" class="rate-diag">
+    <h5>
+      Заполнено полей:
+      <strong rel="filled"></strong>
+      из <span rel="total"></span></h5>
+    <div class="diag"><span rel="bar"></span></div>
+    <p class="rate">Рейтинг: <strong rel="rating"></strong></p>
+    <!--
+      <a class="show" href="#">О рейтинге</a>
+      <p class="hidden">О рейтинге можно сказать многое</p>
+    -->
+    <div class="b"></div>
+  </div>
+
+  <div id="banner-lot-right">
+    <script type='text/javascript'><!--//<![CDATA[
+    var m3_u = (location.protocol == 'https:' ? 'https://media.mesto.ru/www/delivery/ajs.php' : 'http://media.mesto.ru/www/delivery/ajs.php');
+    var m3_r = Math.floor(Math.random() * 99999999999);
+    if (!document.MAX_used) document.MAX_used = ',';
+    document.write("<scr" + "ipt type='text/javascript' src='" + m3_u);
+    document.write("?zoneid=22");
+    document.write('&amp;cb=' + m3_r);
+    if (document.MAX_used != ',') document.write("&amp;exclude=" + document.MAX_used);
+    document.write(document.charset ? '&amp;charset=' + document.charset : (document.characterSet ? '&amp;charset=' + document.characterSet : ''));
+    document.write("&amp;loc=" + escape(window.location));
+    if (document.referrer) document.write("&amp;referer=" + escape(document.referrer));
+    if (document.context) document.write("&context=" + escape(document.context));
+    if (document.mmm_fo) document.write("&amp;mmm_fo=1");
+    document.write("'><\/scr" + "ipt>");
+    //]]>--></script>
+    <noscript>
+      <a href='http://media.mesto.ru/www/delivery/ck.php?n=a5e88059&amp;cb=INSERT_RANDOM_NUMBER_HERE' target='_blank'><img src='http://media.mesto.ru/www/delivery/avw.php?zoneid=22&amp;cb=INSERT_RANDOM_NUMBER_HERE&amp;n=a5e88059' border='0' alt=''/></a>
+    </noscript>
+  </div>
+
+  <div id="front">
+    <div id="wrapper">
+      <div class="rc-box q-and-a">
+        <div class="rc t">
+          <div></div>
+        </div>
+        <div class="content">
+          <h2><a href="/77/qa"><span class="png24"></span>Вопросы и ответы</a>
+          </h2>
+          <div class="item">
+            <div class="question">
+              <a href="#"><a href="/qa/213">А хто это тут у нас?</a></a>
+            </div>
+            <div class="b"></div>
+            <div class="question-info">
+              <div>
+                <h6 class="theme-of">18 февраля 2011, Аренда недвижимости</h6>
+              </div>
+              <span>16 ответов</span>
+            </div>
+          </div>
+          <div class="item">
+            <div class="question">
+              <a href="#"><a href="/qa/207">gsdgsdf gdfg</a></a>
+            </div>
+            <div class="b"></div>
+            <div class="question-info">
+              <div>
+                <h6 class="theme-of">3 февраля 2011, Ипотека</h6></div>
+              <span>2 ответа</span>
+            </div>
+          </div>
+          <div class="item">
+            <div class="question">
+              <a href="#"><a href="/qa/196">zXczXC</a></a>
+            </div>
+            <div class="b"></div>
+            <div class="question-info">
+              <div>
+                <h6 class="theme-of">2 декабря 2010, Инвестиции в недвижимость</h6>
+              </div>
+              <span>3 ответа</span>
+            </div>
+          </div>
+          <a class="button" href="/qa/add"><span>Задать вопрос</span></a>
+        </div>
+        <a class="bottom-link" href="/77/qa">Все вопросы и ответы</a>
+        <div class="rc b">
+          <div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="clearBoth"></div>
+</div>
+</div>
+</div>
+<div class="wrap">
+</div>
+<div class="district-description"></div>
+<div id="footer">
+  <div class="lining">
+    <div class="col side">
+      <p>© 2011. Все права защищены</p>
+      <ul>
+        <li><a href="/contacts">Контактная информация</a></li>
+        <li><a href="/sitemap">Карта сайта</a></li>
+        <li>
+        </li>
+      </ul>
+    </div>
+    <div class="col info">
+      <h3><span></span>Справка</h3>
+      <ul>
+        <li><a href="/about">Что&nbsp;такое&nbsp;Место.ру?</a></li>
+        <li><a href="/terms">Условия&nbsp;использования</a></li>
+        <li><a href="/info">Как&nbsp;пользоваться&nbsp;Место.ру?</a></li>
+      </ul>
+    </div>
+
+    <div class="col text">
+      <h3><span></span>Тексты</h3>
+      <ul>
+        <li><a href="/77/news/news-market">Новости рынка</a></li>
+        <li><a href="/77/posts/article">Статьи</a></li>
+        <li><a href="/77/authors">Авторские колонки</a></li>
+      </ul>
+    </div>
+
+    <div class="col search">
+      <h3><span></span>Поиск</h3>
+      <ul>
+        <li>Квартиры <a href="/apartament-rent/77/search">в аренду</a><br/>
+          и <a href="/apartament-sale/77/search">на продажу</a></li>
+        <li>Дома <a href="/house-rent/77/search">в аренду</a><br/>
+          и <a href="/house-sale/77/search">на продажу</a></li>
+        <li>Коммерческая недвижимость
+          <a href="/commercial-rent/77/search">в аренду</a><br/>
+          и <a href="/commercial-sale/77/search">на продажу</a></li>
+      </ul>
+    </div>
+
+    <div class="col profile">
+      <h3><span></span>Личный кабинет</h3>
+      <ul>
+
+        <li class="out last"><a href="/user/logout">Выход</a></li>
+
+        <li>
+          <a class="" href="/lot/add">Добавить объявление</a></li>
+      </ul>
+    </div>
+
+    <div class="col side">
+      <a href="/terms">Пользовательское соглашение</a></div>
+  </div>
+  <div class="b"></div>
+</div>
+</div>
+</div>
+</body>
+</html>

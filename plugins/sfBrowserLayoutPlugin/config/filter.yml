@@ -1,0 +1,10 @@
+#rendering: ~
+#security:  ~
+#
+#cache:     ~
+#common:    ~
+#
+#browsercondition:
+#  class: sfBrowserLayoutFilter
+#
+#execution: ~

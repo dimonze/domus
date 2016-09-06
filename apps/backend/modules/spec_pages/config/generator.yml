@@ -1,0 +1,31 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           SpecPages
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          spec_pages
+    with_doctrine_route:     1
+
+    config:
+      actions: ~
+      fields:
+        id:       { label: Номер }
+        name:     { label: Заголовок }
+        text:     { label: Текст }
+        url:      { label: url }
+      list:
+        display:  [id, name, url]
+        object_actions: ~
+        actions: ~
+        title: Страницы спецпредложений
+      filter:
+        class: false
+      form:    ~
+      edit:
+        title: Редактирование страницы "%%name%%"
+      new:
+        title: Создание новой страницы

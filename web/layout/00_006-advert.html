@@ -1,0 +1,486 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=8"/>
+  <title>ADVERT</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="description" content=""/>
+  <meta name="keywords" content=""/>
+  <link rel="stylesheet" type="text/css" media="all" href="/css/reset.css"/>
+  <link rel="stylesheet" type="text/css" media="all" href="/js/jscroll/jquery.jscrollpane.css"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="/css/main.css"/>
+  <link rel="stylesheet" type="text/css" media="print" href="/css/print.css"/>
+  <!--[if IE 6]>
+  <link rel='stylesheet' type='text/css' media='screen' href="/css/ie6.css"/>
+  <script type="text/javascript" src="/js/dd.js"></script>
+  <![endif]-->
+  <!--[if IE 7]>
+  <link rel='stylesheet' type='text/css' media='screen' href="/css/ie7.css"/>
+  <![endif]-->
+  <!--[if IE 8]>
+  <link rel='stylesheet' type='text/css' media='screen' href="/css/ie8.css"/>
+  <![endif]-->
+  <script type="text/javascript" src="/js/jquery.js"></script>
+  <script type="text/javascript" src="/js/jscroll/jquery.mousewheel.js"></script>
+  <script type="text/javascript" src="/js/jscroll/jquery.jscrollpane.min.js"></script>
+  <script type="text/javascript" src="/js/global.js"></script>
+  <script type="text/javascript" src="/js/advert.js"></script>
+</head>
+<body>
+<div id="bg">
+<div id="container">
+<div id="global-loading"></div>
+<div class="global">
+<div class="contentBox">
+<div class="headerBox">
+  <div id="header">
+    <a class="popup new-insertion" rel="loginwindow" href="/user/login?forward=%2Flot%2Fadd">Добавить
+      объявление<span></span></a>
+    <ul class="login-nav">
+
+      <li>
+        <a class="popup" rel="reg" p="register" href="/user/register">Регистрация</a>
+      </li>
+      <li>
+        <a class="enter popup" rel="loginwindow" p="login" href="/user/login">Вход<span></span></a>
+      </li>
+    </ul>
+    <!--        <div class="headerLeft">-->
+    <a class="logo" href="/77/main"><img alt="Место.ру" src="/images/no-repeat.png"/></a>
+
+    <div class="cityMenu" style="background: url('/images/region/77.gif') no-repeat left top">
+      <a href="#" toggle=".cityMenu .outlinemenu" id="citySelect">
+        <span>г. Москва</span>
+      </a>
+
+      <div class="outlinemenu" style="display: none">
+        <ul class="cityScroll">
+          <li rel="77" class="current" style="display: none">
+            <a href="/setregion/77">г. Москва</a></li>
+
+          <li rel="47"><a href="/setregion/47">Ленинградская обл.</a></li>
+
+          <li rel="78"><a href="/setregion/78">г. Санкт-Петербург</a></li>
+
+          <li rel="34"><a href="/setregion/34">Волгоградская обл.</a></li>
+
+          <li rel="6"><a href="/setregion/6">Ингушетия</a></li>
+
+          <li rel="39"><a href="/setregion/39">Калининградская обл.</a></li>
+
+          <li rel="23"><a href="/setregion/23">Краснодарский край</a></li>
+
+          <li rel="61"><a href="/setregion/61">Ростовская обл.</a></li>
+        </ul>
+      </div>
+    </div>
+    <ul class="top-nav">
+      <li class="inner ">
+        <a href="#"><em><span>Новости <var></var></span></em></a>
+
+        <div class="corner"></div>
+        <div class="dropbox">
+          <div class="dropbox-wrap">
+            <ul>
+              <li><a href="/77/news/news-market">Новости рынка</a></li>
+              <li><a href="/77/news/news-portal">Новости портала</a></li>
+              <li><a href="/77/news/news-companies">Новости компаний</a></li>
+            </ul>
+            <div class="dropbox-cn dropbox-tl"></div>
+            <div class="dropbox-cn dropbox-tr"></div>
+          </div>
+          <div class="dropbox-cn dropbox-bl"></div>
+          <div class="dropbox-cn dropbox-br"></div>
+        </div>
+      </li>
+      <li>
+        <a href="/77/posts/article"><em>Статьи</em></a></li>
+      <li>
+        <a href="/77/posts/analytics"><em>Аналитика</em></a></li>
+      <li class="inner "><a href="#"><em><span>Эксперты <var></var></span></em></a>
+
+        <div class="corner"></div>
+        <div class="dropbox">
+          <div class="dropbox-wrap">
+            <ul>
+              <li><a href="/77/experts">Экспертные мнения</a></li>
+              <li><a href="/77/authors">Авторские колонки</a></li>
+            </ul>
+            <div class="dropbox-cn dropbox-tl"></div>
+            <div class="dropbox-cn dropbox-tr"></div>
+          </div>
+          <div class="dropbox-cn dropbox-bl"></div>
+          <div class="dropbox-cn dropbox-br"></div>
+        </div>
+      </li>
+      <li class="inner "><a href="#"><em><span>Рейтинги <var></var></span></em></a>
+
+        <div class="corner"></div>
+        <div class="dropbox">
+          <div class="dropbox-wrap">
+            <ul>
+              <li><a href="/rating/company">Рейтинги компаний</a></li>
+              <li><a href="/rating/realtor">Рейтинги риэлторов</a></li>
+            </ul>
+            <div class="dropbox-cn dropbox-tl"></div>
+            <div class="dropbox-cn dropbox-tr"></div>
+          </div>
+          <div class="dropbox-cn dropbox-bl"></div>
+          <div class="dropbox-cn dropbox-br"></div>
+        </div>
+      </li>
+      <li class="inner "><a href="#"><em><span>Еще <var></var></span></em></a>
+
+        <div class="corner"></div>
+        <div class="dropbox">
+          <div class="dropbox-wrap">
+            <ul>
+              <li><a href="/77/posts/events">События</a></li>
+              <li><a href="/77/qa">Вопросы и ответы</a></li>
+            </ul>
+            <div class="dropbox-cn dropbox-tl"></div>
+            <div class="dropbox-cn dropbox-tr"></div>
+          </div>
+          <div class="dropbox-cn dropbox-bl"></div>
+          <div class="dropbox-cn dropbox-br"></div>
+        </div>
+      </li>
+    </ul>
+    <!--        </div>-->
+    <!--        <div class="headerRight">
+    </div>-->
+  </div>
+</div>
+
+<div class="wrapper">
+<ul class="innerGlobalMenu">
+  <li class="first ">
+    <a title="Найти квартиру и комнату" rel="apartament-sale" href="/apartament-sale/77/search">КВАРТИРЫ<br/>продажа</a>
+  </li>
+  <li>
+    <a title="Найти квартиру и комнату" rel="apartament-rent" href="/apartament-rent/77/search">КВАРТИРЫ<br/>аренда</a>
+  </li>
+  <li>
+    <a title="Найти дом и участок" rel="house-sale" href="/house-sale/77/search">ДОМА И УЧАСТКИ<br/>продажа</a>
+  </li>
+  <li>
+    <a title="Найти дом" rel="house-rent" href="/house-rent/77/search">ДОМА<br/>аренда</a>
+  </li>
+  <li>
+    <a title="Найти недвижимость" rel="commercial-sale"
+       href="/commercial-sale/77/search">КОММЕРЧЕСКАЯ<br/>продажа</a>
+  </li>
+  <li class="last">
+    <a title="Найти недвижимость" rel="commercial-rent"
+       href="/commercial-rent/77/search">КОММЕРЧЕСКАЯ<br/>аренда</a>
+  </li>
+</ul>
+<div class="pageHeader advert-header">
+  <h1>Реклама на портале Место.ру</h1>
+</div>
+<div class="advert-price">
+<div class="advert-sel">
+  <h2 class="adv-h2-inline">Выберите регион показа рекламы:</h2>
+
+  <div class="advert-region">
+    <a href="#" id="advert-citySelect"><span num="1">г. Москва</span></a>
+
+    <div id="advert-city-menu" style="display: none">
+      <ul>
+        <li><a href="#"><span num="2">г. Санкт-Петербург</span></a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div id="wrapper-reklama">
+    <div class="reklama"><p>Верба Алексей</p>
+      <address>тел.(495)723-38-09<br/>e-mail:
+        <a href="mailto:">a.verba@orsn-corp.rubr</a><br/>ICQ: 474-844-167
+      </address>
+    </div>
+    <div class="reklama"><p>Астраханцев Денис</p>
+      <address>тел. (495) 961-85-36,<br/>
+        тел. (495) 233-24-43<br/>e-mail:
+        <a href="mailto:">d.astra@orsn-corp.ru</a><br/>ICQ: 360-333-895
+      </address>
+    </div>
+    <div class="reklama"><p>Лыгин Александр</p>
+      <address>тел. (495) 723-36-18
+        <br/>e-mail: <a href="mailto:">a.lygin@orsn-corp.ru</a></address>
+    </div>
+  </div>
+
+</div>
+<div class="banner-tz">
+ Уважаемые клиенты! Информируем,что<br/>рекламные материалы принимаются за три<br/>рабочих дня до даты публикации.<br/>Отнеситесь с пониманием к нашему<br/>требованию.
+  <div> <a href="#">Техтребования для баннеров</a></div>
+</div>
+<div class="advert-vis">
+
+<div class="adv-block adv-block-1">
+  <h2>Москва</h2>
+
+  <div class="page-wrp">
+    <img src="/images/adv-maket-main-p.png" alt="Главная страница" class="adv-maket"/>
+
+    <div class="bord-t"></div>
+    <div class="bord-b"></div>
+    <div class="page-wrp-inn">
+      <div class="adv-ban tail-t adv-ban-t"><!-- 970x90-->
+        <div class="adv-bbl-cont">
+          <div class="adv-bbl-tail"></div>
+          <div style="margin-top: 25px; text-align: center;">Месяц — 70&nbsp;000 р</div>
+        </div>
+      </div>
+      <div class="adv-ban tail-t adv-ban-string"><!-- adv text string-->
+        <div class="adv-bbl-cont">
+          <div class="adv-bbl-tail"></div>
+          <div style="margin-top: 25px; text-align: center;">Месяц — 50&nbsp;000 р</div>
+        </div>
+      </div>
+      <div class="adv-ban tail-t adv-ban-header"><!-- Шапка 970x90-->
+        <div class="adv-bbl-cont">
+          <div class="adv-bbl-tail"></div>
+          <div style="margin-top: 25px; text-align: center;">Неделя — 40&nbsp;000 р</div>
+        </div>
+      </div>
+      <div class="adv-ban tail-b adv-ban-incont"><!-- 640x90 первый экран-->
+        <div class="adv-bbl-cont">
+          <div class="adv-bbl-tail"></div>
+          <div style="margin-top: 25px; text-align: center;">Неделя — 25&nbsp;000 р</div>
+        </div>
+      </div>
+      <div style="visibility: hidden;" class="adv-ban tail-r adv-ban-spec"><!-- Спецпредложения -->
+        <div class="adv-bbl-cont">
+          <div class="adv-bbl-tail"></div>
+          <div>10&nbsp;000 при покупке </div>
+          <div>Спецпредложения</div>
+          <div>15&nbsp;000 без покупки</div>
+          <div>Спецпредложения</div>
+        </div>
+      </div>
+      <img src="/images/adv/adv_main_p.png" class="adv-page-scr" alt="Москва"/>
+    </div>
+  </div>
+  <div class="price-t">
+    <div class="corn-l"></div>
+    <div class="corn-r"></div>
+    <table>
+      <thead>
+      <tr>
+        <td>Позиция</td>
+        <td>Формат</td>
+        <td>Единица измерения</td>
+        <td>Цена</td>
+      </tr>
+      </thead>
+      <tbody>
+      <tr rel="adv-ban-t">
+        <td>Все страницы</td>
+        <td>Блок «Специальное<br/> предложение» (картинка <br/> 144x106 + текст)
+        </td>
+        <td>месяц</td>
+        <td>70000</td>
+      </tr>
+      <tr rel="adv-ban-string">
+        <td>Все страницы</td>
+        <td>Рекламная строка</td>
+        <td>месяц</td>
+        <td>50000</td>
+      </tr>
+      <tr rel="adv-ban-header">
+        <td>Все страницы</td>
+        <td>970x90 шапка, статика</td>
+        <td>неделя</td>
+        <td>40000</td>
+      </tr>
+      <tr rel="adv-ban-incont">
+        <td>Все страницы</td>
+        <td>640х90 первый экран , статика</td>
+        <td>неделя</td>
+        <td>25000</td>
+
+      </tr>
+      <tr rel="adv-ban-spec">
+        <td>Размещение объектов<br/>внутри каталога<br/>Новостройки</td>
+        <td>Размещение объектов<br/>внутри каталога,<br/>неограниченное количество<br/>предложений</td>
+        <td>месяц</td>
+        <td>10000<br/>при покупке<br/>Спецпредложения<br/>15 000<br/>без покупки<br/>Спецпредложения
+        </td>
+      </tr>
+
+      <tr rel="adv-ban-spec">
+        <td>Размещение объектов<br/>внутри каталога<br/>Новостройки<br/>Московская область</td>
+        <td>Размещение объектов<br/>внутри каталога,<br/>неограниченное количество<br/>предложений</td>
+        <td>месяц</td>
+        <td>10000<br/>при покупке<br/>Спецпредложения<br/>15 000<br/>без покупки<br/>Спецпредложения
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<!-- .adv-block + .adv-block-1 -->
+
+<div class="adv-block adv-block-2">
+  <h2>Санкт-Петербург</h2>
+
+  <div class="page-wrp">
+    <img src="/images/adv-maket-sec-p.png" alt="Вторые страницы" class="adv-maket"/>
+
+    <div class="bord-t"></div>
+    <div class="bord-b"></div>
+    <div class="page-wrp-inn">
+      <div class="adv-ban tail-t adv-ban-t"><!-- 970x90-->
+        <div class="adv-bbl-cont">
+          <div class="adv-bbl-tail"></div>
+          <div style="margin-top: 25px; text-align: center;">Месяц — 50&nbsp;000 р</div>
+        </div>
+      </div>
+      <div class="adv-ban tail-t adv-ban-string"><!-- adv text string-->
+        <div class="adv-bbl-cont">
+          <div class="adv-bbl-tail"></div>
+          <div style="margin-top: 25px; text-align: center;">Месяц — 40&nbsp;000 р</div>
+        </div>
+      </div>
+      <div class="adv-ban tail-t adv-ban-header"><!-- Шапка 970x90-->
+        <div class="adv-bbl-cont">
+          <div class="adv-bbl-tail"></div>
+          <div style="margin-top: 25px; text-align: center;">Неделя — 25&nbsp;000 р</div>
+        </div>
+      </div>
+      <div class="adv-ban tail-b adv-ban-incont"><!-- 640x90 первый экран-->
+        <div class="adv-bbl-cont">
+          <div class="adv-bbl-tail"></div>
+          <div style="margin-top: 25px; text-align: center;">Неделя — 15&nbsp;000 р</div>
+        </div>
+      </div>
+      <img src="/images/adv/adv_main_p.png" class="adv-page-scr" alt="Санкт-Петербург"/>
+    </div>
+  </div>
+  <div class="price-t">
+    <div class="corn-l"></div>
+    <div class="corn-r"></div>
+    <table>
+      <thead>
+      <tr>
+        <td>Позиция</td>
+        <td>Формат</td>
+        <td>Единица измерения</td>
+        <td>Цена</td>
+      </tr>
+      </thead>
+      <tbody>
+      <tr rel="adv-ban-t">
+        <td>Все страницы</td>
+        <td>Блок «Специальное<br/> предложение» (картинка <br/> 144x106 + текст)
+        </td>
+        <td>месяц</td>
+        <td>50000</td>
+      </tr>
+      <tr rel="adv-ban-string">
+        <td>Все страницы</td>
+        <td>Рекламная строка</td>
+        <td>месяц</td>
+        <td>40000</td>
+      </tr>
+      <tr rel="adv-ban-header">
+        <td>Все страницы</td>
+        <td>970x90 шапка, статика</td>
+        <td>неделя</td>
+        <td>25000</td>
+      </tr>
+      <tr rel="adv-ban-incont">
+        <td>Все страницы</td>
+        <td>640х90 первый экран , статика</td>
+        <td>неделя</td>
+        <td>15000</td>
+      </tr>
+          </tbody>
+    </table>
+  </div>
+</div>
+<!-- .adv-block + .adv-block-2 -->
+
+</div>
+<div class="adv-border-no"></div>
+
+</div>
+
+
+</div>
+</div>
+</div>
+<div class="wrap">
+</div>
+<div class="district-description"></div>
+<div id="footer">
+  <div class="lining">
+    <div class="col side">
+      <p>© 2010. Все права защищены</p>
+      <ul>
+        <li><a href="/contacts">Контактная информация</a></li>
+        <li><a href="/sitemap">Карта сайта</a></li>
+        <li>
+        </li>
+      </ul>
+    </div>
+    <div class="col info">
+      <h3><span></span>Справка</h3>
+      <ul>
+        <li><a href="/about">Что&nbsp;такое&nbsp;Место.ру?</a></li>
+        <li><a href="/terms">Условия&nbsp;использования</a></li>
+        <li><a href="/info">Как&nbsp;пользоваться&nbsp;Место.ру?</a></li>
+      </ul>
+    </div>
+
+    <div class="col text">
+      <h3><span></span>Тексты</h3>
+      <ul>
+        <li><a href="/77/news/news-market">Новости рынка</a></li>
+        <li><a href="/77/posts/article">Статьи</a></li>
+        <li><a href="/77/authors">Авторские колонки</a></li>
+      </ul>
+    </div>
+
+    <div class="col search">
+      <h3><span></span>Поиск</h3>
+      <ul>
+        <li>Квартиры <a href="/apartament-rent/77/search">в аренду</a><br/>
+          и <a href="/apartament-sale/77/search">на продажу</a></li>
+        <li>Дома <a href="/house-rent/77/search">в аренду</a><br/>
+          и <a href="/house-sale/77/search">на продажу</a></li>
+        <li>Коммерческая недвижимость
+          <a href="/commercial-rent/77/search">в аренду</a><br/>
+          и <a href="/commercial-sale/77/search">на продажу</a></li>
+      </ul>
+    </div>
+
+    <div class="col profile">
+      <h3><span></span>Личный кабинет</h3>
+      <ul>
+        <li>
+          <a class="popup" rel="loginwindow" p="login" href="/user/login">Вход</a>
+        </li>
+        <li>
+          <a class="popup" rel="reg" p="register" href="/user/register">Регистрация</a>
+        </li>
+
+        <li>
+          <a class="popup" rel="loginwindow" href="/user/login?forward=%2Flot%2Fadd">Добавить объявление</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="col side">
+      <a href="/terms">Пользовательское соглашение</a></div>
+  </div>
+  <div class="b"></div>
+</div>
+</div>
+</div>
+</body>
+</html>

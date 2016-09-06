@@ -1,0 +1,1041 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="title" content="Модерирование"/>
+  <meta name="name" content="Модерация"/>
+  <title>Модерирование</title>
+  <link rel="stylesheet" type="text/css" media="all" href="/css/reset.css?1273238389"/>
+  <link rel="stylesheet" type="text/css" media="all" href="/css/main.css?1274706312"/>
+  <link rel="stylesheet" type="text/css" media="all" href="/css/user.css?1273238339"/>
+  <link rel="stylesheet" type="text/css" media="print" href="/css/print.css?1273238391"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="/css/jquery-ui/index.css?1273238385"/>
+
+  <script type="text/javascript" src="/js/jquery.js?1273238371"></script>
+  <script type="text/javascript" src="/js/global.js?1274706317"></script>
+  <script type="text/javascript" src="/js/form.js?1274706317"></script>
+  <script type="text/javascript" src="/js/jquery.datepicker.js?1273238345"></script>
+  <script type="text/javascript" src="/js/moderate.js?1273238365"></script>
+  <link rel="shortcut icon" href="/images/favicon.ico"/>
+</head>
+<body>
+<div id="global-loading"></div>
+<div class="global">
+
+<div class="contentBox">
+
+<div class="headerBox">
+<div class="header">
+<ul class="topMenu">
+  <li>Беляев Евгений</li>
+
+  <li>
+    <a href="/lot/add">Подать объявление</a></li>
+
+  <li class="cabinet inner">
+    <a href="#" toggle=".cabinetSubmenu" class="toggle">Мой кабинет</a>
+    <ul class="cabinetSubmenu">
+      <li class="">
+        <a href="/lot/favourite">Избранное</a>
+
+      </li>
+      <li class="">
+
+        <a href="/lot/add">Подать объявление</a>
+
+      </li>
+      <li class="">
+        <a href="/lot/my">Мои объявления</a>
+        (<span title="Всего">6</span> / <span class="status-inactive" title="Неактивны">6</span>)
+
+      </li>
+
+      <li class="">
+        <a href="/user/pm">Мои сообщения</a>
+        (20<span class="unread-messages-container">)
+
+
+      </li>
+      <li class="">
+        <a href="/user/profile">Профайл</a>
+
+      </li>
+      <li class="">
+
+        <a href="/user/pm#c:create-pm$moderator:1">Обратная связь</a>
+
+      </li>
+      <li class="active">
+        <span>Модерация</span>
+
+      </li>
+      <li class="">
+        <a href="/backend.php">Администрирование</a>
+
+
+      </li>
+    </ul>
+  </li>
+  <li class="out last"><a href="/user/logout">Выход</a></li>
+
+</ul>
+<div class="headerLeft">
+  <a class="logo" href="/apartament-sale/77/search"><img alt="Место.ру" src="/images/no-repeat.png"/></a>
+  <div class="cityMenu" style="background: url('/images/region/77.gif') no-repeat left top">
+    <a href="#" toggle=".cityMenu .outlinemenu" id="citySelect">
+
+      <span>г. Москва</span>
+    </a>
+
+    <div class="outlinemenu" style="display: none">
+      <iframe class="select-hider" frameborder="0"></iframe>
+      <ul class="cityScroll">
+
+        <li rel="77" class="current" style="display: none">
+          <a href="/setregion/77">г. Москва</a></li>
+
+
+        <li rel="78"><a href="/setregion/78">г. Санкт-Петербург</a></li>
+
+        <li rel="50"><a href="/setregion/50">Московская обл.</a></li>
+
+        <li rel="47"><a href="/setregion/47">Ленинградская обл.</a></li>
+
+        <li rel="1"><a href="/setregion/1">Адыгея</a></li>
+
+        <li rel="4"><a href="/setregion/4">Алтай</a></li>
+
+        <li rel="22"><a href="/setregion/22">Алтайский край</a></li>
+
+
+        <li rel="28"><a href="/setregion/28">Амурская обл.</a></li>
+
+        <li rel="29"><a href="/setregion/29">Архангельская обл.</a></li>
+
+        <li rel="30"><a href="/setregion/30">Астраханская обл.</a></li>
+
+        <li rel="2"><a href="/setregion/2">Башкортостан</a></li>
+
+        <li rel="31"><a href="/setregion/31">Белгородская обл.</a></li>
+
+        <li rel="32"><a href="/setregion/32">Брянская обл.</a></li>
+
+
+        <li rel="3"><a href="/setregion/3">Бурятия</a></li>
+
+        <li rel="33"><a href="/setregion/33">Владимирская обл.</a></li>
+
+        <li rel="34"><a href="/setregion/34">Волгоградская обл.</a></li>
+
+        <li rel="35"><a href="/setregion/35">Вологодская обл.</a></li>
+
+        <li rel="36"><a href="/setregion/36">Воронежская обл.</a></li>
+
+        <li rel="5"><a href="/setregion/5">Дагестан</a></li>
+
+
+        <li rel="79"><a href="/setregion/79">Еврейская обл.</a></li>
+
+        <li rel="37"><a href="/setregion/37">Ивановская обл.</a></li>
+
+        <li rel="6"><a href="/setregion/6">Ингушетия</a></li>
+
+        <li rel="38"><a href="/setregion/38">Иркутская обл.</a></li>
+
+        <li rel="7"><a href="/setregion/7">Кабардино-Балкария</a></li>
+
+        <li rel="39"><a href="/setregion/39">Калининградская обл.</a></li>
+
+
+        <li rel="8"><a href="/setregion/8">Калмыкия</a></li>
+
+        <li rel="40"><a href="/setregion/40">Калужская обл.</a></li>
+
+        <li rel="41"><a href="/setregion/41">Камчатский край</a></li>
+
+        <li rel="9"><a href="/setregion/9">Карачаево-Черкессия</a></li>
+
+        <li rel="42"><a href="/setregion/42">Кемеровская обл.</a></li>
+
+        <li rel="10"><a href="/setregion/10">Карелия</a></li>
+
+
+        <li rel="43"><a href="/setregion/43">Кировская обл.</a></li>
+
+        <li rel="11"><a href="/setregion/11">Коми</a></li>
+
+        <li rel="44"><a href="/setregion/44">Костромская обл.</a></li>
+
+        <li rel="23"><a href="/setregion/23">Краснодарский край</a></li>
+
+        <li rel="24"><a href="/setregion/24">Красноярский край</a></li>
+
+        <li rel="45"><a href="/setregion/45">Курганская обл.</a></li>
+
+
+        <li rel="46"><a href="/setregion/46">Курская обл.</a></li>
+
+        <li rel="48"><a href="/setregion/48">Липецкая обл.</a></li>
+
+        <li rel="49"><a href="/setregion/49">Магаданская обл.</a></li>
+
+        <li rel="12"><a href="/setregion/12">Марий Эл</a></li>
+
+        <li rel="13"><a href="/setregion/13">Мордовия</a></li>
+
+        <li rel="51"><a href="/setregion/51">Мурманская обл.</a></li>
+
+
+        <li rel="83"><a href="/setregion/83">Ненецкий АО</a></li>
+
+        <li rel="52"><a href="/setregion/52">Нижегородская обл.</a></li>
+
+        <li rel="53"><a href="/setregion/53">Новгородская обл.</a></li>
+
+        <li rel="54"><a href="/setregion/54">Новосибирская обл.</a></li>
+
+        <li rel="55"><a href="/setregion/55">Омская обл.</a></li>
+
+        <li rel="56"><a href="/setregion/56">Оренбургская обл.</a></li>
+
+
+        <li rel="57"><a href="/setregion/57">Орловская обл.</a></li>
+
+        <li rel="58"><a href="/setregion/58">Пензенская обл.</a></li>
+
+        <li rel="59"><a href="/setregion/59">Пермский край</a></li>
+
+        <li rel="25"><a href="/setregion/25">Приморский край</a></li>
+
+        <li rel="60"><a href="/setregion/60">Псковская обл.</a></li>
+
+        <li rel="61"><a href="/setregion/61">Ростовская обл.</a></li>
+
+
+        <li rel="62"><a href="/setregion/62">Рязанская обл.</a></li>
+
+        <li rel="63"><a href="/setregion/63">Самарская обл.</a></li>
+
+        <li rel="64"><a href="/setregion/64">Саратовская обл.</a></li>
+
+        <li rel="14"><a href="/setregion/14">Саха /Якутия/</a></li>
+
+        <li rel="65"><a href="/setregion/65">Сахалинская обл.</a></li>
+
+        <li rel="66"><a href="/setregion/66">Свердловская обл.</a></li>
+
+
+        <li rel="15"><a href="/setregion/15">Северная Осетия</a></li>
+
+        <li rel="67"><a href="/setregion/67">Смоленская обл.</a></li>
+
+        <li rel="26"><a href="/setregion/26">Ставропольский край</a></li>
+
+        <li rel="68"><a href="/setregion/68">Тамбовская обл.</a></li>
+
+        <li rel="16"><a href="/setregion/16">Татарстан</a></li>
+
+        <li rel="69"><a href="/setregion/69">Тверская обл.</a></li>
+
+
+        <li rel="70"><a href="/setregion/70">Томская обл.</a></li>
+
+        <li rel="71"><a href="/setregion/71">Тульская обл.</a></li>
+
+        <li rel="17"><a href="/setregion/17">Тыва</a></li>
+
+        <li rel="72"><a href="/setregion/72">Тюменская обл.</a></li>
+
+        <li rel="18"><a href="/setregion/18">Удмуртия</a></li>
+
+        <li rel="73"><a href="/setregion/73">Ульяновская обл.</a></li>
+
+
+        <li rel="27"><a href="/setregion/27">Хабаровский край</a></li>
+
+        <li rel="19"><a href="/setregion/19">Хакасия</a></li>
+
+        <li rel="86"><a href="/setregion/86">Ханты-Мансийский АО</a></li>
+
+        <li rel="74"><a href="/setregion/74">Челябинская обл.</a></li>
+
+        <li rel="20"><a href="/setregion/20">Чечня</a></li>
+
+        <li rel="75"><a href="/setregion/75">Забайкальский край</a></li>
+
+
+        <li rel="21"><a href="/setregion/21">Чувашия</a></li>
+
+        <li rel="87"><a href="/setregion/87">Чукотский АО</a></li>
+
+        <li rel="89"><a href="/setregion/89">Ямало-Ненецкий АО</a></li>
+
+        <li rel="76"><a href="/setregion/76">Ярославская обл.</a></li>
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+<div class="headerRight">
+
+  <form action="/search/index" method="post">
+    <fieldset>
+      <input type="text" class="topSearchInput" name="q" init="населенный пункт / метро / улица / ключевое слово"/>
+      <button class="topSearchButton" type="submit" value="Найти">Найти</button>
+    </fieldset>
+  </form>
+</div>
+</div>
+</div>
+
+
+<div class="wrapper">
+<ul class="globalMenu">
+  <li class="">
+    <a href="/apartament-sale/77/search">КВАРТИРЫ<br/>продажа</a></li>
+  <li class="">
+    <a href="/apartament-rent/77/search">КВАРТИРЫ<br/>аренда</a></li>
+
+  <li class="">
+    <a href="/house-sale/77/search">ДОМА И УЧАСТКИ<br/>продажа</a></li>
+  <li class="">
+    <a href="/house-rent/77/search">ДОМА<br/>аренда</a></li>
+  <li class="">
+    <a href="/commercial-sale/77/search">КОММЕРЧЕСКАЯ<br/>продажа</a></li>
+
+  <li class="">
+    <a href="/commercial-rent/77/search">КОММЕРЧЕСКАЯ<br/>аренда</a></li>
+</ul>
+<div class="pageHeader">
+  <h1>
+    Модерация </h1>
+</div>
+
+
+<div class="contentLeft">
+
+<form method="post" class="searchForm moderate" action="/lot/moderate">
+  
+  <table class="moderate-tbl">  	<tr>  		<td>
+  		  <label>Тип</label>
+  		</td><!-- 1.1 -->  		<td>
+  		  <select class="select_01" name="filter[type]" id="filter_type">
+          <option value="" selected="selected">Выберите тип недвижимости</option>
+          <option value="apartament-sale">Квартира/комната на продажу</option>
+          <option value="apartament-rent">Квартира/комната в аренду</option>
+          <option value="house-sale">Дом/участок на продажу</option>
+          <option value="house-rent">Дом в аренду</option>
+          <option value="commercial-sale">Коммерческая недвижимость на продажу</option>
+          <option value="commercial-rent">Коммерческая недвижимость в аренду</option>
+        </select>
+  		</td><!-- 1.2 -->  		<td>
+  		  <label>Регион</label>
+  		</td><!-- 1.3 -->  		<td>
+  		  <select class="select_01" name="filter[region_id]" id="filter_region_id">
+          <option value="" selected="selected">Выберите регион</option>
+          <option value="77">г. Москва</option>
+          <option value="78">г. Санкт-Петербург</option>
+          <option value="50">Московская обл.</option>
+          <option value="47">Ленинградская обл.</option>
+          <option value="1">Адыгея</option>
+          <option value="4">Алтай</option>
+          <option value="22">Алтайский край</option>
+          <option value="28">Амурская обл.</option>
+          <option value="29">Архангельская обл.</option>
+          <option value="30">Астраханская обл.</option>
+          <option value="2">Башкортостан</option>
+          <option value="31">Белгородская обл.</option>
+          <option value="32">Брянская обл.</option>
+          <option value="3">Бурятия</option>
+          <option value="33">Владимирская обл.</option>
+          <option value="34">Волгоградская обл.</option>
+          <option value="35">Вологодская обл.</option>
+          <option value="36">Воронежская обл.</option>
+          <option value="5">Дагестан</option>
+          <option value="79">Еврейская обл.</option>
+          <option value="37">Ивановская обл.</option>
+          <option value="6">Ингушетия</option>
+          <option value="38">Иркутская обл.</option>
+          <option value="7">Кабардино-Балкария</option>
+          <option value="39">Калининградская обл.</option>
+          <option value="8">Калмыкия</option>
+          <option value="40">Калужская обл.</option>
+          <option value="41">Камчатский край</option>
+          <option value="9">Карачаево-Черкессия</option>
+          <option value="42">Кемеровская обл.</option>
+          <option value="10">Карелия</option>
+          <option value="43">Кировская обл.</option>
+          <option value="11">Коми</option>
+          <option value="44">Костромская обл.</option>
+          <option value="23">Краснодарский край</option>
+          <option value="24">Красноярский край</option>
+          <option value="45">Курганская обл.</option>
+          <option value="46">Курская обл.</option>
+          <option value="48">Липецкая обл.</option>
+          <option value="49">Магаданская обл.</option>
+          <option value="12">Марий Эл</option>
+          <option value="13">Мордовия</option>
+          <option value="51">Мурманская обл.</option>
+          <option value="83">Ненецкий АО</option>
+          <option value="52">Нижегородская обл.</option>
+          <option value="53">Новгородская обл.</option>
+          <option value="54">Новосибирская обл.</option>
+          <option value="55">Омская обл.</option>
+          <option value="56">Оренбургская обл.</option>
+          <option value="57">Орловская обл.</option>
+          <option value="58">Пензенская обл.</option>
+          <option value="59">Пермский край</option>
+          <option value="25">Приморский край</option>
+          <option value="60">Псковская обл.</option>
+          <option value="61">Ростовская обл.</option>
+          <option value="62">Рязанская обл.</option>
+          <option value="63">Самарская обл.</option>
+          <option value="64">Саратовская обл.</option>
+          <option value="14">Саха /Якутия/</option>
+          <option value="65">Сахалинская обл.</option>
+          <option value="66">Свердловская обл.</option>
+          <option value="15">Северная Осетия</option>
+          <option value="67">Смоленская обл.</option>
+          <option value="26">Ставропольский край</option>
+          <option value="68">Тамбовская обл.</option>
+          <option value="16">Татарстан</option>
+          <option value="69">Тверская обл.</option>
+          <option value="70">Томская обл.</option>
+          <option value="71">Тульская обл.</option>
+          <option value="17">Тыва</option>
+          <option value="72">Тюменская обл.</option>
+          <option value="18">Удмуртия</option>
+          <option value="73">Ульяновская обл.</option>
+          <option value="27">Хабаровский край</option>
+          <option value="19">Хакасия</option>
+          <option value="86">Ханты-Мансийский АО</option>
+          <option value="74">Челябинская обл.</option>
+          <option value="20">Чечня</option>
+          <option value="75">Забайкальский край</option>
+          <option value="21">Чувашия</option>
+          <option value="87">Чукотский АО</option>
+          <option value="89">Ямало-Ненецкий АО</option>
+          <option value="76">Ярославская обл.</option>
+        </select>
+  		</td><!-- 1.4 -->  		<td rowspan="4" class="moderate-chk-b">
+  		  <div>
+  		    <input type="checkbox" name="filter[usertype1]" checked="checked" id="filter_usertype1"/>
+          <label for="filter_usertype1">Компания</label>
+        </div>
+        <div>
+          <input type="checkbox" name="filter[usertype2]" checked="checked" id="filter_usertype2"/>
+          <label for="filter_usertype2">Сотрудник</label>
+        </div>
+        <div>
+          <input type="checkbox" name="filter[usertype3]" checked="checked" id="filter_usertype3"/>
+          <label for="filter_usertype3">Частный риэлтор</label>
+        </div>
+        <div>
+          <input type="checkbox" name="filter[usertype4]" checked="checked" id="filter_usertype4"/>
+          <label for="filter_usertype4">Собственник</label>
+        </div>
+        <div>
+          <input type="checkbox" name="filter[usertype5]" checked="checked" id="filter_usertype5"/>
+          <label for="filter_usertype5">Источник</label>
+        </div>
+  		</td><!-- 1.5 checkbox -->  	</tr><!-- 1 -->  	<tr>  		<td>
+  		  <label>id</label>
+  		</td><!-- 2.1 -->  		<td>
+  		  <input class="input_01" type="text" name="filter[id]" id="filter_id"/>
+  		</td><!-- 2.2 -->  		<td>
+  		  <label>Адрес</label>
+  		</td><!-- 2.3 -->  		<td>
+  		  <input class="input_01" type="text" name="filter[address]" id="filter_address"/>
+  		</td><!-- 2.4 -->  		<!-- 2.5 checkbox -->  	</tr><!-- 2 -->  	<tr>  		<td rowspan="2">
+  		  <label>Дата начала</label>
+  		</td><!-- 3.1 -->  		<td>
+  		  <div class="dbugger">  		  	<input class="input_02b datepicker" type="text" name="filter[created_at]" id="filter_created_at"/>  		  </div>
+  		</td><!-- 3.2 -->  		<td rowspan="2">
+  		  <label>Дата окончания</label>
+  		</td><!-- 3.3 -->  		<td>
+  		  <input class="input_02b datepicker" type="text" name="filter[active_till]" id="filter_active_till"/>
+  		</td><!-- 3.4 -->  		<!-- 3.5 checkbox -->  	</tr><!-- 3 -->  	<tr>  		<!-- 4.1 Дата начала -->  		<td>
+  		  <input class="input_02b datepicker" type="text" name="filter[created_at_to]" id="filter_created_at_to" />
+  		</td><!-- 4.2 -->  		<!-- 4.3 Дата окончания -->  		<td>
+  		  <input class="input_02b datepicker" type="text" name="filter[active_till_to]" id="filter_active_till_to" />
+  		</td><!-- 4.4 -->  		<!-- 4.5 checkbox -->  	</tr><!-- 4 -->  	<tr>  		<td>
+  		  <label>Логин</label>
+  		</td><!-- 5.1 -->  		<td>
+  		  <input class="input_01" type="text" name="filter[email]" id="filter_email" />
+  		</td><!-- 5.2 -->  		<td>
+  		  <label>Цена</label>
+  		</td><!-- 5.3 -->  		<td class="from-to-inline">
+  		  <div>        	<input class="input_01" type="text" name="filter[price_from]" id="filter_price_from" />	        <input class="input_01" type="text" name="filter[price_to]" id="filter_price_to" />        </div>
+  		</td><!-- 5.4 -->  		<td>
+  		  <select class="select_02" name="filter[status]" id="filter_status">
+          <option value="" selected="selected">Статус</option>
+          <option value="active">активно</option>
+          <option value="inactive">неактивно</option>
+          <option value="restricted">запрещено</option>
+          <option value="moderate">перемодерация</option>
+        </select>
+  		</td><!-- 5.5 -->  	</tr><!-- 5 -->  	<tr>  		<td>
+  		  <label>ФИО</label>
+  		</td><!-- 6.1 -->  		<td>
+  		  <input class="input_01" type="text" name="filter[username]" id="filter_username" />
+  		</td><!-- 6.2 -->  		<td>
+  		  <label>Комнат</label>
+  		</td><!-- 6.3 -->  		<td class="from-to-inline">
+  		  <input class="input_01" type="text" name="filter[num_rooms_from]" id="filter_num_rooms" />
+        <input class="input_01" type="text" name="filter[num_rooms_to]" id="filter_num_rooms-to" />
+  		</td><!-- 6.4 -->  		<td>
+  		  <select class="select_02" name="filter[per-page]" id="filter_per-page">
+          <option value="" selected="selected">выводить</option>
+          <option value="10">10</option>
+          <option value="20">20</option>
+          <option value="50">50</option>
+          <option value="100">100</option>
+          <option value="200">200</option>
+          <option value="500">500</option>
+          <option value="1000">1000</option>
+          <option value="5000">5000</option>
+        </select>
+  		</td><!-- 6.5 -->  	</tr><!-- 6 -->  	<tr>  		<td>
+  		  <label>Компания</label>
+  		</td><!-- 7.1 -->  		<td>
+  		  <input class="input_01" type="text" name="filter[company]" id="filter_company" />
+  		</td><!-- 7.2 -->  		<td>
+  		  <label>Площадь</label>
+  		</td><!-- 7.3 -->  		<td class="from-to-inline">
+  		  <input class="input_01" type="text" name="filter[area_from]" id="filter_area_from" />
+        <input class="input_01" type="text" name="filter[area_to]" id="filter_area_to" />
+  		</td><!-- 7.4 -->  		<td>
+  		  <select class="select_01" name="filter[sort]" id="filter_sort">
+          <option value="id-desc">id &darr;</option>
+          <option value="id-asc">id &uarr;</option>
+          <option value="type-desc">типу &darr;</option>
+          <option value="type-asc">типу &uarr;</option>
+          <option value="address-asc">адресу &uarr;</option>
+          <option value="address-desc">адресу &darr;</option>
+          <option value="price-asc">цене &uarr;</option>
+          <option value="price-desc">цене &darr;</option>
+          <option value="email-asc">логину &uarr;</option>
+          <option value="email-desc">логину &darr;</option>
+          <option value="created_at-asc">размещено &uarr;</option>
+          <option value="created_at-desc">размещено &darr;</option>
+          <option value="active_till-asc">закончится &uarr;</option>
+          <option value="active_till-desc">закончится &darr;</option>
+        </select>
+  		</td><!-- 7.5 -->  	</tr><!-- 7 -->  	<tr>  		<td>
+  		  <label>Телефон</label>
+  		</td><!-- 8.1 -->  		<td>
+  		  <input class="input_01" type="text" name="filter[phone]" id="filter_phone" />
+  		</td><!-- 8.2 -->  		<td>
+  		  <label>Участок</label>
+  		</td><!-- 8.3 -->  		<td class="from-to-inline">
+  		  <input class="input_01" type="text" name="filter[area_country_from]" id="filter_area_country_from" />
+        <input class="input_01" type="text" name="filter[area_country_to]" id="filter_area_country_to" />
+  		</td><!-- 8.4 -->  		<td>
+  		  <div class="search-map-wrp">
+          <input type="checkbox" name="filter[map_search]" id="filter_map_search" />
+          <label for="filter_map_search">Поиск по карте</label>
+        </div>
+  		</td><!-- 8.5 -->  	</tr><!-- 8 -->  	<tr>  		<td></td><!-- 9.1 -->  		<td></td><!-- 9.2 -->  		<td>
+  		  <label>Описание</label>
+  		</td><!-- 9.3 -->  		<td>
+  		  <input class="input_01" type="text" name="filter[description]" id="filter_description" />
+  		</td><!-- 9.4 -->  		<td>
+  		  <!--
+        <input type="hidden" name="filter[coords]" id="filter_coords" />
+        <input type="hidden" name="filter[region_center_coords]" id="filter_region_center_coords" />
+        
+                
+        -->
+        <div class="buttons"><span class="formButton"><input type="submit" value="Найти"/></span></div>
+  		</td><!-- 9.5 -->  	</tr><!-- 9 -->  </table><!-- .moderate-tbl -->
+  
+  
+   
+</form>
+<!--searchForm end -->
+</div>
+<!--contentLeft end -->
+
+<div class="contentRight_02">
+  <div class="cabinetMenuBox ">
+    <div class="boxBack_02">
+
+      <h2>Мой кабинет</h2>
+    </div>
+    <ul class="cabinetMenu padding_11">
+      <li class="">
+        <a href="/lot/favourite">Избранное</a>
+
+      </li>
+      <li class="">
+        <a href="/lot/add">Подать объявление</a>
+
+
+      </li>
+      <li class="">
+        <a href="/lot/my">Мои объявления</a>
+        <span title="Всего">6</span>
+        <ul>
+          <li class="status-inactive">
+            Неактивны 6
+          </li>
+
+        </ul>
+
+
+      </li>
+      <li class="">
+        <a href="/user/pm">Мои сообщения</a>
+        20
+
+
+      </li>
+      <li class="">
+        <a href="/user/profile">Профайл</a>
+
+
+      </li>
+      <li class="">
+        <a href="/user/pm#c:create-pm$moderator:1">Обратная связь</a>
+
+      </li>
+      <li class="active">
+        <span>Модерация</span>
+
+      </li>
+      <li class="">
+
+        <a href="/backend.php">Администрирование</a>
+
+      </li>
+    </ul>
+  </div>
+
+
+</div>
+<div class="clearBoth"></div>
+
+
+<h4>
+  Найдено
+  7554 объявления </h4>
+
+<form method="post" class="resultForm" action="/lot/moderate">
+<fieldset>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="resultTable">
+<thead>
+<tr>
+  <th class="rt_01">
+    <input type="checkbox" name="check_all" id="check_all" value=""/></th>
+  <th>id</th>
+
+  <th>Тип</th>
+  <th>Предложение</th>
+  <th>Адрес</th>
+  <th>Цена</th>
+  <th>Логин</th>
+  <th>Размещено</th>
+
+  <th>Закончится</th>
+  <th>&nbsp;</th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-active">
+  <td class="rt_01">
+    <input type="checkbox" name="id[]" id="id_7626" value="7626"/></td>
+
+  <td>7626</td>
+  <td>Квартира/комната на продажу</td>
+  <td>15-ти комнатная квартира</td>
+  <td>
+    <a href="/apartament-sale/7626">г. Москва, м. Бабушкинская, ул. Егерская, дом 12</a></td>
+  <td>
+
+    1 500 000 руб.
+  </td>
+  <td>
+    <a title="s1l3nt1@garin-studio.ru -  -" href="/user/77">s1l3nt1&hellip;</a></td>
+  <td>27.05.2010</td>
+  <td>11.06.2010</td>
+  <td class="actions">
+
+    <ul class="actionList">
+      <li>
+        <a class="edit" title="Редактировать" href="/lot/7626/edit">редактировать</a></li>
+      <li>
+        <a class="none" title="Остановить показ" href="/lot/7626/restrict">остановить показ</a></li>
+
+      <li>
+        <a class="delit" title="Удалить" onclick="return confirm('Вы уверены?');" href="/lot/7626/delete">удалить</a>
+      </li>
+
+    </ul>
+  </td>
+</tr>
+<tr class="row-active">
+  <td class="rt_01">
+    <input type="checkbox" name="id[]" id="id_7625" value="7625"/></td>
+  <td>7625</td>
+  <td>Квартира/комната на продажу</td>
+
+  <td>7-ми комнатная квартира</td>
+  <td>
+    <a href="/apartament-sale/7625">г. Москва, м. Авиамоторная, Энтузиастов ш., дом 56</a></td>
+  <td>
+    15 000 000 руб.
+  </td>
+  <td>
+    <a title="s1l3nt1@garin-studio.ru -  -" href="/user/77">s1l3nt1&hellip;</a></td>
+
+  <td>27.05.2010</td>
+  <td>11.06.2010</td>
+  <td class="actions">
+    <ul class="actionList">
+      <li>
+        <a class="popup send-mess" title="Отправить сообщение" href="/user/pm/add?to=75" rel="reg">редактировать</a>
+      </li>
+      <li>
+        <a class="edit" title="Редактировать" href="/lot/7625/edit">редактировать</a></li>
+      <li>
+
+        <a class="none" title="Остановить показ" href="/lot/7625/restrict">остановить показ</a></li>
+
+      <li>
+        <a class="delit" title="Удалить" onclick="return confirm('Вы уверены?');" href="/lot/7625/delete">удалить</a>
+      </li>
+    </ul>
+  </td>
+</tr>
+<tr class="row-active">
+
+  <td class="rt_01">
+    <input type="checkbox" name="id[]" id="id_7624" value="7624"/></td>
+  <td>7624</td>
+  <td>Коммерческая недвижимость на продажу</td>
+  <td><abbr title="помещение/земля">Площадь</abbr>: 1000/1200</td>
+  <td>
+
+    <a href="/commercial-sale/7624">Калмыкия, Городовиковский р-н, п. Южный, весь посёлок</a></td>
+  <td>
+    35 руб.
+  </td>
+  <td>
+    <a title="s1l3nt@garin-studio.ru - Алексей Чередников -" href="/user/75">s1l3nt@&hellip;</a></td>
+  <td>26.05.2010</td>
+
+  <td>10.06.2010</td>
+  <td class="actions">
+    <ul class="actionList">
+      <li>
+        <a class="edit" title="Редактировать" href="/lot/7624/edit">редактировать</a></li>
+      <li>
+        <a class="none" title="Остановить показ" href="/lot/7624/restrict">остановить показ</a></li>
+
+
+      <li>
+        <a class="delit" title="Удалить" onclick="return confirm('Вы уверены?');" href="/lot/7624/delete">удалить</a>
+      </li>
+    </ul>
+  </td>
+</tr>
+<tr class="row-restricted">
+  <td class="rt_01">
+    <input type="checkbox" name="id[]" id="id_7623" value="7623"/></td>
+
+  <td>7623</td>
+  <td>Коммерческая недвижимость на продажу</td>
+  <td><abbr title="помещение/земля">Площадь</abbr>: 347/500</td>
+  <td>
+    г. Москва, м. Академическая, ул. Дмитрия Ульянова, дом 13, корп. 2
+  </td>
+  <td>
+
+    60 руб.
+  </td>
+  <td>
+    <a title="s1l3nt@garin-studio.ru - Алексей Чередников -" href="/user/75">s1l3nt@&hellip;</a></td>
+  <td>26.05.2010</td>
+  <td>10.06.2010</td>
+  <td class="actions">
+
+    <ul class="actionList">
+      <li>
+        <a class="edit" title="Редактировать" href="/lot/7623/edit">редактировать</a></li>
+      <li>
+        <a class="none" title="Активировать" href="/lot/7623/setactive">активировать</a></li>
+
+      <li>
+        <a class="delit" title="Удалить" onclick="return confirm('Вы уверены?');" href="/lot/7623/delete">удалить</a>
+      </li>
+
+    </ul>
+  </td>
+</tr>
+<tr class="row-active">
+  <td class="rt_01">
+    <input type="checkbox" name="id[]" id="id_7622" value="7622"/></td>
+  <td>7622</td>
+  <td>Коммерческая недвижимость на продажу</td>
+
+  <td><abbr title="помещение/земля">Площадь</abbr>: 45/100</td>
+  <td>
+    <a href="/commercial-sale/7622">г. Москва, м. Авиамоторная, ул. Авиамоторная, дом 49, корп. 1</a></td>
+  <td>
+    50 руб.
+  </td>
+  <td>
+
+    <a title="s1l3nt@garin-studio.ru - Алексей Чередников -" href="/user/75">s1l3nt@&hellip;</a></td>
+  <td>26.05.2010</td>
+  <td>10.06.2010</td>
+  <td class="actions">
+    <ul class="actionList">
+      <li>
+        <a class="edit" title="Редактировать" href="/lot/7622/edit">редактировать</a></li>
+
+      <li>
+        <a class="none" title="Остановить показ" href="/lot/7622/restrict">остановить показ</a></li>
+
+      <li>
+        <a class="delit" title="Удалить" onclick="return confirm('Вы уверены?');" href="/lot/7622/delete">удалить</a>
+      </li>
+    </ul>
+  </td>
+</tr>
+
+<tr class="row-restricted">
+  <td class="rt_01">
+    <input type="checkbox" name="id[]" id="id_7620" value="7620"/></td>
+  <td>7620</td>
+  <td>Квартира/комната на продажу</td>
+  <td>1 комнатная квартира</td>
+  <td>
+
+    Москва, м. Академическая, ул. Губкина, 9
+  </td>
+  <td>
+    6 800 000 руб.
+  </td>
+  <td>
+    <a title="cegthgegthvskj@yandex.ru - andrey -" href="/user/4">cegthge&hellip;</a></td>
+  <td>11.05.2010</td>
+
+  <td>10.06.2010</td>
+  <td class="actions">
+    <ul class="actionList">
+      <li>
+        <a class="edit" title="Редактировать" href="/lot/7620/edit">редактировать</a></li>
+      <li>
+        <a class="none" title="Активировать" href="/lot/7620/setactive">активировать</a></li>
+
+
+      <li>
+        <a class="delit" title="Удалить" onclick="return confirm('Вы уверены?');" href="/lot/7620/delete">удалить</a>
+      </li>
+    </ul>
+  </td>
+</tr>
+<tr class="row-restricted">
+  <td class="rt_01">
+    <input type="checkbox" name="id[]" id="id_7619" value="7619"/></td>
+
+  <td>7619</td>
+  <td>Квартира/комната на продажу</td>
+  <td>2-х комнатная квартира</td>
+  <td>
+    Москва, м. Печатники, ул. Кухмистерова, 8
+  </td>
+  <td>
+    6 900 000 руб.
+  </td>
+
+  <td>
+    <a title="cegthgegthvskj@yandex.ru - andrey -" href="/user/4">cegthge&hellip;</a></td>
+  <td>11.05.2010</td>
+  <td>10.06.2010</td>
+  <td class="actions">
+    <ul class="actionList">
+      <li>
+
+        <a class="edit" title="Редактировать" href="/lot/7619/edit">редактировать</a></li>
+      <li>
+        <a class="none" title="Активировать" href="/lot/7619/setactive">активировать</a></li>
+
+      <li>
+        <a class="delit" title="Удалить" onclick="return confirm('Вы уверены?');" href="/lot/7619/delete">удалить</a>
+      </li>
+    </ul>
+
+  </td>
+</tr>
+<tr class="row-active">
+  <td class="rt_01">
+    <input type="checkbox" name="id[]" id="id_7618" value="7618"/></td>
+  <td>7618</td>
+  <td>Квартира/комната на продажу</td>
+
+  <td>3-х комнатная квартира</td>
+  <td>
+    <a href="/apartament-sale/7618">Москва, р-н Вешняки, Жемчуговой ал., 3к3</a></td>
+  <td>
+    6 900 000 руб.
+  </td>
+  <td>
+    <a title="cegthgegthvskj@yandex.ru - andrey -" href="/user/4">cegthge&hellip;</a></td>
+
+  <td>11.05.2010</td>
+  <td>10.06.2010</td>
+  <td class="actions">
+    <ul class="actionList">
+      <li>
+        <a class="edit" title="Редактировать" href="/lot/7618/edit">редактировать</a></li>
+      <li>
+
+        <a class="none" title="Остановить показ" href="/lot/7618/restrict">остановить показ</a></li>
+
+      <li>
+        <a class="delit" title="Удалить" onclick="return confirm('Вы уверены?');" href="/lot/7618/delete">удалить</a>
+      </li>
+    </ul>
+  </td>
+</tr>
+<tr class="row-active">
+
+  <td class="rt_01">
+    <input type="checkbox" name="id[]" id="id_7615" value="7615"/></td>
+  <td>7615</td>
+  <td>Квартира/комната на продажу</td>
+  <td>1 комнатная квартира</td>
+  <td>
+    <a href="/apartament-sale/7615">Москва, м. Тимирязевская, ул. Немчинова, 10</a></td>
+
+  <td>
+    4 850 000 руб.
+  </td>
+  <td>
+    <a title="cegthgegthvskj@yandex.ru - andrey -" href="/user/4">cegthge&hellip;</a></td>
+  <td>11.05.2010</td>
+  <td>10.06.2010</td>
+
+  <td class="actions">
+    <ul class="actionList">
+      <li>
+        <a class="edit" title="Редактировать" href="/lot/7615/edit">редактировать</a></li>
+      <li>
+        <a class="none" title="Остановить показ" href="/lot/7615/restrict">остановить показ</a></li>
+
+      <li>
+
+        <a class="delit" title="Удалить" onclick="return confirm('Вы уверены?');" href="/lot/7615/delete">удалить</a>
+      </li>
+    </ul>
+  </td>
+</tr>
+<tr class="row-active">
+  <td class="rt_01">
+    <input type="checkbox" name="id[]" id="id_7614" value="7614"/></td>
+
+  <td>7614</td>
+  <td>Квартира/комната на продажу</td>
+  <td>2-х комнатная квартира</td>
+  <td>
+    <a href="/apartament-sale/7614">Москва, м. Кузьминки, Новая ул., 17</a></td>
+  <td>
+
+    4 900 000 руб.
+  </td>
+  <td>
+    <a title="cegthgegthvskj@yandex.ru - andrey -" href="/user/4">cegthge&hellip;</a></td>
+  <td>11.05.2010</td>
+  <td>10.06.2010</td>
+  <td class="actions">
+
+    <ul class="actionList">
+      <li>
+        <a class="edit" title="Редактировать" href="/lot/7614/edit">редактировать</a></li>
+      <li>
+        <a class="none" title="Остановить показ" href="/lot/7614/restrict">остановить показ</a></li>
+
+      <li>
+        <a class="delit" title="Удалить" onclick="return confirm('Вы уверены?');" href="/lot/7614/delete">удалить</a>
+      </li>
+
+    </ul>
+  </td>
+</tr>
+</tbody>
+</table>
+
+<select name="do" class="select_01">
+  <option value="">Выберите действие</option>
+  <option value="activate">Активировать</option>
+
+  <option value="restrict">Запретить</option>
+  <option value="delete">Удалить</option>
+</select>
+<input type="submit" name="submit" id="submit" value="OK" class="resultSubmit"/> <br/><br/>
+
+</fieldset>
+</form>
+
+<div class="clearBoth"></div>
+
+
+<div class="pagesNaviBox">
+  <ul class="pagesNavi">
+
+    <li>
+      <a class="previous" rel="1" href="/lot/moderate">предыдущая</a></li>
+    <li><a class="active" rel="1" href="/lot/moderate">1</a></li>
+    <li><a rel="2" href="/lot/moderate/2">2</a></li>
+
+    <li><a rel="3" href="/lot/moderate/3">3</a></li>
+    <li><a rel="4" href="/lot/moderate/4">4</a></li>
+    <li><a rel="5" href="/lot/moderate/5">5</a></li>
+    <li>
+      <a class="next" rel="2" href="/lot/moderate/2">следующая</a></li>
+
+    <li class="pageNumber">
+
+      1/756
+    </li>
+
+  </ul>
+
+  <div class="clearBoth"></div>
+</div>
+
+
+<div class="clearBoth"></div>
+</div>
+</div>
+
+</div>
+
+<div id="banner-footer">
+  <div class="wrap">
+  </div>
+  <!-- .wrap -->
+</div>
+<div class="footer">
+  <div class="footerBox">
+    <div class="copyright">
+      © 2010. Все права защищены
+    </div>
+    <ul class="footerMenu">
+
+      <li>
+        <a href="/lot/add">Подать объявление</a></li>
+
+      <li><a href="/about">Что&nbsp;такое&nbsp;Место.ру?</a></li>
+      <li><a href="/terms">Условия&nbsp;использования</a></li>
+      <li><a href="/info">Как&nbsp;пользоваться&nbsp;Место.ру?</a></li>
+
+    </ul>
+  </div>
+</div>
+</body>
+</html>

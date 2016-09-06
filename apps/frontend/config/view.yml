@@ -1,0 +1,37 @@
+default:
+  http_metas:
+    X-UA-Compatible: IE=8
+    content-type: text/html    
+
+  metas:
+    title:        mesto.ru
+
+  stylesheets:
+    - reset: { media: all }
+    - main:  { media: all }
+    - user:  { media: all }
+    - metro:  { media: all }
+    - print: { media: print }
+
+  javascripts:
+    - http://maps.googleapis.com/maps/api/js?sensor=false&key=AIzaSyBDsNyfsGRzQouSQR7rzmYOI4E4W5P4MXw
+    - jquery.js
+    - global.js
+    - form.js
+    
+  has_layout:     true
+  layout:         layout
+
+  components:
+    sidebar:      [menu, default]
+    compare:      []
+
+ie6:
+  stylesheets:    [ie6.css]
+  javascripts:    [iepngfix_tilebg.min.js, dd.js]
+
+ie7:
+  stylesheets:    [ie7.css]
+
+ie8:
+  stylesheets:    [ie8.css]

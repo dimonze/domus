@@ -1,0 +1,14 @@
+all:
+  javascripts:    
+    - form.js
+    - autocomplete.js
+    - metro.js
+    - jquery.maskedinput.min.js
+    - jquery.hcSticky.js
+    - estate_on_duty.js		
+    
+  stylesheets:
+    - autocomplete.css
+indexSuccess:
+  components:
+    compare: [compare, link]

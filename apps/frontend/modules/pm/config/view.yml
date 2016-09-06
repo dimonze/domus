@@ -1,0 +1,8 @@
+all:
+  components:
+    sidebar: [menu, user]
+
+indexSuccess:
+  metas:
+    name: Мои сообщения
+  javascripts: [pm]

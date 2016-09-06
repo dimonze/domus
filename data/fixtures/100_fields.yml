@@ -1,0 +1,214 @@
+FormField:
+  FormField1:
+    type: float
+    size: 5
+    label: Общая площадь
+    help: кв.м
+
+  FormField2:
+    type: price
+    label: Общая стоимость
+
+  FormField3:
+    type: integer
+    size: 2
+    label: Этаж
+
+  FormField4:
+    type: integer
+    size: 2
+    label: Этажность
+
+  FormField5:
+    type: year
+    label: Год постройки
+    help: ориентировочно
+
+  FormField6:
+    type: select
+    label: Тип здания
+    value: |
+      Кирпичный
+      Блочный
+      Панельный
+      Дерево
+      Панельно-блочный
+      Монолит
+      Монолитно-кирпичный
+
+  FormField10:
+    type: float
+    size: 5
+    label: Жилая площадь
+
+  FormField11:
+    type: float
+    size: 5
+    label: Площадь кухни
+
+  FormField12:
+    type: float
+    value: 1,2
+    label: Высота потолков
+
+  FormField13:
+    type: select
+    label: Расположение комнат
+    value: |
+      изолированные
+      смежные
+      смежно-изолированная
+
+  FormField14:
+    type: select
+    label: Санузел
+    value: |
+      совмещенный
+      раздельный
+      2 с/у
+      3 с/у
+      4 с/у
+
+  FormField15:
+    type: select
+    label: Окна
+    value: |
+      деревянные
+      деревянные стеклопакет
+      пластиковые стеклопакет
+      алюминиевые стеклопакет
+      дерево-алюм. стеклопакет
+
+  FormField16:
+    type: select
+    label: Перекрытия
+    value: |
+      дерево
+      железобетон
+      монолитные
+      смешанные
+
+  FormField17:
+    type: select
+    label: Ремонт
+    value: |
+      евроремонт
+      в отличном состоянии
+      после косметического ремонта
+      требует косметического ремонта
+      требует кап ремонта
+
+  FormField18:
+    type: select
+    label: Балкон/лоджия
+    value: |
+      балкон
+      лоджия
+      балкон и лоджия
+
+  FormField26:
+    type: price
+    label: Стоимость аренды в месяц
+
+  FormField27:
+    type: select
+    label: Состояние/ремонт
+    value: |
+      евроремонт
+      в отличном состоянии
+      после косметического ремонта
+      простой ремонт
+      удовлетворительное
+      старый ремонт
+
+  FormField28:
+    type: radio
+    label: Мебель
+    value: |
+      да
+      нет
+
+  FormField29:
+    type: radio
+    label: Оборудование/бытовая техника
+    value: |
+      да
+      нет
+
+
+  FormFieldD_AS:
+    type: multiple
+    label: Детали
+    value: |
+      с отделкой
+      подземная автостоянка
+      меблировка
+      телефон
+      интернет
+      лифт
+      мусоропровод
+      охрана
+      консьерж
+      домофон
+      кодовый замок
+      огороженная территория
+
+  FormFieldD_AR:
+    type: multiple
+    label: Детали
+    value: |
+      гараж/машиноместо
+      телефон
+      интернет
+      лифт
+      мусоропровод
+      охрана
+      консьерж
+      домофон
+      кодовый замок
+      огороженная территория
+
+  FormFieldD_HS:
+    type: multiple
+    label: Детали
+    value: |
+      телефон
+      интернет
+      охрана
+      лес
+      водоем
+      пмж
+
+
+  FormFieldD_HR:
+    type: multiple
+    label: Детали
+    value: |
+      телефон
+      интернет
+      охрана
+      лес
+      водоем
+
+  FormFieldD_CS:
+    type: multiple
+    label: Детали
+    value: |
+      меблировка
+      телефон
+      интернет
+      парковка
+      охрана
+      домофон
+
+
+  FormFieldD_CR:
+    type: multiple
+    label: Детали
+    value: |
+      меблировка
+      телефон
+      интернет
+      парковка
+      охрана
+      домофон

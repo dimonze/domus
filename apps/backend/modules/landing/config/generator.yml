@@ -1,0 +1,40 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           LandingPage
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          landing_page
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        id: { label: "ID" }
+        url: { label: "URL" }
+        h1: { label: "Заголовок H1" }
+        title: { label: 'Мета-тег "Title"' }
+        lot_title_prefix: { label: 'Префикс для заголовков объявлений' }
+        description: { label: 'Мета-тег "Description"' }
+        keywords: { label: 'Мета-тег "Keywords"' }
+        seo_text: { label: "SEO-текст" }
+        params: { label: "Параметры запроса" }
+        region: { label: "Регион" }
+        region_id: { label: "Регион" }
+        type: { label: "Тип" }
+        type_str: { label: "Тип" }
+      list:
+        title: '"Посадочные" страницы'
+        display: [=url, h1, region, type_str]
+        sort: [id, desc]
+      filter:  ~
+      form:
+        class: LandingPageBackendForm
+      edit:
+        title: Редактирование "посадочной" страницы "%%url%%"
+      new:
+        title: 'Новая "посадочная" страница'

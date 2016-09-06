@@ -1,0 +1,26 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           ClaimTheme
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          claim_theme_claimtheme
+    with_doctrine_route:     1
+
+    config:
+      actions: ~
+      fields:
+        title:
+          label: Тема жалобы
+      list:
+        title: Темы жалоб
+        display: [=title]
+      filter:  ~
+      form:    ~
+      edit:
+        title: Правка темы жалобы %%title%%
+      new:
+        title: Новая тематика жалоб

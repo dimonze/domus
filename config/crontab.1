@@ -1,0 +1,24 @@
+#domus1
+MAILTO=noc@garin-studio.ru
+
+5  22    *   *   *   /var/www/mesto.ru/symfony domus:currency-update > /dev/null
+
+0  6   *    *   *   /var/www/mesto.ru/symfony export:LotsToYandex >> /var/www/mesto.ru/log/task/export_yandex.log && gzip -c /var/www/mesto.ru/web/uploads/8TqPnqgq9Aucm7ZRh7feCQFqH5wnofYZzzhYMhrlKvew9Um6u2.yrl > /var/www/mesto.ru/web/uploads/8TqPnqgq9Aucm7ZRh7feCQFqH5wnofYZzzhYMhrlKvew9Um6u2.yrl.gz
+
+0    4    1   *    *   /var/www/mesto.ru/symfony rating:rerateAllUsers >> /var/www/mesto.ru/log/task/rerate_all_users.log
+
+# dafuq?!
+0  */2 *    *   *   touch /var/www/mesto.ru/web/uploads/8TqPnqgq9Aucm7ZRh7feCQFqH5wnofYZzzhYMhrlKvew9Um6u2.yrl /var/www/mesto.ru/web/uploads/8TqPnqgq9Aucm7ZRh7feCQFqH5wnofYZzzhYMhrlKvew9Um6u2.xml /var/www/mesto.ru/web/uploads/8TqPnqgq9Aucm7ZRh7feCQFqH5wnofYZzzhYMhrlKvew9Um6u2.xml.gz /var/www/mesto.ru/web/uploads/8TqPnqgq9Aucm7ZRh7feCQFqH5wnofYZzzhYMhrlKvew9Um6u2.yrl.gz
+
+0  */12  *   *   *   /var/www/mesto.ru/symfony domus:generatexmlvalidators >> /var/www/mesto.ru/log/task/import_download.log && /var/www/mesto.ru/scripts/import_download.sh >> /var/www/mesto.ru/log/task/import_download.log
+
+30 9    *   *   *   /var/www/mesto.ru/symfony domus:maintain >> /var/www/mesto.ru/log/task/maintenance.log
+#0  6    *   *   *   /var/www/mesto.ru/symfony domus:updateUserLotsCounter >> /dev/null
+
+15 16   *    *   *   /var/www/mesto.ru/symfony sitemap:generate >> /var/www/mesto.ru/log/task/sitemap.log
+
+30  10   */3  *   *   /var/www/mesto.ru/symfony export:LotsToMitula >> /var/www/mesto.ru/log/task/export_mitula.log && gzip -c /var/www/mesto.ru/web/uploads/8TqPnqgq9Aucm7ZRh7feCQFqH5wnofYZzzhYMhrlKvew9Um6u2.xml > /var/www/mesto.ru/web/uploads/8TqPnqgq9Aucm7ZRh7feCQFqH5wnofYZzzhYMhrlKvew9Um6u2.xml.gz && gzip -c /var/www/mesto.ru/web/uploads/8TqPnqgq9Aucm7ZRh7feCQFU45nFgp2ErkGKrn593Jfy54HbgP.xml > /var/www/mesto.ru/web/uploads/8TqPnqgq9Aucm7ZRh7feCQFU45nFgp2ErkGKrn593Jfy54HbgP.xml.gz
+
+0  8   1    *   *   /var/www/mesto.ru/symfony domus:notify monthly > /var/www/mesto.ru/log/task/notify_monthly.log
+0  9   *    *   0   /var/www/mesto.ru/symfony domus:notify weekly > /var/www/mesto.ru/log/task/notify_weekly.log
+0  10   *    *   *   /var/www/mesto.ru/symfony domus:notify daily > /var/www/mesto.ru/log/task/notify.log

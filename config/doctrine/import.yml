@@ -1,0 +1,176 @@
+ImportLog:
+  columns:
+    id:
+      type: integer(4)
+      unsigned: true
+      primary: true
+      autoincrement: true
+    user_id:
+      type: integer(4)
+      unsigned: true
+      notnull: true
+    file_name:
+      type: string(150)
+      notnull: true
+    file_type:
+      type: integer(1)
+      notnull: true
+    created_at:
+      type: timestamp
+      notnull: true
+    lots:
+      type: integer(2)
+      unsigned: true
+      notnull: true
+      default: 0
+    errors:
+      type: integer(4)
+      unsigned: true
+      notnull: true
+      default: 0
+  relations:
+    User:
+      local: user_id
+      foreign: id
+      type: one
+      foreignAlias: ImportLogs
+      onDelete: cascade
+
+ImportRegionsLog:
+  columns:
+    log_id:
+      type: integer(4)
+      unsigned: true
+      notnull: true
+    region_id:
+      type: integer(1)
+      unsigned: true
+      notnull: true
+    lots:
+      type: integer(3)
+      unsigned: true
+      notnull: true
+  relations:
+    ImportLog:
+      local: log_id
+      foreign: id
+      type: one
+      foreignAlias: Regions
+      onDelete: cascade
+    Region:
+      local: region_id
+      foreign: id
+      type: one
+      onDelete: cascade
+
+ImportTypesLog:
+  columns:
+    log_id:
+      type: integer(4)
+      unsigned: true
+      notnull: true
+    type:
+      type: integer(1)
+      unsigned: true
+      notnull: true
+    lots:
+      type: integer(3)
+      unsigned: true
+      notnull: true
+  relations:
+    ImportLog:
+      local: log_id
+      foreign: id
+      type: one
+      foreignAlias: Types
+      onDelete: cascade
+
+ImportErrorsLog:
+  columns:
+    log_id:
+      type: integer(4)
+      unsigned: true
+      notnull: true
+    internal_lot_id:
+      type: integer(5)
+      unsigned: true
+    message:
+      type: string(255)
+  relations:
+    ImportLog:
+      local: log_id
+      foreign: id
+      type: one
+      foreignAlias: Errors
+      onDelete: cascade
+      
+ImportOrder:
+  actAs:
+    Timestampable:
+      created:
+        name: created_at
+        type: timestamp
+      updated:
+        disabled: true
+  columns:
+    id:
+      type: integer(4)
+      unsigned: true
+      primary: true
+      autoincrement: true
+    user_id:
+      type: integer(4)
+      unsigned: true
+      notnull: true
+    date_from: timestamp
+    date_to: timestamp
+    status:
+      type: enum
+      values: [inactive, active]
+      default: inactive
+    company_name: string(255)
+    total:
+      type: integer(5)
+      unsigned: true
+    info: string(2000)
+
+  relations:
+    User:
+      foreign: id
+      local: user_id
+    Options:
+      class: ImportOrderOptions
+      local: id
+      foreign: order_id
+      type: many
+      foreignType: one
+      foreignAlias: Order
+      cascade: [delete]
+
+ImportOrderOptions:
+  columns:
+    id:
+      type: integer(4)
+      unsigned: true
+      primary: true
+      autoincrement: true
+    type:
+      type: enum
+      values: ['apartament-sale', 'apartament-rent', 'house-sale', 'house-rent', 'commercial-sale', 'commercial-rent', 'new_building-sale', 'cottage-sale']
+    order_id:
+      type: integer(4)
+      unsigned: true
+    status:
+      type: enum
+      values: [inactive, active]
+      default: inactive
+
+  indexes:
+    index:
+      fields: [type, order_id]
+      type: unique    
+
+  relations:
+      ImportOrder:
+        type: one
+        onDelete: CASCADE

@@ -1,0 +1,4 @@
+showSuccess:
+  components: []
+  javascripts: [homepage]
+  layout: homepage

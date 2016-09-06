@@ -1,0 +1,24 @@
+add:
+  is_secure: true
+delete:
+  is_secure: true
+edit:
+  is_secure: true
+my:
+  is_secure: true
+favourite:
+  is_secure: true
+setactive:
+  is_secure: true
+setinactive:
+  is_secure: true
+
+moderate:
+  is_secure: true
+  credentials: moder-access
+restrict:
+  is_secure: true
+  credentials: moder-actions
+
+all:
+  is_secure: false

@@ -1,0 +1,32 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Events
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          events
+    with_doctrine_route:     1
+
+    config:
+      actions:
+        _edit: { credentials: [redactor-events-actions] }
+        _delete: { credentials: [redactor-events-actions] }
+      fields:  ~
+      list:
+        fields:
+          title_photo: {label: Изображение}
+          title_and_lid: {label: Заголовок и Анонс}
+        display: [_title_photo, _title_and_lid]
+        sort: [created_at, desc]
+        title: События       
+        max_per_page: 10
+      filter:
+        class: EventsFormFilter
+      form:    ~
+      edit:
+        title: Редактирование события "%%title%%" от %%created_at%%
+      new:
+        title: Добавление события

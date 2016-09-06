@@ -1,0 +1,33 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           PostAuthor
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          post_author
+    with_doctrine_route:     1
+
+    config:
+      actions:
+        _edit: { credentials: [create-author-actions] }
+        _delete: { credentials: [create-author-delete] }
+      fields:
+        name: { label: ФИО }
+        photo: { label: Фото }
+        author_type: {label: Тип автора }        
+      list:
+        display: [id, _photo, name, author_type]
+        title: Авторы
+        object_actions:
+          _edit: ~
+          _delete:
+            confirm: Удалить автора, его комментарии и статьи?
+      filter:  ~
+      form:    ~
+      edit:
+        title: Редактирование автора %%name%%
+      new:
+        title: Добавление автора

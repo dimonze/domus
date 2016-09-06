@@ -1,0 +1,6 @@
+editSuccess:
+  credentials: [redactor-questionnaire-actions]
+deleteSuccess:
+  credentials: [redactor-questionnaire-delete]
+all:
+  credentials: [redactor-questionnaire]

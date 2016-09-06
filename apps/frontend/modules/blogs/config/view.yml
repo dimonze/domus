@@ -1,0 +1,11 @@
+all:
+  javascripts:    
+    - news_portal.js
+    - homepage.js
+
+mySuccess:
+  metas:
+    name: Мой блог
+    title: Мой блог
+  components:
+    sidebar: [menu, user]

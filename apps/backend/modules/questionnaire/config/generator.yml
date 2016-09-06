@@ -1,0 +1,33 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Post
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          questionnaire
+    with_doctrine_route:   1
+
+    config:
+      actions:
+        _edit: { credentials: [redactor-questionnaire-actions] }
+        _delete: { credentials: [redactor-questionnaire-delete] }
+      fields:  ~
+      list:
+        fields:
+          color_title: {label: Вопрос}
+          created_at: { label: Дата создания }
+        display: [_color_title, created_at]
+        sort: [created_at, desc]
+        title: Опросы
+        max_per_page: 10
+      filter:
+        class: QuestionnaireFormFilter
+      form:
+        class: QuestionnaireForm
+      edit:
+        title: Редактирование Опроса "%%title%%" от %%created_at%%
+      new:
+        title: Добавление опроса
